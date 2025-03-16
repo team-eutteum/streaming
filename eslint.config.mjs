@@ -10,25 +10,7 @@ const compat = new FlatCompat({
 });
 
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
-  {
-    rules: {
-      "react/jsx-uses-react": "off",
-      "react/react-in-jsx-scope": "off",
-      "prefer-template": "error",
-      "react/self-closing-comp": "error",
-      "prettier/prettier": [
-        "warn",
-        {
-          "printWidth": 80,
-          "tabWidth": 2,
-          "singleQuote": true,
-          "parser": "typescript",
-          "endOfLine": "auto"
-        }
-      ],
-    }
-  }
+  ...compat.extends("next/core-web-vitals", "next/typescript")
 ];
 
 export default eslintConfig;
