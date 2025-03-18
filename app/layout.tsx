@@ -12,7 +12,7 @@ const pretendard = localFont({
 
 export const metadata: Metadata = {
   title: "RIIZE STREAMING",
-  description: "라이즈 총공팀",
+  description: "라이즈 음원총공팀",
 };
 
 export default function RootLayout({

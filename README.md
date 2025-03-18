@@ -1,36 +1,78 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# RIIZESTREAMING
 
-## Getting Started
+## URL
 
-First, run the development server:
+- 운영 : [https://riizestreaming.com/](https://riizestreaming.com/)
 
-```bash
+## Stacks
+
+- next 15
+- react 19
+- typescript 5
+- tailwindcss
+
+## Build Scripts
+
+### Local
+
+개발 모드로 실행된다.
+
+```sh
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[http://localhost:3000](http://localhost:3000)로 브라우저 접속할 수 있다.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+#### Build
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+프로덕션(production) 모드로 빌드가 진행되나, `.env` 파일에 정의된 설정값에 따라 `process.env.APP_ENV` 환경 변수는 'development'와 'production'으로 구분된다.
 
-## Learn More
+```sh
+# dev build
+npm run build:dev
 
-To learn more about Next.js, take a look at the following resources:
+# production build
+npm run build:prod
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## File Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+app/
+└─── _components/ <<-- 컴포넌트
+│   └─── Button/ <<-- 유사한 컴포넌트
+│   │   └─── Button.tsx
+│   └─── index.ts
+└─── _hooks/ <<-- custom hooks 파일을 저장
+│   └─── useXXX.tsx
+└─── _lib/
+│   └─── constants/
+│   │   └─── code.constant.ts <<-- 코드 정의
+│   │   └─── index.ts
+│   └─── helpers/ <<-- 유틸성 파일들 저장
+│   │   └─── code.helper.ts
+│   │   └─── format.helper.ts
+└─── _services/ <<-- api 함수 정의
+│   └─── mypage.service.ts
+│   └─── index.ts
+└─── _stores/ <<-- global 상태 정의
+│   └─── mypage.store.tsx
+└─── _types/ <<-- 타입 정의
+│   └─── common.type.ts <<-- 공통적으로 사용되는 타입 정의
+└─── (page)/
+│   └─── (subpages)/ <<-- 경로 그룹 (동일한 Layout 그룹화)
+│   │   └─── _components/ <<-- 페이지 컴포넌트
+│   │   │   └─── CustomComponent.tsx
+│   │   └─── membership/
+│   │   │   └─── page.tsx
+│   │   └─── layout.tsx <<-- 서브 페이지 공통 레이아웃
+│   └─── layout.tsx <<-- 페이지 공통 레이아웃
+└─── globals.css <<-- 글로벌 스타일
+└─── layout.tsx <<-- 공통 레이아웃 (html, body 등)
+└─── not-found.tsx <<-- 404 페이지
+public/ <<-- 정적 폰트, 이미지
+└─── fonts/
+└─── static/
+│   └─── images/
+└─── tailwind.config.js <<-- tailwindcss 커스텀 스타일
+```
