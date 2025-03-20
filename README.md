@@ -61,18 +61,17 @@ app/
 │   └─── common.type.ts <<-- 공통적으로 사용되는 타입 정의
 └───(page)/
 │   └─── (subpages)/ <<-- 경로 그룹 (동일한 Layout 그룹화)
-│   │   └─── _components/ <<-- 페이지 컴포넌트
+│   │   └─── components/ <<-- 페이지 컴포넌트
 │   │   │   └─── CustomComponent.tsx
 │   │   └─── membership/
 │   │   │   └─── page.tsx
 │   │   └─── layout.tsx <<-- 서브 페이지 공통 레이아웃
 │   └─── layout.tsx <<-- 페이지 공통 레이아웃
+│   └─── page.tsx <<-- 페이지
 └─── globals.css <<-- 글로벌 스타일
 └─── layout.tsx <<-- 공통 레이아웃 (html, body 등)
 └─── not-found.tsx <<-- 404 페이지
 public/ <<-- 정적 폰트, 이미지
-└─── fonts/
 └─── static/
-│   └─── images/
-└─── tailwind.config.js <<-- tailwindcss 커스텀 스타일
+    └─── images/
 ```
