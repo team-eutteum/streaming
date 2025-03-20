@@ -1,14 +1,24 @@
-import { Metadata } from 'next';
+'use client';
 
-import { SITE_TITLE } from '@/_lib/constants/title.constant';
+import { useRouter } from 'next/navigation';
 
-export const metadata: Metadata = {
-  title: `${SITE_TITLE} 페이지를 찾을 수 없습니다`,
-};
+import { Button } from './components';
 
 function NotFound() {
+  const router = useRouter();
+
   return (
-    <p>요청하신 페이지를 찾을 수 없습니다.</p>
+    <div className="flex flex-col justify-center items-center h-dvh">
+      <p className="text-2xl">요청하신 페이지를 찾을 수 없습니다.</p>
+      <div className="flex gap-10 justify-center items-center mt-20">
+        <Button href="/" size="lg">
+          메인으로
+        </Button>
+        <Button size="lg" color="dark" onClick={() => router.back()}>
+          뒤로가기
+        </Button>
+      </div>
+    </div>
   );
 }
 

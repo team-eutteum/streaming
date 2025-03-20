@@ -1,18 +1,10 @@
-import type { Metadata } from "next";
-import localFont from 'next/font/local';
-import "./globals.css";
-
-const pretendard = localFont({
-  src: "../public/fonts/PretendardVariable.woff2",
-  display: "swap",
-  weight: "45 920",
-  variable: "--font-pretendard",
-  fallback: ['Malgun Gothic', 'sans-serif'],
-});
+import type { Metadata } from 'next';
+import 'pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css';
+import './globals.css';
 
 export const metadata: Metadata = {
-  title: "RIIZE STREAMING",
-  description: "라이즈 음원총공팀",
+  title: 'RIIZE STREAMING',
+  description: '라이즈 음원총공팀',
 };
 
 export default function RootLayout({
@@ -21,11 +13,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${pretendard.variable}`}>
-      <body
-        className={pretendard.className}
-      >
-        {children}
+    <html lang="en">
+      <body>
+        {process.env.APP_ENV === 'development' ? (
+          <>{children}</>
+        ) : (
+          <div className="flex flex-col items-center justify-center gap-10 font-black text-white bg-black min-h-dvh text-5xl text-center md:text-7xl">
+            <h1>
+              <em className="max-md:block">RIIZE</em> 음원 총공팀
+            </h1>
+          </div>
+        )}
       </body>
     </html>
   );

@@ -39,27 +39,27 @@ npm run build:prod
 
 ```text
 app/
-└─── _components/ <<-- 컴포넌트
+└───components/ <<-- 컴포넌트
 │   └─── Button/ <<-- 유사한 컴포넌트
 │   │   └─── Button.tsx
 │   └─── index.ts
-└─── _hooks/ <<-- custom hooks 파일을 저장
+└───hooks/ <<-- custom hooks 파일을 저장
 │   └─── useXXX.tsx
-└─── _lib/
+└───lib/
 │   └─── constants/
 │   │   └─── code.constant.ts <<-- 코드 정의
 │   │   └─── index.ts
 │   └─── helpers/ <<-- 유틸성 파일들 저장
 │   │   └─── code.helper.ts
 │   │   └─── format.helper.ts
-└─── _services/ <<-- api 함수 정의
+└───services/ <<-- api 함수 정의
 │   └─── mypage.service.ts
 │   └─── index.ts
-└─── _stores/ <<-- global 상태 정의
+└───stores/ <<-- global 상태 정의
 │   └─── mypage.store.tsx
-└─── _types/ <<-- 타입 정의
+└───types/ <<-- 타입 정의
 │   └─── common.type.ts <<-- 공통적으로 사용되는 타입 정의
-└─── (page)/
+└───(page)/
 │   └─── (subpages)/ <<-- 경로 그룹 (동일한 Layout 그룹화)
 │   │   └─── _components/ <<-- 페이지 컴포넌트
 │   │   │   └─── CustomComponent.tsx
