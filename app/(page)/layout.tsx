@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import { Footer, Header } from '@/components';
+import { Footer, Header, NavigationBar } from '@/components';
 
 function GlobalLayout({ children }: { children: ReactNode }) {
   return (
@@ -8,6 +8,7 @@ function GlobalLayout({ children }: { children: ReactNode }) {
       <Header />
       <div className="flex-1">{children}</div>
       <Footer />
+      <NavigationBar />
     </div>
   );
 }
