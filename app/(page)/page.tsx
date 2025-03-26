@@ -1,5 +1,5 @@
 function GlobalPage() {
-  return <div>Global Page</div>;
+  return <div className="wrap" />;
 }
 
 export default GlobalPage;

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import 'pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css';
 import './globals.css';
+// import './scss/index.scss';
+import 'swiper/css';
 
 export const metadata: Metadata = {
   title: 'RIIZE STREAMING',
