@@ -17,7 +17,7 @@ export const NAV: NavItem[] = [
       },
       {
         title: TITLE.MUSIC_STREAMING,
-        path: '/guide/music',
+        path: '/guide/streaming',
       },
       {
         title: TITLE.MUSIC_DOWNLOAD,

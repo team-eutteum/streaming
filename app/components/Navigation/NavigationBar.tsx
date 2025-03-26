@@ -7,27 +7,29 @@ import {
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 
+import { CONST } from '@/lib/constants';
+
 const navbars = [
   { href: '/', icon: <HomeIcon />, label: '홈' },
   {
-    href: '/',
+    href: '/guide',
     icon: <BookmarkIcon />,
-    label: '가이드',
+    label: CONST.TITLE.GUIDE,
   },
   {
-    href: '/',
+    href: '/chart',
     icon: <PresentationChartBarIcon />,
-    label: '순위',
+    label: CONST.TITLE.CHART,
   },
   {
-    href: '/',
+    href: '/guide/list',
     icon: <ListBulletIcon />,
     label: '스밍',
   },
   {
-    href: '/',
+    href: '/vote',
     icon: <CheckIcon />,
-    label: '투표',
+    label: CONST.TITLE.VOTE,
   },
 ];
 
