@@ -9,7 +9,7 @@ function OneClick() {
     <section className="sc-oneclick">
       <div className="inner">
         <h2 className="tit">원클릭</h2>
-        <div className="container">
+        <div className="container flex items-center">
           <Link href={'/main'}>
             <div className="box">
               <i>
