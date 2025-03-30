@@ -1,24 +1,22 @@
 html {
   width: 100%;
   height: 100%;
-  /*font-size: 0.6vw;*/
+  font-size: 0.052vw;
 }
 
 body {
   position: relative;
-  // min-width: 1400px;
   height: 100%;
-  font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  font-family: "Pretendard Variable", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 16rem;
   color: #000;
-  letter-spacing: -.5px;
+  letter-spacing: -0.01em;
   word-break: keep-all;
   line-height: 1.2;
-  -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
   -webkit-overflow-scrolling: touch;
+  overflow-x: hidden;
 }
 
 body,
@@ -48,14 +46,11 @@ input,
 span,
 section,
 article,
-figure,
-label,
-footer {
+figure {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   word-break: keep-all;
-  letter-spacing: -.2px;
 }
 
 ul,
@@ -89,32 +84,23 @@ caption {
 textarea,
 button {
   vertical-align: middle;
-  font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
-  letter-spacing: -.5px;
-  outline: 0;
+  font-family: Pretendard, sans-serif;
 }
 
 textarea {
-  color: #222;
+  color: inherit;
   resize: none;
   overflow-y: auto;
   -ms-overflow-style: auto;
-  box-sizing: border-box;
 }
 
 select {
-  font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
-  font-weight: 600;
+  font: inherit;
   vertical-align: middle;
-  letter-spacing: -1px;
   border: 0;
-  background: transparent;
-  -webkit-appearance: none;
   appearance: none;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
-  outline: 0;
+  cursor: pointer;
 }
 
 select::-ms-expand {
@@ -123,8 +109,11 @@ select::-ms-expand {
 
 input,
 textarea {
-  font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
-  // vertical-align: middle; border: 0; background: transparent; -webkit-appearance: none; appearance: none; -webkit-box-shadow: none; -moz-box-shadow: none; box-shadow: none;
+  vertical-align: middle;
+  border: 0;
+  background: transparent;
+  appearance: none;
+  box-shadow: none;
 }
 
 option {
@@ -138,99 +127,90 @@ input[type="checkbox"] {
   height: auto;
   font-size: 18px;
   border: 0;
-  -webkit-box-shadow: none;
-  -moz-box-shadow: none;
   box-shadow: none;
-  appearance: none;
-  -webkit-appearance: none;
 }
 
-input[type=text]::-ms-clear {
+input[type="text"]::-ms-clear {
   display: none;
 }
 
 input {
-  &::-webkit-input-placeholder {
-    font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  &::input-placeholder {
+    font-family: Pretendard, sans-serif;
   }
 
-  &::-ms-input-placeholder {
-    font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  &::input-placeholder {
+    font-family: Pretendard, sans-serif;
   }
 
   &::placeholder {
-    font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+    font-family: Pretendard, sans-serif;
   }
 
-  &[type=number]::-webkit-outer-spin-button {
-    -webkit-appearance: none;
+  &[type="number"]::-webkit-outer-spin-button {
+    appearance: none;
     margin: 0;
   }
 
-  &[type=number]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
+  &[type="number"]::-webkit-inner-spin-button {
+    appearance: none;
     margin: 0;
   }
 
-  &:focus::-webkit-input-placeholder {
+  &:focus::input-placeholder {
     color: transparent;
   }
 
-  &:focus:-ms-input-placeholder {
+  &:focus:input-placeholder {
     color: transparent;
   }
 
-  &:focus::-ms-input-placeholder {
+  &:focus::input-placeholder {
     color: transparent;
   }
 
   &:focus::placeholder {
     color: transparent;
   }
-
-  outline: 0;
 }
 
 textarea {
-  &::-webkit-input-placeholder {
-    font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  &::input-placeholder {
+    font-family: Pretendard, sans-serif;
   }
 
-  &:-ms-input-placeholder {
-    font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  &:input-placeholder {
+    font-family: Pretendard, sans-serif;
   }
 
-  &::-ms-input-placeholder {
-    font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+  &::input-placeholder {
+    font-family: Pretendard, sans-serif;
   }
 
   &::placeholder {
-    font-family: "Malgun Gothic", "Apple SD Gothic Neo", sans-serif;
+    font-family: Pretendard, sans-serif;
   }
 
-  &:focus::-webkit-input-placeholder {
+  &:focus::input-placeholder {
     color: transparent;
   }
 
-  &:focus:-ms-input-placeholder {
+  &:focus:input-placeholder {
     color: transparent;
   }
 
-  &:focus::-ms-input-placeholder {
+  &:focus::input-placeholder {
     color: transparent;
   }
 
   &:focus::placeholder {
     color: transparent;
   }
-
-  outline: 0;
 }
 
 a {
   text-decoration: none;
   color: inherit;
-  outline: 0;
 
   &a:hover,
   &a:focus,
@@ -242,6 +222,7 @@ a {
 table {
   width: 100%;
   border-collapse: collapse;
+  border-spacing: 0;
   table-layout: fixed;
 }
 
@@ -281,6 +262,38 @@ summary {
   position: relative;
 }
 
-body:has(.mobile) {
-  min-width: unset;
+*:focus:not(:focus-visible) {
+  outline: none;
+}
+
+#skipNavi a {
+  position: fixed;
+  top: -9999px;
+  left: 0;
+  z-index: 151;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  color: #fff;
+  background: #e31d1a;
+}
+
+#skipNavi a:focus {
+  top: 0;
+}
+
+caption,
+legend,
+.hidden {
+  position: absolute;
+  left: -300px;
+  width: 0;
+  height: 0;
+  margin: 0;
+  padding: 0;
+  background: none;
+  line-height: 0;
+  overflow: hidden;
 }

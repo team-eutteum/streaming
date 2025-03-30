@@ -1,105 +1,229 @@
+@use "mixin" as *;
+@use "variable" as *;
+
 @include tablet() {
-main {
-    padding: 100px 0;
+  main {
+    padding: 40rem 0;
+    section + section {
+      margin: 40rem 0 0;
+    }
     .sc-rank {
       .inner {
-        padding: 0;
+        padding: 0 24rem 0 24rem;
       }
-      .tit {
-        padding: 0 24px;
-        font-size: 24px;
-        font-weight: 500;
+      .tit-area {
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+      }
+      .rank-time {
+        display: block;
+        margin: 6rem 0 0;
+        font-size: 16rem;
+        color: $gray500;
+        font-weight: 300;
       }
       .rank-container {
         width: 100%;
-        height: 500px;
+        // padding: 0 0 0 24rem;
+        // margin: 24rem 0 0;
       }
       .rank-swiper {
-        padding: 0 24px;
-        margin: 24px 0;
-        height: 100%;
-        .swiper-wrapper {
-          height: 100%;
-          cursor: grab;
-          .swiper-slide {
-            padding: 20px;
-            width: 400px;
+        .scroll-area {
+          padding: 0 24rem 12rem 24rem;
+          width: 100%;
+          @include grid(2, 24rem, 0);
+          overflow-x: scroll;
+        }
+        .rank-content {
+          flex-grow: 1;
+          width: 320rem;
+        //  .rank-cate {
+        //     padding: 0 12rem;
+        //     height: 50rem;
+        //     font-size: 24rem;
+        //     font-weight: 700;
+        //     line-height: 50rem;
+        //     background: $black;
+        //     color: $white;
+        //   }
+          .rank-wrap {
+            display: flex;
+            flex-direction: column;
             height: 100%;
-            border: 1px solid rgba(0, 0, 0, .5);
-            border-radius: 20px;
-            .rank-tit {
-              font-size: 24px;
+            // height: calc(100% - 50rem);
+          }
+          .rank-list {
+            padding: 18rem 12rem;
+            height: 100%;
+            border-bottom: 1px solid $gray400;
+            &:nth-child(1) {
+              border-top: 1px solid $gray400;
+            }
+            &.melon .cate {
+              color: $pointMelon;
+            }
+            &.genie .cate {
+              color: $pointGenie;
+            }
+            &.bugs .cate {
+              color: $pointBugs;
+            }
+            &.flo .cate {
+              color: $pointFlo;
+            }
+            .cate {
+              font-size: 16rem;
               font-weight: 700;
+            }
+            &:has(.cate) .rank-box {
+              margin-top: 12rem;
+            }
+            .rank-box {
+              display: flex;
+              justify-content: space-between;
+              width: 100%;
+              // height: 100%;
+            }
+            .tit {
+              font-size: 18rem;
+              align-self: flex-start;
+              @include multiEllipsis(2);
+            }
+            .divide {
+              text-align: right;
+              .rank {
+                text-align: right;
+                width: 54rem;
+                font-size: 20rem;
+                font-weight: 700;
+                margin: 0 0 0 12rem;
+                span {
+                  font-size: 16rem;
+                  font-weight: 400;
+                }
+              }
+              .rank-change {
+                display: block;
+                margin: 8rem 0 0;
+                font-size: 16rem;
+                font-weight: 400;
+              }
+            }
+            .rank-change {
+              font-size: 16rem;
+              &::before {
+                content: "-";
+                margin: 0 6rem 0;
+              }
+              &.up {
+                color: $pointRed;
+                &::before {
+                  content: "▲";
+                  font-size: 14rem;
+                }
+              }
+              &.down {
+                color: $pointBlue;
+                &::before {
+                  content: "▼";
+                  font-size: 14rem;
+                }
+              }
             }
           }
         }
       }
     }
     .sc-oneclick {
-      margin: 60px 0 0;
       .inner {
-        padding: 0 24px;
+        padding: 0 24rem;
       }
       .tit {
-        font-size: 24px;
+        font-size: 24rem;
         font-weight: 500;
       }
       .container {
-        margin: 24px 0 0;
-        @include grid(4, 24px, 12px);
+        // margin: 24rem 0 0;
+        @include grid(4, 24rem, 12rem);
         .box {
           width: 100%;
-          height: 100px;
-          border-radius: 20px;
-          background: rgba(0, 0, 0, .1);
+          border-radius: 20rem;
+          background: $gray100;
           i {
             display: block;
+            padding: 14rem;
+            margin: 0 auto;
+            width: 36rem;
+            height: 36rem;
             text-align: center;
-            line-height: 100px;
-            svg {
-              font-size: 60px;
-            }
           }
         }
         .txt {
-          margin: 12px 0 0;
+          margin: 12rem 0 0;
           text-align: center;
         }
       }
     }
     .sc-todolist {
-      margin: 60px 0 0;
       .inner {
-        padding: 0 24px;
+        padding: 0 24rem;
       }
       .tit {
-        font-size: 24px;
+        font-size: 24rem;
         font-weight: 500;
       }
       .todolist-wrap {
-        margin: 24px 0 0;
-        padding: 24px;
-        border: 1px solid rgba(0, 0, 0, .7);
-        border-radius: 20px;
+        // margin: 24rem 0 0;
+        padding: 20rem;
+        border: 1px solid $gray400;
+        border-radius: 12rem;
         .list {
           & + .list {
-            margin: 18px 0 0;
+            margin: 18rem 0 0;
           }
         }
       }
       .input-wrap {
         display: flex;
         align-items: center;
+        position: relative;
         input[type="checkbox"] {
-          width: 20px;
-          height: 20px;
-          border: 1px solid rgba(0, 0, 0, .7);
-          border-radius: 4px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 20rem;
+          height: 20rem;
           cursor: pointer;
+          & ~ .checkbox {
+            width: 20rem;
+            height: 20rem;
+            border-radius: 6rem;
+            border: 1px solid $gray900;
+          }
+          & ~label {
+            position: relative;
+            &::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translate(0, -50%);
+                width: 0;
+                height: 2px;
+                background: $riizeOrange;
+                transition: width .3s ease-out;
+              }
+          }
+          &:checked ~ label {
+            &::after {
+              width: 100%;
+            }
+          }
         }
         label {
-          margin: 0 0 0 12px;
-          font-size: 18px;
+          margin: 0 0 0 8rem;
+          font-size: 18rem;
           cursor: pointer;
         }
       }

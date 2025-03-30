@@ -1,19 +1,26 @@
-import AndroidIcon from '@mui/icons-material/Android';
-import LaptopChromebookIcon from '@mui/icons-material/LaptopChromebook';
-import PhoneIphoneIcon from '@mui/icons-material/PhoneIphone';
-import TabletIcon from '@mui/icons-material/Tablet';
+import {
+  DevicePhoneMobileIcon,
+  DeviceTabletIcon,
+  ComputerDesktopIcon,
+} from '@heroicons/react/24/outline';
 import Link from 'next/link';
+
+import { PageTitle } from '@/components';
 
 function OneClick() {
   return (
     <section className="sc-oneclick">
       <div className="inner">
-        <h2 className="tit">원클릭</h2>
-        <div className="container flex items-center">
+        <div className="tit-area">
+          <div className="page-tit">
+            <PageTitle label="원클릭" />
+          </div>
+        </div>
+        <div className="container">
           <Link href={'/main'}>
             <div className="box">
               <i>
-                <AndroidIcon />
+                <DevicePhoneMobileIcon />
               </i>
             </div>
             <p className="txt">Android</p>
@@ -21,7 +28,7 @@ function OneClick() {
           <Link href={'/main'}>
             <div className="box">
               <i>
-                <PhoneIphoneIcon />
+                <DevicePhoneMobileIcon />
               </i>
             </div>
             <p className="txt">IOS</p>
@@ -29,7 +36,7 @@ function OneClick() {
           <Link href={'/main'}>
             <div className="box">
               <i>
-                <TabletIcon />
+                <DeviceTabletIcon />
               </i>
             </div>
             <p className="txt">IPad</p>
@@ -37,7 +44,7 @@ function OneClick() {
           <Link href={'/main'}>
             <div className="box">
               <i>
-                <LaptopChromebookIcon />
+                <ComputerDesktopIcon />
               </i>
             </div>
             <p className="txt">PC</p>

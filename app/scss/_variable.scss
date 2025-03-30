@@ -1,3 +1,30 @@
-$desktop: 1024px;
-$tablet: 1023px;
-$mobile: 599px;
+$desktop: 1024px !default;
+$tablet: 1023px !default;
+$mobile: 599px !default;
+
+// primary 
+$riizeOrange: #f0a240;
+
+
+// grayscale
+$black: #000000;
+$gray900: #1a1a1a;
+$gray800: #4d4d4d;
+$gray700: #666666;
+$gray600: #727272;
+$gray500: #999999;
+$gray400: #cccccc;
+$gray300: #d9d9d9;
+$gray200: #e5e5e5;
+$gray100: #f0f0f0;
+$gray50: #f5f5f5;
+$white: #ffffff;
+
+// 강조
+$pointRed: #e83927;
+$pointBlue: #145bb3;
+
+$pointMelon: #00d344;
+$pointBugs: #ff3b28;
+$pointGenie: #0096ff;
+$pointFlo: #3f3fff;

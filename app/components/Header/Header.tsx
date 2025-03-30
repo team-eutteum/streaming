@@ -3,11 +3,17 @@ import Link from 'next/link';
 
 function Header() {
   return (
-    <header className="sticky top-0 z-20 flex items-center justify-center text-white bg-black h-60 md:h-80">
-      <Bars3CenterLeftIcon className="absolute w-32 left-16" />
-      <h1>
-        <Link href={'/'}>로고 이미지 필요</Link>
-      </h1>
+    <header className="header">
+      <div className="inner">
+        <h1 className="logo">
+          <Link href={'/'}>로고</Link>
+        </h1>
+        <button className="btn-menu" type="button">
+          <i>
+            <Bars3CenterLeftIcon />
+          </i>
+        </button>
+      </div>
     </header>
   );
 }

@@ -5,7 +5,7 @@ import TodoList from './_components/TodoList';
 function MainPage() {
   return (
     <main>
-      <section className="sc-rank pt-30">
+      <section className="sc-rank">
         <CurrentRank />
       </section>
       <section className="sc-oneclick pt-30">

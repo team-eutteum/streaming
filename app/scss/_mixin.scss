@@ -1,3 +1,5 @@
+@use "variable";
+
 //style
 @mixin ellipsis($w: 100%) {
   display: block;
@@ -102,19 +104,19 @@ transition: $transitions; // 누적된 값을 출력
 
 //mediaquery
 @mixin mobile() {
-  @media all and (max-width: $mobile) {
+  @media all and (max-width: variable.$mobile) {
     @content;
   }
 }
 
 @mixin tablet() {
-  @media all and (max-width: $tablet) {
+  @media all and (max-width: variable.$tablet) {
     @content;
   }
 }
 
 @mixin desktop() {
-  @media all and (min-width: $desktop) {
+  @media all and (min-width: variable.$desktop) {
     @content;
   }
 }

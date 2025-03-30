@@ -35,14 +35,10 @@ const navbars = [
 
 function NavigationBar() {
   return (
-    <nav className="sticky bottom-0 z-20 flex items-center justify-between gap-10 bg-white lg:hidden">
+    <nav className="nav-bar">
       {navbars.map((nav, index) => (
-        <Link
-          key={index}
-          href={nav.href}
-          className="flex flex-col items-center justify-center flex-1 py-4 text-xs text-center gap-y-3"
-        >
-          <span className="w-24 text-black">{nav.icon}</span>
+        <Link key={index} href={nav.href}>
+          <span className="nav-icon">{nav.icon}</span>
           {nav.label}
         </Link>
       ))}

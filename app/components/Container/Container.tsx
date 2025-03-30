@@ -6,16 +6,7 @@ interface ContainerProps {
 }
 
 function Container({ className, children }: PropsWithChildren<ContainerProps>) {
-  return (
-    <div
-      className={clsx(
-        'px-16 pt-40 pb-60 max-w-1360 mx-auto lg:pt-60 lg:pb-100',
-        className,
-      )}
-    >
-      {children}
-    </div>
-  );
+  return <div className={clsx('sub-container', className)}>{children}</div>;
 }
 
 export default Container;
