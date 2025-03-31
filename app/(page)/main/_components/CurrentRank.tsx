@@ -1,23 +1,21 @@
 'use client';
-
-import ArrowDropDownOutlinedIcon from '@mui/icons-material/ArrowDropDownOutlined';
 import clsx from 'clsx';
 
 import { PageTitle } from '@/components';
 
 function CurrentRank() {
-  const currentRankList = [
-    {
-      site: 'MELON',
-      musicList: [
-        {
-          rank: 1,
-          tit: 'Boom Boom Bass',
-          upDown: '-',
-        },
-      ],
-    },
-  ];
+  // const currentRankList = [
+  //   {
+  //     site: 'MELON',
+  //     musicList: [
+  //       {
+  //         rank: 1,
+  //         tit: 'Boom Boom Bass',
+  //         upDown: '-',
+  //       },
+  //     ],
+  //   },
+  // ];
   return (
     <>
       <div className="inner">
@@ -67,6 +65,30 @@ function CurrentRank() {
                     </div>
                   </div>
                 </li>
+                <li className={clsx('rank-list', 'melon')}>
+                  <div className="cate">MELON</div>
+                  <div className="rank-box">
+                    <p className="tit">LOVE119</p>
+                    <div className="divide">
+                      <div className="rank">
+                        3<span>위</span>
+                      </div>
+                      <span className="rank-change down">1</span>
+                    </div>
+                  </div>
+                </li>
+                <li className={clsx('rank-list', 'melon')}>
+                  <div className="cate">MELON</div>
+                  <div className="rank-box">
+                    <p className="tit">LOVE119</p>
+                    <div className="divide">
+                      <div className="rank">
+                        3<span>위</span>
+                      </div>
+                      <span className="rank-change down">1</span>
+                    </div>
+                  </div>
+                </li>
               </ul>
             </div>
             <div className="rank-content">
@@ -97,7 +119,7 @@ function CurrentRank() {
                     </div>
                   </div>
                 </li>
-                <li className={clsx('rank-list', 'flos')}>
+                <li className={clsx('rank-list', 'flo')}>
                   <div className="cate">FLO</div>
                   <div className="rank-box">
                     <p className="tit">LOVE119</p>

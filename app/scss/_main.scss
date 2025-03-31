@@ -38,20 +38,9 @@
         .rank-content {
           flex-grow: 1;
           width: 320rem;
-        //  .rank-cate {
-        //     padding: 0 12rem;
-        //     height: 50rem;
-        //     font-size: 24rem;
-        //     font-weight: 700;
-        //     line-height: 50rem;
-        //     background: $black;
-        //     color: $white;
-        //   }
           .rank-wrap {
             display: flex;
             flex-direction: column;
-            height: 100%;
-            // height: calc(100% - 50rem);
           }
           .rank-list {
             padding: 18rem 12rem;
@@ -177,7 +166,7 @@
         // margin: 24rem 0 0;
         padding: 20rem;
         border: 1px solid $gray400;
-        border-radius: 12rem;
+        border-radius: 8rem;
         .list {
           & + .list {
             margin: 18rem 0 0;
