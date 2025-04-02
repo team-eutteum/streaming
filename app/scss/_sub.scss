@@ -1,0 +1,32 @@
+@use "mixin" as *;
+@use "variable" as *;
+
+.sub-container {
+  padding: 80rem 0;
+  .tit-area {
+    margin: 0 auto 18rem auto;
+    width: 1240rem;
+    text-align: center;
+  }
+  .box-tab-area {
+    margin: 100rem 0 0;
+  }
+  // .sc-down-guide {
+
+  // }
+  .tab-panel {
+    background: $black;
+    min-height: calc(100vh - 200rem);
+  }
+}
+
+@include tablet() {
+  .sub-container {
+    .tit-area {
+      width: calc(100% - 48rem);
+    }
+    .box-tab-area {
+      margin: 80rem 0 0;
+    }
+  }
+}

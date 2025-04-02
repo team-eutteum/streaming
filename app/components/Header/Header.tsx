@@ -1,13 +1,18 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import clsx from 'clsx';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 import AllMenu from './AllMenu';
 
 function Header() {
+  const pathName = usePathname();
   const [isMenuOpened, setIsMenuOpened] = useState(false);
+  useEffect(() => {
+    setIsMenuOpened(false);
+  }, [pathName]);
   return (
     <header className="header">
       <div className="inner">
@@ -24,7 +29,7 @@ function Header() {
             <Bars3CenterLeftIcon />
           </i> */}
         </button>
-        <AllMenu isMenuOpened={isMenuOpened} />
+        <AllMenu isMenuOpened={isMenuOpened} pathName={pathName} />
       </div>
     </header>
   );

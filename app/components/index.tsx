@@ -5,3 +5,7 @@ export { default as NavigationBar } from './Navigation/NavigationBar';
 export { default as NavigationDrawer } from './Navigation/NavigationDrawer';
 export { default as PageTitle } from './PageTitle/PageTitle';
 export { default as Container } from './Container/Container';
+export { default as Tab } from './Tab/Tab';
+export { default as Tabs } from './Tab/Tabs';
+export { default as TabPanels } from './Tab/TabPanels';
+export { default as TabPanel } from './Tab/TabPanel';

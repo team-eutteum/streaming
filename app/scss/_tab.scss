@@ -1,0 +1,67 @@
+@use "mixin" as *;
+@use "variable" as *;
+
+.box-tab-area {
+  .tabs {
+      display: flex;
+      justify-content: center;
+      gap: 24rem;
+    }
+  .tab-btn {
+    &.lg {
+      button {
+        padding: 16rem 28rem;
+        height: 46rem;
+        font-size: 18rem;
+      }
+    }
+    &.md {
+      button {
+        padding: 12rem 24rem;
+        height: 42rem;
+        font-size: 16rem;
+      }
+    }
+    &.sm {
+      button {
+        padding: 8rem 20rem;
+        height: 38rem;
+        font-size: 14rem;
+      }
+    }
+    &.dark {
+      background: $black;
+      color: $white;
+      &.active {
+        background: $riizeOrange;
+      }
+    }
+    button {
+      display: block;
+      width: 100%;
+      color: inherit;
+      font-weight: 500;
+      line-height: 1;
+    }
+  }
+}
+
+.tab-panels {
+  margin: 60rem 0 0;
+  width: 100%;
+  .tab-panel {
+    width: 100%;
+  }
+}
+
+@include mobile() {
+  .box-tab-area {
+    .tabs {
+      justify-content: flex-start;
+      padding: 8rem 24rem;
+      overflow-x: auto;
+
+    }
+  }
+
+}

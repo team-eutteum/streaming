@@ -1,6 +1,190 @@
 @use "mixin" as *;
 @use "variable" as *;
 
+main {
+  padding: 80rem 0;
+  section+section {
+    margin: 80rem 0 0;
+  }
+  .sc-rank {
+    .tit-area {
+      display: flex;
+      align-items: flex-end;
+    }
+    .rank-time {
+      display: block;
+      margin: 0 0 0 24rem;
+      color: $gray500;
+    }
+    .rank-container {
+      width: 100%;
+    }
+    .rank-swiper {
+      .scroll-area {
+        width: 1240rem;
+        margin: 0 auto;
+        // padding: 0 240rem 24rem 240rem;
+        @include grid(2, 48rem, 0);
+        overflow-x: scroll;
+      }
+      .rank-content {
+        flex-grow: 1;
+        width: 100%;
+        .rank-wrap {
+          display: flex;
+          flex-direction: column;
+        }
+        .rank-list {
+          padding: 28rem 18rem;
+          height: 100%;
+          border-bottom: 1px solid $gray400;
+          &:nth-child(1) {
+            border-top: 1px solid $gray400;
+          }
+          &.melon .cate {
+            color: $pointMelon;
+          }
+          &.genie .cate {
+            color: $pointGenie;
+          }
+          &.bugs .cate {
+            color: $pointBugs;
+          }
+          &.flo .cate {
+            color: $pointFlo;
+          }
+          &:has(.cate) .rank-box {
+            margin-top: 18rem;
+          }
+          .rank-box {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            // height: 100%;
+          }
+          .tit {
+            align-self: flex-start;
+            @include multiEllipsis(2);
+          }
+          .divide {
+            text-align: right;
+            .rank {
+              text-align: right;
+              // width: 54rem;
+              margin: 0 0 0 18rem;
+            }
+            .rank-change {
+              display: block;
+              margin: 12rem 0 0;
+            }
+          }
+          .rank-change {
+            font-size: 16rem;
+            &::before {
+              content: "-";
+              margin: 0 10rem 0;
+              font-size: 22rem;
+            }
+            &.up {
+              color: $pointRed;
+              &::before {
+                content: "▲";
+              }
+            }
+            &.down {
+              color: $pointBlue;
+              &::before {
+                content: "▼";
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .sc-oneclick {
+    .container {
+      width: 100%;
+      // margin: 24rem 0 0;
+      @include grid(4, 48rem, 24rem);
+      .box {
+        width: 100%;
+        border-radius: 20rem;
+        background: $gray100;
+        i {
+          display: block;
+          padding: 28rem;
+          margin: 0 auto;
+          width: 72rem;
+          height: 72rem;
+          text-align: center;
+        }
+      }
+      .txt {
+        margin: 18rem 0 0;
+        text-align: center;
+      }
+    }
+  }
+  .sc-todolist {
+    .todolist-wrap {
+      padding: 40rem;
+      border: 1px solid $gray400;
+      border-radius: 12rem;
+      .list {
+        &+.list {
+          margin: 28rem 0 0;
+        }
+      }
+    }
+    .input-wrap {
+      display: flex;
+      align-items: center;
+      position: relative;
+
+      input[type="checkbox"] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 30rem;
+        height: 30rem;
+        cursor: pointer;
+
+        &~.checkbox {
+          width: 30rem;
+          height: 30rem;
+          border-radius: 6rem;
+          border: 1px solid $gray900;
+        }
+
+        &~label {
+          position: relative;
+          &::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translate(0, -50%);
+            width: 0;
+            height: 4px;
+            background: $riizeOrange;
+            transition: width .3s ease-out;
+          }
+        }
+        &:checked~label {
+          &::after {
+            width: 100%;
+          }
+        }
+      }
+      label {
+        margin: 0 0 0 12rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
 @include tablet() {
   main {
     padding: 40rem 0;
@@ -8,9 +192,6 @@
       margin: 40rem 0 0;
     }
     .sc-rank {
-      .inner {
-        padding: 0 24rem 0 24rem;
-      }
       .tit-area {
         display: flex;
         align-items: flex-end;
@@ -19,14 +200,11 @@
       .rank-time {
         display: block;
         margin: 6rem 0 0;
-        font-size: 16rem;
         color: $gray500;
         font-weight: 300;
       }
       .rank-container {
         width: 100%;
-        // padding: 0 0 0 24rem;
-        // margin: 24rem 0 0;
       }
       .rank-swiper {
         .scroll-area {
@@ -45,26 +223,6 @@
           .rank-list {
             padding: 18rem 12rem;
             height: 100%;
-            border-bottom: 1px solid $gray400;
-            &:nth-child(1) {
-              border-top: 1px solid $gray400;
-            }
-            &.melon .cate {
-              color: $pointMelon;
-            }
-            &.genie .cate {
-              color: $pointGenie;
-            }
-            &.bugs .cate {
-              color: $pointBugs;
-            }
-            &.flo .cate {
-              color: $pointFlo;
-            }
-            .cate {
-              font-size: 16rem;
-              font-weight: 700;
-            }
             &:has(.cate) .rank-box {
               margin-top: 12rem;
             }
@@ -75,7 +233,6 @@
               // height: 100%;
             }
             .tit {
-              font-size: 18rem;
               align-self: flex-start;
               @include multiEllipsis(2);
             }
@@ -85,22 +242,14 @@
                 text-align: right;
                 width: 54rem;
                 font-size: 20rem;
-                font-weight: 700;
                 margin: 0 0 0 12rem;
-                span {
-                  font-size: 16rem;
-                  font-weight: 400;
-                }
               }
               .rank-change {
                 display: block;
                 margin: 8rem 0 0;
-                font-size: 16rem;
-                font-weight: 400;
               }
             }
             .rank-change {
-              font-size: 16rem;
               &::before {
                 content: "-";
                 margin: 0 6rem 0;
@@ -125,47 +274,27 @@
       }
     }
     .sc-oneclick {
-      .inner {
-        padding: 0 24rem;
-      }
-      .tit {
-        font-size: 24rem;
-        font-weight: 500;
-      }
       .container {
         // margin: 24rem 0 0;
+        width: 100%;
         @include grid(4, 24rem, 12rem);
         .box {
           width: 100%;
           border-radius: 20rem;
-          background: $gray100;
           i {
-            display: block;
             padding: 14rem;
-            margin: 0 auto;
             width: 36rem;
             height: 36rem;
-            text-align: center;
           }
         }
         .txt {
           margin: 12rem 0 0;
-          text-align: center;
         }
       }
     }
     .sc-todolist {
-      .inner {
-        padding: 0 24rem;
-      }
-      .tit {
-        font-size: 24rem;
-        font-weight: 500;
-      }
       .todolist-wrap {
-        // margin: 24rem 0 0;
         padding: 20rem;
-        border: 1px solid $gray400;
         border-radius: 8rem;
         .list {
           & + .list {
@@ -188,7 +317,6 @@
             width: 20rem;
             height: 20rem;
             border-radius: 6rem;
-            border: 1px solid $gray900;
           }
           & ~label {
             position: relative;
@@ -201,7 +329,6 @@
                 width: 0;
                 height: 2px;
                 background: $riizeOrange;
-                transition: width .3s ease-out;
               }
           }
           &:checked ~ label {
@@ -212,7 +339,6 @@
         }
         label {
           margin: 0 0 0 8rem;
-          font-size: 18rem;
           cursor: pointer;
         }
       }

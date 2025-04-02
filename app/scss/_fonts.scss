@@ -1,0 +1,53 @@
+@use "mixin" as *;
+@use "variable" as *;
+
+.f-pg-tit {
+  font-size: 64rem;
+  font-weight: 700;
+}
+.f-bd1 {
+  font-size: 30rem;
+  font-weight: 400;
+}
+.f-bd2 {
+  font-size: 28rem;
+  font-weight: 400;
+}
+.f-bd3 {
+  font-size: 24rem;
+  font-weight: 400;
+}
+.f-cp1 {
+  font-size: 18rem;
+  font-weight: 300;
+}
+.-b {
+  font-weight: bold;
+}
+.-m {
+  font-weight: 500;
+}
+.-r {
+  font-weight: 400;
+}
+.-l {
+  font-weight: 300;
+}
+
+@include tablet {
+  .f-pg-tit {
+    font-size: 24rem;
+  }
+  .f-bdy1 {
+    font-size: 20rem;
+  }
+  .f-bd2 {
+    font-size: 18rem;
+  }
+  .f-bd3 {
+    font-size: 16rem;
+  }
+  .f-cp1 {
+    font-size: 16rem;
+  }
+}

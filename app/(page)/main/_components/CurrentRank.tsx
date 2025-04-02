@@ -17,126 +17,114 @@ function CurrentRank() {
   //   },
   // ];
   return (
-    <>
+    <section className="sc-rank">
       <div className="inner">
         <div className="tit-area">
           <PageTitle label="현재 순위" />
-          <div className="rank-time">2025.03.27 18:00</div>
+          <div className="rank-time f-cp1">2025.03.27 18:00</div>
         </div>
       </div>
-      <div className="rank-container">
-        <div className="rank-swiper">
-          <div className="scroll-area">
-            <div className="rank-content">
-              <ul className="rank-wrap">
-                <li className={clsx('rank-list', 'melon')}>
-                  <div className="cate">MELON</div>
-                  <div className="rank-box">
-                    <p className="tit">Boom Boom Bass</p>
-                    <div className="divide">
-                      <div className="rank">
-                        1<span>위</span>
+      <div className="inner-wide">
+        <div className="rank-container">
+          <div className="rank-swiper">
+            <div className="scroll-area">
+              <div className="rank-content">
+                <ul className="rank-wrap">
+                  <li className={clsx('rank-list', 'melon')}>
+                    <div className="cate f-bd3 -b">MELON</div>
+                    <div className="rank-box">
+                      <p className="tit f-bd2">Boom Boom Bass</p>
+                      <div className="divide">
+                        <div className="rank f-bd1 -b">
+                          1<span className="f-bd3">위</span>
+                        </div>
+                        <span className="rank-change f-bd3" />
                       </div>
-                      <span className="rank-change" />
                     </div>
-                  </div>
-                </li>
-                <li className={clsx('rank-list', 'melon')}>
-                  <div className="cate">MELON</div>
-                  <div className="rank-box">
-                    <p className="tit">HUG</p>
-                    <div className="divide">
-                      <div className="rank">
-                        2<span>위</span>
+                  </li>
+                  <li className={clsx('rank-list', 'melon')}>
+                    <div className="cate f-bd3 -b">MELON</div>
+                    <div className="rank-box">
+                      <p className="tit f-bd2">Boom Boom Bass</p>
+                      <div className="divide">
+                        <div className="rank f-bd1 -b">
+                          1<span className="f-bd3">위</span>
+                        </div>
+                        <span className="rank-change f-bd3" />
                       </div>
-                      <span className="rank-change up">1</span>
                     </div>
-                  </div>
-                </li>
-                <li className={clsx('rank-list', 'melon')}>
-                  <div className="cate">MELON</div>
-                  <div className="rank-box">
-                    <p className="tit">LOVE119</p>
-                    <div className="divide">
-                      <div className="rank">
-                        3<span>위</span>
+                  </li>
+                  <li className={clsx('rank-list', 'melon')}>
+                    <div className="cate f-bd3 -b">MELON</div>
+                    <div className="rank-box">
+                      <p className="tit f-bd2">Boom Boom Bass</p>
+                      <div className="divide">
+                        <div className="rank f-bd1 -b">
+                          1<span className="f-bd3">위</span>
+                        </div>
+                        <span className="rank-change f-bd3" />
                       </div>
-                      <span className="rank-change down">1</span>
                     </div>
-                  </div>
-                </li>
-                <li className={clsx('rank-list', 'melon')}>
-                  <div className="cate">MELON</div>
-                  <div className="rank-box">
-                    <p className="tit">LOVE119</p>
-                    <div className="divide">
-                      <div className="rank">
-                        3<span>위</span>
+                  </li>
+                  <li className={clsx('rank-list', 'melon')}>
+                    <div className="cate f-bd3 -b">MELON</div>
+                    <div className="rank-box">
+                      <p className="tit f-bd2">Boom Boom Bass</p>
+                      <div className="divide">
+                        <div className="rank f-bd1 -b">
+                          1<span className="f-bd3">위</span>
+                        </div>
+                        <span className="rank-change f-bd3" />
                       </div>
-                      <span className="rank-change down">1</span>
                     </div>
-                  </div>
-                </li>
-                <li className={clsx('rank-list', 'melon')}>
-                  <div className="cate">MELON</div>
-                  <div className="rank-box">
-                    <p className="tit">LOVE119</p>
-                    <div className="divide">
-                      <div className="rank">
-                        3<span>위</span>
+                  </li>
+                </ul>
+              </div>
+              <div className="rank-content">
+                <ul className="rank-wrap">
+                  <li className={clsx('rank-list', 'genie')}>
+                    <div className="cate f-bd3 -b">GENIE</div>
+                    <div className="rank-box">
+                      <p className="tit f-bd2">Boom Boom Bass</p>
+                      <div className="divide">
+                        <div className="rank f-bd1 -b">
+                          1<span className="f-bd3">위</span>
+                        </div>
+                        <span className="rank-change f-bd3" />
                       </div>
-                      <span className="rank-change down">1</span>
                     </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div className="rank-content">
-              <ul className="rank-wrap">
-                <li className={clsx('rank-list', 'genie')}>
-                  <div className="cate">GENIE</div>
-                  <div className="rank-box">
-                    <p className="tit">Boom Boom Bass</p>
-                    <div className="divide">
-                      <div className="rank">
-                        1<span>위</span>
+                  </li>
+                  <li className={clsx('rank-list', 'bugs')}>
+                    <div className="cate f-bd3 -b">BUGS</div>
+                    <div className="rank-box">
+                      <p className="tit f-bd2">Boom Boom Bass</p>
+                      <div className="divide">
+                        <div className="rank f-bd1 -b">
+                          1<span className="f-bd3">위</span>
+                        </div>
+                        <span className="rank-change f-bd3" />
                       </div>
-                      <span className="rank-change" />
                     </div>
-                  </div>
-                </li>
-                <li className={clsx('rank-list', 'bugs')}>
-                  <div className="cate">BUGS</div>
-                  <div className="rank-box">
-                    <p className="tit">
-                      줄넘김 테스트줄넘김 테스트줄넘김 테스트줄넘김 테스트
-                    </p>
-                    <div className="divide">
-                      <div className="rank">
-                        2<span>위</span>
+                  </li>
+                  <li className={clsx('rank-list', 'flo')}>
+                    <div className="cate f-bd3 -b">FLO</div>
+                    <div className="rank-box">
+                      <p className="tit f-bd2">Boom Boom Bass</p>
+                      <div className="divide">
+                        <div className="rank f-bd1 -b">
+                          1<span className="f-bd3">위</span>
+                        </div>
+                        <span className="rank-change f-bd3" />
                       </div>
-                      <span className="rank-change up">1</span>
                     </div>
-                  </div>
-                </li>
-                <li className={clsx('rank-list', 'flo')}>
-                  <div className="cate">FLO</div>
-                  <div className="rank-box">
-                    <p className="tit">LOVE119</p>
-                    <div className="divide">
-                      <div className="rank">
-                        3<span>위</span>
-                      </div>
-                      <span className="rank-change down">1</span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+                  </li>{' '}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </>
+    </section>
   );
 }
 

@@ -48,28 +48,32 @@ function TodoList() {
   if (!todoList) return null;
 
   return (
-    <div className="inner">
-      <div className="tit-area">
-        <PageTitle label={'브리즈가 할 일'} />
+    <section className="sc-todolist">
+      <div className="inner">
+        <div className="tit-area">
+          <PageTitle label={'브리즈가 할 일'} />
+        </div>
+        <ul className="todolist-wrap">
+          {todoList.map((list) => (
+            <li className="list" key={list.id}>
+              <div className="input-wrap">
+                <input
+                  type="checkbox"
+                  name={list.id}
+                  id={list.id}
+                  checked={list.checked}
+                  onChange={() => toggleChecked(list.id)}
+                />
+                <div className="checkbox">{list.checked && <CheckIcon />}</div>
+                <label className="f-bd2" htmlFor={list.id}>
+                  {list.cntn}
+                </label>
+              </div>
+            </li>
+          ))}
+        </ul>
       </div>
-      <ul className="todolist-wrap">
-        {todoList.map((list) => (
-          <li className="list" key={list.id}>
-            <div className="input-wrap">
-              <input
-                type="checkbox"
-                name={list.id}
-                id={list.id}
-                checked={list.checked}
-                onChange={() => toggleChecked(list.id)}
-              />
-              <div className="checkbox">{list.checked && <CheckIcon />}</div>
-              <label htmlFor={list.id}>{list.cntn}</label>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </div>
+    </section>
   );
 }
 
