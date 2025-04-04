@@ -6,6 +6,7 @@
   top: $headerPcHeight;
   left: 0;
   background: $white;
+  z-index: 5;
   .tabs {
     display: flex;
     justify-content: center;
@@ -21,19 +22,19 @@
     color: $black;
     &.lg {
       button {
-        padding: 34rem 64rem;
+        padding: 24rem 64rem;
         font-size: 24rem;
       }
     }
     &.md {
       button {
-        padding: 30rem 60rem;
+        padding: 20rem 60rem;
         font-size: 18rem;
       }
     }
     &.sm {
       button {
-        padding: 26rem 56rem;
+        padding: 16rem 56rem;
         font-size: 16rem;
       }
     }
@@ -58,7 +59,7 @@
   }
 }
 .tab-panels {
-  margin: 120rem 0 0;
+  margin: 120rem 0;
   width: 100%;
   .tab-panel {
     display: none;
@@ -101,7 +102,7 @@
     }
   }
   .tab-panels {
-    margin: 60rem 0 0;
+    margin: 60rem 0;
   }
 }
 

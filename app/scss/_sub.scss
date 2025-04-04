@@ -2,10 +2,14 @@
 @use "variable" as *;
 
 .sub-container {
-  padding: 160rem 0;
+  padding: 160rem 0 0;
   .tit-area {
     margin: 0 auto 80rem auto;
-    // width: 1240rem;
+    .btn-share {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
   .box-tab-area {
     width: 100%;
@@ -35,7 +39,7 @@
 
 @include tablet() {
   .sub-container {
-    padding: 80rem 0;
+    padding: 80rem 0 0;
     .tit-area {
       margin: 0 auto 40rem auto;
     }

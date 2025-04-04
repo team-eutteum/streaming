@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Image from 'next/image';
 
 import { PageTitle, Tab, TabPanel, TabPanels, Tabs } from '@/components';
+import UrlShareButton from '@/components/Button/UrlShareButton';
 import NoData from '@/components/NoData/Nodata';
 
 import type { StaticImageData } from 'next/image';
@@ -33,6 +34,21 @@ function CommonGuideLayout({
   const handleActiveTabIdx = (idx: number) => {
     setActiveTabIdx(idx);
   };
+
+  const shareData = {
+    title: 'MDN',
+    text: 'Learn web development on MDN!',
+    url: 'https://developer.mozilla.org',
+  };
+
+  // 공유하기
+  const handlePageShare = async () => {
+    try {
+      await navigator.share(shareData);
+    } catch (err) {
+      console.log(err);
+    }
+  };
   return (
     <section className="sc-down-guide">
       <div className="tit-area">
@@ -42,6 +58,7 @@ function CommonGuideLayout({
             subTxt={`${label} 방법에 대해 알려드립니다`}
             updateDate={updateDate}
           />
+          <UrlShareButton />
         </div>
       </div>
       <Tabs hasScroll>
@@ -58,7 +75,7 @@ function CommonGuideLayout({
           </Tab>
         ))}
       </Tabs>
-      <div className="inner">
+      <div className="guide-inner">
         <TabPanels>
           {tabTitleContent?.map((tabItem, index) => (
             <TabPanel
