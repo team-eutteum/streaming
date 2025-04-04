@@ -16,12 +16,15 @@ function DetailList() {
     },
     {
       label: CONST.TITLE.GENIE,
+      image: MelonGuide,
     },
     {
       label: CONST.TITLE.BUGS,
+      image: MelonGuide,
     },
     {
       label: CONST.TITLE.FLO,
+      image: MelonGuide,
     },
   ];
 
@@ -33,7 +36,7 @@ function DetailList() {
   };
   return (
     <section className="sc-down-guide">
-      <Tabs>
+      <Tabs hasScroll>
         {tabs?.map((tab, index) => (
           <Tab
             key={`tabItem${index}`}
@@ -41,8 +44,7 @@ function DetailList() {
             onClick={() => handleActiveTabIdx(index)}
             selected={activeTabIdx}
             index={index}
-            color="dark"
-            size="lg"
+            size="md"
           >
             {tab.label}
           </Tab>

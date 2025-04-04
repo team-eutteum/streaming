@@ -2,37 +2,50 @@
 @use "variable" as *;
 
 .box-tab-area {
+  position: sticky;
+  top: 80rem;
+  left: 0;
+  background: $white;
   .tabs {
-      display: flex;
-      // justify-content: center;
-      gap: 24rem;
-    }
+    display: flex;
+    justify-content: center;
+  }
+  .tabs-wrap {
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid $gray100;
+    border-bottom: 1px solid $gray100;
+  }
   .tab-btn {
+    position: relative;
+    color: $black;
     &.lg {
       button {
-        padding: 16rem 28rem;
-        height: 46rem;
-        font-size: 18rem;
+        padding: 24rem 32rem;
+        font-size: 24rem;
       }
     }
     &.md {
       button {
-        padding: 12rem 24rem;
-        height: 42rem;
-        font-size: 16rem;
+        padding: 20rem 30rem;
+        font-size: 18rem;
       }
     }
     &.sm {
       button {
-        padding: 8rem 20rem;
-        height: 38rem;
-        font-size: 14rem;
+        padding: 18rem 26rem;
+        font-size: 16rem;
       }
     }
-    &.dark {
-      background: $riizePrimary;
-      color: $white;
-      &.active {
+    &.active {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 2px;
         background: $riizeSecondary;
       }
     }
@@ -41,15 +54,12 @@
       width: 100%;
       color: inherit;
       font-weight: 500;
-      line-height: 1;
     }
   }
 }
-
 .tab-panels {
   margin: 60rem 0 0;
   width: 100%;
-  // min-height: calc(100vh - 200rem);
   .tab-panel {
     display: none;
     width: 100%;
@@ -59,14 +69,43 @@
   }
 }
 
+@include tablet() {
+  .box-tab-area {
+    .tab-btn {
+      &.lg {
+        button {
+          padding: 20rem 28rem;
+          font-size: 16rem;
+        }
+      }
+      &.md {
+        button {
+          padding: 16rem 24rem;
+          font-size: 14rem;
+        }
+      }
+      &.sm {
+        button {
+          padding: 12rem 20rem;
+          font-size: 12rem;
+        }
+      }
+      button {
+        display: block;
+        width: 100%;
+        color: inherit;
+        font-weight: 500;
+        line-height: 1;
+      }
+    }
+  }
+}
+
 @include mobile() {
   .box-tab-area {
     .tabs {
       justify-content: flex-start;
-      padding: 0 24rem 8rem 24rem;
-      overflow-x: auto;
-
+      padding: 0 24rem 0 24rem;
     }
   }
-
 }

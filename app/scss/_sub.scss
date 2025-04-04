@@ -4,12 +4,11 @@
 .sub-container {
   padding: 80rem 0;
   .tit-area {
-    margin: 0 auto 18rem auto;
+    margin: 0 auto 40rem auto;
     // width: 1240rem;
   }
   .box-tab-area {
-    margin: 100rem auto 0;
-    width: 1040rem;
+    width: 100%;
   }
   .sc-down-guide {
     .img-wrap {
@@ -36,10 +35,6 @@
 
 @include tablet() {
   .sub-container {
-    .box-tab-area {
-      margin: 80rem auto 0;
-      width: calc(100% - 48rem);
-    }
     .sc-down-guide {
       .no-data {
         .img-wrap {
@@ -53,7 +48,7 @@
 @include mobile() {
   .sub-container {
       .box-tab-area {
-        margin: 80rem auto 0;
+        // margin: 80rem auto 0;
         width: 100%;
       }
     }
