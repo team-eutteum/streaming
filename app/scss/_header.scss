@@ -13,18 +13,18 @@
     display: flex;
     align-items: center;
     position: relative;
-    padding: 16rem 12rem;
-    width: 100%;
+    // padding: 16rem 12rem;
+    // width: 100%;
     height: 100%;
   }
     .logo {
       position: absolute;
       top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      left: 0;
+      transform: translate(0, -50%);
       font-size: 48rem;
       font-weight: 700;
-      line-height: 80rem;
+      line-height: $headerPcHeight;
       font-style: italic;
       color: #fff;
     }
@@ -37,9 +37,9 @@
   .header {
     width: 100%;
     height: $headerMoHeight;
-    .inner {
-      padding: 16rem 12rem;
-    }
+    // .inner {
+    //   padding: 16rem 12rem;
+    // }
     .logo {
       position: absolute;
       top: 50%;
@@ -47,7 +47,7 @@
       transform: translate(-50%, -50%);
       font-size: 40rem;
       font-weight: 700;
-      line-height: 80rem;
+      line-height: $headerMoHeight;
       font-style: italic;
       color: #fff;
     }
@@ -104,7 +104,7 @@
     }
     .menu-area {
       position: fixed;
-      top: 80rem;
+      top: $headerMoHeight;
       // left: -100%;
       left: 0;
       width: 100%;
