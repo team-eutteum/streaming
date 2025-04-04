@@ -2,9 +2,9 @@
 @use "variable" as *;
 
 .sub-container {
-  padding: 80rem 0;
+  padding: 160rem 0;
   .tit-area {
-    margin: 0 auto 40rem auto;
+    margin: 0 auto 80rem auto;
     // width: 1240rem;
   }
   .box-tab-area {
@@ -35,6 +35,10 @@
 
 @include tablet() {
   .sub-container {
+    padding: 80rem 0;
+    .tit-area {
+      margin: 0 auto 40rem auto;
+    }
     .sc-down-guide {
       .no-data {
         .img-wrap {

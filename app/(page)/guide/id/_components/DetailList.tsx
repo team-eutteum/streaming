@@ -27,10 +27,10 @@ function DetailList() {
 
   return (
     <CommonGuideLayout
-      uniqueId="musicDownload"
+      uniqueId="musicIdCreate"
       updateDate="2024.12.03"
       tabTitleContent={tabs}
-      label={CONST.TITLE.MUSIC_DOWNLOAD}
+      label={CONST.TITLE.MUSIC_ID_CREATE}
     />
   );
 }

@@ -23,6 +23,10 @@
   }
 }
 
+body:has(.header .btn-menu.active) {
+  overflow-y: hidden;
+}
+
 .scroll-x-active {
   // position: relative;
   overflow-x: auto;

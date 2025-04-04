@@ -1,20 +1,15 @@
-import { PageTitle } from '@/components';
-import { CONST } from '@/lib/constants';
-
 import DetailList from './_components/DetailList';
+
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'RIIZE STREAMING DOWNLOAD GUIDE',
+  description: '라이즈 음원총공팀 다운로드 가이드',
+};
 
 function DownloadPage() {
   return (
     <>
-      <div className="tit-area">
-        <div className="guide-inner">
-          <PageTitle
-            label={CONST.TITLE.MUSIC_DOWNLOAD}
-            subTxt="음원 다운로드 방법에 대해 알려드립니다"
-            updateDate="2025.04.02"
-          />
-        </div>
-      </div>
       <DetailList />
     </>
   );
