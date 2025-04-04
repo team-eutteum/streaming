@@ -2,6 +2,7 @@
 @use "variable" as *;
 @use "mixin" as *;
 @use "fonts" as *;
+@use "button" as *;
 @use "tab" as *;
 @use "header" as *;
 @use "footer" as *;
@@ -67,12 +68,14 @@ footer {
   }
 }
 .inner {
+  position: relative;
   margin: 0 auto;
   width: 1240rem;
 }
 .guide-inner {
+  position: relative;
   margin: 0 auto;
-  width: 1040rem;
+  width: 940rem;
 }
 .inner-wide {
   margin: 0 auto;

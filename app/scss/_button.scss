@@ -1,0 +1,14 @@
+@use "mixin" as *;
+@use "variable" as *;
+
+.btn-share {
+  width: 40rem;
+  height: 40rem;
+}
+
+@include tablet() {
+  .btn-share {
+    width: 24rem;
+    height: 24rem;
+  }
+}
