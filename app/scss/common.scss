@@ -60,6 +60,10 @@ footer {
   margin: 0 auto;
   width: 1240rem;
 }
+.guide-inner {
+  margin: 0 auto;
+  width: 1040rem;
+}
 .inner-wide {
   margin: 0 auto;
   width: 1240rem;
@@ -71,6 +75,12 @@ footer {
 .page-sub-txt {
   margin: 14rem 0 0;
   color: $gray600;
+}
+
+.update-date {
+  display: block;
+  margin: 8rem 0 0;
+  color: $gray500;
 }
 
 body header .btn-menu:has(.active) {
@@ -85,7 +95,11 @@ body header .btn-menu:has(.active) {
     margin: 0 auto;
     width: calc(100% - 48rem);
   }
-.tit-area {
+  .guide-inner {
+    margin: 0 auto;
+    width: calc(100% - 48rem);
+  }
+  .tit-area {
     margin: 0 0 18rem;
     // text-align: center;
   }
