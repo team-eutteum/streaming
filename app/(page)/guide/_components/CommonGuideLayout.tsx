@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import { PhotoIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 
 import { PageTitle, Tab, TabPanel, TabPanels, Tabs } from '@/components';
@@ -75,7 +76,7 @@ function CommonGuideLayout({
                   <Image src={tabItem.image} alt="" width={100} height={100} />
                 </div>
               ) : (
-                <NoData txt={'가이드 이미지 준비중입니다.'} />
+                <NoData Icon={PhotoIcon} txt={'가이드 이미지 준비중입니다.'} />
               )}
             </TabPanel>
           ))}

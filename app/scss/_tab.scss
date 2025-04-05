@@ -2,11 +2,23 @@
 @use "variable" as *;
 
 .box-tab-area {
-  position: sticky;
-  top: $headerPcHeight;
-  left: 0;
-  background: $white;
   z-index: 5;
+  &.sticky {
+    position: sticky;
+    top: $headerPcHeight;
+    left: 0;
+  }
+  &.box {
+    // background: $white;
+    // border-top: 1px solid $gray100;
+    // border-bottom: 1px solid $gray100;
+
+    .tab-btn {
+      &.active {
+
+      }
+    }
+  }
   .tabs {
     display: flex;
     justify-content: center;
@@ -14,8 +26,53 @@
   .tabs-wrap {
     display: flex;
     justify-content: center;
+  }
+  &:has(.tab-btn.outlined) {
+    background: $white;
     border-top: 1px solid $gray100;
     border-bottom: 1px solid $gray100;
+    .tab-btn {
+      &.active {
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 60%;
+          height: 2px;
+          background: $riizeSecondary;
+        }
+      }
+    }
+  }
+  &:has(.tab-btn.box) {
+    margin-bottom: 10rem;
+    .tabs-wrap {
+    }
+    .tab-btn {
+      border-top: 2px solid $gray100;
+      border-left: 2px solid $gray100;border-bottom: 2px solid $gray100;
+      overflow: visible;
+      &:first-child {
+        border-left: 2px solid $gray100;
+      }
+      &:last-child {
+        border-right: 2px solid $gray100;
+      }
+      // &.active {
+      //   &::after {
+      //     content: "";
+      //     position: absolute;
+      //     left: 0;
+      //     bottom: -2px;
+      //     width: 100%;
+      //     height: 10px;
+      //     background: $white;
+      //     z-index: 10;
+      //   }
+      // }
+    }
   }
   .tab-btn {
     position: relative;
@@ -36,18 +93,6 @@
       button {
         padding: 16rem 56rem;
         font-size: 16rem;
-      }
-    }
-    &.active {
-      &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 60%;
-        height: 2px;
-        background: $riizeSecondary;
       }
     }
     button {
@@ -72,7 +117,9 @@
 
 @include tablet() {
   .box-tab-area {
-    top: $headerMoHeight;
+    &.sticky {
+      top: $headerMoHeight;
+    }
     .tab-btn {
       &.lg {
         button {

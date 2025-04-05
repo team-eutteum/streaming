@@ -79,7 +79,7 @@ export const ID_GUIDE_CONTENT: CommonGuideProps[] = [
   },
   {
     label: TITLE.FLO,
-    image: IdMelonGuide,
+    // image: IdMelonGuide,
     updateDate: '2025.03.30',
   },
 ];

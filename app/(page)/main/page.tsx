@@ -1,11 +1,11 @@
-import CurrentRank from './_components/CurrentRank';
+import CurrentChart from './_components/CurrentChart';
 import OneClick from './_components/OneClick';
 import TodoList from './_components/TodoList';
 
 function MainPage() {
   return (
     <main>
-      <CurrentRank />
+      <CurrentChart />
       <OneClick />
       <TodoList />
     </main>

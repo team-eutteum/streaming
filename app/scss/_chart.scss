@@ -1,0 +1,154 @@
+@use "mixin" as *;
+@use "variable" as *;
+
+.chart-content {
+  flex-grow: 1;
+  width: 100%;
+  .chart-wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .chart-list {
+    padding: 18rem;
+    height: 100%;
+    border-bottom: 1px solid $gray400;
+    &:nth-child(1) {
+      border-top: 1px solid $gray400;
+    }
+    .cate {
+      text-transform: uppercase;
+    }
+    &.melon .cate {
+      color: $pointMelon;
+    }
+    &.genie .cate {
+      color: $pointGenie;
+    }
+    &.bugs .cate {
+      color: $pointBugs;
+    }
+    &.flo .cate {
+      color: $pointFlo;
+    }
+    &:has(.cate) .chart-box {
+      margin-top: 14rem;
+    }
+    .chart-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100%;
+      // height: 100%;
+    }
+    .img-wrap {
+      flex-shrink: 0;
+      width: 80rem;
+      height: 80rem;
+      // height: 80rem;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .tit {
+      margin: 0 0 0 24rem;
+      align-self: flex-start;
+      @include multiEllipsis(2);
+    }
+    .divide {
+      // display: flex;
+      // align-items: flex-end;
+      text-align: right;
+      .chart {
+        text-align: right;
+        // width: 54rem;
+        margin: 0 0 0 18rem;
+      }
+    }
+    .chart-change {
+      display: block;
+      margin: 8rem 0 0;
+      &::before {
+        content: "-";
+        margin: 0 6rem 0 10rem;
+        font-size: 16rem;
+      }
+      &.up {
+        color: $pointRed;
+        &::before {
+          content: "▲";
+        }
+      }
+      &.down {
+        color: $pointBlue;
+        &::before {
+          content: "▼";
+        }
+      }
+    }
+  }
+}
+
+@include tablet() {
+  body:has(main) .chart-content {
+    width: 320rem;
+  }
+  .chart-content {
+    flex-grow: 1;
+    width: 100%;
+    .chart-wrap {
+      display: flex;
+      flex-direction: column;
+    }
+    .chart-list {
+      padding: 12rem;
+      height: 100%;
+      &:has(.cate) .chart-box {
+        margin-top: 8rem;
+      }
+      .chart-box {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        // height: 100%;
+      }
+      .img-wrap {
+        width: 40rem;
+        height: 40rem;
+      }
+      .tit {
+        align-self: flex-start;
+        @include multiEllipsis(2);
+      }
+      .divide {
+        text-align: right;
+        .chart {
+          text-align: right;
+          // width: 54rem;
+          margin: 0 0 0 12rem;
+        }
+      }
+      .chart-change {
+        margin: 4rem 0 0;
+        &::before {
+          content: "-";
+          margin: 0 4rem 0 8rem;
+        }
+        &.up {
+          color: $pointRed;
+          &::before {
+            content: "▲";
+            font-size: 10rem;
+          }
+        }
+        &.down {
+          color: $pointBlue;
+          &::before {
+            content: "▼";
+            font-size: 10rem;
+          }
+        }
+      }
+    }
+  }
+}

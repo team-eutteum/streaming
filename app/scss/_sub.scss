@@ -4,7 +4,9 @@
 .sub-container {
   padding: 160rem 0 0;
   .tit-area {
+    position: relative;
     margin: 0 auto 80rem auto;
+    z-index: 6;
     .btn-share {
       position: absolute;
       top: 0;
@@ -22,16 +24,18 @@
         height: auto;
       }
     }
-    .no-data {
-      min-height: calc(100vh - 500rem);
-      text-align: center;
-      color: $gray500;
-      .img-wrap {
-        margin: 0 auto;
-        width: 240rem;
-        svg {
-          stroke-width: 0.6;
-        }
+  }
+  .no-data {
+    min-height: calc(100vh - 500rem);
+    text-align: center;
+    color: $gray500;
+
+    .img-wrap {
+      margin: 0 auto;
+      width: 240rem;
+
+      svg {
+        stroke-width: 0.6;
       }
     }
   }
@@ -43,11 +47,9 @@
     .tit-area {
       margin: 0 auto 40rem auto;
     }
-    .sc-down-guide {
-      .no-data {
-        .img-wrap {
-          width: 140rem;
-        }
+    .no-data {
+      .img-wrap {
+        width: 140rem;
       }
     }
   }

@@ -1,14 +1,15 @@
-import { PhotoIcon } from '@heroicons/react/24/outline';
+import type { FC, SVGProps } from 'react';
 
 interface NoDataProps {
+  Icon: FC<SVGProps<SVGSVGElement>>;
   txt: string;
 }
 
-function NoData({ txt }: NoDataProps) {
+function NoData({ Icon, txt }: NoDataProps) {
   return (
     <div className="no-data">
       <div className="img-wrap">
-        <PhotoIcon />
+        <Icon />
       </div>
       <p className="txt f-bd3">{txt}</p>
     </div>

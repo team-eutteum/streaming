@@ -5,10 +5,72 @@
   width: 40rem;
   height: 40rem;
 }
-
 @include tablet() {
   .btn-share {
     width: 24rem;
     height: 24rem;
+  }
+}
+
+.link-select-wrap {
+  width: 240rem;
+  height: 60rem;
+  background: $white;
+  border: 1px solid $gray900;
+  .txt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0 12rem;
+    text-align: left;
+    .icon {
+      width: 30rem;
+      height: 30rem;
+      color: $gray500;
+      transition: .3s ease-out;
+    }
+  }
+  &.active {
+    .txt {
+      .icon {
+        color: $gray800;
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .link-select {
+    width: 100%;
+    height: auto;
+    border: 1px solid $gray900;
+    border-top: none;
+    overflow: hidden;
+    background: $white;
+    a {
+      display: block;
+      width: 100%;
+      padding: 12rem;
+      // height: 30rem;
+      &:hover {
+        background: $riizeSecondary;
+        color: $white;
+      }
+    }
+  }
+}
+
+@include tablet() {
+  .link-select-wrap {
+    width: 180rem;
+    height: 40rem;
+    .txt {
+    .icon {
+        width: 20rem;
+        height: 20rem;
+        color: $gray500;
+        transition: .3s ease-out;
+      }
+    }
   }
 }

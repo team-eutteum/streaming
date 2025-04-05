@@ -4,11 +4,19 @@ import clsx from 'clsx';
 
 interface TabsProps {
   hasScroll?: boolean;
+  /**
+   * @default true
+   */
+  sticky?: boolean;
 }
 
-function Tabs({ children, hasScroll }: PropsWithChildren<TabsProps>) {
+function Tabs({
+  children,
+  hasScroll,
+  sticky = true,
+}: PropsWithChildren<TabsProps>) {
   return (
-    <div className="box-tab-area">
+    <div className={clsx(`box-tab-area`, sticky && 'sticky')}>
       <div className="tabs-wrap">
         <div className={clsx('tabs', hasScroll && 'scroll-x-active')}>
           {React.Children.toArray(children)?.map((child, index) =>
