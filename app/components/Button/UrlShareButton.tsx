@@ -1,4 +1,5 @@
 // import { ShareIcon } from '@heroicons/react/16/solid';
+import { useEffect } from 'react';
 import { ShareIcon } from '@heroicons/react/24/solid';
 import { usePathname } from 'next/navigation';
 
@@ -20,6 +21,17 @@ function UrlShareButton() {
       console.log(err);
     }
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      console.log(scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <button className="btn-share" type="button" onClick={handleUrlShare}>
