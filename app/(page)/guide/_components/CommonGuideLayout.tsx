@@ -35,20 +35,6 @@ function CommonGuideLayout({
     setActiveTabIdx(idx);
   };
 
-  const shareData = {
-    title: 'MDN',
-    text: 'Learn web development on MDN!',
-    url: 'https://developer.mozilla.org',
-  };
-
-  // 공유하기
-  const handlePageShare = async () => {
-    try {
-      await navigator.share(shareData);
-    } catch (err) {
-      console.log(err);
-    }
-  };
   return (
     <section className="sc-down-guide">
       <div className="tit-area">
