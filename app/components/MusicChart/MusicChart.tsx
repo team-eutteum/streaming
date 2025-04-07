@@ -2,15 +2,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 
 import AlbumImg from '@/images/@album-ex.jpg';
-
-// 공통 props로 빼기
-interface MusicChartContentProps {
-  chartName?: string;
-  title: string;
-  rank: number;
-  upDowns?: string;
-  chartChange?: number;
-}
+import type { MusicChartContentProps } from '@/types/chart';
 
 function MusicChart({
   chartName,

@@ -12,24 +12,78 @@
   .inner {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     position: relative;
     // padding: 16rem 12rem;
     // width: 100%;
     height: 100%;
   }
-    .logo {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translate(0, -50%);
-      font-size: 48rem;
-      font-weight: 700;
-      line-height: $headerPcHeight;
-      font-style: italic;
-      color: #fff;
-    }
+  .logo {
+    // position: absolute;
+    // top: 50%;
+    // left: 0;
+    // transform: translate(0, -50%);
+    font-size: 48rem;
+    font-weight: 700;
+    line-height: $headerPcHeight;
+    font-style: italic;
+    color: #fff;
+  }
   .btn-menu {
     display: none;
+  }
+  .all-menu {
+    display: none;
+  }
+  .pc-menu {
+    display: flex;
+    align-items: center;
+    gap: 0 60rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    .one-depth {
+      // position: relative;
+      .one-link {
+        display: flex;
+        align-items: center;
+        height: $headerPcHeight;
+        color: $white;
+        &:hover {
+          color: $riizeSecondary;
+        }
+      }
+      .one-list {
+        position: absolute;
+        top: calc($headerPcHeight - 2rem);
+        left: 50%;
+        width: 100vw;
+        height: 0;
+        transform: translateX(-50%);
+        // width: 100vw;
+        // background: #000;
+        overflow: hidden;
+        &.active {
+          height: auto;
+        }
+      }
+      .two-depth {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        background: #000;
+        border-top: 0.8px solid $white;
+        .two-link {
+          display: block;
+          padding: 24rem 20rem;
+          color: $white;
+          &:hover {
+            color: $riizeSecondary;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -102,7 +156,11 @@
       //   color: #fff;
       // }
     }
-    .menu-area {
+    .pc-menu {
+      display: none;
+    }
+    .all-menu {
+      display: block;
       position: fixed;
       top: $headerMoHeight;
       // left: -100%;
@@ -190,7 +248,7 @@
               width: 20rem;
               height: 4px;
               border-radius: 4px;
-              background: $black;
+              background: $riizePrimary;
               transition: background .3s ease-out;
             }
             &::after {
@@ -203,7 +261,7 @@
               width: 4px;
               height: 20rem;
               border-radius: 4px;
-              background: $black;
+              background: $riizePrimary;
               transition: transform .3s ease-out, background .3s ease-out;
             }
           }

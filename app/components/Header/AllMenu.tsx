@@ -8,6 +8,7 @@ import Link from 'next/link';
 import { NAV } from '@/lib/constants/nav.constant';
 interface AllMenuProps {
   isMenuOpened: boolean;
+  pathName: string;
 }
 function AllMenu({ isMenuOpened }: AllMenuProps) {
   const [twoDepthOpenedIdx, setTwoDepthOpenedIdx] = useState<number | null>(
@@ -28,7 +29,7 @@ function AllMenu({ isMenuOpened }: AllMenuProps) {
     <AnimatePresence>
       {isMenuOpened && (
         <motion.div
-          className="menu-area"
+          className="all-menu"
           initial={{ left: '-100%' }}
           animate={{ left: 0 }}
           exit={{ left: '-100%' }}

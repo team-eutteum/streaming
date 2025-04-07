@@ -4,7 +4,7 @@ import type { PropsWithChildren } from 'react';
 import { useState } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
-import { motion } from 'motion/react';
+import { AnimatePresence, motion } from 'motion/react';
 
 interface LinkSelectsProps {
   label: string;
@@ -26,13 +26,18 @@ function LinkSelects({ children, label }: PropsWithChildren<LinkSelectsProps>) {
           </i>
         </span>
       </button>
-      <motion.div
-        className="link-select"
-        initial={{ height: 0 }}
-        animate={{ height: isOpened ? 'auto' : 0 }}
-      >
-        {children}
-      </motion.div>
+      <AnimatePresence>
+        {isOpened && (
+          <motion.div
+            className="link-select"
+            initial={{ height: 0 }}
+            animate={{ height: isOpened ? 'auto' : 0 }}
+            exit={{ height: 0 }}
+          >
+            {children}
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

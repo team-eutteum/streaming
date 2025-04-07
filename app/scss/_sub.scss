@@ -6,6 +6,11 @@
   .tit-area {
     position: relative;
     margin: 0 auto 80rem auto;
+    .link-select-wrap {
+        position: absolute;
+        top: 0;
+        right: 100rem;
+    }
     z-index: 6;
     .btn-share {
       position: absolute;
@@ -46,6 +51,7 @@
     padding: 80rem 0 0;
     .tit-area {
       margin: 0 auto 40rem auto;
+
     }
     .no-data {
       .img-wrap {
@@ -57,9 +63,15 @@
 
 @include mobile() {
   .sub-container {
-      .box-tab-area {
-        // margin: 80rem auto 0;
-        width: 100%;
+    .tit-area {
+      .link-select-wrap {
+        position: unset;
+        margin: 12rem 0 0;
       }
     }
+    .box-tab-area {
+      // margin: 80rem auto 0;
+      width: 100%;
+    }
+  }
 }

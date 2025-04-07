@@ -4,32 +4,11 @@ import { useState } from 'react';
 import { PhotoIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 
-import { PageTitle, Tab, TabPanel, TabPanels, Tabs } from '@/components';
-import UrlShareButton from '@/components/Button/UrlShareButton';
+import { Tab, TabPanel, TabPanels, Tabs } from '@/components';
 import NoData from '@/components/NoData/Nodata';
+import type { CommonGuideLayoutProps } from '@/types/guide';
 
-import type { StaticImageData } from 'next/image';
-
-interface TabContentProps {
-  label: string;
-  image?: StaticImageData;
-}
-
-interface CommonGuideLayoutProps {
-  label: string;
-  // subTxt: string;
-  updateDate: string;
-  tabTitleContent: Array<TabContentProps>;
-  uniqueId: string;
-}
-
-function CommonGuideLayout({
-  label,
-  // subTxt,
-  updateDate,
-  tabTitleContent,
-  uniqueId,
-}: CommonGuideLayoutProps) {
+function CommonGuideLayout({ tabContent, uniqueId }: CommonGuideLayoutProps) {
   const [activeTabIdx, setActiveTabIdx] = useState(0);
 
   const handleActiveTabIdx = (idx: number) => {
@@ -38,18 +17,8 @@ function CommonGuideLayout({
 
   return (
     <section className="sc-down-guide">
-      <div className="tit-area">
-        <div className="inner">
-          <PageTitle
-            label={label}
-            subTxt={`${label} 방법에 대해 알려드립니다`}
-            updateDate={updateDate}
-          />
-          <UrlShareButton />
-        </div>
-      </div>
       <Tabs hasScroll>
-        {tabTitleContent?.map((tab, index) => (
+        {tabContent?.map((tab, index) => (
           <Tab
             key={`tabItem${index}`}
             uniqueId={uniqueId}
@@ -64,7 +33,7 @@ function CommonGuideLayout({
       </Tabs>
       <div className="guide-inner">
         <TabPanels>
-          {tabTitleContent?.map((tabItem, index) => (
+          {tabContent?.map((tabItem, index) => (
             <TabPanel
               key={`${uniqueId}-downloadGuide${index}`}
               index={index}

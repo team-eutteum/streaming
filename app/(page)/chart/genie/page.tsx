@@ -1,6 +1,6 @@
 import DetailList from './_components/DetailList';
 
-function MelonPage() {
+function GeniePage() {
   return (
     <>
       <DetailList />
@@ -8,4 +8,4 @@ function MelonPage() {
   );
 }
 
-export default MelonPage;
+export default GeniePage;

@@ -2,32 +2,38 @@
 @use "variable" as *;
 
 .f-pg-tit {
-  font-size: 64rem;
+  font-size: 60rem;
   font-weight: 700;
 }
 .f-bd1 {
   font-size: 30rem;
   font-weight: 400;
+  line-height: 1.2;
 }
 .f-bd2 {
   font-size: 28rem;
   font-weight: 400;
+  line-height: 1.2;
 }
 .f-bd3 {
   font-size: 24rem;
   font-weight: 400;
+  line-height: 1.2;
 }
 .f-bd4 {
   font-size: 20rem;
   font-weight: 400;
+  line-height: 1.2;
 }
 .f-cp1 {
   font-size: 18rem;
   font-weight: 300;
+  line-height: 1.2;
 }
 .f-cp2 {
   font-size: 18rem;
   font-weight: 300;
+  line-height: 1.2;
 }
 .-b {
   font-weight: bold;
@@ -59,7 +65,7 @@
     font-size: 14rem;
   }
   .f-cp1 {
-    font-size: 16rem;
+    font-size: 14rem;
   }
   .f-cp2 {
     font-size: 14rem;

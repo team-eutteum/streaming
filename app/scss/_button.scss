@@ -44,7 +44,6 @@
     width: 100%;
     height: auto;
     border: 1px solid $gray900;
-    border-top: none;
     overflow: hidden;
     background: $white;
     a {
@@ -62,8 +61,8 @@
 
 @include tablet() {
   .link-select-wrap {
-    width: 180rem;
-    height: 40rem;
+    width: 140rem;
+    height: 36rem;
     .txt {
     .icon {
         width: 20rem;

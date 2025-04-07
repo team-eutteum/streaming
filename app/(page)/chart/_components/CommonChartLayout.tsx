@@ -7,29 +7,7 @@ import { Tab, TabPanel, TabPanels, Tabs } from '@/components';
 import MusicChart from '@/components/MusicChart/MusicChart';
 import MusicChartContainer from '@/components/MusicChart/MusicChartContainer';
 import NoData from '@/components/NoData/Nodata';
-
-import type { StaticImageData } from 'next/image';
-
-interface TabContentProps {
-  label: string;
-  chart: MusicChartContentProps[];
-}
-
-// 공통 props로 빼기
-interface MusicChartContentProps {
-  chartName: string;
-  title: string;
-  rank: number;
-  upDowns: string;
-  image?: StaticImageData;
-  chartChange?: number;
-}
-
-interface CommonChartLayoutProps {
-  label: string;
-  tabContent: TabContentProps[];
-  uniqueId: string;
-}
+import type { CommonChartLayoutProps } from '@/types/chart';
 
 function CommonChartLayout({ tabContent, uniqueId }: CommonChartLayoutProps) {
   const [activeTabIdx, setActiveTabIdx] = useState(0);
