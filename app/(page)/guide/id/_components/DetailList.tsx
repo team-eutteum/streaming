@@ -11,8 +11,7 @@ function DetailList() {
       <TitleArea label={CONST.TITLE.MUSIC_ID_CREATE} updateDate="2025.03.30" />
       <CommonGuideLayout
         uniqueId="idCreate"
-        updateDate="2024.12.03"
-        tabTitleContent={tabs}
+        tabContent={tabs}
         label={CONST.TITLE.MUSIC_ID_CREATE}
       />
     </>

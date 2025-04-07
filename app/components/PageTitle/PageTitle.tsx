@@ -1,14 +1,8 @@
-import type { ReactNode } from 'react';
 import clsx from 'clsx';
 
-interface PageTitleProps {
-  label: ReactNode;
-  subTxt?: ReactNode;
-  className?: string;
-  updateDate?: string;
-}
+import type { TitleAreaProps } from '@/types/commonTitle';
 
-function PageTitle({ label, subTxt, className, updateDate }: PageTitleProps) {
+function PageTitle({ label, subTxt, className, updateDate }: TitleAreaProps) {
   return (
     <>
       <h2 className={clsx('f-pg-tit', className)}>{label}</h2>
