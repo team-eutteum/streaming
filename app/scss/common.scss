@@ -25,6 +25,18 @@
   }
 }
 
+.pg-prelunch {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100dvh;
+  background: $black;
+  h1 {
+    color: $white;
+  }
+}
+
 body:has(.header .btn-menu.active) {
   overflow-y: hidden;
 }

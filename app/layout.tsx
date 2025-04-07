@@ -20,9 +20,9 @@ export default function RootLayout({
         {process.env.APP_ENV === 'development' ? (
           <>{children}</>
         ) : (
-          <div className="flex flex-col items-center justify-center gap-10 font-black text-white bg-black min-h-dvh text-5xl text-center md:text-7xl">
+          <div className="pg-prelunch">
             <h1>
-              <em className="max-md:block">RIIZE</em> 음원 총공팀
+              <em>RIIZE</em> 음원 총공팀
             </h1>
           </div>
         )}
