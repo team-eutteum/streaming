@@ -1,5 +1,3 @@
-// import { ShareIcon } from '@heroicons/react/16/solid';
-import { useEffect } from 'react';
 import { ShareIcon } from '@heroicons/react/24/solid';
 import { usePathname } from 'next/navigation';
 
