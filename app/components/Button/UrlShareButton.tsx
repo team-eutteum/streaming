@@ -22,17 +22,6 @@ function UrlShareButton() {
     }
   };
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      console.log(scrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
   return (
     <button className="btn-share" type="button" onClick={handleUrlShare}>
       <i>
