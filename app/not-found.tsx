@@ -8,9 +8,9 @@ function NotFound() {
   const router = useRouter();
 
   return (
-    <div className="flex flex-col justify-center items-center h-dvh">
-      <p className="text-2xl">요청하신 페이지를 찾을 수 없습니다.</p>
-      <div className="flex gap-10 justify-center items-center mt-20">
+    <div className="not-found">
+      <p>요청하신 페이지를 찾을 수 없습니다.</p>
+      <div className="btn-wrap">
         <Button href="/" size="lg">
           메인으로
         </Button>

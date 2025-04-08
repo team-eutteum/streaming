@@ -9,7 +9,6 @@
 - next 15
 - react 19
 - typescript 5
-- tailwindcss 4
 
 ## Build Scripts
 

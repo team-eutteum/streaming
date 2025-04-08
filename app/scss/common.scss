@@ -48,10 +48,10 @@ body:has(.header .btn-menu.active) {
     width: 0;
     height: 0;
   }
-}   
+}
 .nav-bar {
   display: none;
-}    
+}
 footer {
   padding: 16rem 0;
   background: $gray100;
@@ -93,7 +93,27 @@ footer {
 body header .btn-menu:has(.active) {
   overflow-y: hidden;
 }
-    
+
+//not-found
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100dvh;
+  gap: 50rem;
+  text-align: center;
+  p {
+    font-size: 50rem;
+  }
+  .btn-wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+  }
+}
+
 @include tablet() {
   .nav-bar {
     display: flex;
@@ -137,5 +157,10 @@ body header .btn-menu:has(.active) {
   .page-tit {
     font-size: 24rem;
     font-weight: 700;
+  }
+  .not-found {
+    p {
+      font-size: 30rem;
+    }
   }
 }

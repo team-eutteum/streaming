@@ -1,6 +1,90 @@
 @use "mixin" as *;
 @use "variable" as *;
 
+.btn {
+  display: inline-flex;
+  align-items: center;
+  width: 100%;
+  min-width: fit-content;
+  vertical-align: middle;
+  cursor: pointer;
+  font-size: 18rem;
+  transition: all 0.3s ease-in-out;
+  &.primary {
+    background-color: $riizeSecondary;
+    border: 1px solid $riizeSecondary;
+    color: $white;
+    &:hover,&:active {
+      background-color: $riizeSecondaryLight;
+      border-color: $riizeSecondaryLight;
+    }
+    &.outlined {
+      background-color: $white;
+      border-color: $riizeSecondary;
+      color: $riizeSecondary;
+      &:hover,&:active {
+        border-color: $riizeSecondaryLight;
+      }
+    }
+  }
+  &.dark {
+    background-color: $dark;
+    border: 1px solid $dark;
+    color: $white;
+    &:hover,&:active {
+      background-color: $darkLight;
+      border-color: $darkLight;
+    }
+    &.outlined {
+      background-color: $white;
+      border-color: $dark;
+      color: $dark;
+      &:hover,&:active {
+        border-color: $darkLight;
+      }
+    }
+  }
+  &.align {
+    &-left {
+      justify-content: flex-start;
+    }
+    &-center {
+      justify-content: center;
+    }
+    &-right {
+      justify-content: flex-end;
+    }
+  }
+  &.rounded {
+    &-none {
+      border-radius: 0;
+    }
+    &-sm {
+      border-radius: 4px;
+    }
+    &-full {
+      border-radius: 100%;
+    }
+  }
+  &.size {
+    &-sm {
+      padding: 8px 16px;
+      font-size: 14rem;
+    }
+    &-md {
+      padding: 8px 16px;
+    }
+    &-lg {
+      padding: 12px 24px;
+    }
+  }
+  &.disabled {
+    opacity: 0.8;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
 .btn-share {
   width: 40rem;
   height: 40rem;
