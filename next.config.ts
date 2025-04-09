@@ -8,6 +8,18 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  webpack: (config, options) => {
+    if (options.dev) {
+      Object.defineProperty(config, 'devtool', {
+        get() {
+          return 'source-map';
+        },
+        set() {},
+      });
+    }
+
+    return config;
+  },
 };
 
 export default nextConfig;
