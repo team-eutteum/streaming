@@ -5,8 +5,15 @@ import IdMelonGuide from 'public/images/guide/id/melon.jpg';
 
 import * as TITLE from './title.constant';
 
+export const STREAMING_LIST_CONTENT: TabContentProps[] = [
+  {
+    label: TITLE.STREAMING_LIST,
+    image: IdMelonGuide,
+  },
+];
+
 // 이미지 수급 예정
-export const STREAMING_GUIDE_CONTENT: TabContentProps[] = [
+export const MUSIC_STREAMING_CONTENT: TabContentProps[] = [
   {
     label: TITLE.MELON,
     image: IdMelonGuide,
@@ -46,7 +53,7 @@ export const DOWNLOAD_GUIDE_CONTENT: TabContentProps[] = [
 ];
 
 // flo 이미지 수급 예정
-export const ID_GUIDE_CONTENT: TabContentProps[] = [
+export const MUSIC_ID_CREATE_GUIDE: TabContentProps[] = [
   {
     label: TITLE.MELON,
     image: IdMelonGuide,

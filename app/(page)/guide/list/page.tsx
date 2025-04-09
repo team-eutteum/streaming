@@ -1,11 +1,9 @@
-import { PageTitle } from '@/components';
-import { CONST } from '@/lib/constants';
+import DetailList from './_components/DetailList';
 
 function ListPage() {
   return (
     <>
-      <PageTitle label={CONST.TITLE.STREAMING_LIST} />
-      <div>ListPage</div>
+      <DetailList />
     </>
   );
 }

@@ -10,7 +10,7 @@ function TitleArea({ label, updateDate }: TitleAreaProps) {
       <div className="inner">
         <PageTitle
           label={label}
-          subTxt={`${label} 방법에 대해 알려드립니다`}
+          subTxt={`${label}에 대해 알려드립니다`}
           updateDate={updateDate}
         />
         <UrlShareButton />

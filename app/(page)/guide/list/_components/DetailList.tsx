@@ -1,22 +1,21 @@
-'use client';
 import { CONST } from '@/lib/constants';
 
 import CommonGuideLayout from '../../_components/CommonGuideLayout';
 import TitleArea from '../../_components/TitleArea';
 
 function DetailList() {
-  const tabs = CONST.GUIDE_CONTENT.MUSIC_STREAMING_CONTENT;
+  const tabs = CONST.GUIDE_CONTENT.STREAMING_LIST_CONTENT;
 
   return (
     <>
       <TitleArea
-        label={CONST.TITLE.MUSIC_STREAMING}
-        updateDate={CONST.UPDATE_DATE.MUSIC_STREAMING_UPDATE}
+        label={CONST.TITLE.STREAMING_LIST}
+        updateDate={CONST.UPDATE_DATE.STREAMING_LIST_UPDATE}
       />
       <CommonGuideLayout
-        uniqueId="musicStreaming"
+        uniqueId="streamingList"
         tabContent={tabs}
-        label={CONST.TITLE.MUSIC_STREAMING}
+        label={CONST.TITLE.STREAMING_LIST}
       />
     </>
   );

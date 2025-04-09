@@ -1,7 +1,7 @@
 import type { StaticImageData } from 'next/image';
 
 export interface TabContentProps {
-  label: string;
+  label?: string;
   image?: StaticImageData;
 }
 

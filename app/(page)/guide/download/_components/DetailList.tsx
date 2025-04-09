@@ -8,7 +8,10 @@ function DetailList() {
 
   return (
     <>
-      <TitleArea label={CONST.TITLE.MUSIC_DOWNLOAD} updateDate="2025.03.30" />
+      <TitleArea
+        label={CONST.TITLE.MUSIC_DOWNLOAD}
+        updateDate={CONST.UPDATE_DATE.MUSIC_DOWNLOAD_UPDATE}
+      />
       <CommonGuideLayout
         uniqueId="musicDownload"
         tabContent={tabs}

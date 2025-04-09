@@ -1,0 +1,19 @@
+/* Guide */
+export const STREAMING_LIST_UPDATE = '2025.03.30';
+export const MUSIC_STREAMING_UPDATE = '2025.03.30';
+export const MUSIC_DOWNLOAD_UPDATE = '2025.03.30';
+export const MUSIC_ID_CREATE_UPDATE = '2025.03.30';
+export const RADIO_APPLICATION_UPDATE = '2025.03.30';
+export const MUSIC_VIDEO_STREAMING_UPDATE = '2025.03.30';
+export const CHEERING_METHOD_UPDATE = '2025.03.30';
+
+/* Vote */
+export const COLLECT_UPDATE = '2025.03.30';
+export const MUSIC_BROADCAST_UPDATE = '2025.03.30';
+export const MELON_WEEKLY_POPULAR_UPDATE = '2025.03.30';
+
+/* Support */
+export const DONATION_UPDATE = '2025.03.30';
+export const ID_DONATION_UPDATE = '2025.03.30';
+export const HELPER_UPDATE = '2025.03.30';
+export const ALBUM_PURCHASE_UPDATE = '2025.03.30';

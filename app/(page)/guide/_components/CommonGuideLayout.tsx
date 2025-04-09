@@ -17,20 +17,22 @@ function CommonGuideLayout({ tabContent, uniqueId }: CommonGuideLayoutProps) {
 
   return (
     <section className="sc-down-guide">
-      <Tabs hasScroll>
-        {tabContent?.map((tab, index) => (
-          <Tab
-            key={`tabItem${index}`}
-            uniqueId={uniqueId}
-            onClick={() => handleActiveTabIdx(index)}
-            selected={activeTabIdx}
-            index={index}
-            size="lg"
-          >
-            {tab.label}
-          </Tab>
-        ))}
-      </Tabs>
+      {tabContent?.length > 1 && (
+        <Tabs hasScroll>
+          {tabContent?.map((tab, index) => (
+            <Tab
+              key={`tabItem${index}`}
+              uniqueId={uniqueId}
+              onClick={() => handleActiveTabIdx(index)}
+              selected={activeTabIdx}
+              index={index}
+              size="lg"
+            >
+              {tab.label}
+            </Tab>
+          ))}
+        </Tabs>
+      )}
       <div className="guide-inner">
         <TabPanels>
           {tabContent?.map((tabItem, index) => (
