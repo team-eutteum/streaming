@@ -48,8 +48,10 @@
       .one-link {
         display: flex;
         align-items: center;
+        padding: 0 8rem;
         height: $headerPcHeight;
         color: $white;
+        cursor: pointer;
         &:hover {
           color: $riizeSecondary;
         }
@@ -224,19 +226,14 @@
           display: flex;
           justify-content: space-between;
           align-items: center;
+          padding: 12rem 0;
           width: 100%;
           text-align: left;
           font-size: 24rem;
           font-weight: 700;
-          & > a {
-            padding: 12rem 0;
-            width: 100%;
-            transition: color .3s ease-out;
-          }
+          transition: color .3s ease-out;
           &:hover {
-            & > a {
-              color: $riizeSecondary;
-            }
+            color: $riizeSecondary;
             .open-two-depth {
               &::before, &:after {
                 background: $riizeSecondary;

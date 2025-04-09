@@ -46,16 +46,15 @@ function AllMenu({ isMenuOpened }: AllMenuProps) {
                   )}
                   key={`oneDepth${oneIndex}`}
                 >
-                  <div className="one-link">
-                    <Link href={oneDepth.path}>{oneDepth.title}</Link>
-                    <button
-                      className="open-two-depth"
-                      type="button"
-                      onClick={() => handleTwoDepthOpen(oneIndex)}
-                    >
+                  <button
+                    className="one-link"
+                    onClick={() => handleTwoDepthOpen(oneIndex)}
+                  >
+                    {oneDepth.title}
+                    <div className="open-two-depth">
                       <i />
-                    </button>
-                  </div>
+                    </div>
+                  </button>
                   <AnimatePresence>
                     {oneDepth?.children && twoDepthOpenedIdx === oneIndex && (
                       /* two-depth */
