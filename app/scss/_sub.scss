@@ -2,6 +2,7 @@
 @use "variable" as *;
 
 .sub-container {
+  flex: 1;
   padding: 160rem 0 0;
   .tit-area {
     position: relative;
@@ -15,7 +16,7 @@
     .btn-share {
       position: absolute;
       top: 0;
-      right: 0; 
+      right: 0;
     }
   }
   .box-tab-area {

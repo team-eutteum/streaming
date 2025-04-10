@@ -2,6 +2,7 @@
 @use "variable" as *;
 
 main {
+  flex: 1;
   padding: 80rem 0;
   section+section {
     margin: 80rem 0 0;

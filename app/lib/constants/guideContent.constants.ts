@@ -1,6 +1,6 @@
-import IdBugsGuide from '@/images/id_guide/img-id-guide-bugs.jpg';
-import IdGenieGuide from '@/images/id_guide/img-id-guide-genie.jpg';
-import IdMelonGuide from '@/images/id_guide/img-id-guide-melon.jpg';
+import IdBugsGuide from '@/images/guide/id/bugs.jpg';
+import IdGenieGuide from '@/images/guide/id/genie.jpg';
+import IdMelonGuide from '@/images/guide/id/melon.jpg';
 import type { TabContentProps } from '@/types/guide';
 
 import * as TITLE from './title.constant';
