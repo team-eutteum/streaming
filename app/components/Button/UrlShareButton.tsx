@@ -7,8 +7,6 @@ function UrlShareButton() {
   const link = `${pathname}`;
 
   const shareData = {
-    // title: 'RIIZE STREAMING',
-    // text: 'RIIZE STREAMING',
     url: link,
   };
 
@@ -21,7 +19,12 @@ function UrlShareButton() {
   };
 
   return (
-    <button className="btn-share" type="button" onClick={handleUrlShare}>
+    <button
+      className="btn-share"
+      type="button"
+      onClick={handleUrlShare}
+      aria-label="페이지 공유하기"
+    >
       <i>
         <ShareIcon />
       </i>
