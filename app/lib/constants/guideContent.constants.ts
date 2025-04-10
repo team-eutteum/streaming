@@ -71,7 +71,7 @@ export const MUSIC_DOWNLOAD_CONTENT: CommonContentProps = {
 export const MUSIC_ID_CREATE_GUIDE: CommonContentProps = {
   label: TITLE.MUSIC_ID_CREATE,
   updateDate: '2025.03.30',
-  uniqueId: 'idCreate',
+  uniqueId: 'musicIdCreate',
   content: [
     {
       label: TITLE.MELON,
