@@ -1,2 +1,42 @@
 @use "mixin" as *;
 @use "variable" as *;
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10rem;
+  padding: 20rem 0;
+  background: $gray100;
+  width: 100%;
+  .contact-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10rem;
+    a {
+      font-size: 18rem;
+      font-weight: 700;
+    }
+  }
+  .email{
+    font-size: 16rem;
+  }
+  .copyright {
+    text-align: center;
+    font-size: 16rem;
+    color: $gray700;
+  }
+}
+
+@include desktop(){
+  .footer {
+    padding: 26rem 0;
+    .contact-list {
+      gap: 20rem;
+      a {
+        font-size: 22rem;
+      }
+    }
+  }
+}

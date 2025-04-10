@@ -58,15 +58,7 @@ body:has(.header .btn-menu.active) {
 .nav-bar {
   display: none;
 }
-footer {
-  padding: 16rem 0;
-  background: $gray100;
-  width: 100%;
-  .copyright {
-    text-align: center;
-    font-size: 16rem;
-  }
-}
+
 .inner {
   position: relative;
   margin: 0 auto;
