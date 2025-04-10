@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import Image from 'next/image';
 
-import AlbumImg from '@/images/@album-ex.jpg';
 import type { MusicChartContentProps } from '@/types/chart';
+import AlbumImg from 'public/images/@album-ex.jpg';
 
 function MusicChart({
   chartName,

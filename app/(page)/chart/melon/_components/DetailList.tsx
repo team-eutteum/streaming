@@ -1,4 +1,5 @@
-import AlbumImg from '@/images/@album-ex.jpg';
+import AlbumImg from 'images/@album-ex.jpg';
+
 import type { TabContentProps } from '@/types/chart';
 
 import CommonChartLayout from '../../_components/CommonChartLayout';

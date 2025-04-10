@@ -3,7 +3,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 
 import { PageTitle } from '@/components';
-import AlbumImg from '@/images/@album-ex.jpg';
+import AlbumImg from 'public/images/@album-ex.jpg';
 
 function CurrentChart() {
   return (

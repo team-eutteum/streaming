@@ -19,15 +19,13 @@
     height: 100%;
   }
   .logo {
-    // position: absolute;
-    // top: 50%;
-    // left: 0;
-    // transform: translate(0, -50%);
-    font-size: 48rem;
-    font-weight: 700;
-    line-height: $headerPcHeight;
-    font-style: italic;
-    color: #fff;
+    display: block;
+    font-size: 0;
+    width: 100px;
+    aspect-ratio: 2 / 1;
+    background-image : url('/images/logo/logo.png');
+    background-size : cover;
+    background-position : center;
   }
   .btn-menu {
     display: none;
@@ -101,11 +99,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      font-size: 40rem;
-      font-weight: 700;
-      line-height: $headerMoHeight;
-      font-style: italic;
-      color: #fff;
+      width: 100rem;
     }
     .btn-menu {
       display: flex;
