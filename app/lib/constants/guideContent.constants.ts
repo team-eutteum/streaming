@@ -1,7 +1,15 @@
 import type { CommonContentProps } from '@/types/guide';
+/* id guide */
 import IdBugsGuide from 'public/images/guide/id/bugs.jpg';
 import IdGenieGuide from 'public/images/guide/id/genie.jpg';
 import IdMelonGuide from 'public/images/guide/id/melon.jpg';
+/* streaming list guide */
+import StreamingListGuide from 'public/images/guide/list/list.jpg';
+/* streaming guide */
+import StreamingBugsGuide from 'public/images/guide/streaming/bugs.jpg';
+import StreamingFloGuide from 'public/images/guide/streaming/flo.jpg';
+import StreamingGenieGuide from 'public/images/guide/streaming/genie.jpg';
+import StreamingMelonGuide from 'public/images/guide/streaming/melon.jpg';
 
 import * as TITLE from './title.constant';
 
@@ -12,7 +20,7 @@ export const STREAMING_LIST_CONTENT: CommonContentProps = {
   content: [
     {
       label: TITLE.STREAMING_LIST,
-      image: IdMelonGuide,
+      image: StreamingListGuide,
     },
   ],
 };
@@ -25,19 +33,19 @@ export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
   content: [
     {
       label: TITLE.MELON,
-      image: IdMelonGuide,
+      image: StreamingMelonGuide,
     },
     {
       label: TITLE.GENIE,
-      image: IdMelonGuide,
+      image: StreamingGenieGuide,
     },
     {
       label: TITLE.BUGS,
-      image: IdMelonGuide,
+      image: StreamingBugsGuide,
     },
     {
       label: TITLE.FLO,
-      image: IdMelonGuide,
+      image: StreamingFloGuide,
     },
   ],
 };
@@ -50,19 +58,19 @@ export const MUSIC_DOWNLOAD_CONTENT: CommonContentProps = {
   content: [
     {
       label: TITLE.MELON,
-      image: IdMelonGuide,
+      // image: IdMelonGuide,
     },
     {
       label: TITLE.GENIE,
-      image: IdGenieGuide,
+      // image: IdGenieGuide,
     },
     {
       label: TITLE.BUGS,
-      image: IdBugsGuide,
+      // image: IdBugsGuide,
     },
     {
       label: TITLE.FLO,
-      image: IdMelonGuide,
+      // image: IdMelonGuide,
     },
   ],
 };
