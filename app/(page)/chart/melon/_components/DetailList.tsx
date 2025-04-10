@@ -1,6 +1,5 @@
-import AlbumImg from 'images/@album-ex.jpg';
-
 import type { TabContentProps } from '@/types/chart';
+import AlbumImg from 'public/images/@album-ex.jpg';
 
 import CommonChartLayout from '../../_components/CommonChartLayout';
 import TitleArea from '../../_components/TitleArea';
