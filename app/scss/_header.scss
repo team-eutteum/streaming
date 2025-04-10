@@ -21,10 +21,11 @@
   .logo {
     a {
       display: block;
-      font-size: 0;
+      margin: 0 auto;
       width: 100px;
       aspect-ratio: 2 / 1;
       background-image : url('/images/logo/logo.png');
+      font-size: 0;
       background-size : cover;
       background-position : center;
     }
