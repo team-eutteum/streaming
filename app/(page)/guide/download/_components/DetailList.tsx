@@ -4,18 +4,14 @@ import CommonGuideLayout from '../../_components/CommonGuideLayout';
 import TitleArea from '../../_components/TitleArea';
 
 function DetailList() {
-  const tabs = CONST.GUIDE_CONTENT.DOWNLOAD_GUIDE_CONTENT;
+  const contents = CONST.GUIDE_CONTENT.MUSIC_DOWNLOAD_CONTENT;
 
   return (
     <>
-      <TitleArea
-        label={CONST.TITLE.MUSIC_DOWNLOAD}
-        updateDate={CONST.UPDATE_DATE.MUSIC_DOWNLOAD_UPDATE}
-      />
+      <TitleArea label={contents.label} updateDate={contents.updateDate} />
       <CommonGuideLayout
-        uniqueId="musicDownload"
-        tabContent={tabs}
-        label={CONST.TITLE.MUSIC_DOWNLOAD}
+        uniqueId={contents.uniqueId}
+        tabContent={contents.content}
       />
     </>
   );

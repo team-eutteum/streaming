@@ -6,7 +6,13 @@ export interface TabContentProps {
 }
 
 export interface CommonGuideLayoutProps {
-  label: string;
   tabContent: Array<TabContentProps>;
   uniqueId: string;
+}
+
+export interface CommonContentProps {
+  updateDate?: string;
+  uniqueId: string;
+  label: string;
+  content: Array<TabContentProps>;
 }
