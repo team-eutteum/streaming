@@ -12,12 +12,12 @@ import { CONST } from '@/lib/constants';
 const navbars = [
   { href: '/', icon: <HomeIcon />, label: '홈' },
   {
-    href: '/guide',
+    href: '/guide/streaming',
     icon: <BookmarkIcon />,
     label: CONST.TITLE.GUIDE,
   },
   {
-    href: '/chart',
+    href: '/chart/melon',
     icon: <PresentationChartBarIcon />,
     label: CONST.TITLE.CHART,
   },
@@ -27,7 +27,7 @@ const navbars = [
     label: '스밍',
   },
   {
-    href: '/vote',
+    href: '/vote/collect',
     icon: <CheckIcon />,
     label: CONST.TITLE.VOTE,
   },
