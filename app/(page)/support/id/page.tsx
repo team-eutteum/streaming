@@ -1,6 +1,6 @@
 import DetailList from './_components/DetailList';
 
-function CollectPage() {
+function IdDonationPage() {
   return (
     <>
       <DetailList />
@@ -8,4 +8,4 @@ function CollectPage() {
   );
 }
 
-export default CollectPage;
+export default IdDonationPage;

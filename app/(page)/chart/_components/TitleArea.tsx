@@ -18,7 +18,7 @@ function TitleArea({ label }: TitleAreaProps) {
   return (
     <div className="tit-area">
       <div className="inner">
-        <PageTitle label={label} subTxt={`${label} 차트 순위 입니다.`} />
+        <PageTitle label={label} subTxt={`${label} 순위 입니다.`} />
         <UrlShareButton />
         <LinkSelects label={currPath}>
           <LinkSelect href="/chart/melon" label="MELON" />

@@ -1,7 +1,7 @@
 import { Container } from '@/components';
 
-function GuideLayout({ children }: { children: React.ReactNode }) {
+function VoteLayout({ children }: { children: React.ReactNode }) {
   return <Container>{children}</Container>;
 }
 
-export default GuideLayout;
+export default VoteLayout;

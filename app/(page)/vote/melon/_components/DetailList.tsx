@@ -4,13 +4,14 @@ import CommonVoteLayout from '../../_components/CommonVoteLayout';
 import TitleArea from '../../_components/TitleArea';
 
 function DetailList() {
-  const contents = CONST.VOTE_CONTENT.COLLECT_CONTENT;
+  const contents = CONST.VOTE_CONTENT.MELON_CONTENT;
+
   return (
     <>
       <TitleArea label={contents.label} updateDate={contents.updateDate} />
       <CommonVoteLayout
-        tabContent={contents.content}
         uniqueId={contents.uniqueId}
+        tabContent={contents.content}
       />
     </>
   );
