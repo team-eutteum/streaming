@@ -8,9 +8,12 @@
     position: relative;
     margin: 0 auto 80rem auto;
     .link-select-wrap {
-        position: absolute;
-        top: 0;
-        right: 100rem;
+      position: absolute;
+      top: 0;
+      right: 100rem;
+      & > button {
+        text-transform: uppercase;
+      }
     }
     z-index: 6;
     .btn-share {
@@ -44,6 +47,9 @@
         stroke-width: 0.6;
       }
     }
+  }
+  .chart-time {
+    color: $gray500;
   }
 }
 

@@ -89,6 +89,10 @@
   }
 }
 
+body:not(:has(main)) .chart-content {
+  margin: 12rem 0 0;
+}
+
 @include tablet() {
   body:has(main) .chart-content {
     width: 320rem;

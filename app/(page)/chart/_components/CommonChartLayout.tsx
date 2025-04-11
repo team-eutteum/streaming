@@ -41,7 +41,7 @@ function CommonChartLayout({ tabContent, uniqueId }: CommonChartLayoutProps) {
               selected={activeTabIdx}
               uniqueId={uniqueId}
             >
-              <p className="f-bd4 txt">2025.03.22 16:00</p>
+              <p className="f-bd4 chart-time">2025.03.22 16:00</p>
               <MusicChartContainer>
                 {tabItem?.chart.length > 0 ? (
                   tabItem?.chart?.map((chartItem, chartIndex) => (
