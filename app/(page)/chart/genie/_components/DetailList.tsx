@@ -1,11 +1,12 @@
-import AlbumImg from 'public/images/@album-ex.jpg';
-
+import CommingSoon from '@/components/Etc/CommingSoon';
 import type { TabContentProps } from '@/types/chart';
+import AlbumImg from 'public/images/@album-ex.jpg';
 
 import CommonChartLayout from '../../_components/CommonChartLayout';
 import TitleArea from '../../_components/TitleArea';
 
 function DetailList() {
+  const commingSoon = true;
   const tabContent: TabContentProps[] = [
     {
       label: 'Top100',
@@ -141,11 +142,15 @@ function DetailList() {
   return (
     <>
       <TitleArea label="지니 차트" />
-      <CommonChartLayout
-        label="지니 차트"
-        uniqueId="melonChart"
-        tabContent={tabContent}
-      />
+      {!commingSoon ? (
+        <CommonChartLayout
+          label="지니 차트"
+          uniqueId="melonChart"
+          tabContent={tabContent}
+        />
+      ) : (
+        <CommingSoon />
+      )}
     </>
   );
 }

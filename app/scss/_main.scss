@@ -39,6 +39,7 @@ main {
         width: 100%;
         border-radius: 20rem;
         background: $gray100;
+        transition: background .3s ease-out;
         i {
           display: block;
           padding: 28rem;
@@ -46,6 +47,9 @@ main {
           width: 72rem;
           height: 72rem;
           text-align: center;
+        }
+        &:hover {
+          background: $gray50;
         }
       }
       .txt {
@@ -67,18 +71,21 @@ main {
     }
     .input-wrap {
       display: flex;
-      align-items: center;
+      flex-shrink: 0;
+      align-items: flex-start;
       position: relative;
 
       input[type="checkbox"] {
         position: absolute;
-        top: 0;
+        top: 2rem;
         left: 0;
         width: 30rem;
         height: 30rem;
         cursor: pointer;
 
         &~.checkbox {
+          flex-shrink: 0;
+          margin: 2rem 0 0;
           width: 30rem;
           height: 30rem;
           border-radius: 6rem;
@@ -87,19 +94,21 @@ main {
 
         &~label {
           position: relative;
-          &::after {
-            content: "";
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translate(0, -50%);
-            width: 0;
-            height: 4px;
-            background: $riizeSecondary;
-            transition: width .3s ease-out;
-          }
+          // &::after {
+          //   content: "";
+          //   position: absolute;
+          //   top: 50%;
+          //   left: 0;
+          //   transform: translate(0, -50%);
+          //   width: 0;
+          //   height: 4px;
+          //   background: $riizeSecondary;
+          //   transition: width .3s ease-out;
+          // }
         }
         &:checked~label {
+          text-decoration: line-through;
+          text-decoration-color: $riizeSecondary;
           &::after {
             width: 100%;
           }
@@ -174,7 +183,7 @@ main {
       }
       .input-wrap {
         display: flex;
-        align-items: center;
+        // align-items: center;
         position: relative;
         input[type="checkbox"] {
           position: absolute;
@@ -190,16 +199,16 @@ main {
           }
           & ~label {
             position: relative;
-            &::after {
-                content: "";
-                position: absolute;
-                top: 50%;
-                left: 0;
-                transform: translate(0, -50%);
-                width: 0;
-                height: 2px;
-                background: $riizeSecondary;
-              }
+            // &::after {
+            //     content: "";
+            //     position: absolute;
+            //     top: 50%;
+            //     left: 0;
+            //     transform: translate(0, -50%);
+            //     width: 0;
+            //     height: 2px;
+            //     background: $riizeSecondary;
+            //   }
           }
           &:checked ~ label {
             &::after {

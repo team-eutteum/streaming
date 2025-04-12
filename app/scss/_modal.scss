@@ -1,0 +1,74 @@
+@use "mixin" as *;
+@use "variable" as *;
+
+.modal-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  z-index: 20;
+  .modal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 80rem 40rem 40rem;
+    width: 500rem;
+    max-height: 50%;
+    border-radius: 20rem;
+    background: $white;
+    overflow: hidden;
+  }
+  .scroll-area {
+    flex: 1;
+    height: 100%;
+    min-height: 0;
+    overflow-y: auto;
+  }
+  .content {
+    .list-tit {
+      font-weight: 500;
+    }
+    .list-wrap {
+      ul.grid-1 {
+        margin: 24rem 0 0;
+        @include grid(1, 12rem, 12rem);
+      }
+      ul.grid-2 {
+        margin: 24rem 0 0;
+        @include grid(2, 12rem, 12rem);
+      }
+      & + .list-wrap {
+        margin: 24rem 0 0;
+      }
+    }
+  }
+  .btn-close {
+    position: absolute;
+    top: 40rem;
+    right: 40rem;
+    width: 40rem;
+    height: 40rem;
+  }
+}
+
+@include mobile() {
+  .modal-wrap {
+    .modal {
+      padding: 40rem 20rem 20rem;
+      width: calc(100% - 48rem);
+      border-radius: 12rem;
+    }
+    .btn-close {
+      top: 20rem;
+      right: 20rem;
+      width: 20rem;
+      height: 20rem;
+    }
+  }
+
+}

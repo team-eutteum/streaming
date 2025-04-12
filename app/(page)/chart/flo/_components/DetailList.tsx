@@ -1,11 +1,12 @@
-import AlbumImg from 'public/images/@album-ex.jpg';
-
+import CommingSoon from '@/components/Etc/CommingSoon';
 import type { TabContentProps } from '@/types/chart';
+import AlbumImg from 'public/images/@album-ex.jpg';
 
 import CommonChartLayout from '../../_components/CommonChartLayout';
 import TitleArea from '../../_components/TitleArea';
 
 function DetailList() {
+  const commingSonn = true;
   const tabContent: TabContentProps[] = [
     {
       label: 'Top100',
@@ -141,11 +142,15 @@ function DetailList() {
   return (
     <>
       <TitleArea label="Flo 차트" />
-      <CommonChartLayout
-        label="Flo 차트"
-        uniqueId="floChart"
-        tabContent={tabContent}
-      />
+      {!commingSonn ? (
+        <CommonChartLayout
+          label="Flo 차트"
+          uniqueId="floChart"
+          tabContent={tabContent}
+        />
+      ) : (
+        <CommingSoon />
+      )}
     </>
   );
 }

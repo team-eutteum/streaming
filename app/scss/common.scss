@@ -6,6 +6,7 @@
 @use "tab" as *;
 @use "header" as *;
 @use "footer" as *;
+@use "modal" as *;
 @use "chart" as *;
 @use "main" as *;
 @use "sub" as *;
@@ -44,6 +45,10 @@ body {
 }
 
 body:has(.header .btn-menu.active) {
+  overflow-y: hidden;
+}
+
+body:has(.modal-wrap) {
   overflow-y: hidden;
 }
 
@@ -109,6 +114,22 @@ body header .btn-menu:has(.active) {
     justify-content: center;
     align-items: center;
     gap: 10rem;
+  }
+}
+
+.comming-soon {
+  text-align: center;
+  .icon {
+    i {
+      display: block;
+      margin: 0 auto;
+      width: 40rem;
+      height: 40rem;
+      color: $pointRed;
+    }
+  }
+  .txt {
+    margin: 40rem 0 0;
   }
 }
 

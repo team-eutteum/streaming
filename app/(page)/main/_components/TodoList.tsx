@@ -4,21 +4,18 @@ import { useState, useEffect } from 'react';
 import { CheckIcon } from '@heroicons/react/24/outline';
 
 import { PageTitle } from '@/components';
+import { CONST } from '@/lib/constants';
 
-interface Todo {
+interface TodoListProps {
   id: string;
   cntn: string;
   checked: boolean;
 }
 
-const initialTodos: Todo[] = [
-  { id: 'todoList1', cntn: '스밍 돌리기', checked: false },
-  { id: 'todoList2', cntn: '음원 다운', checked: false },
-  { id: 'todoList3', cntn: '투표 하기', checked: false },
-];
+const initialTodos = CONST.TODOLIST_CONTENT.TODOLIST_CONTENT;
 
 function TodoList() {
-  const [todoList, setTodoList] = useState<Todo[] | null>(null);
+  const [todoList, setTodoList] = useState<TodoListProps[] | null>(null);
 
   useEffect(() => {
     const storedTodos = sessionStorage.getItem('todoList');

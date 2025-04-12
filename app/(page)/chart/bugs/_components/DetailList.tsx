@@ -1,9 +1,11 @@
+import CommingSoon from '@/components/Etc/CommingSoon';
 import type { TabContentProps } from '@/types/chart';
 
 import CommonChartLayout from '../../_components/CommonChartLayout';
 import TitleArea from '../../_components/TitleArea';
 
 function DetailList() {
+  const commingSoon = true;
   const tabContent: TabContentProps[] = [
     {
       label: 'Top100',
@@ -74,11 +76,15 @@ function DetailList() {
   return (
     <>
       <TitleArea label="벅스 차트" />
-      <CommonChartLayout
-        label="벅스 차트"
-        uniqueId="bugsChart"
-        tabContent={tabContent}
-      />
+      {!commingSoon ? (
+        <CommonChartLayout
+          label="벅스 차트"
+          uniqueId="bugsChart"
+          tabContent={tabContent}
+        />
+      ) : (
+        <CommingSoon />
+      )}
     </>
   );
 }
