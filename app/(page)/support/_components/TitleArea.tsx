@@ -1,10 +1,10 @@
 'use client';
 
-import { PageTitle } from '@/components';
+import { Button, PageTitle } from '@/components';
 import UrlShareButton from '@/components/Button/UrlShareButton';
 import type { TitleAreaProps } from '@/types/commonTitle';
 
-function TitleArea({ label, updateDate }: TitleAreaProps) {
+function TitleArea({ label, updateDate, link, linkTxt }: TitleAreaProps) {
   return (
     <div className="tit-area">
       <div className="inner">
@@ -14,6 +14,11 @@ function TitleArea({ label, updateDate }: TitleAreaProps) {
           updateDate={updateDate}
         />
         <UrlShareButton />
+        {link && (
+          <Button size="lg" href={link}>
+            {linkTxt}
+          </Button>
+        )}
       </div>
     </div>
   );

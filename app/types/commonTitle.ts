@@ -5,4 +5,6 @@ export interface TitleAreaProps {
   updateDate?: string;
   subTxt?: ReactNode;
   className?: string;
+  link?: string;
+  linkTxt?: string;
 }

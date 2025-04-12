@@ -51,6 +51,9 @@
   .chart-time {
     color: $gray500;
   }
+  .btn ~ .img-wrap {
+    margin-top: 20rem;
+  }
 }
 
 @include tablet() {

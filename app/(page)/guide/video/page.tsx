@@ -1,11 +1,9 @@
-import { PageTitle } from '@/components';
-import { CONST } from '@/lib/constants';
+import DetailList from './_components/DetailList';
 
 function VideoPage() {
   return (
     <>
-      <PageTitle label={CONST.TITLE.MUSIC_VIDEO_STREAMING} />
-      <div>VideoPage</div>
+      <DetailList />
     </>
   );
 }

@@ -12,23 +12,29 @@ interface TodoListProps {
   checked: boolean;
 }
 
-const initialTodos = CONST.TODOLIST_CONTENT.TODOLIST_CONTENT;
+const initialTodos = CONST.TODOLIST_CONTENT.TODOLIST_CONTENT.content;
+const CURRENT_VERSION = CONST.TODOLIST_CONTENT.TODOLIST_CONTENT.updateDate;
 
 function TodoList() {
   const [todoList, setTodoList] = useState<TodoListProps[] | null>(null);
 
   useEffect(() => {
     const storedTodos = sessionStorage.getItem('todoList');
-    if (storedTodos) {
+    const storedVersion = sessionStorage.getItem('todoListVersion');
+
+    if (storedTodos && storedVersion === CURRENT_VERSION) {
       setTodoList(JSON.parse(storedTodos));
     } else {
       setTodoList(initialTodos);
+      sessionStorage.setItem('todoList', JSON.stringify(initialTodos));
+      sessionStorage.setItem('todoListVersion', CURRENT_VERSION);
     }
   }, []);
 
   useEffect(() => {
     if (todoList) {
       sessionStorage.setItem('todoList', JSON.stringify(todoList));
+      sessionStorage.setItem('todoListVersion', CURRENT_VERSION);
     }
   }, [todoList]);
 
@@ -41,7 +47,6 @@ function TodoList() {
     );
   };
 
-  // 서버 렌더링 중엔 아무것도 렌더링하지 않음 (Hydration 오류 방지)
   if (!todoList) return null;
 
   return (

@@ -15,7 +15,7 @@ import * as TITLE from './title.constant';
 
 export const STREAMING_LIST_CONTENT: CommonContentProps = {
   label: TITLE.STREAMING_LIST,
-  updateDate: '2025.03.30',
+  updateDate: '2025.04.14',
   uniqueId: 'streamingList',
   content: [
     {
@@ -28,7 +28,7 @@ export const STREAMING_LIST_CONTENT: CommonContentProps = {
 // 이미지 수급 예정
 export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
   label: TITLE.MUSIC_STREAMING,
-  updateDate: '2025.03.30',
+  updateDate: '2025.04.14',
   uniqueId: 'musicStreaming',
   content: [
     {
@@ -53,7 +53,7 @@ export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
 // 이미지 수급 예정
 export const MUSIC_DOWNLOAD_CONTENT: CommonContentProps = {
   label: TITLE.MUSIC_DOWNLOAD,
-  updateDate: '2025.03.30',
+  updateDate: '2025.04.14',
   uniqueId: 'musicDownload',
   content: [
     {
@@ -78,7 +78,7 @@ export const MUSIC_DOWNLOAD_CONTENT: CommonContentProps = {
 // flo 이미지 수급 예정
 export const MUSIC_ID_CREATE_GUIDE: CommonContentProps = {
   label: TITLE.MUSIC_ID_CREATE,
-  updateDate: '2025.03.30',
+  updateDate: '2025.04.14',
   uniqueId: 'musicIdCreate',
   content: [
     {
@@ -96,6 +96,29 @@ export const MUSIC_ID_CREATE_GUIDE: CommonContentProps = {
     {
       label: TITLE.FLO,
       // image: IdMelonGuide,
+    },
+  ],
+};
+
+export const RADIO_APPLICATION_GUIDE: CommonContentProps = {
+  label: TITLE.RADIO_APPLICATION,
+  updateDate: '2025.04.14',
+  uniqueId: 'radioApplication',
+  content: [
+    {
+      label: TITLE.RADIO_APPLICATION,
+      // image: IdMelonGuide,
+    },
+  ],
+};
+
+export const MUSIC_VIDEO_STREAMING_GUIDE: CommonContentProps = {
+  label: TITLE.MUSIC_VIDEO_STREAMING,
+  updateDate: '2025.04.14',
+  uniqueId: 'musicVideoStreaming',
+  content: [
+    {
+      label: TITLE.MUSIC_VIDEO_STREAMING,
     },
   ],
 };
