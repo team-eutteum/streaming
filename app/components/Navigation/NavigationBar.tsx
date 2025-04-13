@@ -1,3 +1,5 @@
+'use client';
+
 import {
   HomeIcon,
   BookmarkIcon,
@@ -5,12 +7,13 @@ import {
   ListBulletIcon,
   CheckIcon,
 } from '@heroicons/react/24/outline';
+import clsx from 'clsx';
 import Link from 'next/link';
 
 import { CONST } from '@/lib/constants';
 
 const navbars = [
-  { href: '/', icon: <HomeIcon />, label: '홈' },
+  { href: '/main', icon: <HomeIcon />, label: '홈' },
   {
     href: '/guide/streaming',
     icon: <BookmarkIcon />,
@@ -38,7 +41,7 @@ function NavigationBar() {
     <nav className="nav-bar">
       {navbars.map((nav, index) => (
         <Link key={index} href={nav.href}>
-          <span className="nav-icon">{nav.icon}</span>
+          <span className={clsx('nav-icon')}>{nav.icon}</span>
           {nav.label}
         </Link>
       ))}

@@ -3,7 +3,6 @@ import { usePathname } from 'next/navigation';
 
 function UrlShareButton() {
   const pathname = usePathname();
-  console.log(pathname, 'path');
   const link = `${pathname}`;
 
   const shareData = {
