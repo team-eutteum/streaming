@@ -108,7 +108,13 @@ function Button({
 
   if (href) {
     return (
-      <Link href={href} className={commonClasses} onClick={() => onClick?.()}>
+      <Link
+        href={href}
+        className={commonClasses}
+        onClick={() => onClick?.()}
+        target="_blank"
+        rel="noreferrer"
+      >
         {children}
       </Link>
     );
