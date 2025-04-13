@@ -1,5 +1,6 @@
 import * as GUIDE_CONTENT from './guideContent.constants';
 import * as NAV from './nav.constant';
+import * as RIIZE_ALBUM from './riizeAlbum.constanst';
 import * as SUPPORT_CONTENT from './supportContent.constants';
 import * as TITLE from './title.constant';
 import * as TODOLIST_CONTENT from './todolistContent.constants';
@@ -12,4 +13,5 @@ export const CONST = {
   VOTE_CONTENT,
   SUPPORT_CONTENT,
   TODOLIST_CONTENT,
+  RIIZE_ALBUM,
 };

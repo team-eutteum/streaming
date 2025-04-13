@@ -1,4 +1,4 @@
-import type { CommonContentProps } from '@/types/guide';
+import type { CheeringMethodProps, CommonContentProps } from '@/types/guide';
 /* id guide */
 import IdBugsGuide from 'public/images/guide/id/bugs.jpg';
 import IdGenieGuide from 'public/images/guide/id/genie.jpg';
@@ -11,6 +11,7 @@ import StreamingFloGuide from 'public/images/guide/streaming/flo.jpg';
 import StreamingGenieGuide from 'public/images/guide/streaming/genie.jpg';
 import StreamingMelonGuide from 'public/images/guide/streaming/melon.jpg';
 
+import * as RIIZE_ALBUM from './riizeAlbum.constanst';
 import * as TITLE from './title.constant';
 
 export const STREAMING_LIST_CONTENT: CommonContentProps = {
@@ -25,7 +26,6 @@ export const STREAMING_LIST_CONTENT: CommonContentProps = {
   ],
 };
 
-// 이미지 수급 예정
 export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
   label: TITLE.MUSIC_STREAMING,
   updateDate: '2025.04.14',
@@ -120,5 +120,16 @@ export const MUSIC_VIDEO_STREAMING_GUIDE: CommonContentProps = {
     {
       label: TITLE.MUSIC_VIDEO_STREAMING,
     },
+  ],
+};
+
+export const CHEERING_METHOD_GUIDE: CheeringMethodProps = {
+  label: TITLE.CHEERING_METHOD,
+  updateDate: '2025.04.14',
+  uniqueId: 'musicVideoStreaming',
+  content: [
+    RIIZE_ALBUM.FIRST_MINI,
+    RIIZE_ALBUM.FIRST_SINGLE,
+    RIIZE_ALBUM.JP_FIRST_SINGLE,
   ],
 };

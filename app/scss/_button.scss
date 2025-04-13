@@ -97,6 +97,8 @@
 }
 
 .link-select-wrap {
+  position: relative;
+  z-index: 10;
   width: 240rem;
   height: 60rem;
   background: $white;
@@ -131,6 +133,14 @@
     border: 1px solid $gray900;
     overflow: hidden;
     background: $white;
+    .select {
+      padding: 12rem;
+      cursor: pointer;
+      &:hover {
+        background: $riizeSecondary;
+        color: $white;
+      }
+    }
     a {
       display: block;
       width: 100%;

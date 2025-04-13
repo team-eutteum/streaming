@@ -1,3 +1,4 @@
+// LinkSelects.tsx
 'use client';
 
 import type { PropsWithChildren } from 'react';
@@ -8,14 +9,33 @@ import { AnimatePresence, motion } from 'motion/react';
 
 interface LinkSelectsProps {
   label: string;
+  onSelect?: () => void;
 }
 
-function LinkSelects({ children, label }: PropsWithChildren<LinkSelectsProps>) {
+function LinkSelects({
+  children,
+  label,
+  onSelect,
+}: PropsWithChildren<LinkSelectsProps>) {
   const [isOpened, setIsOpened] = useState(false);
 
   const handleOpenedState = () => {
     setIsOpened(!isOpened);
   };
+
+  const handleSelectAndClose = (child: React.ReactNode) => {
+    return (
+      <div
+        onClick={() => {
+          onSelect?.();
+          setIsOpened(false);
+        }}
+      >
+        {child}
+      </div>
+    );
+  };
+
   return (
     <div className={clsx('link-select-wrap', isOpened && 'active')}>
       <button className="txt f-bd3" type="button" onClick={handleOpenedState}>
@@ -34,7 +54,11 @@ function LinkSelects({ children, label }: PropsWithChildren<LinkSelectsProps>) {
             animate={{ height: isOpened ? 'auto' : 0 }}
             exit={{ height: 0 }}
           >
-            {children}
+            {Array.isArray(children)
+              ? children.map((child, idx) => (
+                  <div key={idx}>{handleSelectAndClose(child)}</div>
+                ))
+              : handleSelectAndClose(children)}
           </motion.div>
         )}
       </AnimatePresence>

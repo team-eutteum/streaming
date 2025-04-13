@@ -19,3 +19,21 @@ export interface CommonContentProps {
   link?: string;
   content: Array<TabContentProps>;
 }
+
+export interface MusicContentProps {
+  title: string;
+  hasCheering: boolean;
+  image?: StaticImageData;
+}
+export interface AlbumContentProps {
+  value: string;
+  albumTitle: string;
+  music: Array<MusicContentProps>;
+}
+
+export interface CheeringMethodProps {
+  label: string;
+  updateDate: string;
+  uniqueId: string;
+  content: Array<AlbumContentProps>;
+}
