@@ -11,6 +11,8 @@ function DetailList() {
       <CommonSupportLayout
         uniqueId={contents.uniqueId}
         tabContent={contents.content}
+        link="http://pf.kakao.com/_LWmxfn"
+        linkTxt="헬퍼 신청 링크(음총팀 카카오채널)"
       />
     </>
   );

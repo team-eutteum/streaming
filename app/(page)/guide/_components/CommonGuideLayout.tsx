@@ -4,11 +4,16 @@ import { useState } from 'react';
 import { PhotoIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 
-import { Tab, TabPanel, TabPanels, Tabs } from '@/components';
+import { Button, Tab, TabPanel, TabPanels, Tabs } from '@/components';
 import NoData from '@/components/NoData/Nodata';
 import type { CommonGuideLayoutProps } from '@/types/guide';
 
-function CommonGuideLayout({ tabContent, uniqueId }: CommonGuideLayoutProps) {
+function CommonGuideLayout({
+  tabContent,
+  uniqueId,
+  link,
+  linkTxt,
+}: CommonGuideLayoutProps) {
   const [activeTabIdx, setActiveTabIdx] = useState(0);
 
   const handleActiveTabIdx = (idx: number) => {
@@ -52,6 +57,13 @@ function CommonGuideLayout({ tabContent, uniqueId }: CommonGuideLayoutProps) {
             </TabPanel>
           ))}
         </TabPanels>
+        {link && (
+          <div className="guide-btn-wrap">
+            <Button size="lg" href={link}>
+              {linkTxt}
+            </Button>
+          </div>
+        )}
       </div>
     </section>
   );

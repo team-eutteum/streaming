@@ -54,6 +54,9 @@
   .btn ~ .img-wrap {
     margin-top: 20rem;
   }
+  .guide-btn-wrap{
+    margin: 50rem 0 100rem;
+  }
 }
 
 @include tablet() {

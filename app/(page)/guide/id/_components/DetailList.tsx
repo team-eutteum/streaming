@@ -12,6 +12,8 @@ function DetailList() {
       <CommonGuideLayout
         uniqueId={contents.uniqueId}
         tabContent={contents.content}
+        link="https://forms.gle/1LtouTfW8wNsDu2v8"
+        linkTxt="아이디 기부폼"
       />
     </>
   );
