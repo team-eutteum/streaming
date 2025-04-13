@@ -100,7 +100,6 @@
   width: 240rem;
   height: 60rem;
   background: $white;
-  border: 1px solid $gray900;
   .txt {
     display: flex;
     justify-content: space-between;
@@ -109,6 +108,7 @@
     height: 100%;
     padding: 0 12rem;
     text-align: left;
+    border: 1px solid $gray900;
     .icon {
       width: 30rem;
       height: 30rem;
@@ -127,6 +127,7 @@
   .link-select {
     width: 100%;
     height: auto;
+    margin-top: -1px;
     border: 1px solid $gray900;
     overflow: hidden;
     background: $white;

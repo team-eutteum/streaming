@@ -118,13 +118,19 @@ body header .btn-menu:has(.active) {
 }
 
 .comming-soon {
+  min-height: 40dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   text-align: center;
+  gap: 10rem;
   .icon {
     i {
       display: block;
       margin: 0 auto;
-      width: 40rem;
-      height: 40rem;
+      width: 100rem;
+      height: 100rem;
       color: $pointRed;
     }
   }
@@ -180,6 +186,14 @@ body header .btn-menu:has(.active) {
   .not-found {
     p {
       font-size: 30rem;
+    }
+  }
+  .comming-soon{
+    .icon {
+      i {
+        width: 60rem;
+        height: 60rem;
+      }
     }
   }
 }
