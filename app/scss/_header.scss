@@ -230,6 +230,7 @@
           font-size: 24rem;
           font-weight: 700;
           transition: color .3s ease-out;
+          color: $riizePrimary;
           &:hover {
             color: $riizeSecondary;
             .open-two-depth {

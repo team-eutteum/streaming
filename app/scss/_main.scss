@@ -55,6 +55,7 @@ main {
       .txt {
         margin: 18rem 0 0;
         text-align: center;
+        color: $riizePrimary;
       }
     }
   }
@@ -94,6 +95,7 @@ main {
 
         &~label {
           position: relative;
+          color: $riizePrimary;
           // &::after {
           //   content: "";
           //   position: absolute;
