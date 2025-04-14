@@ -29,6 +29,7 @@
 body {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
   min-height: 100dvh;
 }
 
@@ -118,6 +119,7 @@ body header .btn-menu:has(.active) {
 }
 
 .comming-soon {
+  min-height: 40vh;
   min-height: 40dvh;
   display: flex;
   justify-content: center;
