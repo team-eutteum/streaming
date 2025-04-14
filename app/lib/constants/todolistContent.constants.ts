@@ -13,7 +13,7 @@ interface TodoListProps {
 
 export const TODOLIST_CONTENT: TodoListProps = {
   updateDate: '2025.04.14',
-  version: '2',
+  version: '3', // 수정될 때마다 버전 변경 해줘서 세션에서 변경 사항 감지
   content: [
     {
       id: 'todoList1',
@@ -38,6 +38,12 @@ export const TODOLIST_CONTENT: TodoListProps = {
       cntn: '음악방송 대비 재화 모으기',
       checked: false,
       url: '/vote/collect',
+    },
+    {
+      id: 'todoList5',
+      cntn: '음악중심 시청자위원회 67기 모집 신청 (4/14 12시 ~ 4/18 12시)',
+      checked: false,
+      url: 'https://program.imbc.com/apply/1000788100000100000?bid=1000788100000100000',
     },
   ],
 };
