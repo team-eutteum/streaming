@@ -150,6 +150,13 @@
     .tabs {
       justify-content: flex-start;
       padding: 0 24rem 0 24rem;
+      width: 100%;
+      .tab-btn {
+        flex: 1;
+        button {
+          padding: 20rem 0;
+        }
+      }
     }
   }
 }
