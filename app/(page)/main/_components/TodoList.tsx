@@ -10,10 +10,11 @@ interface TodoListProps {
   id: string;
   cntn: string;
   checked: boolean;
+  url?: string;
 }
 
 const initialTodos = CONST.TODOLIST_CONTENT.TODOLIST_CONTENT.content;
-const CURRENT_VERSION = CONST.TODOLIST_CONTENT.TODOLIST_CONTENT.updateDate;
+const CURRENT_VERSION = CONST.TODOLIST_CONTENT.TODOLIST_CONTENT.version;
 
 function TodoList() {
   const [todoList, setTodoList] = useState<TodoListProps[] | null>(null);
@@ -38,8 +39,9 @@ function TodoList() {
     }
   }, [todoList]);
 
-  const toggleChecked = (id: string) => {
+  const toggleChecked = (id: string, url?: string) => {
     if (!todoList) return;
+    window.open(url, '_blank');
     setTodoList((prevList) =>
       prevList!.map((item) =>
         item.id === id ? { ...item, checked: !item.checked } : item,
@@ -56,23 +58,29 @@ function TodoList() {
           <PageTitle label={'브리즈가 할 일'} />
         </div>
         <ul className="todolist-wrap">
-          {todoList.map((list) => (
-            <li className="list" key={list.id}>
-              <div className="input-wrap">
-                <input
-                  type="checkbox"
-                  name={list.id}
-                  id={list.id}
-                  checked={list.checked}
-                  onChange={() => toggleChecked(list.id)}
-                />
-                <div className="checkbox">{list.checked && <CheckIcon />}</div>
-                <label className="f-bd2" htmlFor={list.id}>
-                  {list.cntn}
-                </label>
-              </div>
-            </li>
-          ))}
+          {todoList.map((list) => {
+            console.log(list, 'list');
+
+            return (
+              <li className="list" key={list.id}>
+                <div className="input-wrap">
+                  <input
+                    type="checkbox"
+                    name={list.id}
+                    id={list.id}
+                    checked={list.checked}
+                    onChange={() => toggleChecked(list.id, list.url)}
+                  />
+                  <div className="checkbox">
+                    {list.checked && <CheckIcon />}
+                  </div>
+                  <label className="f-bd2" htmlFor={list.id}>
+                    {list.cntn}
+                  </label>
+                </div>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </section>
