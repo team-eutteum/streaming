@@ -15,17 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        {process.env.APP_ENV === 'development' ? (
-          <>{children}</>
-        ) : (
-          <div className="pg-prelunch">
-            <h1>
-              <em>RIIZE</em> 음원 총공팀
-            </h1>
-          </div>
-        )}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
