@@ -26,6 +26,7 @@ export const MELON = '멜론';
 export const GENIE = '지니';
 export const BUGS = '벅스';
 export const FLO = '플로';
+export const VIBE = '바이브';
 
 /* Support */
 export const SUPPORT = '지원';

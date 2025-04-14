@@ -10,6 +10,7 @@ import StreamingBugsGuide from 'public/images/guide/streaming/bugs.jpg';
 import StreamingFloGuide from 'public/images/guide/streaming/flo.jpg';
 import StreamingGenieGuide from 'public/images/guide/streaming/genie.jpg';
 import StreamingMelonGuide from 'public/images/guide/streaming/melon.jpg';
+import StreamingVibeGuide from 'public/images/guide/streaming/vibe.jpg';
 
 import * as RIIZE_ALBUM from './riizeAlbum.constanst';
 import * as TITLE from './title.constant';
@@ -46,6 +47,10 @@ export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
     {
       label: TITLE.FLO,
       image: StreamingFloGuide,
+    },
+    {
+      label: TITLE.VIBE,
+      image: StreamingVibeGuide,
     },
   ],
 };
@@ -92,10 +97,6 @@ export const MUSIC_ID_CREATE_GUIDE: CommonContentProps = {
     {
       label: TITLE.BUGS,
       image: IdBugsGuide,
-    },
-    {
-      label: TITLE.FLO,
-      // image: IdMelonGuide,
     },
   ],
 };
