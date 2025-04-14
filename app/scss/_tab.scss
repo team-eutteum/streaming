@@ -46,17 +46,17 @@
   &:has(.tab-btn.box) {
     margin-bottom: 10rem;
     .tab-btn {
-      border: 1px solid $riizeSecondaryLight;
-      background: $riizeSecondary;
+      border: 1px solid $riizeSecondary;
+      background: $white;
       border-radius: 40rem;
-      color: $white;
+      color: $riizeSecondary;
       transition: all 0.3s ease-in-out;
       &:hover {
-        background: $riizeSecondaryLight;
+        background: $riizeSecondary;
         color: $white;
       }
       &.active {
-        background: $riizeSecondaryLight;
+        background: $riizeSecondary;
         color: $white;
       }
     }

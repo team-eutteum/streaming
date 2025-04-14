@@ -1,11 +1,12 @@
-// LinkSelects.tsx
 'use client';
 
 import type { PropsWithChildren } from 'react';
-import { useState } from 'react';
+import { useRef, useState } from 'react';
 import { ChevronDownIcon } from '@heroicons/react/24/outline';
 import clsx from 'clsx';
 import { AnimatePresence, motion } from 'motion/react';
+
+import { useOutsideClick } from '@/hooks/useOutsideClick';
 
 interface LinkSelectsProps {
   label: string;
@@ -18,10 +19,15 @@ function LinkSelects({
   onSelect,
 }: PropsWithChildren<LinkSelectsProps>) {
   const [isOpened, setIsOpened] = useState(false);
+  const selectRef = useRef<HTMLDivElement>(null);
 
   const handleOpenedState = () => {
     setIsOpened(!isOpened);
   };
+
+  useOutsideClick(selectRef, () => {
+    if (isOpened) setIsOpened(false);
+  });
 
   const handleSelectAndClose = (child: React.ReactNode) => {
     return (
@@ -37,7 +43,10 @@ function LinkSelects({
   };
 
   return (
-    <div className={clsx('link-select-wrap', isOpened && 'active')}>
+    <div
+      className={clsx('link-select-wrap', isOpened && 'active')}
+      ref={selectRef}
+    >
       <button className="txt f-bd3" type="button" onClick={handleOpenedState}>
         <span>{label}</span>
         <span className="icon">
