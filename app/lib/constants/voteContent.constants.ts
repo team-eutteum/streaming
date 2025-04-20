@@ -1,5 +1,7 @@
 import type { CommonContentProps } from '@/types/guide';
 import voteGuide from 'public/images/vote/collect/collect.jpg';
+import musicDayGuide from 'public/images/vote/music/day.jpg';
+import musicFullGuide from 'public/images/vote/music/full.jpg';
 
 import * as TITLE from './title.constant';
 
@@ -21,8 +23,12 @@ export const BROADCAST_CONTENT: CommonContentProps = {
   uniqueId: 'voteCollectList',
   content: [
     {
-      label: TITLE.MUSIC_BROADCAST,
-      // image: voteGuide,
+      label: 'FULL',
+      image: musicFullGuide,
+    },
+    {
+      label: 'DAY',
+      image: musicDayGuide,
     },
   ],
 };
