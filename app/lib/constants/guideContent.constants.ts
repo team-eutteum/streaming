@@ -5,6 +5,9 @@ import IdGenieGuide from 'public/images/guide/id/genie.jpg';
 import IdMelonGuide from 'public/images/guide/id/melon.jpg';
 /* streaming list guide */
 import StreamingListGuide from 'public/images/guide/list/list.jpg';
+import RadioKBSGuide from 'public/images/guide/radio/kbs.jpg';
+import RadioMBCGuide from 'public/images/guide/radio/mbc.jpg';
+import RadioSBSGuide from 'public/images/guide/radio/sbs.jpg';
 /* streaming guide */
 import StreamingBugsGuide from 'public/images/guide/streaming/bugs.jpg';
 import StreamingFloGuide from 'public/images/guide/streaming/flo.jpg';
@@ -107,8 +110,16 @@ export const RADIO_APPLICATION_GUIDE: CommonContentProps = {
   uniqueId: 'radioApplication',
   content: [
     {
-      label: TITLE.RADIO_APPLICATION,
-      // image: IdMelonGuide,
+      label: 'SBS',
+      image: RadioSBSGuide,
+    },
+    {
+      label: 'KBS',
+      image: RadioKBSGuide,
+    },
+    {
+      label: 'MBC',
+      image: RadioMBCGuide,
     },
   ],
 };
