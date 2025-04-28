@@ -3,6 +3,7 @@ import album09Guide from 'public/images/support/album/09.jpeg';
 import albumALLMDGuide from 'public/images/support/album/ALLMD.jpeg';
 import albumAppleGuide from 'public/images/support/album/apple.jpeg';
 import albumKtown4uGuide from 'public/images/support/album/Ktown4u.jpeg';
+import albumSoundWaveGuide from 'public/images/support/album/soundwave.jpeg';
 import albumYes24Guide from 'public/images/support/album/yes24.jpeg';
 import dontationGuide from 'public/images/support/donation/donation.jpg';
 import helperGuide from 'public/images/support/helper/helper.jpg';
@@ -67,7 +68,7 @@ export const ALBUM_PURCHASE_CONTENT: CommonContentProps = {
       image: albumALLMDGuide,
       links: [
         {
-          link: 'https://m.allmd.com/product/list.html?cate_no=553',
+          link: 'https://buly.kr/A44FfrS',
           linkTxt: '올엠디 공구 바로가기',
         },
       ],
@@ -77,23 +78,23 @@ export const ALBUM_PURCHASE_CONTENT: CommonContentProps = {
       image: albumAppleGuide,
       links: [
         {
-          link: 'https://link.gmarket.co.kr/1HHSaI3leg',
+          link: 'https://abit.ly/smddn4',
           linkTxt: '애플뮤직 포토북 세트',
         },
         {
-          link: 'https://link.gmarket.co.kr/Rp3BEv2leg',
+          link: 'https://abit.ly/giftvt',
           linkTxt: '애플뮤직 포토북 랜덤',
         },
         {
-          link: 'https://link.gmarket.co.kr/ooi3941leg',
+          link: 'https://abit.ly/oys2ad',
           linkTxt: '애플뮤직 패키지 세트',
         },
         {
-          link: 'https://link.gmarket.co.kr/0d8qqY1leg',
+          link: 'https://abit.ly/76sznu',
           linkTxt: '애플뮤직 패키지 랜덤',
         },
         {
-          link: 'https://link.gmarket.co.kr/y45fOZ2leg',
+          link: 'https://abit.ly/d5wopt',
           linkTxt: '애플뮤직 스미니',
         },
       ],
@@ -119,6 +120,16 @@ export const ALBUM_PURCHASE_CONTENT: CommonContentProps = {
         {
           link: 'https://www.yes24.com/product/category/series/003?SeriesNumber=359260',
           linkTxt: '예스24 공구 바로가기',
+        },
+      ],
+    },
+    {
+      label: '사운드웨이브',
+      image: albumSoundWaveGuide,
+      links: [
+        {
+          link: 'https://bit.ly/3Gv6ftz',
+          linkTxt: '사운드웨이브 공구 바로가기',
         },
       ],
     },
