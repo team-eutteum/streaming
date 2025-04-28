@@ -151,6 +151,9 @@
       justify-content: flex-start;
       padding: 0 24rem 0 24rem;
       width: 100%;
+      &.wrap {
+        flex-wrap: wrap;
+      }
       .tab-btn.outlined {
 				flex: 0 0 auto;
 				min-width: 25%;

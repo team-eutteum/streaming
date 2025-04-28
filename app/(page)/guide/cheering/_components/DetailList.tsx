@@ -58,7 +58,7 @@ function DetailList() {
 
       <section className="sc-down-guide">
         {cheeringTracks.length > 0 && (
-          <Tabs>
+          <Tabs scrollable={false}>
             {cheeringTracks.map((track, index) => (
               <Tab
                 key={`track-tab-${track.title}`}
