@@ -1,10 +1,14 @@
 import type { StaticImageData } from 'next/image';
 
+export interface LinkProps {
+  link?: string;
+  linkTxt?: string;
+}
+
 export interface TabContentProps {
   label?: string;
   image?: StaticImageData;
-  link?: string;
-  linkTxt?: string;
+  links?: Array<LinkProps>;
 }
 
 export interface CommonGuideLayoutProps {

@@ -62,6 +62,9 @@
     margin-top: 20rem;
   }
   .guide-btn-wrap{
+		display: flex;
+		flex-direction: column;
+		gap: 10rem;
     margin: 50rem 0 100rem;
   }
 }

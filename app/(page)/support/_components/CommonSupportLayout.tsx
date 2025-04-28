@@ -8,12 +8,7 @@ import { Button, Tab, TabPanel, TabPanels, Tabs } from '@/components';
 import NoData from '@/components/NoData/Nodata';
 import type { CommonGuideLayoutProps } from '@/types/guide';
 
-function CommonSupportLayout({
-  tabContent,
-  uniqueId,
-  link,
-  linkTxt,
-}: CommonGuideLayoutProps) {
+function CommonSupportLayout({ tabContent, uniqueId, link, linkTxt }: CommonGuideLayoutProps) {
   const [activeTabIdx, setActiveTabIdx] = useState(0);
 
   const handleActiveTabIdx = (idx: number) => {
@@ -54,13 +49,13 @@ function CommonSupportLayout({
               ) : (
                 <NoData Icon={PhotoIcon} txt={'가이드 이미지 준비중입니다.'} />
               )}
-              {tabItem.link && (
-                <div className="guide-btn-wrap">
-                  <Button size="lg" href={tabItem.link}>
-                    {tabItem.linkTxt}
+              <div className="guide-btn-wrap">
+                {tabItem.links?.map((link, index) => (
+                  <Button size="lg" href={link.link} key={`${uniqueId}-downloadGuide${index}`}>
+                    {link.linkTxt}
                   </Button>
-                </div>
-              )}
+                ))}
+              </div>
             </TabPanel>
           ))}
         </TabPanels>

@@ -16,9 +16,9 @@
       gap: 12rem;
       padding: 8rem 12rem;
     }
-    &:not(:has(.scroll-x-active)) {
-      flex-wrap: wrap;
-    }
+    // &:not(:has(.scroll-x-active)) {
+    //   flex-wrap: wrap;
+    // }
   }
   .tabs-wrap {
     display: flex;
@@ -152,7 +152,8 @@
       padding: 0 24rem 0 24rem;
       width: 100%;
       .tab-btn.outlined {
-        flex: 1;
+				flex: 0 0 auto;
+				min-width: 25%;
         button {
           padding: 20rem 0;
         }
