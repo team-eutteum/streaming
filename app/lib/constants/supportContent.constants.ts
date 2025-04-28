@@ -1,10 +1,10 @@
 import type { CommonContentProps } from '@/types/guide';
-import album09Guide from 'public/images/support/album/09.jpeg';
-import albumALLMDGuide from 'public/images/support/album/ALLMD.jpeg';
-import albumAppleGuide from 'public/images/support/album/apple.jpeg';
-import albumKtown4uGuide from 'public/images/support/album/Ktown4u.jpeg';
-import albumSoundWaveGuide from 'public/images/support/album/soundwave.jpeg';
-import albumYes24Guide from 'public/images/support/album/yes24.jpeg';
+import album09Guide from 'public/images/support/album/09.jpg';
+import albumALLMDGuide from 'public/images/support/album/ALLMD.jpg';
+import albumAppleGuide from 'public/images/support/album/apple.jpg';
+import albumKtown4uGuide from 'public/images/support/album/Ktown4u.jpg';
+import albumSoundWaveGuide from 'public/images/support/album/soundwave.jpg';
+import albumYes24Guide from 'public/images/support/album/yes24.jpg';
 import dontationGuide from 'public/images/support/donation/donation.jpg';
 import helperGuide from 'public/images/support/helper/helper.jpg';
 import idDontationGuide from 'public/images/support/id/id.jpg';
