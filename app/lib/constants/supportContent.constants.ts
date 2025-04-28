@@ -1,4 +1,6 @@
 import type { CommonContentProps } from '@/types/guide';
+import albumALLMDGuide from 'public/images/support/album/ALLMD.jpeg';
+import albumKtown4uGuide from 'public/images/support/album/Ktown4u.jpeg';
 import dontationGuide from 'public/images/support/donation/donation.jpg';
 import helperGuide from 'public/images/support/helper/helper.jpg';
 import idDontationGuide from 'public/images/support/id/id.jpg';
@@ -44,12 +46,20 @@ export const HELPER_CONTENT: CommonContentProps = {
 
 export const ALBUM_PURCHASE_CONTENT: CommonContentProps = {
   label: TITLE.ALBUM_PURCHASE,
-  updateDate: '2025.04.14',
+  updateDate: '2025.04.28',
   uniqueId: 'albumPurchase',
   content: [
     {
-      label: TITLE.ALBUM_PURCHASE,
-      // image: helperGuide,
+      label: 'Ktown4u',
+      image: albumKtown4uGuide,
+      link: 'https://kr.ktown4u.com/eventinfo?eve_no=43259949&biz_no=967',
+      linkTxt: 'Ktown4u 공구 바로가기',
+    },
+    {
+      label: '올엠디',
+      image: albumALLMDGuide,
+      link: 'https://m.allmd.com/product/list.html?cate_no=553',
+      linkTxt: '올엠디 공구 바로가기',
     },
   ],
 };

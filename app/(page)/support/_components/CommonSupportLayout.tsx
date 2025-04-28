@@ -54,6 +54,13 @@ function CommonSupportLayout({
               ) : (
                 <NoData Icon={PhotoIcon} txt={'가이드 이미지 준비중입니다.'} />
               )}
+              {tabItem.link && (
+                <div className="guide-btn-wrap">
+                  <Button size="lg" href={tabItem.link}>
+                    {tabItem.linkTxt}
+                  </Button>
+                </div>
+              )}
             </TabPanel>
           ))}
         </TabPanels>
