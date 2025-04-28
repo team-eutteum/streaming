@@ -8,7 +8,12 @@ import { Button, Tab, TabPanel, TabPanels, Tabs } from '@/components';
 import NoData from '@/components/NoData/Nodata';
 import type { CommonGuideLayoutProps } from '@/types/guide';
 
-function CommonSupportLayout({ tabContent, uniqueId, link, linkTxt }: CommonGuideLayoutProps) {
+function CommonSupportLayout({
+  tabContent,
+  uniqueId,
+  link,
+  linkTxt,
+}: CommonGuideLayoutProps) {
   const [activeTabIdx, setActiveTabIdx] = useState(0);
 
   const handleActiveTabIdx = (idx: number) => {
@@ -51,7 +56,11 @@ function CommonSupportLayout({ tabContent, uniqueId, link, linkTxt }: CommonGuid
               )}
               <div className="guide-btn-wrap">
                 {tabItem.links?.map((link, index) => (
-                  <Button size="lg" href={link.link} key={`${uniqueId}-downloadGuide${index}`}>
+                  <Button
+                    size="lg"
+                    href={link.link}
+                    key={`${uniqueId}-downloadGuide${index}`}
+                  >
                     {link.linkTxt}
                   </Button>
                 ))}
