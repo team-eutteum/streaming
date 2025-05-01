@@ -12,7 +12,7 @@ export const COLLECT_CONTENT: CommonContentProps = {
   content: [
     {
       label: TITLE.VOTE,
-      image: voteGuide,
+      image: [voteGuide],
     },
   ],
 };
@@ -24,11 +24,11 @@ export const BROADCAST_CONTENT: CommonContentProps = {
   content: [
     {
       label: 'FULL',
-      image: musicFullGuide,
+      image: [musicFullGuide],
     },
     {
       label: 'DAY',
-      image: musicDayGuide,
+      image: [musicDayGuide],
     },
   ],
 };

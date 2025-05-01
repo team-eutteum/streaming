@@ -13,6 +13,8 @@ function DetailList() {
       <CommonGuideLayout
         uniqueId={contents.uniqueId}
         tabContent={contents.content}
+        link="https://youtu.be/78lNnCitcBM?si=ys6UH_wv3BTqf6L9"
+        linkTxt="Boo Boom Bass 뮤비 스밍 바로가기"
       />
     </>
   );

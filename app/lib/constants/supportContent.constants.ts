@@ -2,6 +2,8 @@ import type { CommonContentProps } from '@/types/guide';
 import album09Guide from 'public/images/support/album/09.jpg';
 import albumALLMDGuide from 'public/images/support/album/ALLMD.jpg';
 import albumAppleGuide from 'public/images/support/album/apple.jpg';
+import albumEverlineGuide from 'public/images/support/album/everline.jpg';
+import albumIttaGuide from 'public/images/support/album/ITTA.jpg';
 import albumKtown4uGuide from 'public/images/support/album/Ktown4u.jpg';
 import albumSoundWaveGuide from 'public/images/support/album/soundwave.jpg';
 import albumYes24Guide from 'public/images/support/album/yes24.jpg';
@@ -18,7 +20,7 @@ export const DONATION_CONTENT: CommonContentProps = {
   content: [
     {
       label: TITLE.DONATION,
-      image: dontationGuide,
+      image: [dontationGuide],
     },
   ],
 };
@@ -31,7 +33,7 @@ export const ID_DONATION_CONTENT: CommonContentProps = {
   content: [
     {
       label: TITLE.ID_DONATION,
-      image: idDontationGuide,
+      image: [idDontationGuide],
     },
   ],
 };
@@ -43,7 +45,7 @@ export const HELPER_CONTENT: CommonContentProps = {
   content: [
     {
       label: TITLE.HELPER,
-      image: helperGuide,
+      image: [helperGuide],
     },
   ],
 };
@@ -55,7 +57,7 @@ export const ALBUM_PURCHASE_CONTENT: CommonContentProps = {
   content: [
     {
       label: 'Ktown4u',
-      image: albumKtown4uGuide,
+      image: [albumKtown4uGuide],
       links: [
         {
           link: 'https://kr.ktown4u.com/eventinfo?eve_no=43259949&biz_no=967',
@@ -65,7 +67,7 @@ export const ALBUM_PURCHASE_CONTENT: CommonContentProps = {
     },
     {
       label: '올엠디',
-      image: albumALLMDGuide,
+      image: [albumALLMDGuide],
       links: [
         {
           link: 'https://buly.kr/A44FfrS',
@@ -75,7 +77,7 @@ export const ALBUM_PURCHASE_CONTENT: CommonContentProps = {
     },
     {
       label: '애플뮤직',
-      image: albumAppleGuide,
+      image: [albumAppleGuide],
       links: [
         {
           link: 'https://abit.ly/smddn4',
@@ -101,7 +103,7 @@ export const ALBUM_PURCHASE_CONTENT: CommonContentProps = {
     },
     {
       label: '09PLATFORM',
-      image: album09Guide,
+      image: [album09Guide],
       links: [
         {
           link: 'https://09platform.com/surl/P/1205',
@@ -115,7 +117,7 @@ export const ALBUM_PURCHASE_CONTENT: CommonContentProps = {
     },
     {
       label: '예스24',
-      image: albumYes24Guide,
+      image: [albumYes24Guide],
       links: [
         {
           link: 'https://www.yes24.com/product/category/series/003?SeriesNumber=359260',
@@ -125,11 +127,31 @@ export const ALBUM_PURCHASE_CONTENT: CommonContentProps = {
     },
     {
       label: '사운드웨이브',
-      image: albumSoundWaveGuide,
+      image: [albumSoundWaveGuide],
       links: [
         {
           link: 'https://bit.ly/3Gv6ftz',
           linkTxt: '사운드웨이브 공구 바로가기',
+        },
+      ],
+    },
+    {
+      label: '에버라인',
+      image: [albumEverlineGuide],
+      links: [
+        {
+          link: 'https://everlineshop.com/goods/goods_view.php?goodsNo=1000012617',
+          linkTxt: '에버라인 공구 바로가기',
+        },
+      ],
+    },
+    {
+      label: 'ITTA(잇다)',
+      image: [albumIttaGuide],
+      links: [
+        {
+          link: 'https://fanitta.com/?value=%7B%22productId%22:25313%7D&type=productDetail',
+          linkTxt: '잇다 공구 바로가기',
         },
       ],
     },

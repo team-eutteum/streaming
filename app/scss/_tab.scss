@@ -12,6 +12,7 @@
   .tabs {
     display: flex;
     justify-content: center;
+    gap: 0 20rem;
     &:has(.box) {
       gap: 12rem;
       padding: 8rem 12rem;
@@ -63,7 +64,7 @@
     color: $black;
     &.lg {
       button {
-        padding: 24rem 64rem;
+        padding: 24rem 30rem;
         font-size: 24rem;
       }
     }
@@ -112,19 +113,19 @@
     .tab-btn {
       &.lg {
         button {
-          padding: 20rem 28rem;
+          padding: 20rem 0;
           font-size: 16rem;
         }
       }
       &.md {
         button {
-          padding: 12rem 20rem;
+          padding: 12rem;
           font-size: 14rem;
         }
       }
       &.sm {
         button {
-          padding: 8rem 12rem;
+          padding: 8rem;
           font-size: 12rem;
         }
       }
@@ -153,7 +154,7 @@
       }
       .tab-btn.outlined {
 				flex: 0 0 auto;
-				min-width: 25%;
+				min-width: 22%;
         button {
           padding: 20rem 0;
         }

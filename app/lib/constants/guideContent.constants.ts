@@ -1,10 +1,18 @@
 import type { CheeringMethodProps, CommonContentProps } from '@/types/guide';
+/* download guide */
+import DownBugsGuide from 'public/images/guide/download/bugs/bugs.jpg';
+import DownGenieAndroidGuide from 'public/images/guide/download/genie/genieAndroid.jpg';
+import DownGeniePcGuide from 'public/images/guide/download/genie/geniePc.jpg';
+import DownMelonAndroidGuide from 'public/images/guide/download/melon/melonAndroid.jpg';
+import DownMelonPcGuide from 'public/images/guide/download/melon/melonPc.jpg';
+import DownVibeGuide from 'public/images/guide/download/vibe/vibe.jpg';
 /* id guide */
 import IdBugsGuide from 'public/images/guide/id/bugs.jpg';
 import IdGenieGuide from 'public/images/guide/id/genie.jpg';
 import IdMelonGuide from 'public/images/guide/id/melon.jpg';
 /* streaming list guide */
 import StreamingListGuide from 'public/images/guide/list/list.jpg';
+import MusivVideoGuide from 'public/images/guide/musicVideo/musicVideo.jpg';
 import RadioKBSGuide from 'public/images/guide/radio/kbs.jpg';
 import RadioMBCGuide from 'public/images/guide/radio/mbc.jpg';
 import RadioSBSGuide from 'public/images/guide/radio/sbs.jpg';
@@ -25,7 +33,7 @@ export const STREAMING_LIST_CONTENT: CommonContentProps = {
   content: [
     {
       label: TITLE.STREAMING_LIST,
-      image: StreamingListGuide,
+      image: [StreamingListGuide],
     },
   ],
 };
@@ -37,23 +45,23 @@ export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
   content: [
     {
       label: TITLE.MELON,
-      image: StreamingMelonGuide,
+      image: [StreamingMelonGuide],
     },
     {
       label: TITLE.GENIE,
-      image: StreamingGenieGuide,
+      image: [StreamingGenieGuide],
     },
     {
       label: TITLE.BUGS,
-      image: StreamingBugsGuide,
+      image: [StreamingBugsGuide],
     },
     {
       label: TITLE.FLO,
-      image: StreamingFloGuide,
+      image: [StreamingFloGuide],
     },
     {
       label: TITLE.VIBE,
-      image: StreamingVibeGuide,
+      image: [StreamingVibeGuide],
     },
   ],
 };
@@ -61,24 +69,24 @@ export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
 // 이미지 수급 예정
 export const MUSIC_DOWNLOAD_CONTENT: CommonContentProps = {
   label: TITLE.MUSIC_DOWNLOAD,
-  updateDate: '2025.04.14',
+  updateDate: '2025.05.01',
   uniqueId: 'musicDownload',
   content: [
     {
       label: TITLE.MELON,
-      // image: IdMelonGuide,
+      image: [DownMelonAndroidGuide, DownMelonPcGuide],
     },
     {
       label: TITLE.GENIE,
-      // image: IdGenieGuide,
+      image: [DownGenieAndroidGuide, DownGeniePcGuide],
     },
     {
       label: TITLE.BUGS,
-      // image: IdBugsGuide,
+      image: [DownBugsGuide],
     },
     {
-      label: TITLE.FLO,
-      // image: IdMelonGuide,
+      label: TITLE.VIBE,
+      image: [DownVibeGuide],
     },
   ],
 };
@@ -91,15 +99,15 @@ export const MUSIC_ID_CREATE_GUIDE: CommonContentProps = {
   content: [
     {
       label: TITLE.MELON,
-      image: IdMelonGuide,
+      image: [IdMelonGuide],
     },
     {
       label: TITLE.GENIE,
-      image: IdGenieGuide,
+      image: [IdGenieGuide],
     },
     {
       label: TITLE.BUGS,
-      image: IdBugsGuide,
+      image: [IdBugsGuide],
     },
   ],
 };
@@ -111,26 +119,27 @@ export const RADIO_APPLICATION_GUIDE: CommonContentProps = {
   content: [
     {
       label: 'SBS',
-      image: RadioSBSGuide,
+      image: [RadioSBSGuide],
     },
     {
       label: 'KBS',
-      image: RadioKBSGuide,
+      image: [RadioKBSGuide],
     },
     {
       label: 'MBC',
-      image: RadioMBCGuide,
+      image: [RadioMBCGuide],
     },
   ],
 };
 
 export const MUSIC_VIDEO_STREAMING_GUIDE: CommonContentProps = {
   label: TITLE.MUSIC_VIDEO_STREAMING,
-  updateDate: '2025.04.14',
+  updateDate: '2025.05.01',
   uniqueId: 'musicVideoStreaming',
   content: [
     {
       label: TITLE.MUSIC_VIDEO_STREAMING,
+      image: [MusivVideoGuide],
     },
   ],
 };

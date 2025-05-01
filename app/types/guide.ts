@@ -4,10 +4,9 @@ export interface LinkProps {
   link?: string;
   linkTxt?: string;
 }
-
 export interface TabContentProps {
   label?: string;
-  image?: StaticImageData;
+  image?: StaticImageData[];
   links?: Array<LinkProps>;
 }
 
