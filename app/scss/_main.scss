@@ -134,15 +134,15 @@ main {
       background: url('/images/main/banner.png') no-repeat center center / cover;
       &-text {
         position: absolute;
-        top: 10rem;
-        right: 10rem;
+        top: 20rem;
+        right: 20rem;
         span {
           overflow: hidden;
           opacity: 0;
           display: block;
-          padding: 0 10rem;
+          padding: 0 20rem;
           color: $white;
-          font-size: 20rem;
+          font-size: 80rem;
           font-weight: 900;
           font-style: italic;
           transition: all .3s ease-out;
@@ -274,19 +274,14 @@ main {
         }
       }
     }
-  }
-}
-
-@include desktop() {
-  main {
     .sc-banner {
       .banner{
         &-text {
-          top: 20rem;
-          right: 20rem;
+          top: 10rem;
+          right: 10rem;
           span {
-            padding: 0 20rem;
-            font-size: 80rem;
+            padding: 0 10rem;
+            font-size: 20rem;
           }
         }
       }
