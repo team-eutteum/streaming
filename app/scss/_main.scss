@@ -122,6 +122,56 @@ main {
       }
     }
   }
+  .sc-banner {
+    margin-top: -80rem;
+    background-color: $black;
+    .banner {
+      position: relative;
+      display: block;
+      margin: 0 auto;
+      max-width: 1280px;
+      aspect-ratio: 16 / 9;
+      background: url('/images/main/banner.png') no-repeat center center / cover;
+      &-text {
+        position: absolute;
+        top: 10rem;
+        right: 10rem;
+        span {
+          overflow: hidden;
+          opacity: 0;
+          display: block;
+          padding: 0 10rem;
+          color: $white;
+          font-size: 20rem;
+          font-weight: 900;
+          font-style: italic;
+          transition: all .3s ease-out;
+          animation: text-in 1s forwards;
+          &+span {
+            animation-delay: 1s;
+          }
+        }
+      }
+      &:hover {
+        .banner-text {
+          span {
+            text-shadow: -1px 0 $black, 0 1px $black, 1px 0 $black, 0 -1px $black;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes text-in {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @include tablet() {
@@ -227,3 +277,19 @@ main {
   }
 }
 
+@include desktop() {
+  main {
+    .sc-banner {
+      .banner{
+        &-text {
+          top: 20rem;
+          right: 20rem;
+          span {
+            padding: 0 20rem;
+            font-size: 80rem;
+          }
+        }
+      }
+    }
+  }
+}
