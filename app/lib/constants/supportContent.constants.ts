@@ -1,5 +1,6 @@
 import type { CommonContentProps } from '@/types/guide';
 import album09Guide from 'public/images/support/album/09.jpg';
+import albumAll from 'public/images/support/album/all.jpg';
 import albumALLMDGuide from 'public/images/support/album/ALLMD.jpg';
 import albumAppleGuide from 'public/images/support/album/apple.jpg';
 import albumEverlineGuide from 'public/images/support/album/everline.jpg';
@@ -55,6 +56,10 @@ export const ALBUM_PURCHASE_CONTENT: CommonContentProps = {
   updateDate: '2025.04.28',
   uniqueId: 'albumPurchase',
   content: [
+    {
+      label: '모아보기',
+      image: [albumAll],
+    },
     {
       label: 'Ktown4u',
       image: [albumKtown4uGuide],
