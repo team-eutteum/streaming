@@ -8,3 +8,4 @@ export { default as Tab } from './Tab/Tab';
 export { default as Tabs } from './Tab/Tabs';
 export { default as TabPanels } from './Tab/TabPanels';
 export { default as TabPanel } from './Tab/TabPanel';
+export { default as Modal } from './Modal/Modal';

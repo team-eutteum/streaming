@@ -1,38 +1,42 @@
 'use client';
 
 import React, { useState } from 'react';
-import {
-  DevicePhoneMobileIcon,
-  // DeviceTabletIcon,
-  // ComputerDesktopIcon,
-} from '@heroicons/react/24/outline';
+import Image from 'next/image';
 
 import { PageTitle } from '@/components';
 
-import ModalOneClickAndroid from './ModalOneClickAndroid';
-import ModalOneClickIOS from './ModalOneClickIOS';
+import ModalOneClickBugs from './ModalOneClickBugs';
+import ModalOneClickFlo from './ModalOneClickFlo';
+import ModalOneClickGenie from './ModalOneClickGenie';
+import ModalOneClickMelon from './ModalOneClickMelon';
+import ModalOneClickVibe from './ModalOneClickVibe';
 
 const oneClickList = [
   {
-    label: 'Android',
-    icon: <DevicePhoneMobileIcon />,
-    modal: (onClose: () => void) => <ModalOneClickAndroid onClose={onClose} />,
+    label: 'MELON',
+    src: '/images/main/logo/melon.png',
+    modal: (onClose: () => void) => <ModalOneClickMelon onClose={onClose} />,
   },
   {
-    label: 'IOS',
-    icon: <DevicePhoneMobileIcon />,
-    modal: (onClose: () => void) => <ModalOneClickIOS onClose={onClose} />,
+    label: 'GENIE',
+    src: '/images/main/logo/genie.svg',
+    modal: (onClose: () => void) => <ModalOneClickGenie onClose={onClose} />,
   },
-  // {
-  //   label: 'IPad',
-  //   icon: <DeviceTabletIcon />,
-  //   modal: (onClose: () => void) => <ModalOneClickIOS onClose={onClose} />,
-  // },
-  // {
-  //   label: 'PC',
-  //   icon: <ComputerDesktopIcon />,
-  //   modal: (onClose: () => void) => <ModalOneClickAndroid onClose={onClose} />,
-  // },
+  {
+    label: 'BUGS',
+    src: '/images/main/logo/bugs.svg',
+    modal: (onClose: () => void) => <ModalOneClickBugs onClose={onClose} />,
+  },
+  {
+    label: 'VIBE',
+    src: '/images/main/logo/vibe.svg',
+    modal: (onClose: () => void) => <ModalOneClickVibe onClose={onClose} />,
+  },
+  {
+    label: 'FLO',
+    src: '/images/main/logo/flo.svg',
+    modal: (onClose: () => void) => <ModalOneClickFlo onClose={onClose} />,
+  },
 ];
 
 function OneClick() {
@@ -50,17 +54,26 @@ function OneClick() {
           <PageTitle label="원클릭" />
         </div>
         <div className="container">
-          {oneClickList?.map((item, index) => (
-            <React.Fragment key={`oneClicklist${index}`}>
-              <button type="button" onClick={() => handleOpenModal(index)}>
-                <div className="box">
-                  <i>{item.icon}</i>
-                </div>
-                <p className="txt f-bd3">{item.label}</p>
-              </button>
-              {modalIndex === index && item.modal(handleCloseModal)}
-            </React.Fragment>
-          ))}
+          <ul className="oneclick-list">
+            {oneClickList?.map((item, index) => (
+              <>
+                <li
+                  key={`oneClicklist-${item.label}`}
+                  onClick={() => handleOpenModal(index)}
+                >
+                  <div className="img-wrap">
+                    <Image
+                      src={item.src}
+                      alt={item.label}
+                      width={100}
+                      height={100}
+                    />
+                  </div>
+                </li>
+                {modalIndex === index && item.modal(handleCloseModal)}
+              </>
+            ))}
+          </ul>
         </div>
       </div>
     </section>

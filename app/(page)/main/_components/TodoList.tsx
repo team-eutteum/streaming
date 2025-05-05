@@ -59,7 +59,7 @@ function TodoList() {
         </div>
         <ul className="todolist-wrap">
           {todoList.map((list) => {
-            console.log(list, 'list');
+            //console.log(list, 'list');
 
             return (
               <li className="list" key={list.id}>

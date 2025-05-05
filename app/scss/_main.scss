@@ -33,8 +33,6 @@ main {
   .sc-oneclick {
     .container {
       width: 100%;
-      // margin: 24rem 0 0;
-      @include grid(4, 48rem, 24rem);
       .box {
         width: 100%;
         border-radius: 20rem;
@@ -57,6 +55,30 @@ main {
         margin: 18rem 0 0;
         text-align: center;
         color: $riizePrimary;
+      }
+      .oneclick-list {
+        @include grid(5, 48rem, 24rem);
+        li {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 10rem;
+          transition: background .3s ease-out;
+          border-radius: 8rem;
+          cursor: pointer;
+          &:hover {
+            background: $gray50;
+          }
+          .img-wrap {
+            font-size: 0;
+            img {
+              width: 100%;
+              max-width: 100px;
+              height: auto;
+            }
+          }
+        }
       }
     }
   }
@@ -206,9 +228,7 @@ main {
     }
     .sc-oneclick {
       .container {
-        // margin: 24rem 0 0;
         width: 100%;
-        @include grid(4, 24rem, 12rem);
         .box {
           width: 100%;
           border-radius: 20rem;
@@ -220,6 +240,9 @@ main {
         }
         .txt {
           margin: 12rem 0 0;
+        }
+        .oneclick-list {
+          @include grid(3, 24rem, 12rem);
         }
       }
     }
