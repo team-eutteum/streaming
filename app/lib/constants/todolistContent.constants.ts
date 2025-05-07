@@ -12,9 +12,15 @@ interface TodoListProps {
 }
 
 export const TODOLIST_CONTENT: TodoListProps = {
-  updateDate: '2025.04.14',
-  version: '3', // 수정될 때마다 버전 변경 해줘서 세션에서 변경 사항 감지
+  updateDate: '2025.05.07',
+  version: '4', // 수정될 때마다 버전 변경 해줘서 세션에서 변경 사항 감지
   content: [
+    {
+      id: 'todoList0',
+      cntn: '브리즈 Rise & Realize 총공 연습 숙지',
+      checked: false,
+      url: 'https://x.com/RIIZE_STREAM/status/1918994533154697565',
+    },
     {
       id: 'todoList1',
       cntn: '음총팀 계정 팔로우 / 알림 설정 / 주변 브리즈에게 알리기',
@@ -29,21 +35,15 @@ export const TODOLIST_CONTENT: TodoListProps = {
     },
     {
       id: 'todoList3',
-      cntn: '음총팀 모금 참여하기',
-      checked: false,
-      url: '/support/donation',
-    },
-    {
-      id: 'todoList4',
       cntn: '음악방송 대비 재화 모으기',
       checked: false,
       url: '/vote/collect',
     },
     {
-      id: 'todoList5',
-      cntn: '음악중심 시청자위원회 67기 모집 신청 (4/14 12시 ~ 4/18 12시)',
+      id: 'todoList4',
+      cntn: 'MV 스트리밍 하기',
       checked: false,
-      url: 'https://program.imbc.com/apply/1000788100000100000?bid=1000788100000100000',
+      url: 'https://youtu.be/vmL-XgxwQZU?si=U38cNrhJT6DsdeLq',
     },
   ],
 };
