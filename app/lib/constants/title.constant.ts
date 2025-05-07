@@ -1,5 +1,5 @@
 /* Browser Title */
-export const SITE_TITLE = 'RIIZE STREAMING';
+export const SITE_TITLE = '라이즈 음원총공팀';
 
 /* Guide */
 export const GUIDE = '가이드';
