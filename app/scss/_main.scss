@@ -3,7 +3,7 @@
 
 main {
   flex: 1;
-  padding: 80rem 0;
+  padding-bottom: 80rem;
   section+section {
     margin: 80rem 0 0;
   }
@@ -144,20 +144,32 @@ main {
       }
     }
   }
-  .sc-banner {
-    margin-top: -80rem;
-    background-color: $black;
-    .banner {
+  .swiper-banner {
+    margin-bottom: 80rem;
+    .banner-slide {
       position: relative;
       display: block;
       margin: 0 auto;
       max-width: 1280px;
       aspect-ratio: 16 / 9;
-      background: url('/images/main/banner.png') no-repeat center center / cover;
+      &::before, &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 100rem;
+        z-index: 1;
+      }
+      &::before {
+        left: 0;
+      }
+      &::after {
+        right: 0;
+      }
       &-text {
         position: absolute;
         top: 20rem;
-        right: 20rem;
+        right: 50rem;
         span {
           overflow: hidden;
           opacity: 0;
@@ -174,11 +186,25 @@ main {
           }
         }
       }
-      &:hover {
-        .banner-text {
-          span {
-            text-shadow: -1px 0 $black, 0 1px $black, 1px 0 $black, 0 -1px $black;
-          }
+    }
+    .swiper-pagination {
+      bottom: 20rem;
+      &-bullet {
+        background-color: transparent;
+        border: 1px solid $white;
+        &-active {
+          background-color: $white;
+        }
+      }
+    }
+    .bg-bbb {
+      background-color: $black;
+      .banner-slide{
+        &::before {
+          background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,1));
+        }
+        &::after {
+          background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,1));
         }
       }
     }
@@ -198,7 +224,7 @@ main {
 
 @include tablet() {
   main {
-    padding: 80rem 0;
+    padding-bottom: 40rem;
     section + section {
       margin: 40rem 0 0;
     }
@@ -297,8 +323,12 @@ main {
         }
       }
     }
-    .sc-banner {
-      .banner{
+    .swiper-banner {
+      margin-bottom: 40rem;
+      .banner-slide {
+        &::before, &::after {
+          display: none;
+        }
         &-text {
           top: 10rem;
           right: 10rem;

@@ -1,12 +1,12 @@
-import Banner from './_components/Banner';
 import CurrentChart from './_components/CurrentChart';
 import OneClick from './_components/OneClick';
+import SwiperBanner from './_components/SwiperBanner';
 import TodoList from './_components/TodoList';
 
 function MainPage() {
   return (
     <main>
-      <Banner />
+      <SwiperBanner />
       <CurrentChart />
       <OneClick />
       <TodoList />
