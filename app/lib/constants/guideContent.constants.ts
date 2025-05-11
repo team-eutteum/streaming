@@ -17,10 +17,15 @@ import RadioKBSGuide from 'public/images/guide/radio/kbs.jpg';
 import RadioMBCGuide from 'public/images/guide/radio/mbc.jpg';
 import RadioSBSGuide from 'public/images/guide/radio/sbs.jpg';
 /* streaming guide */
+import StreamingAppleGuide from 'public/images/guide/streaming/apple.jpg';
 import StreamingBugsGuide from 'public/images/guide/streaming/bugs.jpg';
 import StreamingFloGuide from 'public/images/guide/streaming/flo.jpg';
 import StreamingGenieGuide from 'public/images/guide/streaming/genie.jpg';
 import StreamingMelonGuide from 'public/images/guide/streaming/melon.jpg';
+import StreamingSamsungGuide from 'public/images/guide/streaming/samsung.jpg';
+import StreamingSpotifyGuide01 from 'public/images/guide/streaming/spotify01.jpg';
+import StreamingSpotifyGuide02 from 'public/images/guide/streaming/spotify02.jpg';
+import StreamingStationheadGuide from 'public/images/guide/streaming/stationhead.jpg';
 import StreamingVibeGuide from 'public/images/guide/streaming/vibe.jpg';
 
 import * as RIIZE_ALBUM from './riizeAlbum.constanst';
@@ -62,6 +67,23 @@ export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
     {
       label: TITLE.VIBE,
       image: [StreamingVibeGuide],
+    },
+
+    {
+      label: '스포티파이',
+      image: [StreamingSpotifyGuide01, StreamingSpotifyGuide02],
+    },
+    {
+      label: '애플뮤직',
+      image: [StreamingAppleGuide],
+    },
+    {
+      label: '삼성뮤직',
+      image: [StreamingSamsungGuide],
+    },
+    {
+      label: '스테이션헤드',
+      image: [StreamingStationheadGuide],
     },
   ],
 };
