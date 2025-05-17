@@ -1,5 +1,7 @@
 import { SITE_TITLE } from '@/lib/constants/title.constant';
 
+import QueryProvider from './lib/queryProvider';
+
 import type { Metadata } from 'next';
 import 'pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css';
 import './scss/common.scss';
@@ -24,7 +26,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <QueryProvider>{children}</QueryProvider>
+      </body>
     </html>
   );
 }

@@ -2,24 +2,26 @@ import clsx from 'clsx';
 import Image from 'next/image';
 
 import type { MusicChartContentProps } from '@/types/chart';
-import AlbumImg from 'public/images/@album-ex.jpg';
 
 function MusicChart({
   chartName,
   title,
   rank,
   upDowns,
-  chartChange,
+  change,
+  albumImageUrl,
 }: MusicChartContentProps) {
   return (
     <tr className={clsx('chart-list', chartName)}>
       {chartName && <td className="cate f-bd4 -b">{chartName}</td>}
       <td className="chart-box">
         <div className="img-wrap">
-          <Image src={AlbumImg} alt="" width={50} height={50} />
+          {albumImageUrl && (
+            <Image src={albumImageUrl} alt="" width={50} height={50} />
+          )}
         </div>
         <p className="tit f-bd4">{title}</p>
-        <div className="divide">
+        <div className="rank">
           <div className="chart f-bd3 -b">
             {rank}
             <span className="f-bd4">위</span>
@@ -31,7 +33,7 @@ function MusicChart({
               upDowns === 'down' && 'down',
             )}
           >
-            {chartChange}
+            {change}
           </span>
         </div>
       </td>

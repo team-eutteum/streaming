@@ -23,7 +23,7 @@ const oneClickList = [
     modal: (onClose: () => void) => <ModalOneClickGenie onClose={onClose} />,
   },
   {
-    label: 'BUGS',
+    label: 'BUGS',
     src: '/images/main/logo/bugs.svg',
     modal: (onClose: () => void) => <ModalOneClickBugs onClose={onClose} />,
   },
@@ -56,11 +56,8 @@ function OneClick() {
         <div className="container">
           <ul className="oneclick-list">
             {oneClickList?.map((item, index) => (
-              <>
-                <li
-                  key={`oneClicklist-${item.label}`}
-                  onClick={() => handleOpenModal(index)}
-                >
+              <React.Fragment key={`oneClicklist-${item.label}`}>
+                <li onClick={() => handleOpenModal(index)}>
                   <div className="img-wrap">
                     <Image
                       src={item.src}
@@ -71,7 +68,7 @@ function OneClick() {
                   </div>
                 </li>
                 {modalIndex === index && item.modal(handleCloseModal)}
-              </>
+              </React.Fragment>
             ))}
           </ul>
         </div>

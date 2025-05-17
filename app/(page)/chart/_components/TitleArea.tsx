@@ -13,8 +13,6 @@ function TitleArea({ label }: TitleAreaProps) {
 
   const currPath = pathname.split('/')[2];
 
-  console.log(currPath, 'currPath');
-
   return (
     <div className="tit-area">
       <div className="inner">

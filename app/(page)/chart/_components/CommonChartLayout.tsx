@@ -1,71 +1,59 @@
 'use client';
 
-import { useState } from 'react';
-import { ChartBarSquareIcon } from '@heroicons/react/24/outline';
+import { useEffect, useState } from 'react';
+import dayjs from 'dayjs';
+import timezone from 'dayjs/plugin/timezone';
+import utc from 'dayjs/plugin/utc';
 
-import { Tab, TabPanel, TabPanels, Tabs } from '@/components';
 import MusicChart from '@/components/MusicChart/MusicChart';
 import MusicChartContainer from '@/components/MusicChart/MusicChartContainer';
-import NoData from '@/components/NoData/Nodata';
 import type { CommonChartLayoutProps } from '@/types/chart';
 
-function CommonChartLayout({ tabContent, uniqueId }: CommonChartLayoutProps) {
-  const [activeTabIdx, setActiveTabIdx] = useState(0);
-
-  const handleActiveTabIdx = (idx: number) => {
-    setActiveTabIdx(idx);
+function CommonChartLayout({ tabContent }: CommonChartLayoutProps) {
+  const [chartTime, setChartTime] = useState('');
+  const handleRankChange = (rank: string) => {
+    if (rank.startsWith('+')) {
+      return 'up';
+    } else if (rank.startsWith('-')) {
+      return 'down';
+    } else {
+      return '';
+    }
   };
 
+  const checkRankType = (rank: string) => {
+    if (isNaN(Number(rank))) {
+      return rank;
+    } else {
+      return rank.slice(1);
+    }
+  };
+
+  useEffect(() => {
+    dayjs.extend(utc);
+    dayjs.extend(timezone);
+
+    setChartTime(dayjs().tz('Asia/Seoul').format('YYYY-MM-DD HH'));
+  }, []);
   return (
-    <section className="sc-chart">
-      <Tabs hasScroll>
-        {tabContent?.map((tab, index) => (
-          <Tab
-            key={`tabItem${index}`}
-            uniqueId={uniqueId}
-            onClick={() => handleActiveTabIdx(index)}
-            selected={activeTabIdx}
-            index={index}
-            size="lg"
-          >
-            {tab.label}
-          </Tab>
+    <>
+      <p className="f-bd4 chart-time">{`${chartTime}:00`}</p>
+      <MusicChartContainer>
+        {tabContent.map((chartItem, chartIndex) => (
+          <MusicChart
+            key={`melon-content${chartIndex}`}
+            artist="RIIZE"
+            title={chartItem.title}
+            rank={chartItem?.rank}
+            change={
+              chartItem.change === '0' ? '' : checkRankType(chartItem?.change)
+            }
+            albumImageUrl={chartItem.albumImageUrl}
+            upDowns={handleRankChange(chartItem?.change)}
+          />
         ))}
-      </Tabs>
-      <div className="inner">
-        <TabPanels>
-          {tabContent?.map((tabItem, index) => (
-            <TabPanel
-              key={`${uniqueId}-downloadGuide${index}`}
-              index={index}
-              selected={activeTabIdx}
-              uniqueId={uniqueId}
-            >
-              <p className="f-bd4 chart-time">2025.03.22 16:00</p>
-              <MusicChartContainer>
-                {tabItem?.chart.length > 0 ? (
-                  tabItem?.chart?.map((chartItem, chartIndex) => (
-                    <MusicChart
-                      key={`${chartItem.chartName}-content${chartIndex}`}
-                      // chartName={chartItem.chartName}
-                      title={chartItem.title}
-                      rank={chartItem?.rank}
-                      upDowns={chartItem?.upDowns}
-                      chartChange={chartItem?.chartChange}
-                    />
-                  ))
-                ) : (
-                  <NoData
-                    Icon={ChartBarSquareIcon}
-                    txt="스밍을 열심히 합시다!"
-                  />
-                )}
-              </MusicChartContainer>
-            </TabPanel>
-          ))}
-        </TabPanels>
-      </div>
-    </section>
+      </MusicChartContainer>
+    </>
   );
 }
 

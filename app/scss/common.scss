@@ -140,6 +140,27 @@ body header .btn-menu:has(.active) {
     margin: 40rem 0 0;
   }
 }
+.no-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 40vh;
+  min-height: 40dvh;
+  text-align: center;
+  color: $gray500;
+  gap: 10rem;
+  .img-wrap {
+    margin: 0 auto;
+    width: 100rem;
+    svg {
+      stroke-width: 0.6;
+    }
+  }
+  .txt {
+    white-space: pre-wrap;
+  }
+}
 
 @include tablet() {
   .nav-bar {
@@ -197,6 +218,11 @@ body header .btn-menu:has(.active) {
         width: 60rem;
         height: 60rem;
       }
+    }
+  }
+  .no-data {
+    .img-wrap {
+      width: 80rem;
     }
   }
 }

@@ -38,27 +38,8 @@
       }
     }
   }
-  .no-data {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    min-height: 40vh;
-    min-height: 40dvh;
-    text-align: center;
-    color: $gray500;
-    gap: 10rem;
-
-    .img-wrap {
-      margin: 0 auto;
-      width: 100rem;
-
-      svg {
-        stroke-width: 0.6;
-      }
-    }
-  }
   .chart-time {
+    margin: 60rem 0 0;
     color: $gray500;
   }
   .btn ~ .img-wrap {
@@ -78,11 +59,6 @@
     .tit-area {
       margin: 0 auto 40rem auto;
 
-    }
-    .no-data {
-      .img-wrap {
-        width: 80rem;
-      }
     }
   }
 }

@@ -29,6 +29,9 @@ main {
         overflow-x: scroll;
       }
     }
+    .no-data {
+      width: 100%;
+    }
   }
   .sc-oneclick {
     .container {
@@ -118,17 +121,6 @@ main {
         &~label {
           position: relative;
           color: $riizePrimary;
-          // &::after {
-          //   content: "";
-          //   position: absolute;
-          //   top: 50%;
-          //   left: 0;
-          //   transform: translate(0, -50%);
-          //   width: 0;
-          //   height: 4px;
-          //   background: $riizeSecondary;
-          //   transition: width .3s ease-out;
-          // }
         }
         &:checked~label {
           text-decoration: line-through;
@@ -337,6 +329,16 @@ main {
             font-size: 20rem;
           }
         }
+      }
+    }
+  }
+}
+
+@include mobile() {
+  main {
+    .sc-chart {
+      .no-data {
+        width: 200rem;
       }
     }
   }

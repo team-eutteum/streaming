@@ -3,6 +3,7 @@
 
 .chart-content {
   flex-grow: 1;
+  position: relative;
   width: 100%;
   .chart-wrap {
     display: flex;
@@ -44,6 +45,7 @@
       flex-shrink: 0;
       width: 80rem;
       height: 80rem;
+      background: url("/images/logo/logo.png") no-repeat center / contain #000;
       // height: 80rem;
       img {
         width: 100%;
@@ -55,7 +57,7 @@
       align-self: flex-start;
       @include multiEllipsis(2);
     }
-    .divide {
+    .rank {
       // display: flex;
       // align-items: flex-end;
       text-align: right;
@@ -86,11 +88,29 @@
         }
       }
     }
+    &.skeleton {
+      .img-wrap {
+        background: $gray200;
+      }
+
+      .tit {
+        width: 80%;
+        height: 30rem;
+        background: $gray200;
+      }
+
+      .chart-change {
+        &:before {
+          content: "";
+        }
+      }
+    }
   }
+
 }
 
 body:not(:has(main)) .chart-content {
-  margin: 12rem 0 0;
+  margin: 12rem 0 60rem;
 }
 
 @include tablet() {
@@ -124,7 +144,7 @@ body:not(:has(main)) .chart-content {
         align-self: flex-start;
         @include multiEllipsis(2);
       }
-      .divide {
+      .rank {
         text-align: right;
         .chart {
           text-align: right;
@@ -135,7 +155,6 @@ body:not(:has(main)) .chart-content {
       .chart-change {
         margin: 4rem 0 0;
         &::before {
-          content: "-";
           margin: 0 4rem 0 8rem;
         }
         &.up {
@@ -151,6 +170,18 @@ body:not(:has(main)) .chart-content {
             content: "▼";
             font-size: 10rem;
           }
+        }
+      }
+    }
+    &.skeleton {
+      .tit {
+        width: 100%;
+        height: 20rem;
+        background: $gray200;
+      }
+      .chart-change {
+        &::after {
+          content: "";
         }
       }
     }
