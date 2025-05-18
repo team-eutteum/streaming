@@ -1,6 +1,6 @@
 import { SITE_TITLE } from '@/lib/constants/title.constant';
 
-import QueryProvider from './lib/queryProvider';
+import QueryProvider from './hooks/queryProvider';
 
 import type { Metadata } from 'next';
 import 'pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css';

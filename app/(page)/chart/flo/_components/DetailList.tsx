@@ -9,6 +9,7 @@ import CommingSoon from '@/components/Etc/CommingSoon';
 import MusicChartContainer from '@/components/MusicChart/MusicChartContainer';
 import MusicChartSkeleton from '@/components/MusicChart/MusicChartSkeleton';
 import NoData from '@/components/NoData/Nodata';
+import { getData } from '@/hooks/getData';
 import { FLO_CHART_CONTENT } from '@/lib/constants/chart.constants';
 import type { MusicChartContentProps } from '@/types/chart';
 
@@ -25,16 +26,7 @@ function DetailList() {
 
   const { data, isLoading, isError } = useQuery<MusicChartContentProps[]>({
     queryKey: ['chart', 'floChartData', chartType],
-    queryFn: async () => {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_CHART_URL}/flo/${chartType}`,
-      );
-      if (!response.ok) {
-        throw new Error(`데이터를 불러오는 데 실패했습니다.`);
-      }
-      const data = await response.json();
-      return data;
-    },
+    queryFn: () => getData(`flo/${chartType}`),
     staleTime: 0,
   });
 

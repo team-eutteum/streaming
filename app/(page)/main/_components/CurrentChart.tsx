@@ -12,6 +12,7 @@ import MusicChart from '@/components/MusicChart/MusicChart';
 import MusicChartContainer from '@/components/MusicChart/MusicChartContainer';
 import MusicChartSkeleton from '@/components/MusicChart/MusicChartSkeleton';
 import NoData from '@/components/NoData/Nodata';
+import { getData } from '@/hooks/getData';
 import type { MusicChartContentProps } from '@/types/chart';
 
 const handleRankChange = (rank: string) => {
@@ -35,16 +36,7 @@ const checkRankType = (rank: string) => {
 function MelonChart() {
   const { data, isLoading } = useQuery<MusicChartContentProps[]>({
     queryKey: ['chart', 'melonChartData', 'hot100'],
-    queryFn: async () => {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_CHART_URL}/melon/hot100`,
-      );
-      if (!response.ok) {
-        throw new Error(`데이터를 불러오는 데 실패했습니다.`);
-      }
-      const data = await response.json();
-      return data;
-    },
+    queryFn: () => getData('melon/hot100'),
     staleTime: 0,
   });
 
@@ -59,7 +51,7 @@ function MelonChart() {
   }
 
   if (!data) {
-    return <div>데이터를 불러오지 못했습니다.</div>;
+    return <NoData txt="데이터를 불러오지 못했습니다" />;
   }
 
   return data?.length > 0 ? (
@@ -94,16 +86,7 @@ function GenieChart({
 }) {
   const { data, isLoading } = useQuery<MusicChartContentProps[]>({
     queryKey: ['chart', 'genieChartData', 'realtime'],
-    queryFn: async () => {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_CHART_URL}/genie/realtime`,
-      );
-      if (!response.ok) {
-        throw new Error(`데이터를 불러오는 데 실패했습니다.`);
-      }
-      const data = await response.json();
-      return data;
-    },
+    queryFn: () => getData('genie/realtime'),
     staleTime: 0,
   });
   const genieChart = data?.[0];
@@ -119,7 +102,13 @@ function GenieChart({
   }
 
   if (!genieChart) {
-    return <div>데이터를 불러오지 못했습니다.</div>;
+    return (
+      <tr className="chart-list">
+        <td>
+          <NoData txt="데이터를 불러오지 못했습니다" />
+        </td>
+      </tr>
+    );
   }
 
   return (
@@ -148,16 +137,7 @@ function BugsChart({
 }) {
   const { data, isLoading } = useQuery<MusicChartContentProps[]>({
     queryKey: ['chart', 'bugsChartData', 'realtime'],
-    queryFn: async () => {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_CHART_URL}/bugs/realtime`,
-      );
-      if (!response.ok) {
-        throw new Error(`데이터를 불러오는 데 실패했습니다.`);
-      }
-      const data = await response.json();
-      return data;
-    },
+    queryFn: () => getData('bugs/realtime'),
     staleTime: 0,
   });
   const bugsChart = data?.[0];
@@ -173,7 +153,13 @@ function BugsChart({
   }
 
   if (!bugsChart) {
-    return <div>데이터를 불러오지 못했습니다.</div>;
+    return (
+      <tr className="chart-list">
+        <td>
+          <NoData txt="데이터를 불러오지 못했습니다" />
+        </td>
+      </tr>
+    );
   }
 
   return (
@@ -202,16 +188,7 @@ function FloChart({
 }) {
   const { data, isLoading } = useQuery<MusicChartContentProps[]>({
     queryKey: ['chart', 'floChartData', 'realtime'],
-    queryFn: async () => {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_CHART_URL}/flo/realtime`,
-      );
-      if (!response.ok) {
-        throw new Error(`데이터를 불러오는 데 실패했습니다.`);
-      }
-      const data = await response.json();
-      return data;
-    },
+    queryFn: () => getData('flo/realtime'),
     staleTime: 0,
   });
   const floChart = data?.[0];
@@ -227,7 +204,13 @@ function FloChart({
   }
 
   if (!floChart) {
-    return <div>데이터를 불러오지 못했습니다.</div>;
+    return (
+      <tr className="chart-list">
+        <td>
+          <NoData txt="데이터를 불러오지 못했습니다" />
+        </td>
+      </tr>
+    );
   }
 
   return (
