@@ -22,7 +22,7 @@ function DetailList() {
   const tabContent = MELON_CHART_CONTENT;
 
   const [activeTabIdx, setActiveTabIdx] = useState(0);
-  const [chartType, setChartType] = useState('hot30');
+  const [chartType, setChartType] = useState('top100');
 
   const { data, isLoading, isError } = useQuery<MusicChartContentProps[]>({
     queryKey: ['chart', 'melonChartData', chartType],
@@ -39,20 +39,22 @@ function DetailList() {
     <>
       <TitleArea label="멜론 차트" />
       <section className="sc-chart">
-        <Tabs hasScroll>
-          {tabContent?.charts.map((tab, index) => (
-            <Tab
-              key={`tabItem${index}`}
-              uniqueId={`melonTab${index}`}
-              onClick={() => handleTab(index, tab.chart)}
-              selected={activeTabIdx}
-              index={index}
-              size="lg"
-            >
-              {tab.label}
-            </Tab>
-          ))}
-        </Tabs>
+        {!commingSoon && (
+          <Tabs hasScroll>
+            {tabContent?.charts.map((tab, index) => (
+              <Tab
+                key={`tabItem${index}`}
+                uniqueId={`melonTab${index}`}
+                onClick={() => handleTab(index, tab.chart)}
+                selected={activeTabIdx}
+                index={index}
+                size="lg"
+              >
+                {tab.label}
+              </Tab>
+            ))}
+          </Tabs>
+        )}
         <div className="inner">
           {!commingSoon ? (
             isLoading ? (

@@ -16,7 +16,7 @@ import type { MusicChartContentProps } from '@/types/chart';
 import CommonChartLayout from '../../_components/CommonChartLayout';
 import TitleArea from '../../_components/TitleArea';
 function DetailList() {
-  const commingSoon = false;
+  const commingSoon = true;
 
   const tabContent = BUGS_CHART_CONTENT;
 
@@ -37,20 +37,22 @@ function DetailList() {
     <>
       <TitleArea label="BUGS 차트" />
       <section className="sc-chart">
-        <Tabs hasScroll>
-          {tabContent?.charts.map((tab, index) => (
-            <Tab
-              key={`tabItem${index}`}
-              uniqueId={`bugsTab${index}`}
-              onClick={() => handleTab(index, tab.chart)}
-              selected={activeTabIdx}
-              index={index}
-              size="lg"
-            >
-              {tab.label}
-            </Tab>
-          ))}
-        </Tabs>
+        {!commingSoon && (
+          <Tabs hasScroll>
+            {tabContent?.charts.map((tab, index) => (
+              <Tab
+                key={`tabItem${index}`}
+                uniqueId={`bugsTab${index}`}
+                onClick={() => handleTab(index, tab.chart)}
+                selected={activeTabIdx}
+                index={index}
+                size="lg"
+              >
+                {tab.label}
+              </Tab>
+            ))}
+          </Tabs>
+        )}
         <div className="inner">
           {!commingSoon ? (
             isLoading ? (

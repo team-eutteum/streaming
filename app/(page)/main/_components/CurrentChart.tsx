@@ -35,8 +35,8 @@ const checkRankType = (rank: string) => {
 
 function MelonChart() {
   const { data, isLoading } = useQuery<MusicChartContentProps[]>({
-    queryKey: ['chart', 'melonChartData', 'hot100'],
-    queryFn: () => getData('melon/hot100'),
+    queryKey: ['chart', 'melonChartData', 'top100'],
+    queryFn: () => getData('melon/top100'),
     staleTime: 0,
   });
 
@@ -231,7 +231,7 @@ function FloChart({
 }
 
 function CurrentChart() {
-  const commingSoon = false;
+  const commingSoon = true;
   const [emptyChartCount, setEmptyChartCount] = useState(0);
   const [chartTime, setChartTime] = useState('');
 

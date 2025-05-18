@@ -17,7 +17,7 @@ import CommonChartLayout from '../../_components/CommonChartLayout';
 import TitleArea from '../../_components/TitleArea';
 
 function DetailList() {
-  const commingSoon = false;
+  const commingSoon = true;
 
   const tabContent = GENIE_CHART_CONTENT;
 
@@ -39,20 +39,22 @@ function DetailList() {
     <>
       <TitleArea label="GENIE 차트" />
       <section className="sc-chart">
-        <Tabs hasScroll>
-          {tabContent?.charts.map((tab, index) => (
-            <Tab
-              key={`tabItem${index}`}
-              uniqueId={`genieTab${index}`}
-              onClick={() => handleTab(index, tab.chart)}
-              selected={activeTabIdx}
-              index={index}
-              size="lg"
-            >
-              {tab.label}
-            </Tab>
-          ))}
-        </Tabs>
+        {!commingSoon && (
+          <Tabs hasScroll>
+            {tabContent?.charts.map((tab, index) => (
+              <Tab
+                key={`tabItem${index}`}
+                uniqueId={`genieTab${index}`}
+                onClick={() => handleTab(index, tab.chart)}
+                selected={activeTabIdx}
+                index={index}
+                size="lg"
+              >
+                {tab.label}
+              </Tab>
+            ))}
+          </Tabs>
+        )}
         <div className="inner">
           {!commingSoon ? (
             isLoading ? (
