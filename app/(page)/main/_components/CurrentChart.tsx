@@ -33,12 +33,24 @@ const checkRankType = (rank: string) => {
   }
 };
 
-function MelonChart() {
+function MelonChart({
+  setChartLoadingState,
+}: {
+  setChartLoadingState: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
   const { data, isLoading } = useQuery<MusicChartContentProps[]>({
     queryKey: ['chart', 'melonChartData', 'top100'],
     queryFn: () => getData('melon/top100'),
     staleTime: 0,
   });
+
+  useEffect(() => {
+    if (isLoading) {
+      setChartLoadingState(true);
+    } else {
+      setChartLoadingState(false);
+    }
+  }, [isLoading, setChartLoadingState]);
 
   if (isLoading) {
     return (
@@ -231,9 +243,10 @@ function FloChart({
 }
 
 function CurrentChart() {
-  const commingSoon = true;
+  const commingSoon = false;
   const [emptyChartCount, setEmptyChartCount] = useState(0);
   const [chartTime, setChartTime] = useState('');
+  const [chartLoadingState, setChartLoadingState] = useState(true);
 
   useEffect(() => {
     dayjs.extend(utc);
@@ -247,9 +260,12 @@ function CurrentChart() {
       <div className="inner">
         <div className="tit-area">
           <PageTitle label="현재 순위" />
-          {!commingSoon && (
+          {!commingSoon && !chartLoadingState && (
             <div className="chart-time f-cp1">{`${chartTime}:00`}</div>
           )}
+          <span className="noti f-cp3">
+            * 차트 갱신에는 약간의 시간이 소요될 수 있습니다.
+          </span>
         </div>
       </div>
       {!commingSoon ? (
@@ -257,7 +273,7 @@ function CurrentChart() {
           <div className="chart-container">
             <div className="chart-swiper">
               <div className="scroll-area">
-                <MelonChart />
+                <MelonChart setChartLoadingState={setChartLoadingState} />
                 {emptyChartCount >= 3 ? (
                   <NoData
                     Icon={ChartBarSquareIcon}

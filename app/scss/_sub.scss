@@ -67,7 +67,9 @@
   .sub-container {
     .tit-area {
       .link-select-wrap {
-        position: unset;
+        position: relative;
+        top: 0;
+        right: 0;
         margin: 12rem 0 0;
       }
     }

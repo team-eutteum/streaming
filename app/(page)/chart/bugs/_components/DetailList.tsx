@@ -16,7 +16,7 @@ import type { MusicChartContentProps } from '@/types/chart';
 import CommonChartLayout from '../../_components/CommonChartLayout';
 import TitleArea from '../../_components/TitleArea';
 function DetailList() {
-  const commingSoon = true;
+  const commingSoon = false;
 
   const tabContent = BUGS_CHART_CONTENT;
 

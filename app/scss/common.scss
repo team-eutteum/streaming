@@ -80,6 +80,11 @@ body:has(.modal-wrap) {
 }
 .tit-area {
   margin: 0 0 32rem;
+  .noti {
+    display: block;
+    margin: 12rem 0 0;
+    color: $gray500;
+  }
 }
 
 .page-sub-txt {

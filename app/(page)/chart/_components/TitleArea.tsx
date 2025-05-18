@@ -24,6 +24,9 @@ function TitleArea({ label }: TitleAreaProps) {
           <LinkSelect href="/chart/bugs" label="BUGS" />
           <LinkSelect href="/chart/flo" label="FLO" />
         </LinkSelects>
+        <span className="noti f-cp3">
+          * 차트 갱신에는 약간의 시간이 소요될 수 있습니다.
+        </span>
       </div>
     </div>
   );

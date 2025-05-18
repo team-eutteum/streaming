@@ -17,7 +17,7 @@ import CommonChartLayout from '../../_components/CommonChartLayout';
 import TitleArea from '../../_components/TitleArea';
 
 function DetailList() {
-  const commingSoon = true;
+  const commingSoon = false;
 
   const tabContent = FLO_CHART_CONTENT;
 
