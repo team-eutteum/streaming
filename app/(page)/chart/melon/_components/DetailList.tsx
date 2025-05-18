@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { ChartBarSquareIcon } from '@heroicons/react/24/outline';
 import { useQuery } from '@tanstack/react-query';
+import dayjs from 'dayjs';
 
 import { Tab, Tabs } from '@/components';
 import CommingSoon from '@/components/Etc/CommingSoon';
@@ -17,7 +18,7 @@ import CommonChartLayout from '../../_components/CommonChartLayout';
 import TitleArea from '../../_components/TitleArea';
 
 function DetailList() {
-  const commingSoon = true;
+  const commingSoon = false;
 
   const tabContent = MELON_CHART_CONTENT;
 
@@ -41,18 +42,38 @@ function DetailList() {
       <section className="sc-chart">
         {!commingSoon && (
           <Tabs hasScroll>
-            {tabContent?.charts.map((tab, index) => (
-              <Tab
-                key={`tabItem${index}`}
-                uniqueId={`melonTab${index}`}
-                onClick={() => handleTab(index, tab.chart)}
-                selected={activeTabIdx}
-                index={index}
-                size="lg"
-              >
-                {tab.label}
-              </Tab>
-            ))}
+            {tabContent?.charts
+              .filter((item) => {
+                const openDate = dayjs(tabContent?.openDate);
+                const now = dayjs();
+
+                // 30일이 지나면 hot30 제외
+                if (item.chart === 'hot30' && now.diff(openDate, 'day') > 30) {
+                  return false;
+                }
+
+                // 100일이 지나면 hot100 제외
+                if (
+                  item.chart === 'hot100' &&
+                  now.diff(openDate, 'day') > 100
+                ) {
+                  return false;
+                }
+
+                return true;
+              })
+              .map((tab, index) => (
+                <Tab
+                  key={`tabItem${index}`}
+                  uniqueId={`melonTab${index}`}
+                  onClick={() => handleTab(index, tab.chart)}
+                  selected={activeTabIdx}
+                  index={index}
+                  size="lg"
+                >
+                  {tab.label}
+                </Tab>
+              ))}
           </Tabs>
         )}
         <div className="inner">

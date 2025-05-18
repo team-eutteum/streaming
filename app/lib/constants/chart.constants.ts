@@ -1,4 +1,5 @@
 export const MELON_CHART_CONTENT = {
+  openDate: '2025-05-19',
   charts: [
     {
       chart: 'top100',
@@ -32,7 +33,7 @@ export const GENIE_CHART_CONTENT = {
   charts: [
     {
       chart: 'realtime',
-      label: '실시간',
+      label: 'TOP200',
     },
     {
       chart: 'day',
