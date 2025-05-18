@@ -17,7 +17,7 @@ import CommonChartLayout from '../../_components/CommonChartLayout';
 import TitleArea from '../../_components/TitleArea';
 
 function DetailList() {
-  const commingSoon = false;
+  const commingSoon = true;
 
   const tabContent = MELON_CHART_CONTENT;
 
