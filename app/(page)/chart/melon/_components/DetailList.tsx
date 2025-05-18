@@ -38,7 +38,7 @@ function DetailList() {
 
   return (
     <>
-      <TitleArea label="멜론 차트" />
+      <TitleArea label="MELON 차트" />
       <section className="sc-chart">
         {!commingSoon && (
           <Tabs hasScroll>
