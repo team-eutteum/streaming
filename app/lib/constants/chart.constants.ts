@@ -2,15 +2,15 @@ export const MELON_CHART_CONTENT = {
   charts: [
     {
       chart: 'top100',
-      label: 'top100',
+      label: 'TOP100',
     },
     {
       chart: 'hot30',
-      label: 'hot100(30일)',
+      label: 'HOT100(30일)',
     },
     {
       chart: 'hot100',
-      label: 'hot100(100일)',
+      label: 'HOT100(100일)',
     },
 
     {
