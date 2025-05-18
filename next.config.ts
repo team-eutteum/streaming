@@ -4,7 +4,6 @@ const nextConfig: NextConfig = {
   /* config options here */
   env: {
     APP_ENV: process.env.APP_ENV,
-    NEXT_PUBLIC_CHART_URL: process.env.NEXT_PUBLIC_CHART_URL,
   },
   images: {
     unoptimized: true,
@@ -20,6 +19,14 @@ const nextConfig: NextConfig = {
     }
 
     return config;
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/chart/:path*',
+        destination: `${process.env.NEXT_PUBLIC_CHART_URL}/:path*`,
+      },
+    ];
   },
 };
 
