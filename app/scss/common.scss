@@ -54,7 +54,6 @@ body:has(.modal-wrap) {
 }
 
 .scroll-x-active {
-  // position: relative;
   overflow-x: auto;
   &::-webkit-scrollbar {
     width: 0;
