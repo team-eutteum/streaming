@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   /* config options here */
   env: {
     APP_ENV: process.env.APP_ENV,
+    NEXT_PUBLIC_CHART_URL: process.env.NEXT_PUBLIC_CHART_URL,
   },
   images: {
     unoptimized: true,
