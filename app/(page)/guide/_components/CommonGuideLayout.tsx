@@ -56,6 +56,18 @@ function CommonGuideLayout({
               ) : (
                 <NoData Icon={PhotoIcon} txt={'가이드 이미지 준비중입니다.'} />
               )}
+
+              <div className="guide-btn-wrap">
+                {tabItem.links?.map((link, index) => (
+                  <Button
+                    size="lg"
+                    href={link.link}
+                    key={`${uniqueId}-downloadGuide${index}`}
+                  >
+                    {link.linkTxt}
+                  </Button>
+                ))}
+              </div>
             </TabPanel>
           ))}
         </TabPanels>

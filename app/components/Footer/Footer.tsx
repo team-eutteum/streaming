@@ -1,17 +1,29 @@
+import Image from 'next/image';
+import Link from 'next/link';
+
 function Footer() {
   return (
     <footer className="footer">
       <div className="contact-list">
-        <a
+        <Link
           href="https://x.com/riize_stream?s=21"
           target="_blank"
           rel="noreferrer"
         >
-          X
-        </a>
-        <a href="https://pf.kakao.com/_LWmxfn" target="_blank" rel="noreferrer">
-          KAKAO
-        </a>
+          <Image src="/images/main/logo/x.svg" alt="X" width={30} height={30} />
+        </Link>
+        <Link
+          href="https://pf.kakao.com/_LWmxfn"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Image
+            src="/images/main/logo/kakaotalk.svg"
+            alt="KAKAO"
+            width={30}
+            height={30}
+          />
+        </Link>
       </div>
       <p className="email">riizestreaming@gmail.com</p>
       <p className="copyright">

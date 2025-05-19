@@ -43,6 +43,12 @@ export const BROADCAST_CONTENT: CommonContentProps = {
     {
       label: '음악중심',
       image: [musicMusicCoreGuide],
+      links: [
+        {
+          link: 'sms:%230505?body=RIIZE',
+          linkTxt: '음악중심 실시간 문자투표',
+        },
+      ],
     },
     {
       label: '엠카운트다운',

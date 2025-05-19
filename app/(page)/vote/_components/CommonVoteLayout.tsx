@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { PhotoIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 
-import { Tab, TabPanel, TabPanels, Tabs } from '@/components';
+import { Button, Tab, TabPanel, TabPanels, Tabs } from '@/components';
 import NoData from '@/components/NoData/Nodata';
 import type { CommonGuideLayoutProps } from '@/types/guide';
 
@@ -51,6 +51,18 @@ function CommonVoteLayout({ tabContent, uniqueId }: CommonGuideLayoutProps) {
               ) : (
                 <NoData Icon={PhotoIcon} txt={'가이드 이미지 준비중입니다.'} />
               )}
+
+              <div className="guide-btn-wrap">
+                {tabItem.links?.map((link, index) => (
+                  <Button
+                    size="lg"
+                    href={link.link}
+                    key={`${uniqueId}-downloadGuide${index}`}
+                  >
+                    {link.linkTxt}
+                  </Button>
+                ))}
+              </div>
             </TabPanel>
           ))}
         </TabPanels>

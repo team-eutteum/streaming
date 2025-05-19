@@ -142,14 +142,32 @@ export const RADIO_APPLICATION_GUIDE: CommonContentProps = {
     {
       label: 'SBS',
       image: [RadioSBSGuide],
+      links: [
+        {
+          link: 'sms:%231077?body=라이즈의 Fly Up 신청합니다.',
+          linkTxt: 'SBS COOL FM 라디오 문자 신청',
+        },
+      ],
     },
     {
       label: 'KBS',
       image: [RadioKBSGuide],
+      links: [
+        {
+          link: 'sms:%238910?body=라이즈의 Fly Up 신청합니다.',
+          linkTxt: 'KBS COOL FM 라디오 문자 신청',
+        },
+      ],
     },
     {
       label: 'MBC',
       image: [RadioMBCGuide],
+      links: [
+        {
+          link: 'sms:%238000?body=라이즈의 Fly Up 신청합니다.',
+          linkTxt: 'MBC FM4U 라디오 문자 신청',
+        },
+      ],
     },
   ],
 };
