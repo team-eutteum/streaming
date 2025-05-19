@@ -4,8 +4,8 @@ import clsx from 'clsx';
 
 function MusicChartContainer({ children }: PropsWithChildren) {
   return (
-    <table className="chart-content">
-      <tbody className="chart-wrap">
+    <div className="chart-content">
+      <div className="chart-wrap">
         {React.Children.toArray(children)?.map((child, index) =>
           React.isValidElement<{ className?: string }>(child)
             ? React.cloneElement(child, {
@@ -14,8 +14,8 @@ function MusicChartContainer({ children }: PropsWithChildren) {
               })
             : child,
         )}
-      </tbody>
-    </table>
+      </div>
+    </div>
   );
 }
 

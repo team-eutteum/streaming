@@ -10,11 +10,15 @@ function MusicChart({
   upDowns,
   change,
   albumImageUrl,
+  chartType,
 }: MusicChartContentProps) {
   return (
-    <tr className={clsx('chart-list', chartName)}>
-      {chartName && <td className="cate f-bd4 -b">{chartName}</td>}
-      <td className="chart-box">
+    <div className={clsx('chart-list', chartName)}>
+      <div className="cate-wrap">
+        {chartName && <p className="cate f-bd4 -b">{chartName}</p>}
+        {chartType && <p className="type f-cp3 -m">{chartType}</p>}
+      </div>
+      <div className="chart-box">
         <div className="img-wrap">
           {albumImageUrl && (
             <Image src={albumImageUrl} alt="" width={50} height={50} />
@@ -37,8 +41,8 @@ function MusicChart({
             {change}
           </span>
         </div>
-      </td>
-    </tr>
+      </div>
+    </div>
   );
 }
 

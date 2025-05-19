@@ -34,6 +34,13 @@
     &:has(.cate) .chart-box {
       margin-top: 14rem;
     }
+    .cate-wrap {
+      display: flex;
+      justify-content: space-between;
+      .type {
+        color: $gray600;
+      }
+    }
     .chart-box {
       display: flex;
       justify-content: space-between;

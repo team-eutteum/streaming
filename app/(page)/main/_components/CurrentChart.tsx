@@ -114,6 +114,7 @@ function MelonChart({
                 upDowns={handleRankChange(melonChart.change)}
                 albumImageUrl={melonChart.albumImageUrl}
                 chartName="melon"
+                chartType="TOP100"
               />
             ))}
           </MusicChartContainer>
@@ -155,27 +156,27 @@ function GenieChart({
       return <MusicChartSkeleton />;
     case 'updating':
       return (
-        <tr className="chart-list">
-          <td>
+        <div className="chart-list">
+          <div>
             <NoData txt={`지니 차트 갱신중! 잠시만 기다려 주세요.`} />
-          </td>
-        </tr>
+          </div>
+        </div>
       );
     case 'error':
       return (
-        <tr className="chart-list">
-          <td>
+        <div className="chart-list">
+          <div>
             <NoData txt={`데이터를 불러오지 못했습니다`} />
-          </td>
-        </tr>
+          </div>
+        </div>
       );
     case 'noData':
       return (
-        <tr className="chart-list">
-          <td>
+        <div className="chart-list">
+          <div>
             <NoData txt={`지니 차트 아웃! 스밍을 열심히 합시다!`} />
-          </td>
-        </tr>
+          </div>
+        </div>
       );
     case 'hasData':
       return (
@@ -190,6 +191,7 @@ function GenieChart({
             upDowns={handleRankChange(data?.[0].change)}
             albumImageUrl={data?.[0].albumImageUrl}
             chartName="genie"
+            chartType="TOP200"
           />
         )
       );
@@ -225,27 +227,27 @@ function BugsChart({
       return <MusicChartSkeleton />;
     case 'updating':
       return (
-        <tr className="chart-list">
-          <td>
+        <div className="chart-list">
+          <div>
             <NoData txt={`벅스 차트 갱신중! 잠시만 기다려 주세요.`} />
-          </td>
-        </tr>
+          </div>
+        </div>
       );
     case 'error':
       return (
-        <tr className="chart-list">
-          <td>
+        <div className="chart-list">
+          <div>
             <NoData txt={`데이터를 불러오지 못했습니다`} />
-          </td>
-        </tr>
+          </div>
+        </div>
       );
     case 'noData':
       return (
-        <tr className="chart-list">
-          <td>
+        <div className="chart-list">
+          <div>
             <NoData txt={`벅스 차트 아웃! 스밍을 열심히 합시다!`} />
-          </td>
-        </tr>
+          </div>
+        </div>
       );
     case 'hasData':
       return (
@@ -260,6 +262,7 @@ function BugsChart({
             upDowns={handleRankChange(data?.[0].change)}
             albumImageUrl={data?.[0].albumImageUrl}
             chartName="bugs"
+            chartType="실시간"
           />
         )
       );
@@ -295,27 +298,27 @@ function FloChart({
       return <MusicChartSkeleton />;
     case 'updating':
       return (
-        <tr className="chart-list">
-          <td>
+        <div className="chart-list">
+          <div>
             <NoData txt={`플로 차트 갱신중! 잠시만 기다려 주세요.`} />
-          </td>
-        </tr>
+          </div>
+        </div>
       );
     case 'error':
       return (
-        <tr className="chart-list">
-          <td>
+        <div className="chart-list">
+          <div>
             <NoData txt={`데이터를 불러오지 못했습니다`} />
-          </td>
-        </tr>
+          </div>
+        </div>
       );
     case 'noData':
       return (
-        <tr className="chart-list">
-          <td>
+        <div className="chart-list">
+          <div>
             <NoData txt={`플로 차트 아웃! 스밍을 열심히 합시다!`} />
-          </td>
-        </tr>
+          </div>
+        </div>
       );
     case 'hasData':
       return (
@@ -330,6 +333,7 @@ function FloChart({
             upDowns={handleRankChange(data?.[0].change)}
             albumImageUrl={data?.[0].albumImageUrl}
             chartName="flo"
+            chartType="실시간"
           />
         )
       );
