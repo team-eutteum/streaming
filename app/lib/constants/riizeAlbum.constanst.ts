@@ -1,5 +1,6 @@
 import BBBCheering from 'public/images/guide/cheering/BBB.jpg';
 import BeMyNextCheering from 'public/images/guide/cheering/BeMyNext.jpg';
+import FlyupCheering from 'public/images/guide/cheering/FlyUp.jpg';
 import GetAGuitarCheering from 'public/images/guide/cheering/GetAGuitar.jpg';
 import Impossible from 'public/images/guide/cheering/Impossible.jpg';
 import Love119Cheering from 'public/images/guide/cheering/Love119.jpg';
@@ -7,6 +8,18 @@ import LuckyCheering from 'public/images/guide/cheering/Lucky.jpg';
 import MemoriesCheering from 'public/images/guide/cheering/Memories.jpg';
 import SirenCheering from 'public/images/guide/cheering/Siren.jpg';
 import TalkSexyCheering from 'public/images/guide/cheering/TalkSaxy.jpg';
+
+export const THE_FIRST_ALBUM = {
+  value: 'The1stAlbum',
+  albumTitle: 'ODYSSEY',
+  music: [
+    {
+      title: 'Fly Up',
+      hasCheering: true,
+      image: FlyupCheering,
+    },
+  ],
+};
 
 export const FIRST_SINGLE = {
   value: 'single1',
