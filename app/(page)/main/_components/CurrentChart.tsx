@@ -343,19 +343,7 @@ function CurrentChart() {
   const [chartLoadingState, setChartLoadingState] = useState(true);
 
   useEffect(() => {
-    dayjs.extend(utc);
-    dayjs.extend(timezone);
-
     setChartTime(dayjs().tz('Asia/Seoul').format('YYYY-MM-DD HH'));
-
-    const minutes = dayjs().minute();
-
-    console.log(minutes, 'minutes');
-
-    console.log(dayjs().get('m'));
-    if (minutes >= 26 && minutes <= 28) {
-      console.log('chartUpdate');
-    }
   }, []);
 
   return (
