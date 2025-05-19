@@ -15,7 +15,7 @@ main {
       .noti {
         position: absolute;
         bottom: 0;
-        right: 0;
+      right: 0;
       }
     }
     .chart-time {
@@ -36,6 +36,7 @@ main {
       }
     }
     .no-data {
+      justify-content: flex-start;
       width: 100%;
       min-height: 0;
     }
@@ -378,7 +379,7 @@ main {
   main {
     .sc-chart {
       .no-data {
-        width: 200rem;
+        min-width: 200rem;
       }
     }
   }

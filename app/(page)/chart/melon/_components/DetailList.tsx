@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { ChartBarSquareIcon } from '@heroicons/react/24/outline';
 import { useQuery } from '@tanstack/react-query';
 import dayjs from 'dayjs';
@@ -24,6 +24,7 @@ function DetailList() {
 
   const [activeTabIdx, setActiveTabIdx] = useState(0);
   const [chartType, setChartType] = useState('top100');
+  // const [isChartRefresh, setIsChartRefresh] = useState(false);
 
   const { data, isLoading, isError } = useQuery<MusicChartContentProps[]>({
     queryKey: ['chart', 'melonChartData', chartType],
@@ -35,6 +36,10 @@ function DetailList() {
     setActiveTabIdx(idx);
     setChartType(chartType);
   };
+
+  useEffect(() => {
+    // if()
+  }, []);
 
   return (
     <>
