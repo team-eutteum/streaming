@@ -90,6 +90,24 @@ main {
           }
         }
       }
+      .oneclick-sms {
+        margin-top: 30rem;
+        &-title {
+          font-size: 30rem;
+        }
+        &-content {
+          h4 {
+            margin-top: 20rem;
+            font-size: 20rem;
+            font-weight: 500;
+          }
+          .sms-list {
+            margin: 20rem 0 0;
+            display: flex;
+            gap: 10rem;
+          }
+        }
+      }
     }
   }
   .sc-todolist {
@@ -272,6 +290,16 @@ main {
         }
         .oneclick-list {
           @include grid(3, 24rem, 12rem);
+        }
+        .oneclick-sms {
+          &-title {
+            font-size: 20rem;
+          }
+          &-content {
+            h4 {
+              font-size: 18rem;
+            }
+          }
         }
       }
     }

@@ -40,7 +40,7 @@ function TodoList() {
   }, [todoList]);
 
   const toggleChecked = (id: string, url?: string) => {
-    if (!todoList?.find((item) => item.id === id)?.checked) {
+    if (!todoList?.find((item) => item.id === id)?.checked && url) {
       window.open(url, '_blank');
     }
     setTodoList((prevList) =>

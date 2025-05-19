@@ -10,6 +10,7 @@ import ModalOneClickFlo from './ModalOneClickFlo';
 import ModalOneClickGenie from './ModalOneClickGenie';
 import ModalOneClickMelon from './ModalOneClickMelon';
 import ModalOneClickVibe from './ModalOneClickVibe';
+import OneClickSMS from './OneClickSMS';
 
 const oneClickList = [
   {
@@ -71,6 +72,7 @@ function OneClick() {
               </React.Fragment>
             ))}
           </ul>
+          <OneClickSMS />
         </div>
       </div>
     </section>
