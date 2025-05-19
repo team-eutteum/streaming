@@ -11,11 +11,14 @@ import type { CommonChartLayoutProps } from '@/types/chart';
 
 function CommonChartLayout({ tabContent }: CommonChartLayoutProps) {
   const [chartTime, setChartTime] = useState('');
+
   const handleRankChange = (rank: string) => {
     if (rank.startsWith('+')) {
       return 'up';
     } else if (rank.startsWith('-')) {
       return 'down';
+    } else if (rank.includes('new')) {
+      return 'new';
     } else {
       return '';
     }

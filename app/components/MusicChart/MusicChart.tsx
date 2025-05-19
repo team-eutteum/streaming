@@ -31,6 +31,7 @@ function MusicChart({
               'chart-change f-bd4',
               upDowns === 'up' && 'up',
               upDowns === 'down' && 'down',
+              upDowns === 'new' && 'new',
             )}
           >
             {change}

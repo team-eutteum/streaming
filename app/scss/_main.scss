@@ -271,7 +271,7 @@ main {
           padding: 0 24rem 12rem 24rem;
           width: 100%;
           @include grid(2, 24rem, 0);
-          overflow-x: scroll;
+          overflow-x: auto;
         }
       }
     }

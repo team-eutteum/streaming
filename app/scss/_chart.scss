@@ -87,6 +87,37 @@
           content: "▼";
         }
       }
+      &.new {
+        &::before {
+          content: "";
+        }
+        @at-root {
+          .chart-list.melon {
+            .new {
+              color: $pointMelon;
+            }
+          }
+          .chart-list.genie {
+            .new {
+              color: $pointGenie;
+            }
+          }
+          .chart-list.bugs {
+            .new {
+              color: $pointBugs;
+            }
+          }
+          .chart-list.flo {
+            .new {
+              color: $pointFlo;
+            }
+          }
+        }
+
+        &::before {
+          content: "";
+        }
+      }
     }
     &.skeleton {
       .img-wrap {
@@ -104,6 +135,9 @@
           content: "";
         }
       }
+    }
+    .no-data {
+      padding: 12rem 0;
     }
   }
 

@@ -21,6 +21,8 @@ const handleRankChange = (rank: string) => {
     return 'up';
   } else if (rank.startsWith('-')) {
     return 'down';
+  } else if (rank.includes('new')) {
+    return 'new';
   } else {
     return '';
   }
@@ -34,7 +36,10 @@ const checkRankType = (rank: string) => {
   }
 };
 
-const minutes = dayjs().minute();
+dayjs.extend(utc);
+dayjs.extend(timezone);
+
+const minutes = dayjs().tz('Asia/Seoul').minute();
 const isChartRefresh = minutes >= 0 && minutes <= 5;
 
 function MelonChart({
@@ -49,8 +54,10 @@ function MelonChart({
   });
 
   const chartStatus = getChartStatus({
-    isUpdating: isChartRefresh && !!data && data.length <= 0,
-    hasData: !!data && data.length > 0,
+    isLoading: isLoading, // 로딩 중
+    isError: !data, // 데이터 가져올 수 없음
+    isUpdating: isChartRefresh && !!data && data.length <= 0, // isChartRefresh 이고 데이터가 없을 때
+    hasData: !!data && data.length > 0, // 데이터가 있을 때
   });
 
   useEffect(() => {
@@ -75,33 +82,42 @@ function MelonChart({
           txt="멜론 차트 갱신중! 잠시만 기다려 주세요."
         />
       );
-    case 'noData':
-      return <NoData txt="데이터를 불러오지 못했습니다" />;
-    case 'hasData':
-      return !!data && data?.length > 0 ? (
-        <MusicChartContainer>
-          {data?.map((melonChart, melonIndex) => (
-            <MusicChart
-              artist={'RIIZE'}
-              key={`melonChart${melonIndex}`}
-              title={melonChart.title}
-              rank={melonChart.rank}
-              change={
-                melonChart.change === '0'
-                  ? ''
-                  : checkRankType(melonChart.change)
-              }
-              upDowns={handleRankChange(melonChart.change)}
-              albumImageUrl={melonChart.albumImageUrl}
-              chartName="melon"
-            />
-          ))}
-        </MusicChartContainer>
-      ) : (
+    case 'error':
+      return (
         <NoData
           Icon={ChartBarSquareIcon}
-          txt={`멜론 차트 아웃! \n 스밍을 열심히 합시다!`}
+          txt={`데이터를 불러오지 못했습니다`}
         />
+      );
+    case 'noData':
+      return (
+        <NoData
+          Icon={ChartBarSquareIcon}
+          txt={`멜론 차트 아웃! 스밍을 열심히 합시다!`}
+        />
+      );
+    case 'hasData':
+      return (
+        !!data && (
+          <MusicChartContainer>
+            {data?.map((melonChart, melonIndex) => (
+              <MusicChart
+                artist={'RIIZE'}
+                key={`melonChart${melonIndex}`}
+                title={melonChart.title}
+                rank={melonChart.rank}
+                change={
+                  melonChart.change === '0'
+                    ? ''
+                    : checkRankType(melonChart.change)
+                }
+                upDowns={handleRankChange(melonChart.change)}
+                albumImageUrl={melonChart.albumImageUrl}
+                chartName="melon"
+              />
+            ))}
+          </MusicChartContainer>
+        )
       );
   }
 }
@@ -111,19 +127,21 @@ function GenieChart({
 }: {
   setEmptyChartCount: React.Dispatch<React.SetStateAction<number>>;
 }) {
-  const { data, isLoading } = useQuery<MusicChartContentProps[]>({
+  const { data, isLoading, isError } = useQuery<MusicChartContentProps[]>({
     queryKey: ['chart', 'genieChartData', 'realtime'],
     queryFn: () => getData('genie/realtime'),
     staleTime: 0,
   });
 
   const chartStatus = getChartStatus({
+    isLoading: isLoading,
+    isError: isError,
     isUpdating: isChartRefresh && !!data && data.length <= 0,
     hasData: !!data && data.length > 0,
   });
 
   useEffect(() => {
-    if (!isLoading && !data?.[0]) {
+    if (!isLoading && !data) {
       setEmptyChartCount((prev) => prev + 1);
     }
   }, [isLoading, setEmptyChartCount, data]);
@@ -133,29 +151,47 @@ function GenieChart({
   }
 
   switch (chartStatus) {
+    case 'loading':
+      return <MusicChartSkeleton />;
     case 'updating':
-      return <NoData txt="지니 차트 갱신중! 잠시만 기다려 주세요." />;
+      return (
+        <tr className="chart-list">
+          <td>
+            <NoData txt={`지니 차트 갱신중! 잠시만 기다려 주세요.`} />
+          </td>
+        </tr>
+      );
+    case 'error':
+      return (
+        <tr className="chart-list">
+          <td>
+            <NoData txt={`데이터를 불러오지 못했습니다`} />
+          </td>
+        </tr>
+      );
     case 'noData':
-      return <NoData txt="데이터를 불러오지 못했습니다" />;
-    case 'hasData':
-      return data?.[0] && data?.length > 0 ? (
-        <MusicChart
-          artist={'RIIZE'}
-          title={data?.[0].title}
-          rank={data?.[0].rank}
-          change={
-            data?.[0].change === '0' ? '' : checkRankType(data?.[0].change)
-          }
-          upDowns={handleRankChange(data?.[0].change)}
-          albumImageUrl={data?.[0].albumImageUrl}
-          chartName="genie"
-        />
-      ) : (
+      return (
         <tr className="chart-list">
           <td>
             <NoData txt={`지니 차트 아웃! 스밍을 열심히 합시다!`} />
           </td>
         </tr>
+      );
+    case 'hasData':
+      return (
+        data && (
+          <MusicChart
+            artist={'RIIZE'}
+            title={data?.[0].title}
+            rank={data?.[0].rank}
+            change={
+              data?.[0].change === '0' ? '' : checkRankType(data?.[0].change)
+            }
+            upDowns={handleRankChange(data?.[0].change)}
+            albumImageUrl={data?.[0].albumImageUrl}
+            chartName="genie"
+          />
+        )
       );
   }
 }
@@ -165,51 +201,67 @@ function BugsChart({
 }: {
   setEmptyChartCount: React.Dispatch<React.SetStateAction<number>>;
 }) {
-  const { data, isLoading } = useQuery<MusicChartContentProps[]>({
+  const { data, isLoading, isError } = useQuery<MusicChartContentProps[]>({
     queryKey: ['chart', 'bugsChartData', 'realtime'],
     queryFn: () => getData('bugs/realtime'),
     staleTime: 0,
   });
 
   const chartStatus = getChartStatus({
+    isLoading: isLoading,
+    isError: isError,
     isUpdating: isChartRefresh && !!data && data.length <= 0,
     hasData: !!data && data.length > 0,
   });
 
   useEffect(() => {
-    if (!isLoading && !data?.[0]) {
+    if (!isLoading && !data) {
       setEmptyChartCount((prev) => prev + 1);
     }
   }, [isLoading, setEmptyChartCount, data]);
 
-  if (isLoading) {
-    return <MusicChartSkeleton />;
-  }
-
   switch (chartStatus) {
+    case 'loading':
+      return <MusicChartSkeleton />;
     case 'updating':
-      return <NoData txt="벅스 차트 갱신중! 잠시만 기다려 주세요." />;
+      return (
+        <tr className="chart-list">
+          <td>
+            <NoData txt={`벅스 차트 갱신중! 잠시만 기다려 주세요.`} />
+          </td>
+        </tr>
+      );
+    case 'error':
+      return (
+        <tr className="chart-list">
+          <td>
+            <NoData txt={`데이터를 불러오지 못했습니다`} />
+          </td>
+        </tr>
+      );
     case 'noData':
-      return <NoData txt="데이터를 불러오지 못했습니다" />;
-    case 'hasData':
-      return data?.[0] && data?.length > 0 ? (
-        <MusicChart
-          artist={'RIIZE'}
-          title={data?.[0].title}
-          rank={data?.[0].rank}
-          change={
-            data?.[0].change === '0' ? '' : checkRankType(data?.[0].change)
-          }
-          upDowns={handleRankChange(data?.[0].change)}
-          albumImageUrl={data?.[0].albumImageUrl}
-          chartName="bugs"
-        />
-      ) : (
+      return (
         <tr className="chart-list">
           <td>
             <NoData txt={`벅스 차트 아웃! 스밍을 열심히 합시다!`} />
           </td>
         </tr>
+      );
+    case 'hasData':
+      return (
+        data?.[0] && (
+          <MusicChart
+            artist={'RIIZE'}
+            title={data?.[0].title}
+            rank={data?.[0].rank}
+            change={
+              data?.[0].change === '0' ? '' : checkRankType(data?.[0].change)
+            }
+            upDowns={handleRankChange(data?.[0].change)}
+            albumImageUrl={data?.[0].albumImageUrl}
+            chartName="bugs"
+          />
+        )
       );
   }
 }
@@ -219,54 +271,69 @@ function FloChart({
 }: {
   setEmptyChartCount: React.Dispatch<React.SetStateAction<number>>;
 }) {
-  const { data, isLoading } = useQuery<MusicChartContentProps[]>({
+  const { data, isLoading, isError } = useQuery<MusicChartContentProps[]>({
     queryKey: ['chart', 'floChartData', 'realtime'],
     queryFn: () => getData('flo/realtime'),
     staleTime: 0,
   });
-  const floChart = data?.[0];
+
+  const chartStatus = getChartStatus({
+    isLoading: isLoading,
+    isError: isError,
+    isUpdating: isChartRefresh && !!data && data.length <= 0,
+    hasData: !!data && data?.length > 0, // 데이터가 있을 때
+  });
 
   useEffect(() => {
-    if (!isLoading && !floChart) {
+    if (!isLoading && !data) {
       setEmptyChartCount((prev) => prev + 1);
     }
-  }, [isLoading, setEmptyChartCount, floChart]);
+  }, [isLoading, setEmptyChartCount, data]);
 
-  if (isLoading) {
-    return <MusicChartSkeleton />;
-  }
-
-  if (!data) {
-    return (
-      <tr className="chart-list">
-        <td>
-          <NoData txt="데이터를 불러오지 못했습니다" />
-        </td>
-      </tr>
-    );
-  }
-
-  return (
-    <>
-      {floChart && data?.length > 0 ? (
-        <MusicChart
-          artist={'RIIZE'}
-          title={floChart.title}
-          rank={floChart.rank}
-          change={floChart.change === '0' ? '' : checkRankType(floChart.change)}
-          upDowns={handleRankChange(floChart.change)}
-          albumImageUrl={floChart.albumImageUrl}
-          chartName="flo"
-        />
-      ) : (
+  switch (chartStatus) {
+    case 'loading':
+      return <MusicChartSkeleton />;
+    case 'updating':
+      return (
+        <tr className="chart-list">
+          <td>
+            <NoData txt={`플로 차트 갱신중! 잠시만 기다려 주세요.`} />
+          </td>
+        </tr>
+      );
+    case 'error':
+      return (
+        <tr className="chart-list">
+          <td>
+            <NoData txt={`데이터를 불러오지 못했습니다`} />
+          </td>
+        </tr>
+      );
+    case 'noData':
+      return (
         <tr className="chart-list">
           <td>
             <NoData txt={`플로 차트 아웃! 스밍을 열심히 합시다!`} />
           </td>
         </tr>
-      )}
-    </>
-  );
+      );
+    case 'hasData':
+      return (
+        !!data && (
+          <MusicChart
+            artist={'RIIZE'}
+            title={data?.[0].title}
+            rank={data?.[0].rank}
+            change={
+              data?.[0].change === '0' ? '' : checkRankType(data?.[0].change)
+            }
+            upDowns={handleRankChange(data?.[0].change)}
+            albumImageUrl={data?.[0].albumImageUrl}
+            chartName="flo"
+          />
+        )
+      );
+  }
 }
 
 function CurrentChart() {

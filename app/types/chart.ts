@@ -9,7 +9,7 @@ export interface MusicChartContentProps {
   chartType?: string;
   crawledAt?: string;
   detailUrl?: string;
-  upDowns: 'up' | 'down' | '';
+  upDowns: 'up' | 'down' | 'new' | '';
   songId?: number;
 }
 
