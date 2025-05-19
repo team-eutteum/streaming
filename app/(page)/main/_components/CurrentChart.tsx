@@ -113,7 +113,7 @@ function GenieChart({
     return <MusicChartSkeleton />;
   }
 
-  if (!genieChart) {
+  if (!data) {
     return (
       <tr className="chart-list">
         <td>
@@ -125,7 +125,7 @@ function GenieChart({
 
   return (
     <>
-      {genieChart && (
+      {genieChart && data?.length > 0 ? (
         <MusicChart
           artist={'RIIZE'}
           title={genieChart.title}
@@ -137,6 +137,12 @@ function GenieChart({
           albumImageUrl={genieChart.albumImageUrl}
           chartName="genie"
         />
+      ) : (
+        <tr className="chart-list">
+          <td>
+            <NoData txt={`지니 차트 아웃! 스밍을 열심히 합시다!`} />
+          </td>
+        </tr>
       )}
     </>
   );
@@ -164,7 +170,7 @@ function BugsChart({
     return <MusicChartSkeleton />;
   }
 
-  if (!bugsChart) {
+  if (!data) {
     return (
       <tr className="chart-list">
         <td>
@@ -176,7 +182,7 @@ function BugsChart({
 
   return (
     <>
-      {bugsChart && (
+      {bugsChart && data?.length > 0 ? (
         <MusicChart
           artist={'RIIZE'}
           title={bugsChart.title}
@@ -188,6 +194,12 @@ function BugsChart({
           albumImageUrl={bugsChart.albumImageUrl}
           chartName="bugs"
         />
+      ) : (
+        <tr className="chart-list">
+          <td>
+            <NoData txt={`벅스 차트 아웃! 스밍을 열심히 합시다!`} />
+          </td>
+        </tr>
       )}
     </>
   );
@@ -215,7 +227,7 @@ function FloChart({
     return <MusicChartSkeleton />;
   }
 
-  if (!floChart) {
+  if (!data) {
     return (
       <tr className="chart-list">
         <td>
@@ -227,7 +239,7 @@ function FloChart({
 
   return (
     <>
-      {floChart && (
+      {floChart && data?.length > 0 ? (
         <MusicChart
           artist={'RIIZE'}
           title={floChart.title}
@@ -237,6 +249,12 @@ function FloChart({
           albumImageUrl={floChart.albumImageUrl}
           chartName="flo"
         />
+      ) : (
+        <tr className="chart-list">
+          <td>
+            <NoData txt={`플로 차트 아웃! 스밍을 열심히 합시다!`} />
+          </td>
+        </tr>
       )}
     </>
   );

@@ -13,8 +13,8 @@ function DetailList() {
       <CommonGuideLayout
         uniqueId={contents.uniqueId}
         tabContent={contents.content}
-        link="https://youtu.be/vmL-XgxwQZU?si=U38cNrhJT6DsdeLq"
-        linkTxt="Bag Bad Back 뮤비 스밍 바로가기"
+        link="https://youtu.be/vLUtHODdLzk?si=JjO37QtHXbPmEZF8"
+        linkTxt="Fly Up 뮤비 스밍 바로가기"
       />
     </>
   );
