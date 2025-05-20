@@ -26,7 +26,7 @@ export const THE_FIRST_ALBUM = {
       image: BagBadBackCheering,
     },
     {
-      title: 'Ember To Solor',
+      title: '잉걸',
       hasCheering: true,
       image: EmberToSolorCheering,
     },
