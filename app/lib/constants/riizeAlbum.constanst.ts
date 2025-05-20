@@ -1,5 +1,7 @@
+import BagBadBackCheering from 'public/images/guide/cheering/BagBadBack.jpg';
 import BBBCheering from 'public/images/guide/cheering/BBB.jpg';
 import BeMyNextCheering from 'public/images/guide/cheering/BeMyNext.jpg';
+import EmberToSolorCheering from 'public/images/guide/cheering/EmberToSolar.jpg';
 import FlyupCheering from 'public/images/guide/cheering/FlyUp.jpg';
 import GetAGuitarCheering from 'public/images/guide/cheering/GetAGuitar.jpg';
 import Impossible from 'public/images/guide/cheering/Impossible.jpg';
@@ -17,6 +19,16 @@ export const THE_FIRST_ALBUM = {
       title: 'Fly Up',
       hasCheering: true,
       image: FlyupCheering,
+    },
+    {
+      title: 'Bag Bad Back',
+      hasCheering: true,
+      image: BagBadBackCheering,
+    },
+    {
+      title: 'Ember To Solor',
+      hasCheering: true,
+      image: EmberToSolorCheering,
     },
   ],
 };
