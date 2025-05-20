@@ -31,7 +31,7 @@ function ChartArea({ chartType }: { chartType: string }) {
   dayjs.extend(timezone);
 
   const minutes = dayjs().tz('Asia/Seoul').minute();
-  const isChartRefresh = minutes >= 0 && minutes <= 5;
+  const isChartRefresh = minutes >= 0 && minutes <= 10;
 
   const chartStatus = getChartStatus({
     isLoading: isLoading, // 로딩 중
@@ -75,6 +75,7 @@ function ChartArea({ chartType }: { chartType: string }) {
         data && (
           <div style={{ position: 'relative' }}>
             <CommonChartLayout
+              chartName="flo"
               label="플로 차트"
               uniqueId="floChart"
               tabContent={data}

@@ -75,6 +75,7 @@ function ChartArea({ chartType }: { chartType: string }) {
         data && (
           <div style={{ position: 'relative' }}>
             <CommonChartLayout
+              chartName="bugs"
               label="벅스 차트"
               uniqueId="bugsChart"
               tabContent={data}

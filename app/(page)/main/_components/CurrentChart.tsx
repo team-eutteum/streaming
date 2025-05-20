@@ -40,7 +40,6 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 
 const minutes = dayjs().tz('Asia/Seoul').minute();
-const isChartRefresh = minutes >= 0 && minutes <= 5;
 
 function MelonChart({
   setChartLoadingState,
@@ -52,6 +51,8 @@ function MelonChart({
     queryFn: () => getData('melon/top100'),
     staleTime: 0,
   });
+
+  const isChartRefresh = minutes >= 0 && minutes <= 5;
 
   const chartStatus = getChartStatus({
     isLoading: isLoading, // 로딩 중
@@ -102,6 +103,7 @@ function MelonChart({
           <MusicChartContainer>
             {data?.map((melonChart, melonIndex) => (
               <MusicChart
+                chartNameShow={true}
                 artist={'RIIZE'}
                 key={`melonChart${melonIndex}`}
                 title={melonChart.title}
@@ -133,6 +135,8 @@ function GenieChart({
     queryFn: () => getData('genie/realtime'),
     staleTime: 0,
   });
+
+  const isChartRefresh = minutes >= 0 && minutes <= 10;
 
   const chartStatus = getChartStatus({
     isLoading: isLoading,
@@ -182,6 +186,7 @@ function GenieChart({
       return (
         data && (
           <MusicChart
+            chartNameShow={true}
             artist={'RIIZE'}
             title={data?.[0].title}
             rank={data?.[0].rank}
@@ -208,6 +213,8 @@ function BugsChart({
     queryFn: () => getData('bugs/realtime'),
     staleTime: 0,
   });
+
+  const isChartRefresh = minutes >= 0 && minutes <= 5;
 
   const chartStatus = getChartStatus({
     isLoading: isLoading,
@@ -253,6 +260,7 @@ function BugsChart({
       return (
         data?.[0] && (
           <MusicChart
+            chartNameShow={true}
             artist={'RIIZE'}
             title={data?.[0].title}
             rank={data?.[0].rank}
@@ -279,6 +287,8 @@ function FloChart({
     queryFn: () => getData('flo/realtime'),
     staleTime: 0,
   });
+
+  const isChartRefresh = minutes >= 0 && minutes <= 10;
 
   const chartStatus = getChartStatus({
     isLoading: isLoading,
@@ -324,6 +334,7 @@ function FloChart({
       return (
         !!data && (
           <MusicChart
+            chartNameShow={true}
             artist={'RIIZE'}
             title={data?.[0].title}
             rank={data?.[0].rank}

@@ -9,7 +9,7 @@ import MusicChart from '@/components/MusicChart/MusicChart';
 import MusicChartContainer from '@/components/MusicChart/MusicChartContainer';
 import type { CommonChartLayoutProps } from '@/types/chart';
 
-function CommonChartLayout({ tabContent }: CommonChartLayoutProps) {
+function CommonChartLayout({ tabContent, chartName }: CommonChartLayoutProps) {
   const [chartTime, setChartTime] = useState('');
 
   const handleRankChange = (rank: string) => {
@@ -44,6 +44,8 @@ function CommonChartLayout({ tabContent }: CommonChartLayoutProps) {
       <MusicChartContainer>
         {tabContent.map((chartItem, chartIndex) => (
           <MusicChart
+            chartNameShow={false}
+            chartName={chartName}
             key={`melon-content${chartIndex}`}
             artist="RIIZE"
             title={chartItem.title}

@@ -1,6 +1,7 @@
 export interface MusicChartContentProps {
   id?: number;
   chartName?: 'melon' | 'genie' | 'bugs' | 'flo';
+  chartNameShow: boolean;
   title: string;
   artist?: string;
   albumImageUrl?: string;
@@ -16,6 +17,7 @@ export interface MusicChartContentProps {
 export interface CommonChartLayoutProps {
   label: string;
   tabContent: MusicChartContentProps[];
+  chartName?: 'melon' | 'genie' | 'bugs' | 'flo';
   uniqueId: string;
   activeTabIdx: number;
 }

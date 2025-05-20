@@ -5,6 +5,7 @@ import type { MusicChartContentProps } from '@/types/chart';
 
 function MusicChart({
   chartName,
+  chartNameShow,
   title,
   rank,
   upDowns,
@@ -15,7 +16,9 @@ function MusicChart({
   return (
     <div className={clsx('chart-list', chartName)}>
       <div className="cate-wrap">
-        {chartName && <p className="cate f-bd4 -b">{chartName}</p>}
+        {chartName && chartNameShow && (
+          <p className="cate f-bd4 -b">{chartName}</p>
+        )}
         {chartType && <p className="type f-cp3 -m">{chartType}</p>}
       </div>
       <div className="chart-box">
