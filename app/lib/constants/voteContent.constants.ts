@@ -1,5 +1,6 @@
 import type { CommonContentProps } from '@/types/guide';
 import voteGuide from 'public/images/vote/collect/collect.jpg';
+import mamaSuperFanGuide from 'public/images/vote/mama/superfanApply.jpg';
 import musicDayGuide from 'public/images/vote/music/day.jpg';
 import musicFullGuide from 'public/images/vote/music/full.jpg';
 import musicInkigayoGuide from 'public/images/vote/music/inkigayo.jpg';
@@ -73,6 +74,18 @@ export const MELON_CONTENT: CommonContentProps = {
     {
       label: TITLE.MELON_WEEKLY_POPULAR,
       // image: voteGuide,
+    },
+  ],
+};
+
+export const MAMA_CONTENT: CommonContentProps = {
+  label: TITLE.MAMA_FANS_CHOICE,
+  updateDate: '2025.08.28',
+  uniqueId: 'voteCollectList',
+  content: [
+    {
+      label: TITLE.MAMA_FANS_CHOICE,
+      image: [mamaSuperFanGuide],
     },
   ],
 };

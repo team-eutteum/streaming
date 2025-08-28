@@ -57,6 +57,10 @@ export const NAV: NavItem[] = [
         title: TITLE.MELON_WEEKLY_POPULAR,
         path: '/vote/melon',
       },
+      {
+        title: TITLE.MAMA_FANS_CHOICE,
+        path: '/vote/mama',
+      },
     ],
   },
   {
