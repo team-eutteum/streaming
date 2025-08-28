@@ -17,8 +17,8 @@ export const VOTE = '투표';
 
 export const COLLECT = '재화 모으기';
 export const MUSIC_BROADCAST = '음악방송';
-export const MELON_WEEKLY_POPULAR = '멜론 주간인기상';
 export const MAMA_FANS_CHOICE = "MAMA Fan's Choice";
+export const MELON_WEEKLY_POPULAR = '멜론 주간인기상';
 
 /* Chart */
 export const CHART = '차트';
