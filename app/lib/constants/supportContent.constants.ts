@@ -10,7 +10,7 @@ import type { CommonContentProps } from '@/types/guide';
 // import albumYes24Guide from 'public/images/support/album/yes24.jpg';
 import dontationGuide from 'public/images/support/donation/donation.jpg';
 import helperGuide from 'public/images/support/helper/helper.jpg';
-import idDontationGuide from 'public/images/support/id/id.jpg';
+import idDontationGuide from 'public/images/support/id/id.png';
 
 import * as TITLE from './title.constant';
 export const DONATION_CONTENT: CommonContentProps = {
@@ -28,9 +28,9 @@ export const DONATION_CONTENT: CommonContentProps = {
 
 export const ID_DONATION_CONTENT: CommonContentProps = {
   label: TITLE.ID_DONATION,
-  updateDate: '2025.04.14',
+  updateDate: '2025.09.01',
   uniqueId: 'dontationList',
-  link: 'https://docs.google.com/forms/d/e/1FAIpQLSfv0Rm-dzDspH9nyhIy5hbjjQC32PBYpAPi9TAjsgVfEIT7PQ/viewform',
+  link: 'http://pf.kakao.com/_LWmxfn',
   content: [
     {
       label: TITLE.ID_DONATION,

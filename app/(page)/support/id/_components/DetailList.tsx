@@ -12,8 +12,8 @@ function DetailList() {
       <CommonSupportLayout
         uniqueId={contents.uniqueId}
         tabContent={contents.content}
-        link="https://forms.gle/1LtouTfW8wNsDu2v8"
-        linkTxt="아이디 기부폼"
+        link={contents.link}
+        linkTxt="아이디 기부 링크(음총팀 카카오채널)"
       />
     </>
   );
