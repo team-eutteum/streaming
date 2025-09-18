@@ -15,7 +15,7 @@ import idDontationGuide from 'public/images/support/id/id.png';
 import * as TITLE from './title.constant';
 export const DONATION_CONTENT: CommonContentProps = {
   label: TITLE.DONATION,
-  updateDate: '2025.04.14',
+  updateDate: '2025.09.17',
   uniqueId: 'dontationList',
   link: 'https://docs.google.com/forms/d/e/1FAIpQLSf4PlkHgQ4k1gAw7diOV2KHRsQol1i0OzmcxBrYZbfO57UYdg/viewform',
   content: [
@@ -28,7 +28,7 @@ export const DONATION_CONTENT: CommonContentProps = {
 
 export const ID_DONATION_CONTENT: CommonContentProps = {
   label: TITLE.ID_DONATION,
-  updateDate: '2025.09.01',
+  updateDate: '2025.09.17',
   uniqueId: 'dontationList',
   link: 'http://pf.kakao.com/_LWmxfn',
   content: [
@@ -41,7 +41,7 @@ export const ID_DONATION_CONTENT: CommonContentProps = {
 
 export const HELPER_CONTENT: CommonContentProps = {
   label: TITLE.HELPER,
-  updateDate: '2025.04.14',
+  updateDate: '2025.09.17',
   uniqueId: 'helperList',
   content: [
     {
