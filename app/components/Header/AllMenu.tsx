@@ -37,47 +37,63 @@ function AllMenu({ isMenuOpened }: AllMenuProps) {
         >
           <div className="scroll-area">
             <ul className="one-depth">
-              {NAV?.map((oneDepth, oneIndex) => (
-                /* one-depth */
-                <li
-                  className={clsx(
-                    'one-list',
-                    twoDepthOpenedIdx === oneIndex && 'active',
-                  )}
-                  key={`oneDepth${oneIndex}`}
-                >
-                  <button
-                    className="one-link"
-                    onClick={() => handleTwoDepthOpen(oneIndex)}
-                  >
-                    {oneDepth.title}
-                    <div className="open-two-depth">
-                      <i />
-                    </div>
-                  </button>
-                  <AnimatePresence>
-                    {oneDepth?.children && twoDepthOpenedIdx === oneIndex && (
-                      /* two-depth */
-                      <motion.ul
-                        className="two-depth"
-                        key={`twoDepth${oneIndex}`}
-                        initial={{ height: 0 }}
-                        animate={{ height: 'auto' }}
-                        exit={{ height: 0 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        {oneDepth?.children.map((twoDepth, index) => (
-                          <li className="two-list" key={`twoDepth${index}`}>
-                            <Link className="two-link" href={twoDepth.path}>
-                              {twoDepth.title}
-                            </Link>
-                          </li>
-                        ))}
-                      </motion.ul>
-                    )}
-                  </AnimatePresence>
-                </li>
-              ))}
+              {NAV?.map(
+                (oneDepth, oneIndex) =>
+                  /* one-depth */
+                  oneDepth.opened !== false && (
+                    <li
+                      className={clsx(
+                        'one-list',
+                        twoDepthOpenedIdx === oneIndex && 'active',
+                      )}
+                      key={`oneDepth${oneIndex}`}
+                    >
+                      {oneDepth?.children ? (
+                        <button
+                          className="one-link"
+                          onClick={() => handleTwoDepthOpen(oneIndex)}
+                        >
+                          {oneDepth.title}
+                          <div className="open-two-depth">
+                            <i />
+                          </div>
+                        </button>
+                      ) : (
+                        <Link className="one-link" href={oneDepth.path}>
+                          {oneDepth.title}
+                        </Link>
+                      )}
+                      <AnimatePresence>
+                        {oneDepth?.children &&
+                          twoDepthOpenedIdx === oneIndex && (
+                            /* two-depth */
+                            <motion.ul
+                              className="two-depth"
+                              key={`twoDepth${oneIndex}`}
+                              initial={{ height: 0 }}
+                              animate={{ height: 'auto' }}
+                              exit={{ height: 0 }}
+                              transition={{ duration: 0.2 }}
+                            >
+                              {oneDepth?.children.map((twoDepth, index) => (
+                                <li
+                                  className="two-list"
+                                  key={`twoDepth${index}`}
+                                >
+                                  <Link
+                                    className="two-link"
+                                    href={twoDepth.path}
+                                  >
+                                    {twoDepth.title}
+                                  </Link>
+                                </li>
+                              ))}
+                            </motion.ul>
+                          )}
+                      </AnimatePresence>
+                    </li>
+                  ),
+              )}
             </ul>
           </div>
         </motion.div>

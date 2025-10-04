@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { PhotoIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
+import { SwiperSlide } from 'swiper/react';
 
 import { PageTitle, Tab, TabPanel, TabPanels, Tabs } from '@/components';
 import UrlShareButton from '@/components/Button/UrlShareButton';
@@ -60,17 +61,18 @@ function DetailList() {
         {cheeringTracks.length > 0 && (
           <Tabs scrollable={false}>
             {cheeringTracks.map((track, index) => (
-              <Tab
-                key={`track-tab-${track.title}`}
-                uniqueId={contents.uniqueId}
-                onClick={() => handleActiveTabIdx(index)}
-                selected={activeTabIdx}
-                index={index}
-                size="sm"
-                variant="box"
-              >
-                {track.title}
-              </Tab>
+              <SwiperSlide key={`track-tab-${track.title}`}>
+                <Tab
+                  uniqueId={contents.uniqueId}
+                  onClick={() => handleActiveTabIdx(index)}
+                  selected={activeTabIdx}
+                  index={index}
+                  size="sm"
+                  variant="box"
+                >
+                  {track.title}
+                </Tab>
+              </SwiperSlide>
             ))}
           </Tabs>
         )}

@@ -8,6 +8,7 @@ import { usePathname } from 'next/navigation';
 import { NAV } from '@/lib/constants/nav.constant';
 
 import AllMenu from './AllMenu';
+
 function Header() {
   const pathName = usePathname();
   const [isMenuOpened, setIsMenuOpened] = useState(false);
@@ -39,34 +40,46 @@ function Header() {
           </i> */}
         </button>
         <ul className="pc-menu">
-          {NAV?.map((oneDepth, oneIndex) => (
-            <li
-              className="one-depth"
-              key={`pcOneDepth${oneIndex}`}
-              onMouseEnter={() => handleTwoDepthOpen(oneIndex)}
-              onMouseLeave={() => handleTwoDepthOpen(null)}
-            >
-              <div className="one-link f-bd4">{oneDepth.title}</div>
-              {oneDepth?.children && (
-                <div
-                  className={clsx(
-                    'one-list',
-                    twoDepthOpenedIdx === oneIndex && 'active',
-                  )}
+          {/* {NAV.filter((oneDepth) => {
+            oneDepth.title !== TITLE.QNA && <li>{item.title}</li>;
+          })} */}
+          {NAV?.map(
+            (oneDepth, oneIndex) =>
+              oneDepth.opened !== false && (
+                <li
+                  className="one-depth"
+                  key={`pcOneDepth${oneIndex}`}
+                  onMouseEnter={() => handleTwoDepthOpen(oneIndex)}
+                  onMouseLeave={() => handleTwoDepthOpen(null)}
                 >
-                  <ul className="two-depth">
-                    {oneDepth?.children.map((twoDepth, twoIndex) => (
-                      <li className="two-list" key={`pcTwoDepth${twoIndex}`}>
-                        <Link className="two-link f-bd4" href={twoDepth.path}>
-                          {twoDepth.title}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </li>
-          ))}
+                  <div className="one-link f-bd4">{oneDepth.title}</div>
+                  {oneDepth?.children && (
+                    <div
+                      className={clsx(
+                        'one-list',
+                        twoDepthOpenedIdx === oneIndex && 'active',
+                      )}
+                    >
+                      <ul className="two-depth">
+                        {oneDepth?.children.map((twoDepth, twoIndex) => (
+                          <li
+                            className="two-list"
+                            key={`pcTwoDepth${twoIndex}`}
+                          >
+                            <Link
+                              className="two-link f-bd4"
+                              href={twoDepth.path}
+                            >
+                              {twoDepth.title}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </li>
+              ),
+          )}
         </ul>
         <AllMenu isMenuOpened={isMenuOpened} pathName={pathName} />
       </div>

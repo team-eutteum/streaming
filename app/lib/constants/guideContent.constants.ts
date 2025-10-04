@@ -68,7 +68,6 @@ export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
       label: TITLE.VIBE,
       image: [StreamingVibeGuide],
     },
-
     {
       label: '스포티파이',
       image: [StreamingSpotifyGuide01, StreamingSpotifyGuide02],

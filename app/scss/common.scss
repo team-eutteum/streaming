@@ -4,6 +4,7 @@
 @use "fonts" as *;
 @use "button" as *;
 @use "tab" as *;
+@use "accordion" as *;
 @use "header" as *;
 @use "footer" as *;
 @use "modal" as *;
@@ -53,13 +54,13 @@ body:has(.modal-wrap) {
   overflow-y: hidden;
 }
 
-.scroll-x-active {
-  overflow-x: auto;
-  &::-webkit-scrollbar {
-    width: 0;
-    height: 0;
-  }
-}
+// .scroll-x-active {
+//   overflow-x: auto;
+//   &::-webkit-scrollbar {
+//     width: 0;
+//     height: 0;
+//   }
+// }
 .nav-bar {
   display: none;
 }
@@ -227,6 +228,26 @@ body header .btn-menu:has(.active) {
   .no-data {
     .img-wrap {
       width: 80rem;
+    }
+  }
+}
+
+.bullet-list {
+  .list {
+    position: relative;
+    padding: 0 0 0 12rem;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 10rem;
+      left: 0;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background: #000;
+    }
+    & + .list {
+      margin: 4rem 0 0;
     }
   }
 }

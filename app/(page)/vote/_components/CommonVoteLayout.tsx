@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { PhotoIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
+import { SwiperSlide } from 'swiper/react';
 
 import { Button, Tab, TabPanel, TabPanels, Tabs } from '@/components';
 import NoData from '@/components/NoData/Nodata';
@@ -20,16 +21,17 @@ function CommonVoteLayout({ tabContent, uniqueId }: CommonGuideLayoutProps) {
       {tabContent?.length > 1 && (
         <Tabs hasScroll>
           {tabContent?.map((tab, index) => (
-            <Tab
-              key={`tabItem${index}`}
-              uniqueId={uniqueId}
-              onClick={() => handleActiveTabIdx(index)}
-              selected={activeTabIdx}
-              index={index}
-              size="lg"
-            >
-              {tab.label}
-            </Tab>
+            <SwiperSlide key={`tabItem${index}`}>
+              <Tab
+                uniqueId={uniqueId}
+                onClick={() => handleActiveTabIdx(index)}
+                selected={activeTabIdx}
+                index={index}
+                size="lg"
+              >
+                {tab.label}
+              </Tab>
+            </SwiperSlide>
           ))}
         </Tabs>
       )}

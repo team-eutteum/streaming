@@ -12,37 +12,47 @@
   .tabs {
     display: flex;
     justify-content: center;
-    gap: 0 20rem;
+    width: fit-content;
+    max-width: 100%;
+    overflow: visible;
     &:has(.box) {
       gap: 12rem;
       padding: 8rem 12rem;
     }
   }
   .tabs-wrap {
-    display: flex;
-    justify-content: center;
+    .swiper-slide {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      // margin: 0 20rem 0 0;
+      min-height: 80rem;
+    }
   }
   &:has(.tab-btn.outlined) {
     background: $white;
     border-top: 1px solid $gray100;
     border-bottom: 1px solid $gray100;
-    .tab-btn {
-      &.active {
-        &::before {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 60%;
-          height: 2px;
-          background: $riizeSecondary;
-        }
+    .swiper-slide:has(.active) {
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -1px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 2px;
+        background: $riizeSecondary;
       }
     }
   }
   &:has(.tab-btn.box) {
     margin-bottom: 10rem;
+    .swiper-slide {
+      min-height: auto;
+    }
     .tab-btn {
       border: 1px solid $riizeSecondary;
       background: $white;
@@ -62,30 +72,28 @@
   .tab-btn {
     position: relative;
     color: $black;
+    display: block;
+    width: 100%;
+    color: inherit;
+    font-weight: 500;
     &.lg {
-      button {
-        padding: 24rem 30rem;
-        font-size: 24rem;
-      }
+      // padding: 24rem 30rem;
+      font-size: 24rem;
     }
     &.md {
-      button {
-        padding: 16rem 56rem;
-        font-size: 18rem;
-      }
+      padding: 16rem 56rem;
+      font-size: 18rem;
     }
     &.sm {
-      button {
-        padding: 14rem 52rem;
-        font-size: 16rem;
-      }
+      padding: 14rem 52rem;
+      font-size: 16rem;
     }
-    button {
-      display: block;
-      width: 100%;
-      color: inherit;
-      font-weight: 500;
-    }
+    // .btn {
+    //   display: block;
+    //   width: 100%;
+    //   color: inherit;
+    //   font-weight: 500;
+    // }
   }
 }
 .tab-panels {
@@ -110,32 +118,36 @@
         gap: 8rem;
       }
     }
+    .tabs-wrap {
+      .swiper-slide {
+        min-height: 50rem;
+      }
+    }
     .tab-btn {
+      display: block;
+      width: 100%;
+      color: inherit;
+      font-weight: 500;
+      line-height: 1;
       &.lg {
-        button {
-          padding: 20rem 0;
-          font-size: 16rem;
-        }
+        // padding: 20rem 0;
+        font-size: 16rem;
       }
       &.md {
-        button {
-          padding: 12rem;
-          font-size: 14rem;
-        }
+        padding: 12rem;
+        font-size: 14rem;
       }
       &.sm {
-        button {
-          padding: 8rem;
-          font-size: 12rem;
-        }
+        padding: 8rem;
+        font-size: 12rem;
       }
-      button {
-        display: block;
-        width: 100%;
-        color: inherit;
-        font-weight: 500;
-        line-height: 1;
-      }
+      // .btn {
+      //   display: block;
+      //   width: 100%;
+      //   color: inherit;
+      //   font-weight: 500;
+      //   line-height: 1;
+      // }
     }
   }
   .tab-panels {
@@ -146,18 +158,14 @@
 @include mobile() {
   .box-tab-area {
     .tabs {
-      justify-content: flex-start;
       padding: 0 24rem 0 24rem;
-      width: 100%;
       &.wrap {
         flex-wrap: wrap;
       }
       .tab-btn.outlined {
 				flex: 0 0 auto;
+        // padding: 20rem 0;
 				min-width: 22%;
-        button {
-          padding: 20rem 0;
-        }
       }
     }
   }

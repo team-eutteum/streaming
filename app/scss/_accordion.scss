@@ -1,0 +1,99 @@
+@use "mixin" as *;
+@use "variable" as *;
+
+.accordion-list {
+  position: relative;
+  padding: 0 0 0 68rem;
+  width: 100%;
+  min-height: 88rem;
+  border-bottom: 1px solid $gray100;
+  overflow: hidden;
+  .accordion-head {
+    position: relative;
+      .btn {
+        padding: 30rem 30rem 30rem 0;
+        width: 100%;
+        font-size: 18rem;
+        font-weight: 700;
+        line-height: 160%;
+        color: $gray900;
+        text-align: left;
+        white-space: normal;
+        .q-mark {
+          position: absolute;
+          top: 50%;
+          left: -44rem;
+          transform: translate(0, -50%);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 36rem;
+          height: 36rem;
+          background: $riizeSecondary;
+          color: $white;
+          border-radius: 50%;
+        }
+        .tit {
+          width: calc(100% - 24rem);
+        }
+        &::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: 30rem;
+          transform: rotate(0) translate(0, -50%);
+          width: 24rem;
+          height: 24rem;
+          background: url("/images/icons/icon-accordion-arrow.svg") no-repeat center / 24rem 24rem;
+          transform-origin: top;
+          transition: .3s ease-out;
+        }
+      }
+  }
+  .accordion-body {
+    opacity: 0;
+    .txt {
+      padding: 0 30rem 40rem 0;
+      font-size: 18rem;
+      font-weight: 400;
+      line-height: 160%;
+      p + .bullet-list {
+        margin: 12rem 0 0;
+      }
+      .bullet-list + p {
+        margin: 12rem 0 0;
+      }
+    }
+  }
+  &.active {
+    background: $gray50;
+    .accordion-head {
+      .btn {
+        &::after {
+          transform: rotate(180deg) translate(0, -50%);
+        }
+      }
+    }
+  }
+}
+@include tablet() {
+  .accordion-list {
+    padding: 0 0 0 60rem;
+    min-height: 72rem;
+    .accordion-head {
+      .btn {
+        padding: 20rem 20rem 20rem 0;
+        font-size: 16rem;
+        &::after {
+          right: 20rem;
+        }
+      }
+    }
+    .accordion-body {
+      .txt {
+        padding: 0 20rem 16rem 0;
+        font-size: 16rem;
+      }
+    }
+  }
+}

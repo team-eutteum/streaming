@@ -36,3 +36,5 @@ export const DONATION = '모금';
 export const ID_DONATION = '아이디 기부';
 export const HELPER = '헬퍼 지원';
 export const ALBUM_PURCHASE = '앨범 공구';
+
+export const QNA = 'QnA';

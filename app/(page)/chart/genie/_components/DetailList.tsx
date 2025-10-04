@@ -6,6 +6,7 @@ import { useQuery } from '@tanstack/react-query';
 import dayjs from 'dayjs';
 import timezone from 'dayjs/plugin/timezone';
 import utc from 'dayjs/plugin/utc';
+import { SwiperSlide } from 'swiper/react';
 
 import { Tab, Tabs } from '@/components';
 import CommingSoon from '@/components/Etc/CommingSoon';
@@ -106,16 +107,17 @@ function DetailList() {
         {!commingSoon && (
           <Tabs hasScroll>
             {tabContent?.charts.map((tab, index) => (
-              <Tab
-                key={`tabItem${index}`}
-                uniqueId={`genieTab${index}`}
-                onClick={() => handleTab(index, tab.chart)}
-                selected={activeTabIdx}
-                index={index}
-                size="lg"
-              >
-                {tab.label}
-              </Tab>
+              <SwiperSlide key={`tabItem${index}`}>
+                <Tab
+                  uniqueId={`genieTab${index}`}
+                  onClick={() => handleTab(index, tab.chart)}
+                  selected={activeTabIdx}
+                  index={index}
+                  size="lg"
+                >
+                  {tab.label}
+                </Tab>
+              </SwiperSlide>
             ))}
           </Tabs>
         )}

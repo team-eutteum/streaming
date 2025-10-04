@@ -1,6 +1,11 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
+
+import { Button, PageTitle } from '@/components';
+
+import IosIntro from '../../../public/images/guide/cheering/BBB.jpg';
 
 function ShortCutPage() {
   const [deferredPrompt, setDeferredPrompt] =
@@ -25,22 +30,37 @@ function ShortCutPage() {
   };
 
   return (
-    <div>
-      <h3>라이즈 음총팀 뮤직웨이브 바로가기 생성 링크입니다</h3>
-      <p>안드로이드</p>
-      <p>아래의 링크를 눌러 바로가기 앱을 추가해 주세요</p>
-
-      <button
-        onClick={handleInstall}
-        className="btn"
-        disabled={!deferredPrompt} // 이벤트가 잡혔을 때만 활성화
-      >
-        음총팀뮤웨 바로가기 생성
-      </button>
-
-      <p>아이폰</p>
-      <p>아래의 이미지에 따라 바로가기 아이콘을 생성해주세요</p>
-    </div>
+    <section className="sc-shortcut">
+      <div className="inner">
+        <PageTitle label="라이즈 음총팀 뮤직웨이브 바로가기 생성 링크입니다" />
+        <div className="page-division">
+          <div className="android half">
+            <p className="f-bd2 half-tit">안드로이드</p>
+            <p className="f-bd4 half-txt">
+              아래의 링크를 눌러 바로가기 앱을 추가해 주세요.
+            </p>
+            <Button
+              type="button"
+              size="md"
+              rounded="sm"
+              onClick={handleInstall}
+              disabled={!deferredPrompt}
+            >
+              음총팀 뮤직웨이브 바로가기 생성
+            </Button>
+          </div>
+          <div className="ios half">
+            <p className="f-bd2 half-tit">아이폰</p>
+            <p className="f-bd4 half-txt">
+              아래의 이미지에 따라 바로가기 아이콘을 생성해주세요.
+            </p>
+            <div className="img-wrap">
+              <Image src={IosIntro} alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }
 

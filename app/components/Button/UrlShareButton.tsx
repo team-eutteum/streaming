@@ -1,9 +1,11 @@
 import { ShareIcon } from '@heroicons/react/24/solid';
-import { usePathname } from 'next/navigation';
+import { usePathname, useSearchParams } from 'next/navigation';
 
 function UrlShareButton() {
   const pathname = usePathname();
-  const link = `${pathname}`;
+  const searchParams = useSearchParams();
+  const queryString = searchParams.toString();
+  const link = `${pathname}?${queryString}`;
 
   const shareData = {
     url: link,

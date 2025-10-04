@@ -1,10 +1,11 @@
+'use client';
 import clsx from 'clsx';
 import Link from 'next/link';
 
 import type { UrlObject } from 'url';
-
 interface TabProps {
-  href?: UrlObject | string;
+  href?: string | UrlObject;
+  currentPage?: string;
   children: React.ReactNode;
   className?: string;
   /**
@@ -15,7 +16,7 @@ interface TabProps {
    * @default 'outlined'
    */
   variant?: 'outlined' | 'box';
-  selected: number;
+  selected: number | string;
   index: number;
   uniqueId: string;
   onClick?: () => void;
@@ -34,6 +35,7 @@ const variants = {
 
 function Tab({
   href,
+  currentPage,
   children,
   className,
   size = 'md',
@@ -46,20 +48,33 @@ function Tab({
   const sizeClasses = sizes[size];
   const variantClasses = variants[variant];
 
+  console.log(typeof href);
+
   const commonClasses = clsx(sizeClasses, variantClasses, className);
 
   return (
-    <div
-      className={clsx(
-        'tab-btn',
-        clsx(selected === index && 'active'),
-        commonClasses,
-      )}
-    >
+    <>
       {href ? (
-        <Link href={href}>{children}</Link>
+        <Link
+          className={clsx(
+            'tab-btn',
+            (selected === index && 'active') ||
+              (typeof href === 'object' &&
+                href?.pathname === currentPage &&
+                'active'),
+            commonClasses,
+          )}
+          href={href}
+        >
+          {children}
+        </Link>
       ) : (
         <button
+          className={clsx(
+            'tab-btn',
+            selected === index && 'active',
+            commonClasses,
+          )}
           role="tab"
           onClick={() => onClick?.()}
           aria-selected={selected === index}
@@ -68,7 +83,7 @@ function Tab({
           {children}
         </button>
       )}
-    </div>
+    </>
   );
 }
 

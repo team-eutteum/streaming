@@ -1,6 +1,10 @@
+'use client';
+
 import type { PropsWithChildren } from 'react';
 import React from 'react';
 import clsx from 'clsx';
+import { Swiper } from 'swiper/react';
+import 'swiper/css';
 
 interface TabsProps {
   hasScroll?: boolean;
@@ -23,7 +27,9 @@ function Tabs({
   return (
     <div className={clsx(`box-tab-area`, sticky && 'sticky')}>
       <div className="tabs-wrap">
-        <div
+        <Swiper
+          slidesPerView={'auto'}
+          spaceBetween={20}
           className={clsx('tabs', hasScroll && 'scroll-x-active', {
             wrap: !scrollable,
           })}
@@ -35,7 +41,7 @@ function Tabs({
                 })
               : child,
           )}
-        </div>
+        </Swiper>
       </div>
     </div>
   );

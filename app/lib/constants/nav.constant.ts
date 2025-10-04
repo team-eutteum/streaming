@@ -4,6 +4,7 @@ interface NavItem {
   title: string;
   path: string;
   children?: NavItem[];
+  opened?: boolean;
 }
 
 export const NAV: NavItem[] = [
@@ -106,5 +107,10 @@ export const NAV: NavItem[] = [
         path: '/support/album',
       },
     ],
+  },
+  {
+    title: TITLE.QNA,
+    path: '/qna/streaming',
+    opened: false,
   },
 ];
