@@ -5,7 +5,7 @@ import { useEffect } from 'react';
 export default function RedirectPage() {
   useEffect(() => {
     window.location.replace(
-      'https://musicwave.melon.com/musicwave.htm?a=Y&m=tphpmyjUfXJUMxYL_0JGKk4bbsztv_8TdpDeXsUKhwM',
+      'https://musicwave.melon.com/musicwave.htm?m=D7W4jfMRX5F_jAiqRE8Inw',
     );
   }, []);
 
