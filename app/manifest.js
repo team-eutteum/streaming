@@ -11,15 +11,9 @@ const manifest = () => {
     lang: 'ko-KR',
     icons: [
       {
-        src: 'images/logo/logo.png',
-        sizes: '192x192',
-        type: 'image/png',
-        purpose: 'maskable',
-      },
-      {
-        src: 'images/logo/logo.png',
-        sizes: '512x512',
-        type: 'image/png',
+        src: 'images/logo/logo-app.jpg',
+        sizes: '160x160',
+        type: 'image/jpg',
       },
     ],
   };

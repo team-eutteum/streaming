@@ -43,7 +43,9 @@ function ShortCutPage() {
               onClick={handleInstall}
               disabled={!deferredPrompt}
             >
-              음총팀 뮤직웨이브 바로가기 생성
+              {deferredPrompt
+                ? ' 음총팀 뮤직웨이브 바로가기 생성'
+                : '바로가기 생성 완료!'}
             </Button>
           </div>
           <div className="ios half">
