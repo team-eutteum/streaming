@@ -10,13 +10,13 @@ import { Tab, TabPanels, Tabs, TabPanel } from '@/components';
 import { QNA_CONTENT } from '@/lib/constants/qna.constants';
 
 interface QnaLayoutProps {
-  params: string;
+  id: string;
 }
 
-export default function QnaLayout({ params }: QnaLayoutProps) {
+export default function QnaLayout({ id }: QnaLayoutProps) {
   const tabContent = QNA_CONTENT;
 
-  const isValidTab = tabContent.list.some((tab) => tab.id === params);
+  const isValidTab = tabContent.list.some((tab) => tab.id === id);
   if (!isValidTab) {
     notFound();
   }
@@ -32,7 +32,7 @@ export default function QnaLayout({ params }: QnaLayoutProps) {
               uniqueId={`qnaTab`}
               href={{ pathname: tab.id }}
               selected={tab.id}
-              currentPage={params}
+              currentPage={id}
               index={index}
               size="lg"
             >
@@ -46,7 +46,7 @@ export default function QnaLayout({ params }: QnaLayoutProps) {
         <TabPanels>
           {tabContent?.list?.map((tab, index) => {
             return (
-              params === tab.id && (
+              id === tab.id && (
                 <TabPanel
                   key={index}
                   index={index}

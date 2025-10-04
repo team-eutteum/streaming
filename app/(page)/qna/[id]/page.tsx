@@ -1,18 +1,17 @@
+import { Suspense } from 'react';
+
 import QnaLayout from '../_components/QnaLayout';
 import TitleArea from '../_components/TitleArea';
 
-interface QnaLayoutProps {
-  params: { id: string };
-}
-
-function QnaPage({ params }: QnaLayoutProps) {
-  const { id } = params;
-
+async function QnaPage({ params }: { params: Promise<{ id: string }> }) {
+  const { id } = await params;
   return (
-    <div>
+    <>
       <TitleArea label="QnA" />
-      <QnaLayout params={id} />
-    </div>
+      <Suspense>
+        <QnaLayout id={id} />
+      </Suspense>
+    </>
   );
 }
 

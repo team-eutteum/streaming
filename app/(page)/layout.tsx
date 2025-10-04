@@ -1,14 +1,16 @@
-import { type ReactNode } from 'react';
+import { Suspense, type ReactNode } from 'react';
 
 import { Footer, Header, NavigationBar } from '@/components';
 
 function GlobalLayout({ children }: { children: ReactNode }) {
   return (
     <>
-      <Header />
-      {children}
-      <Footer />
-      <NavigationBar />
+      <Suspense fallback={null}>
+        <Header />
+        {children}
+        <Footer />
+        <NavigationBar />
+      </Suspense>
     </>
   );
 }

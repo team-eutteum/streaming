@@ -55,7 +55,18 @@ function ShortCutPage() {
               아래의 이미지에 따라 바로가기 아이콘을 생성해주세요.
             </p>
             <div className="img-wrap">
-              <Image src={IosIntro} alt="" />
+              <div
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  width: '80%',
+                  height: '500rem',
+                  background: '#d9d9d9',
+                }}
+              >
+                가이드 이미지 첨부
+              </div>
             </div>
           </div>
         </div>
