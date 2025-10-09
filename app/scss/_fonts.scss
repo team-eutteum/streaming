@@ -54,6 +54,15 @@
   font-weight: 300;
 }
 
+.fc-pointRed {
+  color: $pointRed;
+}
+
+.f-underline {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 @include tablet {
   .f-pg-tit {
     font-size: 24rem;
