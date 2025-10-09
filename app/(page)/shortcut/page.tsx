@@ -1,12 +1,16 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 
 import { Button, PageTitle } from '@/components';
+import ShortcutImage from 'public/images/shortcut/shortcut-ios.jpg';
 
 function ShortCutPage() {
   const [deferredPrompt, setDeferredPrompt] =
     useState<BeforeInstallPromptEvent | null>(null);
+
+  const [msg, setMsg] = useState('');
 
   useEffect(() => {
     const handler = (e: Event) => {
@@ -19,16 +23,19 @@ function ShortCutPage() {
   }, []);
 
   const handleInstall = async () => {
-    if (!deferredPrompt) return;
-    deferredPrompt.prompt(); // 설치 다이얼로그 띄우기
-    const { outcome } = await deferredPrompt.userChoice;
-    console.log('User choice:', outcome);
-    setDeferredPrompt(null);
+    if (!deferredPrompt) setMsg('이미 설치가 되어있습니다');
+    else {
+      deferredPrompt.prompt(); // 설치 다이얼로그 띄우기
+      const { outcome } = await deferredPrompt.userChoice;
+      console.log('User choice:', outcome);
+      setDeferredPrompt(null);
+    }
   };
 
   return (
     <section className="sc-shortcut">
       <div className="inner">
+        <p>에러: {msg}</p>
         <PageTitle label="라이즈 음총팀 뮤직웨이브 바로가기 생성 링크입니다" />
         <div className="page-division">
           <div className="android half">
@@ -47,23 +54,12 @@ function ShortCutPage() {
             </Button>
           </div>
           <div className="ios half">
-            <p className="f-bd2 half-tit">아이폰</p>
+            <p className="f-bd2 half-tit">아이폰 | PC | 태블릿</p>
             <p className="f-bd4 half-txt">
               아래의 이미지에 따라 바로가기 아이콘을 생성해주세요.
             </p>
             <div className="img-wrap">
-              <div
-                style={{
-                  display: 'flex',
-                  justifyContent: 'center',
-                  alignItems: 'center',
-                  width: '80%',
-                  height: '500rem',
-                  background: '#d9d9d9',
-                }}
-              >
-                가이드 이미지 첨부
-              </div>
+              <Image src={ShortcutImage} alt="" width={100} height={100} />
             </div>
           </div>
         </div>
