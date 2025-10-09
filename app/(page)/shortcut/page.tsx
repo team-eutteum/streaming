@@ -10,8 +10,6 @@ function ShortCutPage() {
   const [deferredPrompt, setDeferredPrompt] =
     useState<BeforeInstallPromptEvent | null>(null);
 
-  const [msg, setMsg] = useState('');
-
   useEffect(() => {
     const handler = (e: Event) => {
       e.preventDefault();
@@ -23,19 +21,16 @@ function ShortCutPage() {
   }, []);
 
   const handleInstall = async () => {
-    if (!deferredPrompt) setMsg('이미 설치가 되어있습니다');
-    else {
-      deferredPrompt.prompt(); // 설치 다이얼로그 띄우기
-      const { outcome } = await deferredPrompt.userChoice;
-      console.log('User choice:', outcome);
-      setDeferredPrompt(null);
-    }
+    if (!deferredPrompt) return;
+    deferredPrompt.prompt(); // 설치 다이얼로그 띄우기
+    const { outcome } = await deferredPrompt.userChoice;
+    console.log('User choice:', outcome);
+    setDeferredPrompt(null);
   };
 
   return (
     <section className="sc-shortcut">
       <div className="inner">
-        <p>에러: {msg}</p>
         <PageTitle label="라이즈 음총팀 뮤직웨이브 바로가기 생성 링크입니다" />
         <div className="page-division">
           <div className="android half">
