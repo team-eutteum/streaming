@@ -1,7 +1,7 @@
 @use "mixin" as *;
 @use "variable" as *;
 .tab-total {
-  padding: 0 0 18rem;
+  padding: 0 0 24rem;
 }
 .accordion-list {
   position: relative;
@@ -85,6 +85,9 @@
   }
 }
 @include tablet() {
+  .tab-total {
+      padding: 0 0 18rem;
+    }
   .accordion-list {
     padding: 0 0 0 60rem;
     min-height: 72rem;
