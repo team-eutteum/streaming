@@ -53,6 +53,10 @@ export default function QnaLayout({ id }: QnaLayoutProps) {
                   selected={index}
                   uniqueId={`qnaTab-${index}`}
                 >
+                  <p className="tab-total f-bd4">
+                    <span className="fc-gray700">{tab.title} </span>
+                    <span className="fc-gray500">{tab.content.length}</span>
+                  </p>
                   {tab.content.map((item, idx) => {
                     return (
                       <div
@@ -87,7 +91,9 @@ export default function QnaLayout({ id }: QnaLayoutProps) {
                             >
                               <div
                                 className="txt"
-                                dangerouslySetInnerHTML={{ __html: item.body }}
+                                dangerouslySetInnerHTML={{
+                                  __html: item.body,
+                                }}
                               />
                             </motion.div>
                           )}
