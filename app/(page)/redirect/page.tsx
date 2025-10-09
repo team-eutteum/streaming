@@ -9,5 +9,5 @@ export default function RedirectPage() {
     );
   }, []);
 
-  return <p>외부 서비스로 이동 중...</p>;
+  return <div className="inner">외부 서비스로 이동 중...</div>;
 }
