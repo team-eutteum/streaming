@@ -52,7 +52,13 @@ function Header() {
                   onMouseEnter={() => handleTwoDepthOpen(oneIndex)}
                   onMouseLeave={() => handleTwoDepthOpen(null)}
                 >
-                  <div className="one-link f-bd4">{oneDepth.title}</div>
+                  {oneDepth.children ? (
+                    <div className="one-link f-bd4">{oneDepth.title}</div>
+                  ) : (
+                    <Link className="one-link f-bd4" href={oneDepth.path}>
+                      {oneDepth.title}
+                    </Link>
+                  )}
                   {oneDepth?.children && (
                     <div
                       className={clsx(
