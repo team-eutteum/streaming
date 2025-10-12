@@ -111,6 +111,6 @@ export const NAV: NavItem[] = [
   {
     title: TITLE.QNA,
     path: '/qna/streaming',
-    opened: false,
+    opened: true,
   },
 ];
