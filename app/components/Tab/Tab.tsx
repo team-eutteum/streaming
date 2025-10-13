@@ -48,8 +48,6 @@ function Tab({
   const sizeClasses = sizes[size];
   const variantClasses = variants[variant];
 
-  console.log(typeof href);
-
   const commonClasses = clsx(sizeClasses, variantClasses, className);
 
   return (
