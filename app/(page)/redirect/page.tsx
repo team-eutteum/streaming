@@ -12,7 +12,7 @@ export default function RedirectPage() {
   return (
     <div className="sub-container">
       <div className="inner">
-        <p className="f-bd2">음총팀 뮤직웨이브로 이동중...</p>
+        <p className="f-bd2">음총팀 뮤직웨이브로 이동중....</p>
       </div>
       <Loader />
     </div>
