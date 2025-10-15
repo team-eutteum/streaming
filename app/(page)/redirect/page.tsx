@@ -6,9 +6,7 @@ import Loader from '@/components/Etc/Loader';
 
 export default function RedirectPage() {
   useEffect(() => {
-    window.location.replace(
-      'https://musicwave.melon.com/musicwave.htm?m=D7W4jfMRX5F_jAiqRE8Inw',
-    );
+    window.location.replace('https://tinyurl.com/bddnfyb3');
   }, []);
 
   return (
