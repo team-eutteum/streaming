@@ -121,7 +121,7 @@ transition: $transitions; // 누적된 값을 출력
   }
 }
 
-@mixin font($name: Pretendard, $weight: 400, $size: 16px, $height: 160%, $spacing: -0.032px, $color: $black) {
+@mixin font($name: "Pretendard Variable", $weight: 400, $size: 16px, $height: 160%, $spacing: -0.032px, $color: $black) {
   font-family: #{$name};
 
   font: {

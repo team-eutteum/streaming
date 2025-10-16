@@ -83,7 +83,7 @@ caption {
 textarea,
 button {
   vertical-align: middle;
-  font-family: Pretendard, sans-serif;
+  font-family: "Pretendard Variable", sans-serif;
 }
 
 textarea {
@@ -135,15 +135,15 @@ input[type="text"]::-ms-clear {
 
 input {
   &::input-placeholder {
-    font-family: Pretendard, sans-serif;
+    font-family: "Pretendard Variable", sans-serif;
   }
 
   &::input-placeholder {
-    font-family: Pretendard, sans-serif;
+    font-family: "Pretendard Variable", sans-serif;
   }
 
   &::placeholder {
-    font-family: Pretendard, sans-serif;
+    font-family: "Pretendard Variable", sans-serif;
   }
 
   &[type="number"]::-webkit-outer-spin-button {
@@ -175,19 +175,19 @@ input {
 
 textarea {
   &::input-placeholder {
-    font-family: Pretendard, sans-serif;
+    font-family: "Pretendard Variable", sans-serif;
   }
 
   &:input-placeholder {
-    font-family: Pretendard, sans-serif;
+    font-family: "Pretendard Variable", sans-serif;
   }
 
   &::input-placeholder {
-    font-family: Pretendard, sans-serif;
+    font-family: "Pretendard Variable", sans-serif;
   }
 
   &::placeholder {
-    font-family: Pretendard, sans-serif;
+    font-family: "Pretendard Variable", sans-serif;
   }
 
   &:focus::input-placeholder {
