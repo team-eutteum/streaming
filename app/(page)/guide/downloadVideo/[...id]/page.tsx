@@ -1,13 +1,14 @@
 import GuideLayout from '../_components/GuideLayout';
 import TitleArea from '../_components/TitleArea';
 
-async function downloadGuideVideoPage({
-  params,
-}: {
-  params: { id: string[] };
-}) {
-  // const { id } = params;
-  const id = params.id.join('/');
+interface PageProps {
+  params: Promise<{ id: string[] }>;
+}
+
+async function downloadGuideVideoPage({ params }: PageProps) {
+  const { id: rawId } = await params;
+
+  const id = Array.isArray(rawId) ? rawId.join('/') : rawId;
   return (
     <>
       <TitleArea label="음원 다운로드 가이드 영상" />
