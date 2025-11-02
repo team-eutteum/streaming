@@ -67,19 +67,22 @@ function Header() {
                       )}
                     >
                       <ul className="two-depth">
-                        {oneDepth?.children.map((twoDepth, twoIndex) => (
-                          <li
-                            className="two-list"
-                            key={`pcTwoDepth${twoIndex}`}
-                          >
-                            <Link
-                              className="two-link f-bd4"
-                              href={twoDepth.path}
-                            >
-                              {twoDepth.title}
-                            </Link>
-                          </li>
-                        ))}
+                        {oneDepth?.children.map(
+                          (twoDepth, twoIndex) =>
+                            twoDepth.opened !== false && (
+                              <li
+                                className="two-list"
+                                key={`pcTwoDepth${twoIndex}`}
+                              >
+                                <Link
+                                  className="two-link f-bd4"
+                                  href={twoDepth.path}
+                                >
+                                  {twoDepth.title}
+                                </Link>
+                              </li>
+                            ),
+                        )}
                       </ul>
                     </div>
                   )}

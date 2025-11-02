@@ -37,6 +37,13 @@
         margin: 80rem 0 0;
       }
     }
+    .video-wrap {
+      margin: 0 auto;
+      width: 80%;
+      video {
+        width: 100%;
+      }
+    }
     .no-data {
       .img-wrap {
         width: 100rem;
@@ -107,7 +114,7 @@
     }
     .sc-shortcut {
       .page-division {
-        .img-wrap {
+ video       .img-wrap {
             width: 100%;
           }
       }

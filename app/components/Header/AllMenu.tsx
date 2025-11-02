@@ -75,19 +75,22 @@ function AllMenu({ isMenuOpened }: AllMenuProps) {
                               exit={{ height: 0 }}
                               transition={{ duration: 0.2 }}
                             >
-                              {oneDepth?.children.map((twoDepth, index) => (
-                                <li
-                                  className="two-list"
-                                  key={`twoDepth${index}`}
-                                >
-                                  <Link
-                                    className="two-link"
-                                    href={twoDepth.path}
-                                  >
-                                    {twoDepth.title}
-                                  </Link>
-                                </li>
-                              ))}
+                              {oneDepth?.children.map(
+                                (twoDepth, index) =>
+                                  twoDepth.opened && (
+                                    <li
+                                      className="two-list"
+                                      key={`twoDepth${index}`}
+                                    >
+                                      <Link
+                                        className="two-link"
+                                        href={twoDepth.path}
+                                      >
+                                        {twoDepth.title}
+                                      </Link>
+                                    </li>
+                                  ),
+                              )}
                             </motion.ul>
                           )}
                       </AnimatePresence>
