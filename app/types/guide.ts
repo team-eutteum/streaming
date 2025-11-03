@@ -8,6 +8,7 @@ export interface TabContentProps {
   label?: string;
   image?: StaticImageData[];
   links?: Array<LinkProps>;
+  content?: string;
 }
 
 export interface CommonGuideLayoutProps {

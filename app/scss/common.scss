@@ -168,6 +168,28 @@ body header .btn-menu:has(.active) {
   }
 }
 
+.bullet-list {
+  .list {
+    position: relative;
+    padding: 0 0 0 12rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 15rem;
+      left: 0;
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      background: #000;
+    }
+
+    &+.list {
+      margin: 4rem 0 0;
+    }
+  }
+}
+
 @include tablet() {
   .nav-bar {
     display: flex;
@@ -231,24 +253,11 @@ body header .btn-menu:has(.active) {
       width: 80rem;
     }
   }
-}
-
-.bullet-list {
-  .list {
-    position: relative;
-    padding: 0 0 0 12rem;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 10rem;
-      left: 0;
-      width: 5rem;
-      height: 5rem;
-      border-radius: 50%;
-      background: #000;
-    }
-    & + .list {
-      margin: 4rem 0 0;
+  .bullet-list {
+    .list {
+      &::before {
+        top: 8rem;
+      }
     }
   }
 }

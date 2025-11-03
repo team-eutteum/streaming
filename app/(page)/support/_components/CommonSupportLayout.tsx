@@ -49,12 +49,23 @@ function CommonSupportLayout({
               selected={activeTabIdx}
               uniqueId={uniqueId}
             >
-              {tabItem.image?.length ? (
-                tabItem.image.map((img, idx) => (
-                  <div className="img-wrap" key={`tabItemImg${idx}`}>
-                    <Image src={img} alt="" width={100} height={100} />
-                  </div>
-                ))
+              {tabItem.image?.length || tabItem.content ? (
+                <>
+                  {tabItem.content && (
+                    <div
+                      className="txt-wrap"
+                      dangerouslySetInnerHTML={{
+                        __html: tabItem.content,
+                      }}
+                    />
+                  )}
+                  {tabItem.image &&
+                    tabItem.image.map((img, idx) => (
+                      <div className="img-wrap" key={`tabItemImg${idx}`}>
+                        <Image src={img} alt="" width={100} height={100} />
+                      </div>
+                    ))}
+                </>
               ) : (
                 <NoData Icon={PhotoIcon} txt={'가이드 이미지 준비중입니다.'} />
               )}
