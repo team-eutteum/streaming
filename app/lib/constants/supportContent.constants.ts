@@ -46,7 +46,7 @@ export const HELPER_CONTENT: CommonContentProps = {
 
 export const ALBUM_PURCHASE_CONTENT: CommonContentProps = {
   label: TITLE.ALBUM_PURCHASE,
-  updateDate: '2025.04.28',
+  updateDate: '2025.11.03',
   uniqueId: 'albumPurchase',
   content: [
     // {
