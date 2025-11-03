@@ -1,9 +1,11 @@
 'use client';
 
+import { ArrowPathIcon } from '@heroicons/react/24/outline';
 import { notFound } from 'next/navigation';
 import { SwiperSlide } from 'swiper/react';
 
 import { Tab, TabPanels, Tabs, TabPanel } from '@/components';
+import NoData from '@/components/NoData/Nodata';
 import { DOWNLOAD_GUIDE_VIDEO_CONTENT } from '@/lib/constants/downloadGuideVideo.constants';
 
 interface GuideLayoutProps {
@@ -69,9 +71,16 @@ export default function GuideLayout({ id }: GuideLayoutProps) {
                     selected={index}
                     uniqueId={`downloadGuideVideoTabPanel-${childIndex}`}
                   >
-                    <div className="video-wrap">
-                      <video src={child.video} muted autoPlay controls />
-                    </div>
+                    {child.video ? (
+                      <div className="video-wrap">
+                        <video src={child.video} muted autoPlay controls />
+                      </div>
+                    ) : (
+                      <NoData
+                        Icon={ArrowPathIcon}
+                        txt={`비디오 불러오기에 실패하였습니다.\n 새로고침을 다시 해주시기 바랍니다.`}
+                      />
+                    )}
                   </TabPanel>
                 ),
             ),

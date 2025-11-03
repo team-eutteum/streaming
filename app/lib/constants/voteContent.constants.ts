@@ -1,5 +1,5 @@
 import type { CommonContentProps } from '@/types/guide';
-import voteGuide from 'public/images/vote/collect/collect.png';
+import voteGuide from 'public/images/vote/collect/collect.jpg';
 import mamaSuperFanGuide from 'public/images/vote/mama/superfanApply.jpg';
 import musicDayGuide from 'public/images/vote/music/day.jpg';
 import musicFullGuide from 'public/images/vote/music/full.jpg';
@@ -14,7 +14,7 @@ import * as TITLE from './title.constant';
 
 export const COLLECT_CONTENT: CommonContentProps = {
   label: TITLE.COLLECT,
-  updateDate: '2025.09.15',
+  updateDate: '2025.10',
   uniqueId: 'voteCollectList',
   content: [
     {

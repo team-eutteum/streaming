@@ -41,7 +41,7 @@ export const ID_DONATION_CONTENT: CommonContentProps = {
 
 export const HELPER_CONTENT: CommonContentProps = {
   label: TITLE.HELPER,
-  updateDate: '2025.09.17',
+  updateDate: '2025.11',
   uniqueId: 'helperList',
   content: [
     {
