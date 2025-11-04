@@ -42,7 +42,7 @@
     }
     .video-wrap {
       margin: 0 auto;
-      width: 80%;
+      width: 50%;
       video {
         width: 100%;
       }
@@ -114,6 +114,11 @@
     .tit-area {
       margin: 0 auto 40rem auto;
 
+    }
+    .sc-down-guide {
+      .video-wrap {
+          width: 70%;
+        }
     }
     .sc-shortcut {
       .page-division {
