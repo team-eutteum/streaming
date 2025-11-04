@@ -39,6 +39,11 @@ export const DOWNLOAD_GUIDE_VIDEO_CONTENT = [
     title: TITLE.BUGS,
     children: [
       {
+        id: 'mobile',
+        title: '모바일',
+        video: '/videos/downloadGuide/bugs-mobile.mp4',
+      },
+      {
         id: 'pc',
         title: 'PC',
         video: '/videos/downloadGuide/bugs-pc.mp4',

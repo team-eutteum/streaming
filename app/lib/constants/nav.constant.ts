@@ -41,7 +41,7 @@ export const NAV: NavItem[] = [
           },
           {
             title: TITLE.BUGS,
-            path: '/guide/downloadVideo/bugs/pc',
+            path: '/guide/downloadVideo/bugs/mobile',
           },
         ],
         opened: false,
