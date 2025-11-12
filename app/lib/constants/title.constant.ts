@@ -7,10 +7,11 @@ export const GUIDE = '가이드';
 export const STREAMING_LIST = '스트리밍 리스트';
 export const MUSIC_STREAMING = '음원 스트리밍';
 export const MUSIC_DOWNLOAD = '음원 다운';
-export const MUSIC_DOWNLOAD_GUIDE_VIDEO = '다운로드 가이드 영상';
+export const MUSIC_DOWNLOAD_GUIDE_VIDEO = '음원 다운로드 가이드 영상';
 export const MUSIC_ID_CREATE = '음원 아이디 생성';
 export const RADIO_APPLICATION = '라디오 신청';
 export const MUSIC_VIDEO_STREAMING = '뮤직비디오 스트리밍';
+export const MUSIC_VIDEO_DOWNLOAD = '뮤직비디오 다운로드';
 export const CHEERING_METHOD = '응원법';
 
 /* Vote */

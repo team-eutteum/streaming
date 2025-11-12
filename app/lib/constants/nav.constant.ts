@@ -61,6 +61,11 @@ export const NAV: NavItem[] = [
         path: '/guide/video',
         opened: true,
       },
+      // {
+      //   title: TITLE.MUSIC_VIDEO_DOWNLOAD,
+      //   path: '/guide/musicVideoDownload',
+      //   opened: true,
+      // },
       {
         title: TITLE.CHEERING_METHOD,
         path: '/guide/cheering',
