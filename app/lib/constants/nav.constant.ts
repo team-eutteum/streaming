@@ -44,7 +44,7 @@ export const NAV: NavItem[] = [
             path: '/guide/downloadVideo/bugs/mobile',
           },
         ],
-        opened: false,
+        opened: true,
       },
       {
         title: TITLE.MUSIC_ID_CREATE,
