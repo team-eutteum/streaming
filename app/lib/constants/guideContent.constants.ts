@@ -45,7 +45,7 @@ export const STREAMING_LIST_CONTENT: CommonContentProps = {
 
 export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
   label: TITLE.MUSIC_STREAMING,
-  updateDate: '2025.04.14',
+  updateDate: '2025.09',
   uniqueId: 'musicStreaming',
   content: [
     {
@@ -173,7 +173,7 @@ export const RADIO_APPLICATION_GUIDE: CommonContentProps = {
 
 export const MUSIC_VIDEO_STREAMING_GUIDE: CommonContentProps = {
   label: TITLE.MUSIC_VIDEO_STREAMING,
-  updateDate: '2025.05.01',
+  updateDate: '2025.09',
   uniqueId: 'musicVideoStreaming',
   content: [
     {
