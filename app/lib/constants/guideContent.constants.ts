@@ -3,6 +3,7 @@ import type { CheeringMethodProps, CommonContentProps } from '@/types/guide';
 import DownBugsGuide from 'public/images/guide/download/bugs/bugs.jpg';
 import DownGenieAndroidGuide from 'public/images/guide/download/genie/genieAndroid.jpg';
 import DownGeniePcGuide from 'public/images/guide/download/genie/geniePc.jpg';
+import DownKakaoMusicGuide from 'public/images/guide/download/kakaoMusic/kakaoMusic.jpg';
 import DownMelonAndroidGuide from 'public/images/guide/download/melon/melonAndroid.jpg';
 import DownMelonPcGuide from 'public/images/guide/download/melon/melonPc.jpg';
 import DownVibeGuide from 'public/images/guide/download/vibe/vibe.jpg';
@@ -12,10 +13,17 @@ import IdGenieGuide from 'public/images/guide/id/genie.jpg';
 import IdMelonGuide from 'public/images/guide/id/melon.jpg';
 /* streaming list guide */
 import StreamingListGuide from 'public/images/guide/list/list.jpg';
-import MusivVideoGuide from 'public/images/guide/musicVideo/musicVideo.jpg';
+import MusicVideoDownloadBugsPcGuide from 'public/images/guide/musicVideo/download-bugs-pc.jpg';
+import MusicVideoDownloadMelonMoGuide from 'public/images/guide/musicVideo/download-melon-mo.jpg';
+import MusicVideoDownloadMelonPcGuide from 'public/images/guide/musicVideo/download-melon-pc.jpg';
+import MusicVideoGuide from 'public/images/guide/musicVideo/musicVideo.jpg';
 import RadioKBSGuide from 'public/images/guide/radio/kbs.jpg';
 import RadioMBCGuide from 'public/images/guide/radio/mbc.jpg';
 import RadioSBSGuide from 'public/images/guide/radio/sbs.jpg';
+/* 숏폼 */
+import ShortFormInstagram from 'public/images/guide/shortForm/instagram.jpg';
+import ShortFormTikTok from 'public/images/guide/shortForm/tiktok.jpg';
+import ShortFormYoutube from 'public/images/guide/shortForm/youtube.jpg';
 /* streaming guide */
 import StreamingAppleGuide from 'public/images/guide/streaming/apple.jpg';
 import StreamingBugsGuide from 'public/images/guide/streaming/bugs.jpg';
@@ -87,10 +95,9 @@ export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
   ],
 };
 
-// 이미지 수급 예정
 export const MUSIC_DOWNLOAD_CONTENT: CommonContentProps = {
   label: TITLE.MUSIC_DOWNLOAD,
-  updateDate: '2025.05.01',
+  updateDate: '2025.10',
   uniqueId: 'musicDownload',
   content: [
     {
@@ -108,6 +115,10 @@ export const MUSIC_DOWNLOAD_CONTENT: CommonContentProps = {
     {
       label: TITLE.VIBE,
       image: [DownVibeGuide],
+    },
+    {
+      label: TITLE.KAKAOMUSIC,
+      image: [DownKakaoMusicGuide],
     },
   ],
 };
@@ -178,7 +189,83 @@ export const MUSIC_VIDEO_STREAMING_GUIDE: CommonContentProps = {
   content: [
     {
       label: TITLE.MUSIC_VIDEO_STREAMING,
-      image: [MusivVideoGuide],
+      image: [MusicVideoGuide],
+    },
+  ],
+};
+
+export const MUSIC_VIDEO_GUIDE = [
+  {
+    label: TITLE.MUSIC_VIDEO_STREAMING,
+    updateDate: '2025.09',
+    uniqueId: 'streaming',
+    children: [
+      {
+        uniqueId: 'streamingGuide',
+        label: TITLE.MUSIC_VIDEO_STREAMING,
+        image: [MusicVideoGuide],
+        links: [
+          {
+            link: 'https://youtu.be/vLUtHODdLzk?si=JjO37QtHXbPmEZF8',
+            linkTxt: 'Fly Up 뮤비 스밍 바로가기',
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: TITLE.MUSIC_VIDEO_DOWNLOAD,
+    updateDate: '2025.09',
+    uniqueId: 'download',
+    children: [
+      {
+        uniqueId: 'melon',
+        label: TITLE.MELON,
+        image: [MusicVideoDownloadMelonPcGuide, MusicVideoDownloadMelonMoGuide],
+      },
+      {
+        uniqueId: 'bugs',
+        label: TITLE.BUGS,
+        image: [MusicVideoDownloadBugsPcGuide],
+      },
+    ],
+  },
+];
+
+// export const MUSIC_VIDEO_GUIDE: CommonContentProps = {
+//   label: TITLE.MUSIC_VIDEO,
+//   updateDate: '2025.09',
+//   uniqueId: 'musicVideo',
+//   content: [
+//     {
+//       uniqueId: 'download',
+//       label: TITLE.MUSIC_VIDEO_STREAMING,
+//       image: [MusicVideoGuide],
+//     },
+//     {
+//       uniqueId: 'streaming',
+//       label: TITLE.MUSIC_VIDEO_DOWNLOAD,
+//       image: [MusicVideoGuide],
+//     },
+//   ],
+// };
+
+export const SHORTFORM_CONTENT: CommonContentProps = {
+  label: TITLE.SHORT_FORM,
+  updateDate: '2025.11',
+  uniqueId: 'shortform',
+  content: [
+    {
+      label: TITLE.INSTAGRAM,
+      image: [ShortFormInstagram],
+    },
+    {
+      label: TITLE.TiKTOK,
+      image: [ShortFormTikTok],
+    },
+    {
+      label: TITLE.YOUTUBESHORTS,
+      image: [ShortFormYoutube],
     },
   ],
 };

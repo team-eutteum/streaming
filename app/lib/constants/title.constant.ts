@@ -10,8 +10,10 @@ export const MUSIC_DOWNLOAD = '음원 다운';
 export const MUSIC_DOWNLOAD_GUIDE_VIDEO = '음원 다운로드 가이드 영상';
 export const MUSIC_ID_CREATE = '음원 아이디 생성';
 export const RADIO_APPLICATION = '라디오 신청';
+export const MUSIC_VIDEO = '뮤직비디오';
 export const MUSIC_VIDEO_STREAMING = '뮤직비디오 스트리밍';
 export const MUSIC_VIDEO_DOWNLOAD = '뮤직비디오 다운로드';
+export const SHORT_FORM = '숏폼 가이드';
 export const CHEERING_METHOD = '응원법';
 
 /* Vote */
@@ -30,6 +32,12 @@ export const GENIE = '지니';
 export const BUGS = '벅스';
 export const FLO = '플로';
 export const VIBE = '바이브';
+export const KAKAOMUSIC = '카카오뮤직';
+
+/* ShortForm */
+export const INSTAGRAM = '인스타그램';
+export const TiKTOK = '틱톡';
+export const YOUTUBESHORTS = '유튜브 쇼츠';
 
 /* Support */
 export const SUPPORT = '지원';

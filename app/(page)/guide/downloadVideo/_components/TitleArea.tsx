@@ -1,6 +1,5 @@
 'use client';
 
-import { useEffect } from 'react';
 import { usePathname } from 'next/navigation';
 
 import { PageTitle } from '@/components';
@@ -14,12 +13,6 @@ function TitleArea({ label }: TitleAreaProps) {
   const pathname = usePathname();
 
   const currPath = pathname.split('/')[3];
-
-  useEffect(() => {
-    {
-      console.log();
-    }
-  }, []);
 
   return (
     <div className="tit-area">

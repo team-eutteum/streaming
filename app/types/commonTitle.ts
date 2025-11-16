@@ -7,4 +7,5 @@ export interface TitleAreaProps {
   className?: string;
   link?: string;
   linkTxt?: string;
+  hasSelect?: boolean;
 }

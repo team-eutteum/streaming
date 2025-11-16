@@ -7,8 +7,11 @@ export interface LinkProps {
 export interface TabContentProps {
   label?: string;
   image?: StaticImageData[];
+  video?: string;
   links?: Array<LinkProps>;
   content?: string;
+  id?: string;
+  uniqueId?: string;
 }
 
 export interface CommonGuideLayoutProps {
@@ -16,6 +19,8 @@ export interface CommonGuideLayoutProps {
   uniqueId: string;
   link?: string;
   linkTxt?: string;
+  parentId?: string;
+  childId?: string;
 }
 
 export interface CommonContentProps {

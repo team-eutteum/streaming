@@ -57,8 +57,23 @@ export const NAV: NavItem[] = [
         opened: true,
       },
       {
-        title: TITLE.MUSIC_VIDEO_STREAMING,
-        path: '/guide/video',
+        title: TITLE.MUSIC_VIDEO,
+        path: '/guide/video/streaming',
+        children: [
+          {
+            title: TITLE.MUSIC_VIDEO_STREAMING,
+            path: '/guide/video/streaming',
+          },
+          {
+            title: TITLE.MUSIC_VIDEO_DOWNLOAD,
+            path: '/guide/video/download',
+          },
+        ],
+        opened: true,
+      },
+      {
+        title: TITLE.SHORT_FORM,
+        path: '/guide/shortForm',
         opened: true,
       },
       // {
