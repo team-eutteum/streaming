@@ -1,6 +1,8 @@
+// import musicTheShowGuide from 'public/images/vote/music/theshow.jpg';
+
 import type { CommonContentProps } from '@/types/guide';
 import voteGuide from 'public/images/vote/collect/collect.jpg';
-import mamaSuperFanGuide from 'public/images/vote/mama/superfanApply.jpg';
+// import mamaSuperFanGuide from 'public/images/vote/mama/superfanApply.jpg';
 import musicDayGuide from 'public/images/vote/music/day.jpg';
 import musicFullGuide from 'public/images/vote/music/full.jpg';
 import musicInkigayoGuide from 'public/images/vote/music/inkigayo.jpg';
@@ -8,7 +10,6 @@ import musicMcountdownGuide from 'public/images/vote/music/mcountdown.jpg';
 import musicMusicBankGuide from 'public/images/vote/music/musicbank.jpg';
 import musicMusicCoreGuide from 'public/images/vote/music/musiccore.jpg';
 import musicShowChampionGuide from 'public/images/vote/music/showchampion.jpg';
-import musicTheShowGuide from 'public/images/vote/music/theshow.jpg';
 
 import * as TITLE from './title.constant';
 
@@ -26,7 +27,7 @@ export const COLLECT_CONTENT: CommonContentProps = {
 
 export const BROADCAST_CONTENT: CommonContentProps = {
   label: TITLE.MUSIC_BROADCAST,
-  updateDate: '2025.04.14',
+  updateDate: '2025.10',
   uniqueId: 'voteCollectList',
   content: [
     {
@@ -55,10 +56,11 @@ export const BROADCAST_CONTENT: CommonContentProps = {
       label: '엠카운트다운',
       image: [musicMcountdownGuide],
     },
-    {
-      label: '더쇼',
-      image: [musicTheShowGuide],
-    },
+    // 더쇼 종영으로 삭제
+    // {
+    //   label: '더쇼',
+    //   image: [musicTheShowGuide],
+    // },
     {
       label: '쇼챔피언',
       image: [musicShowChampionGuide],
@@ -85,7 +87,7 @@ export const MAMA_CONTENT: CommonContentProps = {
   content: [
     {
       label: TITLE.MAMA_FANS_CHOICE,
-      image: [mamaSuperFanGuide],
+      // image: [mamaSuperFanGuide],
     },
   ],
 };
