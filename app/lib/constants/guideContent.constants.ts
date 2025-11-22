@@ -146,7 +146,7 @@ export const MUSIC_ID_CREATE_GUIDE: CommonContentProps = {
 
 export const RADIO_APPLICATION_GUIDE: CommonContentProps = {
   label: TITLE.RADIO_APPLICATION,
-  updateDate: '2025.04.14',
+  updateDate: '2025.11.24',
   uniqueId: 'radioApplication',
   content: [
     {
@@ -154,7 +154,7 @@ export const RADIO_APPLICATION_GUIDE: CommonContentProps = {
       image: [RadioSBSGuide],
       links: [
         {
-          link: 'sms:%231077?body=라이즈의 Fly Up 신청합니다.',
+          link: 'sms:%231077?body=라이즈의 Fame 신청합니다.',
           linkTxt: 'SBS COOL FM 라디오 문자 신청',
         },
       ],
@@ -164,7 +164,7 @@ export const RADIO_APPLICATION_GUIDE: CommonContentProps = {
       image: [RadioKBSGuide],
       links: [
         {
-          link: 'sms:%238910?body=라이즈의 Fly Up 신청합니다.',
+          link: 'sms:%238910?body=라이즈의 Fame 신청합니다.',
           linkTxt: 'KBS COOL FM 라디오 문자 신청',
         },
       ],
@@ -174,7 +174,7 @@ export const RADIO_APPLICATION_GUIDE: CommonContentProps = {
       image: [RadioMBCGuide],
       links: [
         {
-          link: 'sms:%238000?body=라이즈의 Fly Up 신청합니다.',
+          link: 'sms:%238000?body=라이즈의 Fame 신청합니다.',
           linkTxt: 'MBC FM4U 라디오 문자 신청',
         },
       ],
