@@ -5,6 +5,14 @@ import { Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 function BannerSwiper() {
+  /* 
+    썸네일 추출 방법 
+    https://img.youtube.com/vi/동영상고유아이디/maxresdefault.jpg
+    동영상고유아이디 예시) 
+    https://www.youtube.com/watch?v=vLUtHODdLzk&list=PLVtDfG0ugTx7Z_XHyRiN54Z3jyQCUUYw1
+    영상 url에서 v= 뒤에 있는 "vLUtHODdLzk"이 동영상고유아이디
+  **/
+
   return (
     <Swiper
       className="swiper-banner"
