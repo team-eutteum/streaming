@@ -39,7 +39,7 @@ function ModalOneClickMelon({ onClose }: { onClose: () => void }) {
               </Button>
             </li>
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/4c5x6c6y'}>
+              <Button size="lg" href={'https://tinyurl.com/yxr9pmr8'}>
                 아이패드
               </Button>
             </li>
