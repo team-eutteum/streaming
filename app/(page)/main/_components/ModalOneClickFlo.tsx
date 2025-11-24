@@ -9,7 +9,7 @@ function ModalOneClickFlo({ onClose }: { onClose: () => void }) {
           <p className="list-tit f-bd3">ANDROID & IOS</p>
           <ul className="grid-1">
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/59mj6euy'}>
+              <Button size="lg" href={'https://tinyurl.com/4k3pp7he'}>
                 원클릭
               </Button>
             </li>

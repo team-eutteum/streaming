@@ -9,7 +9,7 @@ function ModalOneClickGenie({ onClose }: { onClose: () => void }) {
           <p className="list-tit f-bd3">ANDROID</p>
           <ul className="grid-1">
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/26pk8axh'}>
+              <Button size="lg" href={'https://tinyurl.com/4k6jh8a6'}>
                 원클릭
               </Button>
             </li>
@@ -19,7 +19,7 @@ function ModalOneClickGenie({ onClose }: { onClose: () => void }) {
           <p className="list-tit f-bd3">IOS</p>
           <ul className="grid-1">
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/23hxvamv'}>
+              <Button size="lg" href={'https://tinyurl.com/3xyyzpu3'}>
                 원클릭
               </Button>
             </li>
@@ -29,7 +29,7 @@ function ModalOneClickGenie({ onClose }: { onClose: () => void }) {
           <p className="list-tit f-bd3">PC</p>
           <ul className="grid-1">
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/fcy4vzwz'}>
+              <Button size="lg" href={'https://tinyurl.com/ejywnd2k'}>
                 원클릭
               </Button>
             </li>

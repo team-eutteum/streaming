@@ -12,17 +12,17 @@ interface TodoListProps {
 }
 
 export const TODOLIST_CONTENT: TodoListProps = {
-  updateDate: '2025.06.19',
-  version: '6', // 수정될 때마다 버전 변경 해줘서 세션에서 변경 사항 감지
+  updateDate: '2025.11.24',
+  version: '7', // 수정될 때마다 버전 변경 해줘서 세션에서 변경 사항 감지
   content: [
     {
       id: 'todoList0',
-      cntn: '하루 1번 Fly Up 감상 🪽',
+      cntn: '하루 1번 Fame 감상 🪽',
       checked: false,
     },
     {
       id: 'todoList1',
-      cntn: 'Fly Up MV 스트리밍 하기',
+      cntn: 'Fame MV 스트리밍 하기',
       checked: false,
       url: 'https://youtu.be/vLUtHODdLzk?si=0UFgyDChm3Rx9aCd',
     },

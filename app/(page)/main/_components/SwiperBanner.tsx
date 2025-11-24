@@ -29,6 +29,15 @@ function BannerSwiper() {
     >
       <SwiperSlide>
         <Link
+          href="https://youtu.be/TVqEwvbZP30?si=2KU1xVvBr1Q4bC1I"
+          target="_blank"
+          className="banner-slide"
+        >
+          <Image src="/images/main/banner/fame.jpg" alt="Fame" fill />
+        </Link>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Link
           href="https://youtu.be/vLUtHODdLzk?si=swRHDlE8IGXsrNCq"
           target="_blank"
           className="banner-slide"

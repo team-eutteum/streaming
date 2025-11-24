@@ -41,7 +41,7 @@ import * as TITLE from './title.constant';
 
 export const STREAMING_LIST_CONTENT: CommonContentProps = {
   label: TITLE.STREAMING_LIST,
-  updateDate: '2025.04.14',
+  updateDate: '2025.11.24',
   uniqueId: 'streamingList',
   content: [
     {
@@ -206,8 +206,8 @@ export const MUSIC_VIDEO_GUIDE = [
         image: [MusicVideoGuide],
         links: [
           {
-            link: 'https://youtu.be/vLUtHODdLzk?si=JjO37QtHXbPmEZF8',
-            linkTxt: 'Fly Up 뮤비 스밍 바로가기',
+            link: 'https://youtu.be/TVqEwvbZP30?si=2KU1xVvBr1Q4bC1I',
+            linkTxt: 'Fame 뮤비 스밍 바로가기',
           },
         ],
       },
