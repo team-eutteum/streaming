@@ -24,7 +24,7 @@ export const TODOLIST_CONTENT: TodoListProps = {
       id: 'todoList1',
       cntn: 'Fame MV 스트리밍 하기',
       checked: false,
-      url: 'https://youtu.be/vLUtHODdLzk?si=0UFgyDChm3Rx9aCd',
+      url: 'https://youtu.be/TVqEwvbZP30?si=g-13bDX6OtieEPBr',
     },
     {
       id: 'todoList2',
