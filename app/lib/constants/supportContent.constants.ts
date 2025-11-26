@@ -61,7 +61,7 @@ export const ALBUM_PURCHASE_CONTENT: CommonContentProps = {
       label: 'Ktown4u',
       image: [albumKtown4uGuide],
       content:
-        '<div class="f-bd3"><ul class="bullet-list"><li class="list">공구처: 케타포</li><li class="list">특전: 미정 (미공포 추가 시 동일 제공 예정)</li><li class="list">가격: 포토북 15,600원 / 챔버 19,200원 / 카탈로그 13,200원 / 스미니 10,800원 (세트 64,200원)</li><li class="list">공구 기간: ~11/24(월) 17:00</li><li class="list">발송일: 11/25 이후</li></ul></div>',
+        '<div class="f-bd3"><ul class="bullet-list"><li class="list">공구처: 케타포</li><li class="list">특전: 미정 (미공포 추가 시 동일 제공 예정)</li><li class="list">가격: 포토북 15,600원 / 챔버 19,200원 / 카탈로그 13,200원 / 스미니 10,800원 (세트 64,200원)</li><li class="list">공구 기간: ~11/30(일) 17:00</li><li class="list">발송일: 11/25 이후</li></ul></div>',
       links: [
         {
           link: 'https://kr.ktown4u.com/eventsub?eve_no=43803989&biz_no=967',
@@ -123,18 +123,18 @@ export const ALBUM_PURCHASE_CONTENT: CommonContentProps = {
     //     },
     //   ],
     // },
-    {
-      label: '예스24',
-      // image: [albumYes24Guide],
-      content:
-        '<div class="f-bd3"><ul class="bullet-list"><li class="list">공구처: 예스24</li><li class="list">가격: 포토북 17,500원 / 챔버 21,500원 / 카탈로그 14,600원 / 스미니 12,000원 (세트 71,400원)</li><li class="list">공구 기간: ~11/24(일) 17:00</li><li class="list">발송일: 11/25부터 순차배송</li></ul></div>',
-      links: [
-        {
-          link: 'https://yes24.com/product/category/series/003001018002001?SeriesNumber=368390',
-          linkTxt: '예스24 공구 바로가기',
-        },
-      ],
-    },
+    // {
+    //   label: '예스24',
+    //   // image: [albumYes24Guide],
+    //   content:
+    //     '<div class="f-bd3"><ul class="bullet-list"><li class="list">공구처: 예스24</li><li class="list">가격: 포토북 17,500원 / 챔버 21,500원 / 카탈로그 14,600원 / 스미니 12,000원 (세트 71,400원)</li><li class="list">공구 기간: ~11/24(일) 17:00</li><li class="list">발송일: 11/25부터 순차배송</li></ul></div>',
+    //   links: [
+    //     {
+    //       link: 'https://yes24.com/product/category/series/003001018002001?SeriesNumber=368390',
+    //       linkTxt: '예스24 공구 바로가기',
+    //     },
+    //   ],
+    // },
     // {
     //   label: '사운드웨이브',
     //   image: [albumSoundWaveGuide],
