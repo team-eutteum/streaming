@@ -2,20 +2,25 @@ import type { CommonContentProps } from '@/types/guide';
 import albumAll from 'public/images/support/album/all.jpg';
 import albumALLMDGuide from 'public/images/support/album/ALLMD.jpg';
 import albumKtown4uGuide from 'public/images/support/album/Ktown4u.jpg';
-import dontationGuide from 'public/images/support/donation/donation.jpg';
-import helperGuide from 'public/images/support/helper/helper.jpg';
-import idDontationGuide from 'public/images/support/id/id.png';
+// import dontationGuide from 'public/images/support/donation/donation.jpg';
+// import helperGuide from 'public/images/support/helper/helper.jpg';
+// import idDontationGuide from 'public/images/support/id/id.png';
 
 import * as TITLE from './title.constant';
 export const DONATION_CONTENT: CommonContentProps = {
   label: TITLE.DONATION,
   updateDate: '2025.09.17',
   uniqueId: 'dontationList',
-  link: 'https://docs.google.com/forms/d/e/1FAIpQLSf4PlkHgQ4k1gAw7diOV2KHRsQol1i0OzmcxBrYZbfO57UYdg/viewform',
   content: [
     {
       label: TITLE.DONATION,
-      image: [dontationGuide],
+      // image: [dontationGuide],
+      links: [
+        {
+          link: 'https://docs.google.com/forms/d/e/1FAIpQLSf4PlkHgQ4k1gAw7diOV2KHRsQol1i0OzmcxBrYZbfO57UYdg/viewform',
+          linkTxt: '모금 후 정보입력 바로가기',
+        },
+      ],
     },
   ],
 };
@@ -28,7 +33,13 @@ export const ID_DONATION_CONTENT: CommonContentProps = {
   content: [
     {
       label: TITLE.ID_DONATION,
-      image: [idDontationGuide],
+      // image: [idDontationGuide],
+      // links: [
+      //   {
+      //     link: 'http://pf.kakao.com/_LWmxfn',
+      //     linkTxt: '아이디 기부 링크(음총팀 카카오채널)',
+      //   },
+      // ],
     },
   ],
 };
@@ -40,7 +51,13 @@ export const HELPER_CONTENT: CommonContentProps = {
   content: [
     {
       label: TITLE.HELPER,
-      image: [helperGuide],
+      // links: [
+      //   {
+      //     link: 'http://pf.kakao.com/_LWmxfn',
+      //     linkTxt: '헬퍼 신청 링크(음총팀 카카오채널)',
+      //   },
+      // ],
+      // image: [helperGuide],
     },
   ],
 };
