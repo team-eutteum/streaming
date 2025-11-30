@@ -70,10 +70,10 @@ export const ALBUM_PURCHASE_CONTENT: CommonContentProps = {
     // {
     //   label: TITLE.ALBUM_PURCHASE,
     // },
-    // {
-    //   label: '모아보기',
-    //   image: [albumAll],
-    // },
+    {
+      label: '모아보기',
+      // image: [albumAll],
+    },
     // {
     //   label: 'Ktown4u',
     //   image: [albumKtown4uGuide],
