@@ -47,6 +47,29 @@ export const NAV: NavItem[] = [
         opened: true,
       },
       {
+        title: TITLE.MUSIC_STREAMING_GUIDE_VIDEO,
+        path: '/guide/streamingVideo/melon/mobile',
+        children: [
+          {
+            title: TITLE.MELON,
+            path: '/guide/streamingVideo/melon/mobile',
+          },
+          {
+            title: TITLE.GENIE,
+            path: '/guide/streamingVideo/genie/mobile',
+          },
+          {
+            title: TITLE.BUGS,
+            path: '/guide/streamingVideo/bugs/mobile',
+          },
+          {
+            title: TITLE.FLO,
+            path: '/guide/streamingVideo/flo/mobile',
+          },
+        ],
+        opened: true,
+      },
+      {
         title: TITLE.MUSIC_ID_CREATE,
         path: '/guide/id',
         opened: true,

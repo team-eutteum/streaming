@@ -20,9 +20,9 @@ function TitleArea({ label }: TitleAreaProps) {
         <PageTitle label={label} subTxt={`${label} 입니다.`} />
         <UrlShareButton />
         <LinkSelects label={currPath}>
-          {NAV?.[0]?.children?.[3]?.children?.map((child, idx) => (
+          {NAV?.[0]?.children?.[4]?.children?.map((child, idx) => (
             <LinkSelect
-              key={`download-video-guide${idx}`}
+              key={`streaming-video-guide${idx}`}
               label={child.title}
               href={child.path}
             />

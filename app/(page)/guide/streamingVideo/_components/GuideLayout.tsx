@@ -6,14 +6,14 @@ import { SwiperSlide } from 'swiper/react';
 
 import { Tab, TabPanels, Tabs, TabPanel } from '@/components';
 import NoData from '@/components/NoData/Nodata';
-import { DOWNLOAD_GUIDE_VIDEO_CONTENT } from '@/lib/constants/guideInVideo.constants';
+import { STREAMING_GUIDE_VIDEO_CONTENT } from '@/lib/constants/guideInVideo.constants';
 
 interface GuideLayoutProps {
   id: string;
 }
 
 export default function GuideLayout({ id }: GuideLayoutProps) {
-  const tabContent = DOWNLOAD_GUIDE_VIDEO_CONTENT;
+  const tabContent = STREAMING_GUIDE_VIDEO_CONTENT;
 
   const [parentId, childId] = id.split('/');
 
