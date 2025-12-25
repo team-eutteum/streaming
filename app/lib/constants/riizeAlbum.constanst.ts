@@ -2,6 +2,7 @@ import BagBadBackCheering from 'public/images/guide/cheering/BagBadBack.jpg';
 import BBBCheering from 'public/images/guide/cheering/BBB.jpg';
 import BeMyNextCheering from 'public/images/guide/cheering/BeMyNext.jpg';
 import EmberToSolorCheering from 'public/images/guide/cheering/EmberToSolar.jpg';
+import FameCheering from 'public/images/guide/cheering/Fame.png';
 import FlyupCheering from 'public/images/guide/cheering/FlyUp.jpg';
 import GetAGuitarCheering from 'public/images/guide/cheering/GetAGuitar.jpg';
 import Impossible from 'public/images/guide/cheering/Impossible.jpg';
@@ -10,6 +11,18 @@ import LuckyCheering from 'public/images/guide/cheering/Lucky.jpg';
 import MemoriesCheering from 'public/images/guide/cheering/Memories.jpg';
 import SirenCheering from 'public/images/guide/cheering/Siren.jpg';
 import TalkSexyCheering from 'public/images/guide/cheering/TalkSaxy.jpg';
+
+export const THE_SECOND_SINGLE = {
+  value: 'single2',
+  albumTitle: 'FAME',
+  music: [
+    {
+      title: 'FAME',
+      hasCheering: true,
+      image: FameCheering,
+    },
+  ],
+};
 
 export const THE_FIRST_ALBUM = {
   value: 'The1stAlbum',

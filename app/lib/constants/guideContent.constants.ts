@@ -275,6 +275,7 @@ export const CHEERING_METHOD_GUIDE: CheeringMethodProps = {
   updateDate: '2025.04.14',
   uniqueId: 'musicVideoStreaming',
   content: [
+    RIIZE_ALBUM.THE_SECOND_SINGLE,
     RIIZE_ALBUM.THE_FIRST_ALBUM,
     RIIZE_ALBUM.FIRST_MINI,
     RIIZE_ALBUM.FIRST_SINGLE,
