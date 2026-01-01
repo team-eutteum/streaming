@@ -23,7 +23,7 @@ function CommonSupportLayout({
 
   return (
     <section className="sc-down-guide">
-      {tabContent?.length > 1 && (
+      {tabContent?.length > 0 && (
         <Tabs hasScroll>
           {tabContent?.map((tab, index) => (
             <SwiperSlide key={`tabItem${index}`}>
