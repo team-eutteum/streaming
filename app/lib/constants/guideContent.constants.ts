@@ -41,7 +41,7 @@ import * as TITLE from './title.constant';
 
 export const STREAMING_LIST_CONTENT: CommonContentProps = {
   label: TITLE.STREAMING_LIST,
-  updateDate: '2025.11.24',
+  updateDate: '2026.02.18',
   uniqueId: 'streamingList',
   content: [
     {
