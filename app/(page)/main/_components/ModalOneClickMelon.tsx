@@ -9,22 +9,22 @@ function ModalOneClickMelon({ onClose }: { onClose: () => void }) {
           <p className="list-tit f-bd3">ANDROID</p>
           <ul className="grid-2">
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/428hz495'}>
+              <Button size="lg" href={'https://tinyurl.com/44yfkyrs'}>
                 원클릭1
               </Button>
             </li>
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/49yac5ct'}>
+              <Button size="lg" href={'https://tinyurl.com/v9khbvck'}>
                 원클릭2
               </Button>
             </li>
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/bdvzwdct'}>
+              <Button size="lg" href={'https://tinyurl.com/44yfkyrs'}>
                 원클릭3
               </Button>
             </li>
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/428hz495'}>
+              <Button size="lg" href={'https://tinyurl.com/uv5krf3e'}>
                 원클릭4
               </Button>
             </li>
@@ -34,12 +34,12 @@ function ModalOneClickMelon({ onClose }: { onClose: () => void }) {
           <p className="list-tit f-bd3">IOS</p>
           <ul className="grid-2">
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/y7vk44dt'}>
+              <Button size="lg" href={'https://tinyurl.com/22ea3469'}>
                 아이폰
               </Button>
             </li>
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/yxr9pmr8'}>
+              <Button size="lg" href={'https://tinyurl.com/2sexa5hy'}>
                 아이패드
               </Button>
             </li>
@@ -49,22 +49,22 @@ function ModalOneClickMelon({ onClose }: { onClose: () => void }) {
           <p className="list-tit f-bd3">PC</p>
           <ul className="grid-2">
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/rp6jf44z'}>
+              <Button size="lg" href={'https://tinyurl.com/24t2v8cn'}>
                 원클릭1
               </Button>
             </li>
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/5bpfpu5y'}>
+              <Button size="lg" href={'https://tinyurl.com/57skmjhw'}>
                 원클릭2
               </Button>
             </li>
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/3br24v7a'}>
+              <Button size="lg" href={'https://tinyurl.com/24t2v8cn'}>
                 원클릭3
               </Button>
             </li>
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/n6dt3955'}>
+              <Button size="lg" href={'https://tinyurl.com/4j462zzn'}>
                 원클릭4
               </Button>
             </li>
