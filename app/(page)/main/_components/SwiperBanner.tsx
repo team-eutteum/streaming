@@ -29,6 +29,15 @@ function BannerSwiper() {
     >
       <SwiperSlide>
         <Link
+          href="https://youtu.be/yfKBI5l81-A?si=UDUZlicQahBATOOB"
+          target="_blank"
+          className="banner-slide"
+        >
+          <Image src="/images/main/banner/allOfYou.jpg" alt="All of You" fill />
+        </Link>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Link
           href="https://youtu.be/TVqEwvbZP30?si=2KU1xVvBr1Q4bC1I"
           target="_blank"
           className="banner-slide"
