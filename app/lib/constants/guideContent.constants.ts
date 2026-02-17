@@ -12,7 +12,7 @@ import IdBugsGuide from 'public/images/guide/id/bugs.jpg';
 import IdGenieGuide from 'public/images/guide/id/genie.jpg';
 import IdMelonGuide from 'public/images/guide/id/melon.jpg';
 /* streaming list guide */
-import StreamingListGuide from 'public/images/guide/list/list.jpg';
+import StreamingListGuide from 'public/images/guide/list/list_allOfYou.jpg';
 import MusicVideoDownloadBugsPcGuide from 'public/images/guide/musicVideo/download-bugs-pc.jpg';
 import MusicVideoDownloadMelonMoGuide from 'public/images/guide/musicVideo/download-melon-mo.jpg';
 import MusicVideoDownloadMelonPcGuide from 'public/images/guide/musicVideo/download-melon-pc.jpg';
