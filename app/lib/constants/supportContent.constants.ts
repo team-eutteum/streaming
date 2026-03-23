@@ -1,11 +1,11 @@
-import albumKtown4uGuide from 'public/images/support/album/Ktown4u.jpg';
-
 import type { CommonContentProps } from '@/types/guide';
+import idDontationGuide from 'public/images/support/id/id.jpg';
+// import albumKtown4uGuide from 'public/images/support/album/Ktown4u.jpg';
+
 // import albumAll from 'public/images/support/album/all.jpg';
 // import albumALLMDGuide from 'public/images/support/album/ALLMD.jpg';
 // import dontationGuide from 'public/images/support/donation/donation.jpg';
 // import helperGuide from 'public/images/support/helper/helper.jpg';
-// import idDontationGuide from 'public/images/support/id/id.png';
 
 import * as TITLE from './title.constant';
 export const DONATION_CONTENT: CommonContentProps = {
@@ -28,19 +28,19 @@ export const DONATION_CONTENT: CommonContentProps = {
 
 export const ID_DONATION_CONTENT: CommonContentProps = {
   label: TITLE.ID_DONATION,
-  updateDate: '2025.09.17',
+  updateDate: '2026.03',
   uniqueId: 'dontationList',
   link: 'http://pf.kakao.com/_LWmxfn',
   content: [
     {
       label: TITLE.ID_DONATION,
-      // image: [idDontationGuide],
-      // links: [
-      //   {
-      //     link: 'http://pf.kakao.com/_LWmxfn',
-      //     linkTxt: '아이디 기부 링크(음총팀 카카오채널)',
-      //   },
-      // ],
+      image: [idDontationGuide],
+      links: [
+        {
+          link: 'http://pf.kakao.com/_LWmxfn',
+          linkTxt: '아이디 기부 링크(음총팀 카카오채널)',
+        },
+      ],
     },
   ],
 };
@@ -75,18 +75,18 @@ export const ALBUM_PURCHASE_CONTENT: CommonContentProps = {
     //   label: '모아보기',
     //   // image: [albumAll],
     // },
-    {
-      label: 'Ktown4u',
-      image: [albumKtown4uGuide],
-      content:
-        '<div class="f-bd3"><ul class="bullet-list"><li class="list">공구처: 케타포</li><li class="list">한정반 A (DVD) / 한정반 B (포토북)<br /> 31,100원 → 공구가 26,400원</li><li class="list">멤버별 한정반, 일반반 <br /> 20,140원 → 공구가 17,100원</li><li class="list">공구 기간: ~소진 시까지</li><li class="list">일본 출시일: 26.02.18</li><li class="list">한국배송: 26.03.20. 이후 순차 발송</li></ul></div>',
-      links: [
-        {
-          link: 'https://kr.ktown4u.com/eventinfo?eve_no=43951353&biz_no=967',
-          linkTxt: 'Ktown4u 공구 바로가기',
-        },
-      ],
-    },
+    // {
+    //   label: "Ktown4u",
+    //   // image: [albumKtown4uGuide],
+    //   content:
+    //     '<div class="f-bd3"><ul class="bullet-list"><li class="list">공구처: 케타포</li><li class="list">한정반 A (DVD) / 한정반 B (포토북)<br /> 31,100원 → 공구가 26,400원</li><li class="list">멤버별 한정반, 일반반 <br /> 20,140원 → 공구가 17,100원</li><li class="list">공구 기간: ~소진 시까지</li><li class="list">일본 출시일: 26.02.18</li><li class="list">한국배송: 26.03.20. 이후 순차 발송</li></ul></div>',
+    //   links: [
+    //     {
+    //       link: "https://kr.ktown4u.com/eventinfo?eve_no=43951353&biz_no=967",
+    //       linkTxt: "Ktown4u 공구 바로가기",
+    //     },
+    //   ],
+    // },
     // {
     //   label: '올엠디',
     //   image: [albumALLMDGuide],
