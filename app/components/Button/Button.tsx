@@ -26,11 +26,11 @@ export interface ButtonProps {
   /**
    * @default 'md'
    */
-  size?: 'sm' | 'md' | 'lg';
+  size?: 'xs' | 'sm' | 'md' | 'lg';
   /**
    * @default 'sm'
    */
-  rounded?: 'sm' | 'none' | 'full';
+  rounded?: 'sm' | 'md' | 'none' | 'full';
   /**
    * @default false
    */
@@ -47,6 +47,7 @@ const variants = {
 };
 
 const sizes = {
+  xs: 'size-xs',
   sm: 'size-sm',
   md: 'size-md',
   lg: 'size-lg',
@@ -71,6 +72,7 @@ const aligns = {
 
 const roundeds = {
   sm: 'rounded-sm',
+  md: 'rounded-md',
   none: 'rounded-none',
   full: 'rounded-full',
 };
