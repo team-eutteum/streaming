@@ -6,7 +6,7 @@ import Loader from '@/components/Etc/Loader';
 
 export default function RedirectPage() {
   useEffect(() => {
-    window.location.replace('https://tinyurl.com/yzv6kuzr');
+    window.location.replace('https://tinyurl.com/aryt3pfs');
   }, []);
 
   return (
