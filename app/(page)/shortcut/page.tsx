@@ -53,7 +53,7 @@ function ShortCutPage() {
             <p className="f-bd4 half-txt">
               아래의 이미지에 따라 바로가기 아이콘을 생성해주세요.
             </p>
-            <Button size="md" rounded="sm" href="https://kko.to/BpQ-AUPQzY">
+            <Button size="md" rounded="sm" href="https://tinyurl.com/aryt3pfs">
               음총팀 뮤웨 입장하기
             </Button>
             <div className="img-wrap">
