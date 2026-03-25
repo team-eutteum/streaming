@@ -1,7 +1,7 @@
 import { Suspense, type ReactNode } from 'react';
 
 import { Footer, Header, NavigationBar } from '@/components';
-// import ShortcutFloating from '@/components/Etc/ShortcutFloating';
+import ShortcutFloating from '@/components/Etc/ShortcutFloating';
 
 function GlobalLayout({ children }: { children: ReactNode }) {
   return (
@@ -11,7 +11,7 @@ function GlobalLayout({ children }: { children: ReactNode }) {
         {children}
         <Footer />
         <NavigationBar />
-        {/* <ShortcutFloating /> */}
+        <ShortcutFloating />
       </Suspense>
     </>
   );

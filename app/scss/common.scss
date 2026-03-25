@@ -185,10 +185,14 @@ body header .btn-menu:has(.active) {
       background: #000;
     }
 
-    &+.list {
+    & + .list {
       margin: 4rem 0 0;
     }
   }
+}
+
+.floating-btn {
+  display: none;
 }
 
 @include tablet() {
@@ -241,7 +245,7 @@ body header .btn-menu:has(.active) {
       font-size: 30rem;
     }
   }
-  .comming-soon{
+  .comming-soon {
     .icon {
       i {
         width: 60rem;
@@ -260,5 +264,8 @@ body header .btn-menu:has(.active) {
         top: 8rem;
       }
     }
+  }
+  .floating-btn {
+    display: block;
   }
 }
