@@ -1,14 +1,12 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
-import Loader from "@/components/Etc/Loader";
+import Loader from '@/components/Etc/Loader';
 
 export default function RedirectPage() {
   useEffect(() => {
-    window.location.replace(
-      "melonapp://paly/?ctype=musicwave&m=pRxSKs0H7NNR2PGUIBUgmA",
-    );
+    window.location.replace('https://kko.to/BpQ-AUPQzY');
   }, []);
 
   return (
