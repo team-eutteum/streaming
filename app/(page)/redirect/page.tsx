@@ -13,6 +13,9 @@ export default function RedirectPage() {
     <div className="sub-container">
       <div className="inner">
         <p className="f-bd2">음총팀 뮤직웨이브로 이동중....</p>
+        <p className="f-bd2">
+          화면 상단에 뜨는 Melon 앱으로 이동 버튼을 눌러주시기 바랍니다.
+        </p>
       </div>
       <Loader />
     </div>
