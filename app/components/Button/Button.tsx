@@ -22,7 +22,7 @@ export interface ButtonProps {
   /**
    * @default 'primary'
    */
-  color?: 'primary' | 'dark';
+  color?: 'primary' | 'dark' | 'melon';
   /**
    * @default 'md'
    */
@@ -31,6 +31,10 @@ export interface ButtonProps {
    * @default 'sm'
    */
   rounded?: 'sm' | 'md' | 'none' | 'full';
+  /**
+   * @default false
+   */
+  hasIcon?: false | true;
   /**
    * @default false
    */
@@ -62,6 +66,10 @@ const colors = {
     contained: 'dark',
     outlined: 'dark outlined',
   },
+  melon: {
+    contained: 'melon',
+    outlined: 'melon outlined',
+  },
 };
 
 const aligns = {
@@ -88,6 +96,7 @@ function Button({
   href,
   className,
   children,
+  hasIcon,
   onClick,
 }: ButtonProps) {
   const variantClasses = variants[variant];
@@ -103,7 +112,10 @@ function Button({
     colorClasses,
     roundedClasses,
     {
-      'disabled ': disabled,
+      icon: hasIcon,
+    },
+    {
+      disabled: disabled,
     },
     className,
   );
