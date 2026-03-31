@@ -1,13 +1,20 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import clsx from 'clsx';
 import Image from 'next/image';
+
+import { useIsMobile } from '@/hooks/deviceCheck';
 
 import Button from '../Button/Button';
 
 function ShortcutFloating() {
   const [deferredPrompt, setDeferredPrompt] =
     useState<BeforeInstallPromptEvent | null>(null);
+
+  const isMobile = useIsMobile();
+
+  console.log(isMobile, 'isMobileisMobile');
 
   useEffect(() => {
     const handler = (e: Event) => {
@@ -22,12 +29,10 @@ function ShortcutFloating() {
   const handleInstall = async () => {
     if (!deferredPrompt) return;
     deferredPrompt.prompt(); // 설치 다이얼로그 띄우기
-    const { outcome } = await deferredPrompt.userChoice;
-    console.log('User choice:', outcome);
     setDeferredPrompt(null);
   };
   return (
-    <div className="floating-btn">
+    <div className={clsx('floating-btn', !isMobile && 'display-none')}>
       <Button size="xs" rounded="md" onClick={handleInstall}>
         <Image
           src={'/images/logo/melon-icon50-w.png'}

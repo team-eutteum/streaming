@@ -30,7 +30,7 @@
   row-gap: $rowgap;
 }
 
-@mixin flexCenter($display: flex, $justify: center, $align : center) {
+@mixin flexCenter($display: flex, $justify: center, $align: center) {
   display: $display;
   justify-content: $justify;
   align-items: $align;
@@ -50,13 +50,9 @@
 
   @if $x ==50% and $y ==50% {
     transform: translate(-50%, -50%);
-  }
-
-  @else if $x ==50% {
+  } @else if $x ==50% {
     transform: translateX(-50%);
-  }
-
-  @else if $y ==50% {
+  } @else if $y ==50% {
     transform: translateY(-50%);
   }
 }
@@ -68,13 +64,9 @@
 
   @if $x ==50% and $y ==50% {
     transform: translate(-50%, -50%);
-  }
-
-  @else if $x ==50% {
+  } @else if $x ==50% {
     transform: translateX(-50%);
-  }
-
-  @else if $y ==50% {
+  } @else if $y ==50% {
     transform: translateY(-50%);
   }
 }
@@ -82,8 +74,9 @@
 @mixin scrollMotion($y: 60px, $duration: 0.8s) {
   opacity: 0;
   transform: translateY($y);
-  transition: opacity #{$duration} ease,
-  transform #{$duration} ease;
+  transition:
+    opacity #{$duration} ease,
+    transform #{$duration} ease;
 }
 
 @mixin scrollMotionActive() {
@@ -92,14 +85,17 @@
 }
 
 @mixin transition($properties, $duration: 0.15s, $easing: ease) {
-  $transitions: (
-  ); // 빈 리스트 초기화
+  $transitions: (); // 빈 리스트 초기화
 
-@each $property in $properties {
-  $transitions: append($transitions, #{$property} #{$duration} #{$easing}, comma);
-}
+  @each $property in $properties {
+    $transitions: append(
+      $transitions,
+      #{$property} #{$duration} #{$easing},
+      comma
+    );
+  }
 
-transition: $transitions; // 누적된 값을 출력
+  transition: $transitions; // 누적된 값을 출력
 }
 
 //mediaquery
@@ -121,7 +117,14 @@ transition: $transitions; // 누적된 값을 출력
   }
 }
 
-@mixin font($name: "Pretendard Variable", $weight: 400, $size: 16px, $height: 160%, $spacing: -0.032px, $color: $black) {
+@mixin font(
+  $name: "Pretendard Variable",
+  $weight: 400,
+  $size: 16px,
+  $height: 160%,
+  $spacing: -0.032px,
+  $color: $black
+) {
   font-family: #{$name};
 
   font: {
@@ -173,7 +176,7 @@ transition: $transitions; // 누적된 값을 출력
 }
 
 @mixin before($width: 100%, $height: 1px) {
-  content: '';
+  content: "";
   position: absolute;
   display: block;
   width: $width;
@@ -183,4 +186,18 @@ transition: $transitions; // 누적된 값을 출력
 @mixin column() {
   display: flex;
   flex-flow: column;
+}
+
+@mixin display($display) {
+  .display-#{$display} {
+    display: $display !important;
+
+    &.column {
+      flex-direction: column;
+    }
+
+    &.row {
+      flex-direction: row;
+    }
+  }
 }

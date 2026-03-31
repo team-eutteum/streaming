@@ -1,6 +1,7 @@
 @use "reset" as *;
 @use "variable" as *;
 @use "mixin" as *;
+@use "layout" as *;
 @use "fonts" as *;
 @use "loader" as *;
 @use "button" as *;
@@ -191,10 +192,6 @@ body header .btn-menu:has(.active) {
   }
 }
 
-.floating-btn {
-  display: none;
-}
-
 @include tablet() {
   .nav-bar {
     display: flex;
@@ -264,8 +261,5 @@ body header .btn-menu:has(.active) {
         top: 8rem;
       }
     }
-  }
-  .floating-btn {
-    display: block;
   }
 }
