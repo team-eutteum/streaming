@@ -32,50 +32,52 @@ function ShortcutFloating() {
     setDeferredPrompt(null);
   };
   return (
-    <div className={clsx('floating-btn', !isMobile && 'display-none')}>
-      <Button
-        size="xs"
-        rounded="md"
-        className="point-melon"
-        href="https://tinyurl.com/aryt3pfs"
-        hasIcon
-        color="melon"
-      >
-        <Image
-          src={'/images/logo/melon-icon50-w.png'}
-          alt=""
-          width={30}
-          height={30}
-        />
-        <span>
-          음총팀 뮤웨
-          <br />
-          바로가기
-          <br />
-        </span>
-      </Button>
-      <Button
-        size="xs"
-        rounded="md"
-        onClick={handleInstall}
-        className="riize-secondary"
-        hasIcon
-      >
-        <Image
-          src={'/images/logo/melon-icon50-w.png'}
-          alt=""
-          width={30}
-          height={30}
-        />
-        <span>
-          음총팀 뮤웨
-          <br />
-          바로가기 앱
-          <br />
-          설치 &#40;갤럭시&#41;
-        </span>
-      </Button>
-    </div>
+    isMobile && (
+      <div className={clsx('floating-btn')}>
+        <Button
+          size="xs"
+          rounded="md"
+          className="point-melon"
+          href="https://tinyurl.com/aryt3pfs"
+          hasIcon
+          color="melon"
+        >
+          <Image
+            src={'/images/logo/melon-icon50-w.png'}
+            alt=""
+            width={30}
+            height={30}
+          />
+          <span>
+            음총팀 뮤웨
+            <br />
+            바로가기
+            <br />
+          </span>
+        </Button>
+        <Button
+          size="xs"
+          rounded="md"
+          onClick={handleInstall}
+          className="riize-secondary"
+          hasIcon
+        >
+          <Image
+            src={'/images/logo/melon-icon50-w.png'}
+            alt=""
+            width={30}
+            height={30}
+          />
+          <span>
+            음총팀 뮤웨
+            <br />
+            바로가기 앱
+            <br />
+            설치 &#40;갤럭시&#41;
+          </span>
+        </Button>
+      </div>
+    )
   );
 }
 
