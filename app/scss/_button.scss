@@ -95,27 +95,27 @@
   }
   &.size {
     &-xs {
-      padding: 4rem 8rem;
-      font-size: 12rem;
-      &.rounded-full {
-        padding: 0;
-      }
-    }
-    &-sm {
-      padding: 8rem 16rem;
+      padding: 8rem 12rem;
       font-size: 14rem;
       &.rounded-full {
         padding: 0;
       }
     }
+    &-sm {
+      padding: 12rem 20rem;
+      font-size: 16rem;
+      &.rounded-full {
+        padding: 0;
+      }
+    }
     &-md {
-      padding: 8rem 16rem;
+      padding: 12rem 20rem;
       &.rounded-full {
         padding: 0;
       }
     }
     &-lg {
-      padding: 12rem 24rem;
+      padding: 16rem 28rem;
       &.rounded-full {
         padding: 0;
         width: 50rem;
@@ -132,6 +132,90 @@
     justify-content: flex-start;
     gap: 0 4rem;
     text-align: left;
+  }
+}
+
+@include tablet() {
+  .btn {
+    &.size {
+      &-xs {
+        padding: 6rem 10rem;
+        font-size: 14rem;
+
+        &.rounded-full {
+          padding: 0;
+        }
+      }
+
+      &-sm {
+        padding: 10rem 14rem;
+        font-size: 14rem;
+
+        &.rounded-full {
+          padding: 0;
+        }
+      }
+
+      &-md {
+        padding: 10rem 18rem;
+
+        &.rounded-full {
+          padding: 0;
+        }
+      }
+
+      &-lg {
+        padding: 14rem 26rem;
+
+        &.rounded-full {
+          padding: 0;
+          width: 54rem;
+          height: 54rem;
+        }
+      }
+    }
+  }
+}
+
+@include mobile() {
+  .btn {
+    &.size {
+      &-xs {
+        padding: 4rem 8rem;
+        font-size: 12rem;
+
+        &.rounded-full {
+          padding: 0;
+        }
+      }
+
+      &-sm {
+        padding: 8rem 12rem;
+        font-size: 12rem;
+
+        &.rounded-full {
+          padding: 0;
+        }
+      }
+
+      &-md {
+        padding: 8rem 16rem;
+        font-size: 14rem;
+        &.rounded-full {
+          padding: 0;
+        }
+      }
+
+      &-lg {
+        padding: 10rem 22rem;
+        font-size: 14rem;
+        &.rounded-full {
+          padding: 0;
+          width: 50rem;
+          height: 50rem;
+        }
+      }
+    }
   }
 }
 

@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import clsx from "clsx";
-import Image from "next/image";
+import { useEffect, useState } from 'react';
+import clsx from 'clsx';
+import Image from 'next/image';
 
-import { useIsMobile } from "@/hooks/deviceCheck";
+import { useIsMobile } from '@/hooks/deviceCheck';
 
-import Button from "../Button/Button";
+import Button from '../Button/Button';
 
 function ShortcutFloating() {
   const [deferredPrompt, setDeferredPrompt] =
@@ -14,16 +14,16 @@ function ShortcutFloating() {
 
   const isMobile = useIsMobile();
 
-  console.log(isMobile, "isMobileisMobile");
+  console.log(isMobile, 'isMobileisMobile');
 
   useEffect(() => {
     const handler = (e: Event) => {
       e.preventDefault();
       setDeferredPrompt(e as BeforeInstallPromptEvent); // 타입 단언
     };
-    window.addEventListener("beforeinstallprompt", handler);
+    window.addEventListener('beforeinstallprompt', handler);
 
-    return () => window.removeEventListener("beforeinstallprompt", handler);
+    return () => window.removeEventListener('beforeinstallprompt', handler);
   }, []);
 
   const handleInstall = async () => {
@@ -32,8 +32,8 @@ function ShortcutFloating() {
     setDeferredPrompt(null);
   };
   return (
-    <div className={clsx("floating-btn", !isMobile && "display-none")}>
-      {/* <Button
+    <div className={clsx('floating-btn', !isMobile && 'display-none')}>
+      <Button
         size="xs"
         rounded="md"
         className="point-melon"
@@ -53,7 +53,7 @@ function ShortcutFloating() {
           바로가기
           <br />
         </span>
-      </Button> */}
+      </Button>
       <Button
         size="xs"
         rounded="md"
@@ -62,7 +62,7 @@ function ShortcutFloating() {
         hasIcon
       >
         <Image
-          src={"/images/logo/melon-icon50-w.png"}
+          src={'/images/logo/melon-icon50-w.png'}
           alt=""
           width={30}
           height={30}
@@ -71,8 +71,8 @@ function ShortcutFloating() {
           음총팀 뮤웨
           <br />
           바로가기 앱
-          {/* <br />
-          설치 &#40;갤럭시&#41; */}
+          <br />
+          설치 &#40;갤럭시&#41;
         </span>
       </Button>
     </div>
