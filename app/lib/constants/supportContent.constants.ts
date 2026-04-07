@@ -1,11 +1,11 @@
 import type { CommonContentProps } from '@/types/guide';
+import helperGuide from 'public/images/support/helper/helper.jpg';
 import idDontationGuide from 'public/images/support/id/id.jpg';
 // import albumKtown4uGuide from 'public/images/support/album/Ktown4u.jpg';
 
 // import albumAll from 'public/images/support/album/all.jpg';
 // import albumALLMDGuide from 'public/images/support/album/ALLMD.jpg';
-// import dontationGuide from 'public/images/support/donation/donation.jpg';
-// import helperGuide from 'public/images/support/helper/helper.jpg';
+// import dontationGuide from 'public/images/support/donation/donation.jpg";
 
 import * as TITLE from './title.constant';
 export const DONATION_CONTENT: CommonContentProps = {
@@ -47,18 +47,18 @@ export const ID_DONATION_CONTENT: CommonContentProps = {
 
 export const HELPER_CONTENT: CommonContentProps = {
   label: TITLE.HELPER,
-  updateDate: '2025.11',
+  updateDate: '2026.04',
   uniqueId: 'helperList',
   content: [
     {
       label: TITLE.HELPER,
-      // links: [
-      //   {
-      //     link: 'http://pf.kakao.com/_LWmxfn',
-      //     linkTxt: '헬퍼 신청 링크(음총팀 카카오채널)',
-      //   },
-      // ],
-      // image: [helperGuide],
+      links: [
+        {
+          link: 'http://pf.kakao.com/_LWmxfn',
+          linkTxt: '헬퍼 신청 링크(음총팀 카카오채널)',
+        },
+      ],
+      image: [helperGuide],
     },
   ],
 };
