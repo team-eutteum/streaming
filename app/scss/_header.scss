@@ -8,7 +8,7 @@
   width: 100%;
   height: $headerPcHeight;
   background: $riizePrimary;
-  z-index: 20;
+  z-index: 200;
   .inner {
     display: flex;
     align-items: center;
@@ -24,10 +24,10 @@
       margin: 0 auto;
       width: 84px;
       aspect-ratio: 2 / 1;
-      background-image : url('/images/logo/logo.png');
+      background-image: url("/images/logo/logo.png");
       font-size: 0;
-      background-size : cover;
-      background-position : center;
+      background-size: cover;
+      background-position: center;
     }
   }
   .btn-menu {
@@ -118,7 +118,7 @@
         height: 4px;
         background: $white;
         border-radius: 4px;
-        transition: opacity .3s ease-out;
+        transition: opacity 0.3s ease-out;
       }
       &::before {
         content: "";
@@ -131,7 +131,10 @@
         height: 4px;
         border-radius: 4px;
         background: $white;
-        transition: top .3s ease-out, left .3s ease-out, transform .3s ease-out;
+        transition:
+          top 0.3s ease-out,
+          left 0.3s ease-out,
+          transform 0.3s ease-out;
       }
       &::after {
         content: "";
@@ -144,7 +147,10 @@
         height: 4px;
         border-radius: 4px;
         background: $white;
-        transition: top .3s ease-out, left .3s ease-out, transform .3s ease-out;
+        transition:
+          top 0.3s ease-out,
+          left 0.3s ease-out,
+          transform 0.3s ease-out;
       }
       &.active {
         i {
@@ -230,12 +236,13 @@
           text-align: left;
           font-size: 24rem;
           font-weight: 700;
-          transition: color .3s ease-out;
+          transition: color 0.3s ease-out;
           color: $riizePrimary;
           &:hover {
             color: $riizeSecondary;
             .open-two-depth {
-              &::before, &:after {
+              &::before,
+              &:after {
                 background: $riizeSecondary;
               }
             }
@@ -257,7 +264,7 @@
               height: 4px;
               border-radius: 4px;
               background: $riizePrimary;
-              transition: background .3s ease-out;
+              transition: background 0.3s ease-out;
             }
             &::after {
               content: "";
@@ -270,7 +277,9 @@
               height: 20rem;
               border-radius: 4px;
               background: $riizePrimary;
-              transition: transform .3s ease-out, background .3s ease-out;
+              transition:
+                transform 0.3s ease-out,
+                background 0.3s ease-out;
             }
           }
         }
