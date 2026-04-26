@@ -1,6 +1,7 @@
 import type { CommonContentProps } from '@/types/guide';
 import helperGuide from 'public/images/support/helper/helper.jpg';
 import idDontationGuide from 'public/images/support/id/id.jpg';
+import instantIdDontationGuide from 'public/images/support/id/instantId.jpg';
 // import albumKtown4uGuide from 'public/images/support/album/Ktown4u.jpg';
 
 // import albumAll from 'public/images/support/album/all.jpg';
@@ -35,6 +36,16 @@ export const ID_DONATION_CONTENT: CommonContentProps = {
     {
       label: TITLE.ID_DONATION,
       image: [idDontationGuide],
+      links: [
+        {
+          link: 'http://pf.kakao.com/_LWmxfn',
+          linkTxt: '아이디 기부 링크(음총팀 카카오채널)',
+        },
+      ],
+    },
+    {
+      label: TITLE.INSTANT_ID_DONATION,
+      image: [instantIdDontationGuide],
       links: [
         {
           link: 'http://pf.kakao.com/_LWmxfn',
