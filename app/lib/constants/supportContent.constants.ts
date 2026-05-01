@@ -1,25 +1,25 @@
 import type { CommonContentProps } from '@/types/guide';
+import dontationGuide from 'public/images/support/donation/donation.jpg';
 import helperGuide from 'public/images/support/helper/helper.jpg';
 import idDontationGuide from 'public/images/support/id/id.jpg';
 import instantIdDontationGuide from 'public/images/support/id/instantId.jpg';
 // import albumKtown4uGuide from 'public/images/support/album/Ktown4u.jpg';
 
 // import albumAll from 'public/images/support/album/all.jpg';
-// import albumALLMDGuide from 'public/images/support/album/ALLMD.jpg';
-// import dontationGuide from 'public/images/support/donation/donation.jpg";
+// import albumALLMDGuide from 'public/images/support/album/ALLMD.jpg";
 
 import * as TITLE from './title.constant';
 export const DONATION_CONTENT: CommonContentProps = {
   label: TITLE.DONATION,
-  updateDate: '2025.09.17',
+  updateDate: '2026.05',
   uniqueId: 'dontationList',
   content: [
     {
       label: TITLE.DONATION,
-      // image: [dontationGuide],
+      image: [dontationGuide],
       links: [
         {
-          link: 'https://docs.google.com/forms/d/e/1FAIpQLSf4PlkHgQ4k1gAw7diOV2KHRsQol1i0OzmcxBrYZbfO57UYdg/viewform',
+          link: 'https://docs.google.com/forms/d/1uW7P6LIGLhzJ_1JeShHuQ18lzuNrTv6tKPdCskLp-y4/viewform?chromeless=1&edit_requested=true',
           linkTxt: '모금 후 정보입력 바로가기',
         },
       ],
