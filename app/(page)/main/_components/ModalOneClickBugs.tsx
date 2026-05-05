@@ -9,7 +9,7 @@ function ModalOneClickBugs({ onClose }: { onClose: () => void }) {
           <p className="list-tit f-bd3">ANDROID & IOS</p>
           <ul className="grid-1">
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/47bzh8nj'}>
+              <Button size="lg" href={'https://tinyurl.com/5n8t5b7h'}>
                 원클릭
               </Button>
             </li>
@@ -19,7 +19,7 @@ function ModalOneClickBugs({ onClose }: { onClose: () => void }) {
           <p className="list-tit f-bd3">PC</p>
           <ul className="grid-1">
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/4kvna323'}>
+              <Button size="lg" href={'https://tinyurl.com/2kyutn3a'}>
                 원클릭
               </Button>
             </li>
