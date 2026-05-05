@@ -5,11 +5,11 @@ import Image from 'next/image';
 
 import { PageTitle } from '@/components';
 
-import ModalOneClickBugs from './ModalOneClickBugs';
-import ModalOneClickFlo from './ModalOneClickFlo';
+// import ModalOneClickBugs from './ModalOneClickBugs';
+// import ModalOneClickFlo from './ModalOneClickFlo';
 import ModalOneClickGenie from './ModalOneClickGenie';
 import ModalOneClickMelon from './ModalOneClickMelon';
-import ModalOneClickVibe from './ModalOneClickVibe';
+// import ModalOneClickVibe from './ModalOneClickVibe';
 import OneClickSMS from './OneClickSMS';
 
 const oneClickList = [
@@ -23,21 +23,21 @@ const oneClickList = [
     src: '/images/main/logo/genie.svg',
     modal: (onClose: () => void) => <ModalOneClickGenie onClose={onClose} />,
   },
-  {
-    label: 'BUGS',
-    src: '/images/main/logo/bugs.svg',
-    modal: (onClose: () => void) => <ModalOneClickBugs onClose={onClose} />,
-  },
-  {
-    label: 'VIBE',
-    src: '/images/main/logo/vibe.svg',
-    modal: (onClose: () => void) => <ModalOneClickVibe onClose={onClose} />,
-  },
-  {
-    label: 'FLO',
-    src: '/images/main/logo/flo.svg',
-    modal: (onClose: () => void) => <ModalOneClickFlo onClose={onClose} />,
-  },
+  // {
+  //   label: 'BUGS',
+  //   src: '/images/main/logo/bugs.svg',
+  //   modal: (onClose: () => void) => <ModalOneClickBugs onClose={onClose} />,
+  // },
+  // {
+  //   label: 'VIBE',
+  //   src: '/images/main/logo/vibe.svg',
+  //   modal: (onClose: () => void) => <ModalOneClickVibe onClose={onClose} />,
+  // },
+  // {
+  //   label: 'FLO',
+  //   src: '/images/main/logo/flo.svg',
+  //   modal: (onClose: () => void) => <ModalOneClickFlo onClose={onClose} />,
+  // },
 ];
 
 function OneClick() {
