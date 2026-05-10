@@ -52,13 +52,22 @@ function MelonChart({
     staleTime: 0,
   });
 
+  const { data: melonHot100, isLoading: melonHot100Loading } = useQuery<
+    MusicChartContentProps[]
+  >({
+    queryKey: ['chart', 'melonChartData', 'hot100'],
+    queryFn: () => getData('melon/hot100'),
+    staleTime: 0,
+  });
+
   const isChartRefresh = minutes >= 0 && minutes <= 5;
 
   const chartStatus = getChartStatus({
-    isLoading: isLoading, // 로딩 중
+    isLoading: isLoading || melonHot100Loading, // 로딩 중
     isError: !data, // 데이터 가져올 수 없음
     isUpdating: isChartRefresh && !!data && data.length <= 0, // isChartRefresh 이고 데이터가 없을 때
-    hasData: !!data && data.length > 0, // 데이터가 있을 때
+    hasData:
+      (!!data && data.length > 0) || (!!melonHot100 && melonHot100.length > 0), // 데이터가 있을 때
   });
 
   useEffect(() => {
@@ -98,6 +107,49 @@ function MelonChart({
         />
       );
     case 'hasData':
+      // return data?.length ? (
+      //   <MusicChartContainer>
+      //     {data?.map((melonChart, melonIndex) => (
+      //       <MusicChart
+      //         chartNameShow={true}
+      //         artist={'RIIZE'}
+      //         key={`melonChart${melonIndex}`}
+      //         title={melonChart.title}
+      //         rank={melonChart.rank}
+      //         change={
+      //           melonChart.change === '0'
+      //             ? ''
+      //             : checkRankType(melonChart.change)
+      //         }
+      //         upDowns={handleRankChange(melonChart.change)}
+      //         albumImageUrl={melonChart.albumImageUrl}
+      //         chartName="melon"
+      //         chartType="TOP100"
+      //       />
+      //     ))}
+      //   </MusicChartContainer>
+      // ) : (
+      //   <MusicChartContainer>
+      //     {melonHot100?.map((melonHot100, melonIndex) => (
+      //       <MusicChart
+      //         chartNameShow={true}
+      //         artist={'RIIZE'}
+      //         key={`melonHot100${melonIndex}`}
+      //         title={melonHot100.title}
+      //         rank={melonHot100.rank}
+      //         change={
+      //           melonHot100.change === '0'
+      //             ? ''
+      //             : checkRankType(melonHot100.change)
+      //         }
+      //         upDowns={handleRankChange(melonHot100.change)}
+      //         albumImageUrl={melonHot100.albumImageUrl}
+      //         chartName="melon"
+      //         chartType="HOT100"
+      //       />
+      //     ))}
+      //   </MusicChartContainer>
+      // );
       return (
         !!data && (
           <MusicChartContainer>
@@ -184,7 +236,7 @@ function GenieChart({
       );
     case 'hasData':
       return (
-        data && (
+        !!data && (
           <MusicChart
             chartNameShow={true}
             artist={'RIIZE'}
@@ -258,7 +310,7 @@ function BugsChart({
       );
     case 'hasData':
       return (
-        data?.[0] && (
+        !!data && (
           <MusicChart
             chartNameShow={true}
             artist={'RIIZE'}
