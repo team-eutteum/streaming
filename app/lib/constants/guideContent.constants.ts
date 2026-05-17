@@ -53,7 +53,7 @@ export const STREAMING_LIST_CONTENT: CommonContentProps = {
 
 export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
   label: TITLE.MUSIC_STREAMING,
-  updateDate: '2025.09',
+  updateDate: '2026.05',
   uniqueId: 'musicStreaming',
   content: [
     {
