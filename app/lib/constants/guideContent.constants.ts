@@ -16,6 +16,7 @@ import StreamingListGuide from 'public/images/guide/list/list.jpg';
 import MusicVideoDownloadBugsPcGuide from 'public/images/guide/musicVideo/download-bugs-pc.jpg';
 import MusicVideoDownloadMelonMoGuide from 'public/images/guide/musicVideo/download-melon-mo.jpg';
 import MusicVideoDownloadMelonPcGuide from 'public/images/guide/musicVideo/download-melon-pc.jpg';
+import MusicVideoGuideEn from 'public/images/guide/musicVideo/musicVideo-en.jpg';
 import MusicVideoGuide from 'public/images/guide/musicVideo/musicVideo.jpg';
 import RadioKBSGuide from 'public/images/guide/radio/kbs.jpg';
 import RadioMBCGuide from 'public/images/guide/radio/mbc.jpg';
@@ -25,16 +26,23 @@ import ShortFormInstagram from 'public/images/guide/shortForm/instagram.jpg';
 import ShortFormTikTok from 'public/images/guide/shortForm/tiktok.jpg';
 import ShortFormYoutube from 'public/images/guide/shortForm/youtube.jpg';
 /* streaming guide */
+import StreamingAppleGuideEn from 'public/images/guide/streaming/apple-en.jpg';
 import StreamingAppleGuide from 'public/images/guide/streaming/apple.jpg';
 import StreamingBugsGuide from 'public/images/guide/streaming/bugs.jpg';
 import StreamingFloGuide from 'public/images/guide/streaming/flo.jpg';
 import StreamingGenieGuide from 'public/images/guide/streaming/genie.jpg';
 import StreamingMelonGuide from 'public/images/guide/streaming/melon.jpg';
 import StreamingSamsungGuide from 'public/images/guide/streaming/samsung.jpg';
+import StreamingSpotifyGuide01En from 'public/images/guide/streaming/spotify01-en.jpg';
 import StreamingSpotifyGuide01 from 'public/images/guide/streaming/spotify01.jpg';
+import StreamingSpotifyGuide02En from 'public/images/guide/streaming/spotify02-en.jpg';
 import StreamingSpotifyGuide02 from 'public/images/guide/streaming/spotify02.jpg';
+import StreamingStationheadGuideEn from 'public/images/guide/streaming/stationhead-en.jpg';
 import StreamingStationheadGuide from 'public/images/guide/streaming/stationhead.jpg';
 import StreamingVibeGuide from 'public/images/guide/streaming/vibe.jpg';
+import StreamingYoutubeMusicGuideEn from 'public/images/guide/streaming/youtubeMusic01-en.jpg';
+import StreamingYoutubeMusicGuide01 from 'public/images/guide/streaming/youtubeMusic01.jpg';
+import StreamingYoutubeMusicGuide02 from 'public/images/guide/streaming/youtubeMusic02.jpg';
 
 import * as RIIZE_ALBUM from './riizeAlbum.constanst';
 import * as TITLE from './title.constant';
@@ -78,11 +86,16 @@ export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
     },
     {
       label: '스포티파이',
-      image: [StreamingSpotifyGuide01, StreamingSpotifyGuide02],
+      image: [
+        StreamingSpotifyGuide01,
+        StreamingSpotifyGuide02,
+        StreamingSpotifyGuide01En,
+        StreamingSpotifyGuide02En,
+      ],
     },
     {
       label: '애플뮤직',
-      image: [StreamingAppleGuide],
+      image: [StreamingAppleGuide, StreamingAppleGuideEn],
     },
     {
       label: '삼성뮤직',
@@ -90,7 +103,15 @@ export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
     },
     {
       label: '스테이션헤드',
-      image: [StreamingStationheadGuide],
+      image: [StreamingStationheadGuide, StreamingStationheadGuideEn],
+    },
+    {
+      label: '유튜브뮤직',
+      image: [
+        StreamingYoutubeMusicGuide01,
+        StreamingYoutubeMusicGuide02,
+        StreamingYoutubeMusicGuideEn,
+      ],
     },
   ],
 };
@@ -197,17 +218,17 @@ export const MUSIC_VIDEO_STREAMING_GUIDE: CommonContentProps = {
 export const MUSIC_VIDEO_GUIDE = [
   {
     label: TITLE.MUSIC_VIDEO_STREAMING,
-    updateDate: '2025.09',
+    updateDate: '2026.05',
     uniqueId: 'streaming',
     children: [
       {
         uniqueId: 'streamingGuide',
         label: TITLE.MUSIC_VIDEO_STREAMING,
-        image: [MusicVideoGuide],
+        image: [MusicVideoGuide, MusicVideoGuideEn],
         links: [
           {
-            link: 'https://youtu.be/TVqEwvbZP30?si=2KU1xVvBr1Q4bC1I',
-            linkTxt: 'Fame 뮤비 스밍 바로가기',
+            link: 'https://youtu.be/yfKBI5l81-A?si=8lfZrlRPzImUuCiB',
+            linkTxt: 'All of You 뮤비 스밍 바로가기',
           },
         ],
       },
