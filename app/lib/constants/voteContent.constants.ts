@@ -26,7 +26,7 @@ export const COLLECT_CONTENT: CommonContentProps = {
 
 export const BROADCAST_CONTENT: CommonContentProps = {
   label: TITLE.MUSIC_BROADCAST,
-  updateDate: '2026.06',
+  updateDate: '2026.05',
   uniqueId: 'voteCollectList',
   content: [
     {
