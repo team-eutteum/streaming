@@ -22,8 +22,11 @@ import RadioKBSGuide from 'public/images/guide/radio/kbs.jpg';
 import RadioMBCGuide from 'public/images/guide/radio/mbc.jpg';
 import RadioSBSGuide from 'public/images/guide/radio/sbs.jpg';
 /* 숏폼 */
+import ShortFormInstagramEn from 'public/images/guide/shortForm/instagram-en.jpg';
 import ShortFormInstagram from 'public/images/guide/shortForm/instagram.jpg';
+import ShortFormTikTokEn from 'public/images/guide/shortForm/tiktok-en.jpg';
 import ShortFormTikTok from 'public/images/guide/shortForm/tiktok.jpg';
+import ShortFormYoutubeEn from 'public/images/guide/shortForm/youtube-en.jpg';
 import ShortFormYoutube from 'public/images/guide/shortForm/youtube.jpg';
 /* streaming guide */
 import StreamingAppleGuideEn from 'public/images/guide/streaming/apple-en.jpg';
@@ -40,8 +43,9 @@ import StreamingSpotifyGuide02 from 'public/images/guide/streaming/spotify02.jpg
 import StreamingStationheadGuideEn from 'public/images/guide/streaming/stationhead-en.jpg';
 import StreamingStationheadGuide from 'public/images/guide/streaming/stationhead.jpg';
 import StreamingVibeGuide from 'public/images/guide/streaming/vibe.jpg';
-import StreamingYoutubeMusicGuideEn from 'public/images/guide/streaming/youtubeMusic01-en.jpg';
+import StreamingYoutubeMusicGuideEn01 from 'public/images/guide/streaming/youtubeMusic01-en.jpg';
 import StreamingYoutubeMusicGuide01 from 'public/images/guide/streaming/youtubeMusic01.jpg';
+import StreamingYoutubeMusicGuideEn02 from 'public/images/guide/streaming/youtubeMusic02-en.jpg';
 import StreamingYoutubeMusicGuide02 from 'public/images/guide/streaming/youtubeMusic02.jpg';
 
 import * as RIIZE_ALBUM from './riizeAlbum.constanst';
@@ -110,7 +114,8 @@ export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
       image: [
         StreamingYoutubeMusicGuide01,
         StreamingYoutubeMusicGuide02,
-        StreamingYoutubeMusicGuideEn,
+        StreamingYoutubeMusicGuideEn01,
+        StreamingYoutubeMusicGuideEn02,
       ],
     },
   ],
@@ -118,7 +123,7 @@ export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
 
 export const MUSIC_DOWNLOAD_CONTENT: CommonContentProps = {
   label: TITLE.MUSIC_DOWNLOAD,
-  updateDate: '2025.10',
+  updateDate: '2026.06',
   uniqueId: 'musicDownload',
   content: [
     {
@@ -273,20 +278,20 @@ export const MUSIC_VIDEO_GUIDE = [
 
 export const SHORTFORM_CONTENT: CommonContentProps = {
   label: TITLE.SHORT_FORM,
-  updateDate: '2025.11',
+  updateDate: '2026.05',
   uniqueId: 'shortform',
   content: [
     {
       label: TITLE.INSTAGRAM,
-      image: [ShortFormInstagram],
+      image: [ShortFormInstagram, ShortFormInstagramEn],
     },
     {
       label: TITLE.TiKTOK,
-      image: [ShortFormTikTok],
+      image: [ShortFormTikTok, ShortFormTikTokEn],
     },
     {
       label: TITLE.YOUTUBESHORTS,
-      image: [ShortFormYoutube],
+      image: [ShortFormYoutube, ShortFormYoutubeEn],
     },
   ],
 };
