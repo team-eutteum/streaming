@@ -178,16 +178,18 @@ export const ALBUM_PURCHASE_CONTENT: CommonContentProps = {
     //     },
     //   ],
     // },
-    // {
-    //   label: '에버라인',
-    //   image: [albumEverlineGuide],
-    //   links: [
-    //     {
-    //       link: 'https://everlineshop.com/goods/goods_view.php?goodsNo=1000012617',
-    //       linkTxt: '에버라인 공구 바로가기',
-    //     },
-    //   ],
-    // },
+    {
+      label: '에버라인',
+      // image: [albumEverlineGuide],
+      content:
+        '<div class="f-bd3"><ul class="bullet-list"><li class="list">공구처: 에버라인</li><li class="list">특전: 미공개 셀카 포토카드 6종 중 랜덤 1종</li><li class="list">가격: 포토북 랜덤 13,500원</li><li class="list">5만원 이상 구매시 무료배송</li><li class="list">출시일: 2026-06-15</li><li class="list">공구 기간: ~06:14 23:59까지</li><li class="list">발송일: 6/15 이후 순차 발송</li></ul></div>',
+      links: [
+        {
+          link: 'https://everlineshop.com/goods/goods_view.php?goodsNo=1000022056',
+          linkTxt: '에버라인 공구 바로가기',
+        },
+      ],
+    },
     // {
     //   label: 'ITTA(잇다)',
     //   image: [albumIttaGuide],
