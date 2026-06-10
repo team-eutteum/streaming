@@ -52,9 +52,7 @@ function MelonChart({
     staleTime: 0,
   });
 
-  const { data: melonHot100, isLoading: melonHot100Loading } = useQuery<
-    MusicChartContentProps[]
-  >({
+  const { isLoading: melonHot100Loading } = useQuery<MusicChartContentProps[]>({
     queryKey: ['chart', 'melonChartData', 'hot100'],
     queryFn: () => getData('melon/hot100'),
     staleTime: 0,
@@ -66,8 +64,7 @@ function MelonChart({
     isLoading: isLoading || melonHot100Loading, // 로딩 중
     isError: !data, // 데이터 가져올 수 없음
     isUpdating: isChartRefresh && !!data && data.length <= 0, // isChartRefresh 이고 데이터가 없을 때
-    hasData:
-      (!!data && data.length > 0) || (!!melonHot100 && melonHot100.length > 0), // 데이터가 있을 때
+    hasData: !!data && data.length > 0, // 데이터가 있을 때
   });
 
   useEffect(() => {

@@ -167,7 +167,7 @@ export const MUSIC_ID_CREATE_GUIDE: CommonContentProps = {
 
 export const RADIO_APPLICATION_GUIDE: CommonContentProps = {
   label: TITLE.RADIO_APPLICATION,
-  updateDate: '2025.11.24',
+  updateDate: '2026.06',
   uniqueId: 'radioApplication',
   content: [
     {
