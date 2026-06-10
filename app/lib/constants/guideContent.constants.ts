@@ -175,7 +175,7 @@ export const RADIO_APPLICATION_GUIDE: CommonContentProps = {
       image: [RadioSBSGuide],
       links: [
         {
-          link: 'sms:%231077?body=라이즈의 Fame 신청합니다.',
+          link: 'sms:%231077?body=라이즈의 Do your dance 신청합니다.',
           linkTxt: 'SBS COOL FM 라디오 문자 신청',
         },
       ],
@@ -185,7 +185,7 @@ export const RADIO_APPLICATION_GUIDE: CommonContentProps = {
       image: [RadioKBSGuide],
       links: [
         {
-          link: 'sms:%238910?body=라이즈의 Fame 신청합니다.',
+          link: 'sms:%238910?body=라이즈의 Do your dance 신청합니다.',
           linkTxt: 'KBS COOL FM 라디오 문자 신청',
         },
       ],
@@ -195,7 +195,7 @@ export const RADIO_APPLICATION_GUIDE: CommonContentProps = {
       image: [RadioMBCGuide],
       links: [
         {
-          link: 'sms:%238000?body=라이즈의 Fame 신청합니다.',
+          link: 'sms:%238000?body=라이즈의 Do your dance 신청합니다.',
           linkTxt: 'MBC FM4U 라디오 문자 신청',
         },
       ],
