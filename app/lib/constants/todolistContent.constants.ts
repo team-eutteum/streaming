@@ -12,19 +12,19 @@ interface TodoListProps {
 }
 
 export const TODOLIST_CONTENT: TodoListProps = {
-  updateDate: '2025.11.24',
-  version: '8', // 수정될 때마다 버전 변경 해줘서 세션에서 변경 사항 감지
+  updateDate: '2026.06.15',
+  version: '11', // 수정될 때마다 버전 변경 해줘서 세션에서 변경 사항 감지
   content: [
     {
       id: 'todoList0',
-      cntn: '하루 1번 Fame 감상 🪽',
+      cntn: '하루 1번 Do your Dance 감상 🕺',
       checked: false,
     },
     {
       id: 'todoList1',
-      cntn: 'Fame MV 스트리밍 하기',
+      cntn: 'Do your Dance MV 스트리밍 하기',
       checked: false,
-      url: 'https://youtu.be/TVqEwvbZP30?si=g-13bDX6OtieEPBr',
+      url: 'https://youtu.be/HDGCTtuW-Yo?si=2VtiftXL4--THZeo',
     },
     {
       id: 'todoList2',

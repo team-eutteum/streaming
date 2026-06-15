@@ -29,6 +29,15 @@ function BannerSwiper() {
     >
       <SwiperSlide>
         <Link
+          href="https://youtu.be/HDGCTtuW-Yo?si=2VtiftXL4--THZeo"
+          target="_blank"
+          className="banner-slide"
+        >
+          <Image src="/images/main/banner/dyd.jpg" alt="Do your Dance" fill />
+        </Link>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Link
           href="https://youtu.be/yfKBI5l81-A?si=UDUZlicQahBATOOB"
           target="_blank"
           className="banner-slide"
