@@ -318,6 +318,9 @@
       color: $gray500;
       transition: 0.3s ease-out;
     }
+    span {
+      overflow: hidden;
+    }
   }
   &.active {
     .txt {

@@ -14,7 +14,7 @@ import { CHEERING_METHOD_GUIDE } from '@/lib/constants/guideContent.constants';
 
 function DetailList() {
   const contents = CHEERING_METHOD_GUIDE;
-  const [selectedValue, setSelectedValue] = useState('single2');
+  const [selectedValue, setSelectedValue] = useState('II2ndMiniAlbum');
 
   const [activeTabIdx, setActiveTabIdx] = useState(0);
 

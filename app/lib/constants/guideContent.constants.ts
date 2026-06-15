@@ -298,7 +298,7 @@ export const SHORTFORM_CONTENT: CommonContentProps = {
 
 export const CHEERING_METHOD_GUIDE: CheeringMethodProps = {
   label: TITLE.CHEERING_METHOD,
-  updateDate: '2025.04.14',
+  updateDate: '2026.06.15',
   uniqueId: 'musicVideoStreaming',
   content: [
     RIIZE_ALBUM.THE_SECOND_SINGLE,
@@ -306,5 +306,6 @@ export const CHEERING_METHOD_GUIDE: CheeringMethodProps = {
     RIIZE_ALBUM.FIRST_MINI,
     RIIZE_ALBUM.FIRST_SINGLE,
     RIIZE_ALBUM.JP_FIRST_SINGLE,
+    RIIZE_ALBUM.II_THE_2ND_MINI_ALBUM,
   ],
 };
