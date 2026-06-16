@@ -9,22 +9,22 @@ function ModalOneClickMelon({ onClose }: { onClose: () => void }) {
           <p className="list-tit f-bd3">ANDROID</p>
           <ul className="grid-2">
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/4py957tw'}>
+              <Button size="lg" href={'https://tinyurl.com/4py957tw'} noBlank>
                 원클릭1
               </Button>
             </li>
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/yzkymevc'}>
+              <Button size="lg" href={'https://tinyurl.com/yzkymevc'} noBlank>
                 원클릭2
               </Button>
             </li>
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/2dwrjkss'}>
+              <Button size="lg" href={'https://tinyurl.com/2dwrjkss'} noBlank>
                 원클릭3
               </Button>
             </li>
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/8wd2xe8z'}>
+              <Button size="lg" href={'https://tinyurl.com/8wd2xe8z'} noBlank>
                 원클릭4
               </Button>
             </li>
