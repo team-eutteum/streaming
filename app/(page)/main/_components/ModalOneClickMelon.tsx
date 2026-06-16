@@ -31,7 +31,17 @@ function ModalOneClickMelon({ onClose }: { onClose: () => void }) {
           </ul>
         </div>
         <div className="list-wrap">
-          <p className="list-tit f-bd3">IOS</p>
+          <p className="list-tit f-bd3">
+            IOS{' '}
+            <span
+              style={{
+                fontSize: '12rem',
+                fontWeight: 300,
+              }}
+            >
+              (*크롬으로 작동 안 할 경우 사파리로 시도 부탁드립니다.)
+            </span>
+          </p>
           <ul className="grid-2">
             <li className="list">
               <Button size="lg" href={'https://tinyurl.com/5x5n5mcd'}>

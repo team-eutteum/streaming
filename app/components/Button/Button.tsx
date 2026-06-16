@@ -43,6 +43,7 @@ export interface ButtonProps {
   className?: string;
   onClick?: () => void;
   children: React.ReactNode;
+  noBlank?: boolean;
 }
 
 const variants = {
@@ -98,6 +99,7 @@ function Button({
   children,
   hasIcon,
   onClick,
+  noBlank,
 }: ButtonProps) {
   const variantClasses = variants[variant];
   const alignClasses = aligns[align];
@@ -126,7 +128,7 @@ function Button({
         href={href}
         className={commonClasses}
         onClick={() => onClick?.()}
-        target="_blank"
+        target={noBlank ? '_self' : '_blank'}
         rel="noreferrer"
       >
         {children}
