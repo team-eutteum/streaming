@@ -9,7 +9,7 @@ function ModalOneClickGenie({ onClose }: { onClose: () => void }) {
           <p className="list-tit f-bd3">ANDROID</p>
           <ul className="grid-1">
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/ymne3t5m'}>
+              <Button size="lg" href={'https://tinyurl.com/ymne3t5m'} noBlank>
                 원클릭
               </Button>
             </li>
