@@ -1,6 +1,7 @@
 import BagBadBackCheering from 'public/images/guide/cheering/BagBadBack.jpg';
 import BBBCheering from 'public/images/guide/cheering/BBB.jpg';
 import BeMyNextCheering from 'public/images/guide/cheering/BeMyNext.jpg';
+import DDDone from 'public/images/guide/cheering/D-D-Done.jpg';
 import DoYourDance from 'public/images/guide/cheering/doYourDance.jpg';
 import EmberToSolorCheering from 'public/images/guide/cheering/EmberToSolar.jpg';
 import FameCheering from 'public/images/guide/cheering/Fame.png';
@@ -23,6 +24,11 @@ export const SECOND_MINI = {
       title: 'Do your Dance',
       hasCheering: true,
       image: DoYourDance,
+    },
+    {
+      title: 'D-D-Done',
+      hasCheering: true,
+      image: DDDone,
     },
   ],
 };
