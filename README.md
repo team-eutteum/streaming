@@ -9,6 +9,7 @@
 - next 15
 - react 19
 - typescript 5
+- node 20.17.0
 
 ## Build Scripts
 
