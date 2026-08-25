@@ -29,6 +29,15 @@ function BannerSwiper() {
     >
       <SwiperSlide>
         <Link
+          href="https://youtu.be/RsDXsGIst-s?si=XrOnucrGPIg09mHJ"
+          target="_blank"
+          className="banner-slide"
+        >
+          <Image src="/images/main/banner/sunburst.jpg" alt="Sunburst" fill />
+        </Link>
+      </SwiperSlide>
+      <SwiperSlide>
+        <Link
           href="https://youtu.be/HDGCTtuW-Yo?si=2VtiftXL4--THZeo"
           target="_blank"
           className="banner-slide"
