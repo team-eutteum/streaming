@@ -33,6 +33,13 @@ export const SECOND_MINI = {
   ],
 };
 
+export const JP_THIRD_SINGLE = {
+  value: 'jpSingle3',
+  albumTitle: 'Sunburst',
+  releaseDate: '2026.08.26',
+  music: [{ title: 'Sunburst', hasCheering: false }],
+};
+
 export const JP_SECOND_SINGLE = {
   value: 'jpSingle2',
   albumTitle: 'All of You',

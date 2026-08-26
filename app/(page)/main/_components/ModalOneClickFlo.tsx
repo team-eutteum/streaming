@@ -19,7 +19,7 @@ function ModalOneClickFlo({ onClose }: { onClose: () => void }) {
           </p>
           <ul className="grid-1">
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/yc6bd874'} noBlank>
+              <Button size="lg" href={'https://tinyurl.com/zteda26r'} noBlank>
                 원클릭
               </Button>
             </li>
