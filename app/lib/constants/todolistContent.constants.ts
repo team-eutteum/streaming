@@ -12,8 +12,8 @@ interface TodoListProps {
 }
 
 export const TODOLIST_CONTENT: TodoListProps = {
-  updateDate: '2026.06.15',
-  version: '11', // 수정될 때마다 버전 변경 해줘서 세션에서 변경 사항 감지
+  updateDate: '2026.10.26',
+  version: '12', // 수정될 때마다 버전 변경 해줘서 세션에서 변경 사항 감지
   content: [
     {
       id: 'todoList0',

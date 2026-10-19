@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { CheckIcon } from '@heroicons/react/24/outline';
 
 import { PageTitle } from '@/components';
+import { useIsMobile } from '@/hooks/deviceCheck';
 import { CONST } from '@/lib/constants';
 
 interface TodoListProps {
@@ -18,6 +19,8 @@ const CURRENT_VERSION = CONST.TODOLIST_CONTENT.TODOLIST_CONTENT.version;
 
 function TodoList() {
   const [todoList, setTodoList] = useState<TodoListProps[] | null>(null);
+
+  const isMobile = useIsMobile();
 
   useEffect(() => {
     const storedTodos = sessionStorage.getItem('todoList');
@@ -40,7 +43,11 @@ function TodoList() {
   }, [todoList]);
 
   const toggleChecked = (id: string, url?: string) => {
-    if (!todoList?.find((item) => item.id === id)?.checked && url) {
+    if (
+      !todoList?.find((item) => item.id === id)?.checked &&
+      url &&
+      (id !== 'todoList0' || isMobile)
+    ) {
       window.open(url, '_blank');
     }
     setTodoList((prevList) =>
