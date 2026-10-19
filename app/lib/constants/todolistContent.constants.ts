@@ -17,12 +17,13 @@ export const TODOLIST_CONTENT: TodoListProps = {
   content: [
     {
       id: 'todoList0',
-      cntn: '하루 1번 Do your Dance 감상 🕺',
+      cntn: '하루 1번 Insomnia 감상 🕺',
       checked: false,
+      url: 'https://tinyurl.com/aryt3pfs',
     },
     {
       id: 'todoList1',
-      cntn: 'Do your Dance MV 스트리밍 하기',
+      cntn: 'Insomnia MV 스트리밍 하기',
       checked: false,
       url: 'https://youtu.be/HDGCTtuW-Yo?si=2VtiftXL4--THZeo',
     },
