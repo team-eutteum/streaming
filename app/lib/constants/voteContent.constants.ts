@@ -14,7 +14,7 @@ import * as TITLE from './title.constant';
 
 export const COLLECT_CONTENT: CommonContentProps = {
   label: TITLE.COLLECT,
-  updateDate: '2026.06',
+  updateDate: '2026.10',
   uniqueId: 'voteCollectList',
   content: [
     {
@@ -26,7 +26,7 @@ export const COLLECT_CONTENT: CommonContentProps = {
 
 export const BROADCAST_CONTENT: CommonContentProps = {
   label: TITLE.MUSIC_BROADCAST,
-  updateDate: '2026.06',
+  updateDate: '2026.10',
   uniqueId: 'voteCollectList',
   content: [
     {

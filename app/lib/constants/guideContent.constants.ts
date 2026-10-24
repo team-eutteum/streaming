@@ -39,14 +39,14 @@ import StreamingSamsungGuide from 'public/images/guide/streaming/samsung.jpg';
 import StreamingSpotifyGuide01En from 'public/images/guide/streaming/spotify01-en.jpg';
 import StreamingSpotifyGuide01 from 'public/images/guide/streaming/spotify01.jpg';
 import StreamingSpotifyGuide02En from 'public/images/guide/streaming/spotify02-en.jpg';
-import StreamingSpotifyGuide02 from 'public/images/guide/streaming/spotify02.jpg';
+// import StreamingSpotifyGuide02 from 'public/images/guide/streaming/spotify02.jpg';
 import StreamingStationheadGuideEn from 'public/images/guide/streaming/stationhead-en.jpg';
 import StreamingStationheadGuide from 'public/images/guide/streaming/stationhead.jpg';
 import StreamingVibeGuide from 'public/images/guide/streaming/vibe.jpg';
 import StreamingYoutubeMusicGuideEn01 from 'public/images/guide/streaming/youtubeMusic01-en.jpg';
 import StreamingYoutubeMusicGuide01 from 'public/images/guide/streaming/youtubeMusic01.jpg';
 import StreamingYoutubeMusicGuideEn02 from 'public/images/guide/streaming/youtubeMusic02-en.jpg';
-import StreamingYoutubeMusicGuide02 from 'public/images/guide/streaming/youtubeMusic02.jpg';
+// import StreamingYoutubeMusicGuide02 from 'public/images/guide/streaming/youtubeMusic02.jpg';
 
 import * as RIIZE_ALBUM from './riizeAlbum.constanst';
 import * as TITLE from './title.constant';
@@ -65,7 +65,7 @@ export const STREAMING_LIST_CONTENT: CommonContentProps = {
 
 export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
   label: TITLE.MUSIC_STREAMING,
-  updateDate: '2026.05',
+  updateDate: '2026.10',
   uniqueId: 'musicStreaming',
   content: [
     {
@@ -92,7 +92,7 @@ export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
       label: '스포티파이',
       image: [
         StreamingSpotifyGuide01,
-        StreamingSpotifyGuide02,
+        // StreamingSpotifyGuide02,
         StreamingSpotifyGuide01En,
         StreamingSpotifyGuide02En,
       ],
@@ -113,7 +113,7 @@ export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
       label: '유튜브뮤직',
       image: [
         StreamingYoutubeMusicGuide01,
-        StreamingYoutubeMusicGuide02,
+        // StreamingYoutubeMusicGuide02,
         StreamingYoutubeMusicGuideEn01,
         StreamingYoutubeMusicGuideEn02,
       ],
@@ -123,7 +123,7 @@ export const MUSIC_STREAMING_CONTENT: CommonContentProps = {
 
 export const MUSIC_DOWNLOAD_CONTENT: CommonContentProps = {
   label: TITLE.MUSIC_DOWNLOAD,
-  updateDate: '2026.06',
+  updateDate: '2026.10',
   uniqueId: 'musicDownload',
   content: [
     {
@@ -210,7 +210,7 @@ export const RADIO_APPLICATION_GUIDE: CommonContentProps = {
 
 export const MUSIC_VIDEO_STREAMING_GUIDE: CommonContentProps = {
   label: TITLE.MUSIC_VIDEO_STREAMING,
-  updateDate: '2025.09',
+  updateDate: '2026.10',
   uniqueId: 'musicVideoStreaming',
   content: [
     {
@@ -223,7 +223,7 @@ export const MUSIC_VIDEO_STREAMING_GUIDE: CommonContentProps = {
 export const MUSIC_VIDEO_GUIDE = [
   {
     label: TITLE.MUSIC_VIDEO_STREAMING,
-    updateDate: '2026.05',
+    updateDate: '2026.10',
     uniqueId: 'streaming',
     children: [
       {
@@ -278,7 +278,7 @@ export const MUSIC_VIDEO_GUIDE = [
 
 export const SHORTFORM_CONTENT: CommonContentProps = {
   label: TITLE.SHORT_FORM,
-  updateDate: '2026.05',
+  updateDate: '2026.10',
   uniqueId: 'shortform',
   content: [
     {

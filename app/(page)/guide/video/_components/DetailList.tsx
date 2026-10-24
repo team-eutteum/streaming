@@ -31,8 +31,8 @@ function DetailList({ id }: idProps) {
       <TitleArea
         label={parent.label}
         updateDate={parent.updateDate}
-        hasSelect
-        // hasSelect={false}
+        // hasSelect
+        hasSelect={false}
       />
       <CommonGuideLayout
         uniqueId={parent.uniqueId}
