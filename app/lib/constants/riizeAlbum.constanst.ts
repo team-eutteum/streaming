@@ -16,7 +16,7 @@ import MemoriesCheering from 'public/images/guide/cheering/Memories.jpg';
 import SirenCheering from 'public/images/guide/cheering/Siren.jpg';
 import TalkSexyCheering from 'public/images/guide/cheering/TalkSaxy.jpg';
 
-export const THE_THIRD_SINGLE = {
+export const INSOMNIA = {
   value: 'insomnia',
   albumTitle: 'Insomnia',
   releaseDate: '2026.10.26',
@@ -29,7 +29,7 @@ export const THE_THIRD_SINGLE = {
   ],
 };
 
-export const SECOND_MINI = {
+export const II = {
   value: 'mini2',
   albumTitle: 'II',
   releaseDate: '2026.06.15',
@@ -47,21 +47,21 @@ export const SECOND_MINI = {
   ],
 };
 
-export const JP_THIRD_SINGLE = {
+export const Sunburst = {
   value: 'jpSingle3',
   albumTitle: 'Sunburst',
   releaseDate: '2026.08.26',
   music: [{ title: 'Sunburst', hasCheering: false }],
 };
 
-export const JP_SECOND_SINGLE = {
+export const ALL_OF_YOU = {
   value: 'jpSingle2',
   albumTitle: 'All of You',
   releaseDate: '2026.02.18',
   music: [{ title: 'All of You', hasCheering: false }],
 };
 
-export const THE_SECOND_SINGLE = {
+export const FAME = {
   value: 'single2',
   albumTitle: 'FAME',
   releaseDate: '2025.11.24',
@@ -74,7 +74,7 @@ export const THE_SECOND_SINGLE = {
   ],
 };
 
-export const THE_FIRST_ALBUM = {
+export const ODYSSEY = {
   value: 'The1stAlbum',
   albumTitle: 'ODYSSEY',
   releaseDate: '2025.05.19',
@@ -110,9 +110,9 @@ export const DIGITAL_SINGLE_HUG = {
   ],
 };
 
-export const JP_FIRST_SINGLE = {
-  value: 'jpSingle1',
-  albumTitle: 'Lucky(RIIZE)',
+export const LUCKY = {
+  value: 'lucky',
+  albumTitle: 'Lucky',
   releaseDate: '2024.07.29',
   music: [
     { title: 'Lucky', hasCheering: true, image: LuckyCheering },
@@ -121,8 +121,8 @@ export const JP_FIRST_SINGLE = {
   ],
 };
 
-export const FIRST_MINI = {
-  value: 'mini1',
+export const RIIZING = {
+  value: 'riizing',
   albumTitle: 'RIIZING',
   releaseDate: '2024.06.17',
   music: [
@@ -166,8 +166,8 @@ export const FIRST_MINI = {
   ],
 };
 
-export const JP_DIGITAL_SINGLE = {
-  value: 'jpDigiSingle1',
+export const LOVE_119_JP = {
+  value: 'love119Jp',
   albumTitle: 'Love 119(Japanese Ver.)',
   releaseDate: '2024.01.24',
   music: [
@@ -178,8 +178,8 @@ export const JP_DIGITAL_SINGLE = {
   ],
 };
 
-export const FIRST_SINGLE = {
-  value: 'single1',
+export const GET_A_GUITAR = {
+  value: 'getAGuitar',
   albumTitle: 'Get A Guitar',
   releaseDate: '2023.09.04',
   music: [
