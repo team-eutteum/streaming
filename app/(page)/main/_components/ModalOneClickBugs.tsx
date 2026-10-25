@@ -19,7 +19,7 @@ function ModalOneClickBugs({ onClose }: { onClose: () => void }) {
           </p>
           <ul className="grid-1">
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/4wyrujef'} noBlank>
+              <Button size="lg" href={'https://tinyurl.com/4hyftb5f'} noBlank>
                 원클릭
               </Button>
             </li>
@@ -29,7 +29,7 @@ function ModalOneClickBugs({ onClose }: { onClose: () => void }) {
           <p className="list-tit f-bd3">PC</p>
           <ul className="grid-1">
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/5cy7psps'}>
+              <Button size="lg" href={'https://tinyurl.com/58txm85b'}>
                 원클릭
               </Button>
             </li>

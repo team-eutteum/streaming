@@ -19,22 +19,22 @@ function ModalOneClickVibe({ onClose }: { onClose: () => void }) {
           </p>
           <ul className="grid-2">
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/24dhvnuv'} noBlank>
+              <Button size="lg" href={'https://tinyurl.com/dtjnfkkj'} noBlank>
                 원클릭1
               </Button>
             </li>
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/2e8fpemr'} noBlank>
+              <Button size="lg" href={'https://tinyurl.com/y6cmm2wc'} noBlank>
                 원클릭2
               </Button>
             </li>
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/mt3xjr88'} noBlank>
+              <Button size="lg" href={'https://tinyurl.com/mvb6kc6j'} noBlank>
                 원클릭3
               </Button>
             </li>
             <li className="list">
-              <Button size="lg" href={'https://tinyurl.com/2tbf2rp9'} noBlank>
+              <Button size="lg" href={' https://tinyurl.com/2mhy4pzs'} noBlank>
                 원클릭4
               </Button>
             </li>
