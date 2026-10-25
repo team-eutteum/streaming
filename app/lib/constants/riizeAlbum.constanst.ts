@@ -9,11 +9,25 @@ import FlyupCheering from 'public/images/guide/cheering/FlyUp.jpg';
 import GetAGuitarCheering from 'public/images/guide/cheering/GetAGuitar.jpg';
 import Hug from 'public/images/guide/cheering/Hug.jpg';
 import Impossible from 'public/images/guide/cheering/Impossible.jpg';
+import InsomniaCheering from 'public/images/guide/cheering/insomnia.jpg';
 import Love119Cheering from 'public/images/guide/cheering/Love119.jpg';
 import LuckyCheering from 'public/images/guide/cheering/Lucky.jpg';
 import MemoriesCheering from 'public/images/guide/cheering/Memories.jpg';
 import SirenCheering from 'public/images/guide/cheering/Siren.jpg';
 import TalkSexyCheering from 'public/images/guide/cheering/TalkSaxy.jpg';
+
+export const THE_THIRD_SINGLE = {
+  value: 'insomnia',
+  albumTitle: 'Insomnia',
+  releaseDate: '2026.10.26',
+  music: [
+    {
+      title: 'Insomnia',
+      hasCheering: true,
+      image: InsomniaCheering,
+    },
+  ],
+};
 
 export const SECOND_MINI = {
   value: 'mini2',
