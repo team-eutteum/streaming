@@ -232,7 +232,7 @@ export const MUSIC_VIDEO_GUIDE = [
         image: [MusicVideoGuide, MusicVideoGuideEn],
         links: [
           {
-            link: 'https://youtu.be/HDGCTtuW-Yo?si=2VtiftXL4--THZeo',
+            link: 'https://youtu.be/RgkoXU4BlOE?si=6jtNygoNFhjVPW-h',
             linkTxt: 'Insomnia 뮤비 스밍 바로가기',
           },
         ],

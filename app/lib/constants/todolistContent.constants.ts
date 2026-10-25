@@ -13,7 +13,7 @@ interface TodoListProps {
 
 export const TODOLIST_CONTENT: TodoListProps = {
   updateDate: '2026.10.26',
-  version: '12', // 수정될 때마다 버전 변경 해줘서 세션에서 변경 사항 감지
+  version: '13', // 수정될 때마다 버전 변경 해줘서 세션에서 변경 사항 감지
   content: [
     {
       id: 'todoList0',
@@ -25,7 +25,7 @@ export const TODOLIST_CONTENT: TodoListProps = {
       id: 'todoList1',
       cntn: 'Insomnia MV 스트리밍 하기',
       checked: false,
-      url: 'https://youtu.be/HDGCTtuW-Yo?si=2VtiftXL4--THZeo',
+      url: 'https://youtu.be/RgkoXU4BlOE?si=6jtNygoNFhjVPW-h',
     },
     {
       id: 'todoList2',
