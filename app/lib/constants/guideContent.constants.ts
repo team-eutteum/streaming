@@ -181,7 +181,7 @@ export const RADIO_APPLICATION_GUIDE: CommonContentProps = {
       links: [
         {
           link: 'sms:%231077?body=라이즈의 Insomnia 신청합니다.',
-          linkTxt: 'SBS COOL FM 라디오 문자 신청',
+          linkTxt: 'SBS 파워 FM 라디오 문자 신청',
         },
       ],
     },
