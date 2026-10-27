@@ -6,7 +6,6 @@ import DownGeniePcGuide from 'public/images/guide/download/genie/geniePc.jpg';
 import DownKakaoMusicGuide from 'public/images/guide/download/kakaoMusic/kakaoMusic.jpg';
 import DownMelonAndroidGuide from 'public/images/guide/download/melon/melonAndroid.jpg';
 import DownMelonPcGuide from 'public/images/guide/download/melon/melonPc.jpg';
-import DownVibeGuide from 'public/images/guide/download/vibe/vibe.jpg';
 /* id guide */
 import IdBugsGuide from 'public/images/guide/id/bugs.jpg';
 import IdGenieGuide from 'public/images/guide/id/genie.jpg';
@@ -138,10 +137,10 @@ export const MUSIC_DOWNLOAD_CONTENT: CommonContentProps = {
       label: TITLE.BUGS,
       image: [DownBugsGuide],
     },
-    {
-      label: TITLE.VIBE,
-      image: [DownVibeGuide],
-    },
+    // {
+    //   label: TITLE.VIBE,
+    //   image: [DownVibeGuide],
+    // },
     {
       label: TITLE.KAKAOMUSIC,
       image: [DownKakaoMusicGuide],
